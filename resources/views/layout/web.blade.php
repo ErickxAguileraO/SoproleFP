@@ -10,7 +10,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <!-- Title -->
-    <title>Soprole FP| @yield('title')</title>
+    <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
     <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
