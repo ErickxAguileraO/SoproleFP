@@ -1,12 +1,12 @@
 @extends('layout.web')
 
-@section('title', 'Nuestras recetas')
+@section('title', 'Nuestros productos')
 
 @section('content')
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img src="{{ asset('/web/imagenes/portada-recetas-escritorio.svg') }}" alt="">
+        <img src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
     </div>
     <div class="contenido">
         <section class="filtros">

@@ -39,3 +39,7 @@ Route::get('/mini-sitio', function () {
 Route::get('/nuestras-recetas', function () {
     return view('web.recetas.index');
 });
+
+Route::get('/productos', function () {
+    return view('web.productos.index');
+});

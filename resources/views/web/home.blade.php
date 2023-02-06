@@ -84,7 +84,7 @@
                         </div>
                     </a>
 
-                    <a href="" class="cuadros-info-n">
+                    <a href="" class="cuadros-info-n ocultar-576">
                         <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -123,13 +123,14 @@
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
             </div>
+            <a href="" class="boton bg-red">Ver todos los productos</a>
         </section>
 
         <section class="seccion-home">
@@ -151,13 +152,14 @@
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
             </div>
+            <a href="" class="boton bg-red">Ver todas las recetas</a>
         </section>
 
 
@@ -180,16 +182,18 @@
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
             </div>
+            <a href="" class="boton bg-red">Ver todas las noticias</a>
+            
         </section>
-
-        <section class="conocenos">
+        {{-- Conocenos Escritorio --}}
+        <section class="conocenos mostrar-1920">
             <div class="concenos-txt">
                 <div></div>
                 <div>
@@ -202,6 +206,23 @@
                     <div class="img"><img src="{{ asset('/web/imagenes/img-circulo2.svg') }}" alt=""></div>
                 </div>
                 <div>
+                    <p>Nosotros somos expertos en la industria láctea y entendemos el rol fundamental que juega en tu cocina. El sabor, textura y apariencia en los platos que entregan los productos lácteos, son clave para entregar calidad a los miles de consumidores que se atienden día a día.</p>
+                    <br>
+                    <p> En Soprole Food Professionals, trabajamos en conjunto con nuestros clientes, en sus negocios, compartiendo ideas y formas de trabajo de manera permanente. Nos concentramos en esas preparaciones, en que los lácteos son el factor diferenciador, y que son el motivo por el que los consumidores entran a esa pastelería, pizzería, restaurante o cafeteria.</p>
+                    <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
+                </div>
+            </div>
+        </section>
+        {{-- Conocenos Movil --}}
+        <section class="conocenos mostrar-1100">
+            <div class="concenos-img-txt">
+                <div>
+                    <div class="img"><img src="{{ asset('/web/imagenes/img-circulo2.svg') }}" alt=""></div>
+                </div>
+                <div class="conocenos-txt">
+                    <h3>Conócenos</h3>
+                    <p>Soprole Food Professionals es la marca industrial de Soprole. Nosotros creamos productos sanos y ricos, y entregamos soluciones de alta calidad, diseñadas para cada propósito de nuestros clientes.</p>
+                    <br>
                     <p>Nosotros somos expertos en la industria láctea y entendemos el rol fundamental que juega en tu cocina. El sabor, textura y apariencia en los platos que entregan los productos lácteos, son clave para entregar calidad a los miles de consumidores que se atienden día a día.</p>
                     <br>
                     <p> En Soprole Food Professionals, trabajamos en conjunto con nuestros clientes, en sus negocios, compartiendo ideas y formas de trabajo de manera permanente. Nos concentramos en esas preparaciones, en que los lácteos son el factor diferenciador, y que son el motivo por el que los consumidores entran a esa pastelería, pizzería, restaurante o cafeteria.</p>

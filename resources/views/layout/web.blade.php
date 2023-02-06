@@ -61,7 +61,7 @@
         {{-- Menu movil --}}
         <div class="flex-bar-menu-movil">
             <div class="bar-menu-movil">
-                <img src="{{ asset('/web/imagenes/logo.svg') }}" alt="">
+                <a href="/"><img width="130px" src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
                 <div><img src="{{ asset('/web/imagenes/i-bar.svg') }}" alt=""></div>
             </div>
         </div>
@@ -73,9 +73,10 @@
     <footer>
         <div class="linea-footer">
         </div>
+        
         <div class="contenido-footer">
             <div class="logo-footer">
-                <img src="{{ asset('/web/imagenes/logo.svg') }}" alt="">
+                <a href="/"><img src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
                 <div>
                     <img src="{{ asset('/web/imagenes/i-correo.svg') }}" alt="">   
                     <a href="">soproleFP@soprole.cl</a>
@@ -116,6 +117,7 @@
         </div>
         <div class="sub-footer">
             <p>©2023 Fonterra Co-operative Group</p>
+            <div class="linea-footer-2"></div>
             <div>
                 <a href="/politicas-de-privacidad">Políticas de privacidad</a>
                 <p>|</p>
