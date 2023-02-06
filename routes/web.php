@@ -16,6 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('web.home');
 });
-// Route::get('/contacto', function () {
-//     return view('web.contacto.index');
-// });
+Route::get('/conocenos', function () {
+    return view('web.conocenos.index');
+});
+
+Route::get('/politicas-de-privacidad', function () {
+    return view('web.politicas.index');
+});
+
+Route::get('/terminos-condiciones', function () {
+    return view('web.terminos.index');
+});
+
+Route::get('/informacion-consumidor', function () {
+    return view('web.informacionConsumidor.index');
+});
+
+Route::get('/mini-sitio', function () {
+    return view('web.miniSitios.index');
+});

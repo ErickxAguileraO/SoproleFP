@@ -19,23 +19,117 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/flexslider/flexslider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/fresco/fresco.css') }}">
 
     @stack('extra-css')
 </head>
 
 <body>
-    <header>Soy header</header>
+    <header>
+        {{-- Menu escritorio --}}
+        <div class="flex-menu">
+            <div class="menu">
+                <div class="rrss-header">
+                    <a href=""><img src="{{ asset('/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                    <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                </div>
+                <div class="menu-op">
+                    <a href="">Conócenos</a>
+                    <a href="">Academia</a>
+                    <a href="">Productos</a>
+                    <a href="">Recetas</a>
+                    <a href="">Noticias y tendencias</a>
+                </div>
+                <div class="botones-header">
+                    <a href="" class="tienda">
+                        <img src="{{ asset('/web/imagenes/i-carro.svg') }}" alt="">
+                        <p>Ir a la tienda</p>
+                    </a>
+                    <a href="" class="cliente">
+                        <img src="{{ asset('/web/imagenes/i-user.svg') }}" alt="">
+                        <p>Hazte cliente</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="logo-txt">
+                <a href="/"><img src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
+                <div><h2>Apasionados por tu negocio gastronómico</h2></div>
+            </div>
+        </div>
+        {{-- Menu movil --}}
+        <div class="flex-bar-menu-movil">
+            <div class="bar-menu-movil">
+                <img src="{{ asset('/web/imagenes/logo.svg') }}" alt="">
+                <div><img src="{{ asset('/web/imagenes/i-bar.svg') }}" alt=""></div>
+            </div>
+        </div>
+       
+    </header>
     
     @yield('content')
 
     <footer>
-        
+        <div class="linea-footer">
+        </div>
+        <div class="contenido-footer">
+            <div class="logo-footer">
+                <img src="{{ asset('/web/imagenes/logo.svg') }}" alt="">
+                <div>
+                    <img src="{{ asset('/web/imagenes/i-correo.svg') }}" alt="">   
+                    <a href="">soproleFP@soprole.cl</a>
+                </div>
+                <div>
+                    <img src="{{ asset('/web/imagenes/i-telefono.svg') }}" alt="">
+                    <h3>600 600 6600</h3>
+                </div>
+            </div>
+            <div class="linea-columna"></div>
+            <div class="menu-footer-1">
+                <a href="">Pastelería</a>
+                <a href="">Cocina Italiana</a>
+                <a href="">Comida Rápida</a>
+                <a href="">Cafetería</a>
+                <a href="">Servicios de alimentación</a>
+            </div>
+            <div class="linea-columna"></div>
+            <div class="menu-footer-2">
+                <a href="">Contáctenos</a>
+                <a href="">Academia</a>
+                <a href="">Productos</a>
+                <a href="">Recetas</a>
+                <a href="">Tendencias y noticias</a>
+                <a href="">Hazte cliente</a>
+                <a href="">Ir a la tienda</a>
+            </div>
+            <div class="rrss-footer">
+                <div>
+                    <p>Encuéntranos en redes sociales</p>
+                    <div class="logos-rrrss-footer">
+                        <a href=""><img src="{{ asset('/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                        <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="sub-footer">
+            <p>©2023 Fonterra Co-operative Group</p>
+            <div>
+                <a href="/politicas-de-privacidad">Políticas de privacidad</a>
+                <p>|</p>
+                <a href="/informacion-consumidor">Información del Consumidor</a>
+                <p>|</p>
+                <a href="/terminos-condiciones">Términos y Condiciones</a>
+            </div>
+        </div>
     </footer>
     <!-- Scripts -->
     <script src="{{ asset('web/js/niceselect/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('web/js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('web/js/fresco/fresco.min.js') }}"></script>
+    <script src="{{ asset('web/js/flexslider/jquery.flexslider.js') }}"></script>
     
     <script src="{{ asset('web/js/script.js') }}"></script>
     <script>
