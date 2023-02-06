@@ -35,3 +35,7 @@ Route::get('/informacion-consumidor', function () {
 Route::get('/mini-sitio', function () {
     return view('web.miniSitios.index');
 });
+
+Route::get('/nuestras-recetas', function () {
+    return view('web.recetas.index');
+});
