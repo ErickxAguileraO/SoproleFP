@@ -65,3 +65,8 @@ Route::get('/academia-detalle', function () {
 Route::get('/hazte-cliente', function () {
     return view('web.cliente.index');
 });
+
+Route::get('/producto-detalle', function () {
+    return view('web.productos.detalle');
+});
+

@@ -734,7 +734,7 @@ input{
     border-radius: 20px;
     padding: 40px;
     overflow-y: scroll;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .encabezado-ventana{
     display: grid;
@@ -747,6 +747,85 @@ input{
 .contenido-ventana-ubicacion{
     margin-top: 38px;
 }
+.ubicaciones{
+    margin-top: 35px;
+}
+.ubicacion-n{
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #E7E7E7;
+    margin-bottom: 12px;
+}
+.ocultar-acordeon{
+    display: none;
+}
+.grid-ocultar-acordeon{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+.ubicacion-n p{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 136%;
+    color: #313131;
+}
+
+.ubicacion-n span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 136%;
+    color: #818181;
+}
+.drop-down{
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    align-items: center;
+    width: 100%;
+}
+.img-principal {
+    width: 350px;
+    height: 450px;
+    margin-bottom: 20px;    
+}
+
+
+.vista-previa .img-principal .main_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.vista-previa .thumbnail_container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.vista-previa .thumbnail_container .thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+    opacity: .7;
+    transition: .3s;
+}
+
+.vista-previa .thumbnail_container .thumbnail:hover {
+    opacity: 1;
+}
+
+.active {
+    opacity:  1 !important;
+    box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
+}
+
 /* Footer */
 .linea-footer-2{
     display: none !important;
@@ -906,7 +985,7 @@ footer a{
         border-radius: 20px;
         padding: 40px;
         overflow-y: scroll;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 }
 
@@ -1045,7 +1124,7 @@ footer a{
         border-radius: 20px;
         padding: 40px;
         overflow-y: scroll;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     /* Footer */
     .contenido-footer {

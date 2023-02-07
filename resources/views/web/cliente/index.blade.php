@@ -27,6 +27,168 @@
                         </select>
                     </div>
                 </form>
+                <div class="ubicaciones">
+
+                    <div class="ubicacion-n">
+                        <div class="drop-down">
+                            <p>Supermercado Mayorista 10, Los Ángeles</p>
+                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                        </div>                  
+                        <div class="ocultar-acordeon">
+                            <div class="grid-ocultar-acordeon">
+                                <div>
+                                    <span>Dirección</span>
+                                    <p>Calle 1, Local 2</p>
+                                </div>
+        
+                                <div>
+                                    <span>Horario</span>
+                                    <p>09:00 a 21:00 hrs</p>
+                                </div>
+        
+                                <div>
+                                    <span>Contacto</span>
+                                    <p>Pepito Gutiérrez</p>
+                                </div>
+                                
+                                <div>
+                                    <span>Teléfono</span>
+                                    <p>+56 9 1122 3344</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ubicacion-n">
+                        <div class="drop-down">
+                            <p>Supermercado Mayorista 10, Los Ángeles</p>
+                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                        </div>                  
+                        <div class="ocultar-acordeon">
+                            <div class="grid-ocultar-acordeon">
+                                <div>
+                                    <span>Dirección</span>
+                                    <p>Calle 1, Local 2</p>
+                                </div>
+        
+                                <div>
+                                    <span>Horario</span>
+                                    <p>09:00 a 21:00 hrs</p>
+                                </div>
+        
+                                <div>
+                                    <span>Contacto</span>
+                                    <p>Pepito Gutiérrez</p>
+                                </div>
+                                
+                                <div>
+                                    <span>Teléfono</span>
+                                    <p>+56 9 1122 3344</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ubicacion-n">
+                        <div class="drop-down">
+                            <p>Supermercado Mayorista 10, Los Ángeles</p>
+                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                        </div>                  
+                        <div class="ocultar-acordeon">
+                            <div class="grid-ocultar-acordeon">
+                                <div>
+                                    <span>Dirección</span>
+                                    <p>Calle 1, Local 2</p>
+                                </div>
+        
+                                <div>
+                                    <span>Horario</span>
+                                    <p>09:00 a 21:00 hrs</p>
+                                </div>
+        
+                                <div>
+                                    <span>Contacto</span>
+                                    <p>Pepito Gutiérrez</p>
+                                </div>
+                                
+                                <div>
+                                    <span>Teléfono</span>
+                                    <p>+56 9 1122 3344</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ubicacion-n">
+                        <div class="drop-down">
+                            <p>Supermercado Mayorista 10, Los Ángeles</p>
+                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                        </div>                  
+                        <div class="ocultar-acordeon">
+                            <div class="grid-ocultar-acordeon">
+                                <div>
+                                    <span>Dirección</span>
+                                    <p>Calle 1, Local 2</p>
+                                </div>
+        
+                                <div>
+                                    <span>Horario</span>
+                                    <p>09:00 a 21:00 hrs</p>
+                                </div>
+        
+                                <div>
+                                    <span>Contacto</span>
+                                    <p>Pepito Gutiérrez</p>
+                                </div>
+                                
+                                <div>
+                                    <span>Teléfono</span>
+                                    <p>+56 9 1122 3344</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ubicacion-n">
+                        <div class="drop-down">
+                            <p>Supermercado Mayorista 10, Los Ángeles</p>
+                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                        </div>                  
+                        <div class="ocultar-acordeon">
+                            <div class="grid-ocultar-acordeon">
+                                <div>
+                                    <span>Dirección</span>
+                                    <p>Calle 1, Local 2</p>
+                                </div>
+        
+                                <div>
+                                    <span>Horario</span>
+                                    <p>09:00 a 21:00 hrs</p>
+                                </div>
+        
+                                <div>
+                                    <span>Contacto</span>
+                                    <p>Pepito Gutiérrez</p>
+                                </div>
+                                
+                                <div>
+                                    <span>Teléfono</span>
+                                    <p>+56 9 1122 3344</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="numeros-pag">
+                    <a href="" class="numero-antes-despues"  style="margin-right: 35px">Anterior</a>
+                    <a href="" class="numero-antes-despues-movil"  style="margin-right: 35px"><img src="{{ asset('web/imagenes/i-antes.svg') }}" alt=""></a>
+                    <a href="" class="numero numero-seleccionado">1</a>
+                    <a href="" class="numero">2</a>
+                    <a href="" class="numero-antes-despues" style="margin-left: 35px">Siguiente</a>
+                    <a href="" class="numero-antes-despues-movil"  style="margin-left: 35px"><img src="{{ asset('web/imagenes/i-despues.svg') }}" alt=""></a>
+                </div>
             </div>
         </div>
     </div>
