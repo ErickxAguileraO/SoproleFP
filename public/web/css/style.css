@@ -486,8 +486,82 @@ h6{
     gap: 20px;
     margin-top: 48px;
 }
+/* Noticias */
+.cuadros-info-n .texto span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    color: #AEAEAE;
+    margin-top: -15px;
+}
+
+.noticia-tendencia .texto h5 {
+    margin-bottom: 0px;
+}
+
+.boton-noticia-tendencia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: var(--azul1);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    position: relative;
+    margin-top: 20px;
+}
+.noticia-tendencia .texto div{
+    height: 250px;
+}
 
 
+.numeros-pag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 5px;
+    text-decoration: none;
+}
+.numeros-pag .numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    color: #000000;
+    text-decoration: none;
+
+}
+.numeros-pag .numero:hover{
+    background: #E3EDFB;
+    color: #13355D;
+}
+.numero-seleccionado{
+    background: var(--azul1) !important;
+    color: white !important;
+}
+.numero-antes-despues{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #999CA0;
+    padding: 4px 12px 4px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.numero-antes-despues-movil{
+    display: none;
+}
+.numero-antes-despues:hover{
+    color: #13355D;
+    background-color: #e2e1e1;
+}
 /* Footer */
 .linea-footer-2{
     display: none !important;
@@ -718,11 +792,11 @@ footer a{
         margin: 50px 0px;
     }
     .cuadros-row-3 .cuadros-info-n{
-        width: 400px;
+        width: 320px;
         height: auto;
     }
     .cuadros-row-3 .cuadros-info-n .img{
-        width: 400px;
+        width: 100%;
         height: 320px;    
     }
     /* Conocenos */
@@ -890,7 +964,7 @@ footer a{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         height: auto;
         padding: 12px 16px;
         text-decoration: none;
@@ -919,6 +993,7 @@ footer a{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         margin: 50px 0px;
+        width: 100%;
     }
     .cuadros-row-4 .cuadros-info-n, .cuadros-row-3 .cuadros-info-n {
         width: 100%;

@@ -43,3 +43,7 @@ Route::get('/nuestras-recetas', function () {
 Route::get('/productos', function () {
     return view('web.productos.index');
 });
+
+Route::get('/noticias-tendencias', function () {
+    return view('web.noticias.index');
+});
