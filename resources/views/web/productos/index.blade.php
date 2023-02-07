@@ -27,14 +27,14 @@
                 </div>
             </div>
             <br>
-            <h2>Filtrado por: <p>Leche</p> </h2>
         </section>
 
         <section class="seccion-home seccion-listas">
             <div class="encabezado-titulo-btn">
                 <h2>Pastelería</h2>
                 <div>
-                    <a href="" class="boton bg-blue">Ver todas las recetas</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
@@ -72,7 +72,8 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Italiana</h2>
                 <div>
-                    <a href="" class="boton bg-blue">Ver todas las recetas</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
@@ -103,7 +104,8 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Rápida</h2>
                 <div>
-                    <a href="" class="boton bg-blue">Ver todas las recetas</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
@@ -141,7 +143,8 @@
             <div class="encabezado-titulo-btn">
                 <h2>Cafetería</h2>
                 <div>
-                    <a href="" class="boton bg-blue">Ver todas las recetas</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
@@ -158,7 +161,8 @@
             <div class="encabezado-titulo-btn">
                 <h2>Servicios de alimentación</h2>
                 <div>
-                    <a href="" class="boton bg-blue">Ver todas las recetas</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">

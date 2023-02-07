@@ -130,7 +130,7 @@
                     </div>
                 </a>
             </div>
-            <a href="" class="boton bg-red">Ver todos los productos</a>
+            <a href="/productos" class="boton bg-red">Ver todos los productos</a>
         </section>
 
         <section class="seccion-home">
@@ -159,7 +159,7 @@
                     </div>
                 </a>
             </div>
-            <a href="" class="boton bg-red">Ver todas las recetas</a>
+            <a href="/nuestras-recetas" class="boton bg-red">Ver todas las recetas</a>
         </section>
 
 
@@ -189,7 +189,7 @@
                     </div>
                 </a>
             </div>
-            <a href="" class="boton bg-red">Ver todas las noticias</a>
+            <a href="/noticias-tendencias" class="boton bg-red">Ver todas las noticias</a>
             
         </section>
         {{-- Conocenos Escritorio --}}

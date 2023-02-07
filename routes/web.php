@@ -47,3 +47,21 @@ Route::get('/productos', function () {
 Route::get('/noticias-tendencias', function () {
     return view('web.noticias.index');
 });
+
+Route::get('/detalle-noticia-tendencia', function () {
+    return view('web.noticias.detalle');
+});
+
+
+Route::get('/academia', function () {
+    return view('web.academia.index');
+});
+
+Route::get('/academia-detalle', function () {
+    return view('web.academia.detalle');
+});
+
+
+Route::get('/hazte-cliente', function () {
+    return view('web.cliente.index');
+});

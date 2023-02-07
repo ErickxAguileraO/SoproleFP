@@ -35,7 +35,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>                  
                         </div>
                         
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
                             <span>02/01/2023</span>
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         </div>
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>                  
                         </div>
                         
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
 
@@ -85,7 +85,7 @@
                             <span>02/01/2023</span>
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         </div>
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="" class="boton-noticia-tendencia">Ver</a>
+                        <a href="/detalle-noticia-tendencia" class="boton-noticia-tendencia">Ver</a>
                     </div>
                 </div>
             </div>
