@@ -35,11 +35,11 @@
                     <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                 </div>
                 <div class="menu-op">
-                    <a href="">Conócenos</a>
-                    <a href="">Academia</a>
-                    <a href="">Productos</a>
-                    <a href="">Recetas</a>
-                    <a href="">Noticias y tendencias</a>
+                    <a href="/conocenos">Conócenos</a>
+                    <a href="/academia">Academia</a>
+                    <a href="/productos">Productos</a>
+                    <a href="/nuestras-recetas">Recetas</a>
+                    <a href="/noticias-tendencias">Noticias y tendencias</a>
                 </div>
                 <div class="botones-header">
                     <a href="" class="tienda">
@@ -97,11 +97,11 @@
             <div class="linea-columna"></div>
             <div class="menu-footer-2">
                 <a href="">Contáctenos</a>
-                <a href="">Academia</a>
-                <a href="">Productos</a>
-                <a href="">Recetas</a>
-                <a href="">Tendencias y noticias</a>
-                <a href="">Hazte cliente</a>
+                <a href="/academia">Academia</a>
+                <a href="/productos">Productos</a>
+                <a href="/nuestras-recetas">Recetas</a>
+                <a href="/noticias-tendencias">Tendencias y noticias</a>
+                <a href="/hazte-cliente">Hazte cliente</a>
                 <a href="">Ir a la tienda</a>
             </div>
             <div class="rrss-footer">

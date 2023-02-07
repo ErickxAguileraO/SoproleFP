@@ -10,7 +10,8 @@
             <ul class="slides">
                 <!-- 1 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img src="{{ asset('/web/imagenes/portada-home-escritorio.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-home-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-home-movil.svg') }}" alt="">
                 </li>
     
                 <!-- 2 -->
@@ -60,7 +61,7 @@
                 <br>
                 <p class="sub-titulo">Nos apasiona ayudar a nuestros clientes, logrando la optimización de sus recursos, haciendo más eficiente sus procesos, alcanzando una mayor calidad y  expertíz en su negocio</p>
                 <div class="cuadros-info cuadros-row-4">
-                    <a href="" class="cuadros-info-n">
+                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -68,7 +69,7 @@
                         </div>
                     </a>
 
-                    <a href="" class="cuadros-info-n">
+                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -76,7 +77,7 @@
                         </div>
                     </a>
 
-                    <a href="" class="cuadros-info-n">
+                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -84,7 +85,7 @@
                         </div>
                     </a>
 
-                    <a href="" class="cuadros-info-n ocultar-576">
+                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n ocultar-576">
                         <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -93,7 +94,7 @@
                     </a>
                 </div>
 
-                <a href="" class="boton bg-red">Ver más cursos</a>
+                <a href="/academia" class="boton bg-red">Ver más cursos</a>
             </div>
         </section>
 
@@ -102,28 +103,28 @@
             <br>
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
+                <a href="/producto-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/producto-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/producto-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n ocultar-576">
+                <a href="/producto-detalle" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
@@ -138,21 +139,21 @@
             <br>
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n ocultar-576">
+                <a href="/receta-detalle" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>

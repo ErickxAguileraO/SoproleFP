@@ -39,9 +39,16 @@ Route::get('/mini-sitio', function () {
 Route::get('/nuestras-recetas', function () {
     return view('web.recetas.index');
 });
+Route::get('/receta-detalle', function () {
+    return view('web.recetas.detalle');
+});
+
 
 Route::get('/productos', function () {
     return view('web.productos.index');
+});
+Route::get('/producto-detalle', function () {
+    return view('web.productos.detalle');
 });
 
 Route::get('/noticias-tendencias', function () {
@@ -66,7 +73,4 @@ Route::get('/hazte-cliente', function () {
     return view('web.cliente.index');
 });
 
-Route::get('/producto-detalle', function () {
-    return view('web.productos.detalle');
-});
 

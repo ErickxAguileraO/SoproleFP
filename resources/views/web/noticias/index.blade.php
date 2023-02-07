@@ -10,17 +10,20 @@
             <ul class="slides">
                 <!-- 1 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
     
                 <!-- 2 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
     
                 <!-- 3 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
             </ul>
         </div>
