@@ -24,19 +24,34 @@
                 </div>
             </div>
             <div class="txt-detalle-info">
-                <h2>Alfajores</h2>
+                <div class="titulo-receta">
+                    <h2>Alfajores</h2>
+                    <div class="dificultad">
+                        <p>Dificultad de la receta</p>
+                        <div class="intermedia">
+                            <p>Intermedia</p>
+                        </div>
+                    </div>
+                </div>
                 <br>
                 <h6>Descripción</h6>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <br>
-                <h6>Ingredientes</h6>
-                <ul>
-                    <li>Ingrediente 1</li>
-                    <li>Ingrediente 2</li>
-                    <li>Ingrediente 3</li>
-                    <li>Ingrediente 4</li>
-
-                </ul>
+                <div class="ingredientes-porciones">
+                    <div>
+                        <h6>Ingredientes</h6>
+                        <li>Ingrediente 1</li>
+                        <li>Ingrediente 2</li>
+                        <li>Ingrediente 3</li>
+                        <li>Ingrediente 4</li>
+                    </div>
+                    <div class="porciones">
+                        <h6>Ingredientes</h6>
+                        <p>4 personas</p>
+                    </div>
+                </div>
+                
+                
             </div>
         </div>
         <br>

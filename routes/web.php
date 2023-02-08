@@ -74,6 +74,9 @@ Route::get('/hazte-cliente', function () {
     return view('web.cliente.index');
 });
 
+Route::get('/contacto', function () {
+    return view('web.contacto.index');
+});
 
 //ADMINISTRACIÓN
 Route::group(['middleware' => ['auth']], function () {
