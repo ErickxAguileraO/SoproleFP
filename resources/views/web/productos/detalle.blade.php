@@ -28,16 +28,9 @@
                 <div class="encabezado-detalle-info">
                     <h2>Leche Entera</h2>
                     <h3>1 litro</h3>
-                    <div>
-                      <p>SKU: 000030-001</p>
-                    </div>
                 </div>
-                <div class="estrellas">
-                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
+                <div>
+                    <p>Código interno Soporle: 000030-001</p>
                 </div>
                 <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
