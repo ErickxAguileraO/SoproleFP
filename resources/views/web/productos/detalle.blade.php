@@ -8,7 +8,8 @@
     <div class="contenido">
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
-                <div class="img-principal">
+                <div id="product_viewer"></div>
+                {{-- <div class="img-principal">
                     <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
                 </div>        
                 <div class="carruselImagenes thumbnail_container">
@@ -21,7 +22,7 @@
                     <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
                     <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
                 
-                </div>
+                </div> --}}
             </div>
             <div class="txt-detalle-info">
                 <div class="encabezado-detalle-info">
@@ -100,16 +101,7 @@
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
-                </a>
-                {{-- <a href="" style="width: auto; height: auto;" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a> --}}
-
-              
-            
+                </a>  
             </div>
         </section>
     </div>
@@ -122,6 +114,22 @@
                     animation: "slide",
                 });
             });
+        </script>
+
+        <script>
+            var productViewer = new ProductViewer ({
+            element: document.getElementById('product_viewer'),
+            imagePath: '/public/web/imagenes/img360',
+            filePrefix: 'img',
+            fileExtension: '.jpg'
+            });
+
+            // if you want to see it will roted 360 deg once it loaded then you have to write some extra code
+
+            ProductViewer.once('loaded', function (){
+            ProductViewer.animate360();
+            })
+
         </script>
     @endpush
 
