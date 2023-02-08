@@ -27,6 +27,17 @@
                 </li>
             </ul>
         </div>
+        <section class="filtros">
+            <div class="select-filtros">
+                <div>
+                    <label for="">Segmento</label>
+                    <select name="" id="">
+                        <option value="">Todos</option>
+                        <option value="">value 1</option>
+                    </select>
+                </div>
+            </div>
+        </section>
         <section class="seccion-home">
             <div class="cuadros-info cuadros-row-3">
                 <div class="cuadros-info-n noticia-tendencia">
