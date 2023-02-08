@@ -10,27 +10,27 @@
             <ul class="slides">
                 <!-- 1 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
-                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
     
                 <!-- 2 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
-                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
     
                 <!-- 3 -->
                 <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
-                    <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-noticias-movil.svg') }}" alt="">
+                    <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
+                    <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
                 </li>
             </ul>
         </div>
         <section class="seccion-home">
             <div class="cuadros-info cuadros-row-3">
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Esta es la primera tendencia</h5>
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Segunda tendencia con un título un poco más largo</h5>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Este título es el tercero y más largo. La idea es que tenga tres líneas en de texto en el título</h5>
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Esta es la primera tendencia</h5>
@@ -81,7 +81,7 @@
                 </div>
 
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Segunda tendencia con un título un poco más largo</h5>
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="cuadros-info-n noticia-tendencia">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <div>
                             <h5>Este título es el tercero y más largo. La idea es que tenga tres líneas en de texto en el título</h5>

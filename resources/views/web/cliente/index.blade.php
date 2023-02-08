@@ -9,7 +9,7 @@
         <div class="ventana-locales">
             <div class="encabezado-ventana">
                 <h6>Si no tienes iniciación de actividades, adquiere nuestros productos  en:</h6>
-                <img class="cerrar-ventana-ubicacion" src="{{ asset('/web/imagenes/x-black.svg') }}" alt="">
+                <img class="cerrar-ventana-ubicacion" src="{{ asset('/public/web/imagenes/x-black.svg') }}" alt="">
             </div>
             <div class="contenido-ventana-ubicacion">
                 <form action="" class="form-row-2">
@@ -32,7 +32,7 @@
                     <div class="ubicacion-n">
                         <div class="drop-down">
                             <p>Supermercado Mayorista 10, Los Ángeles</p>
-                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                            <img src="{{ asset('/public/web/imagenes/i-flecha-abajo.svg') }}" alt="">
                         </div>                  
                         <div class="ocultar-acordeon">
                             <div class="grid-ocultar-acordeon">
@@ -63,7 +63,7 @@
                     <div class="ubicacion-n">
                         <div class="drop-down">
                             <p>Supermercado Mayorista 10, Los Ángeles</p>
-                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                            <img src="{{ asset('/public/web/imagenes/i-flecha-abajo.svg') }}" alt="">
                         </div>                  
                         <div class="ocultar-acordeon">
                             <div class="grid-ocultar-acordeon">
@@ -93,7 +93,7 @@
                     <div class="ubicacion-n">
                         <div class="drop-down">
                             <p>Supermercado Mayorista 10, Los Ángeles</p>
-                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                            <img src="{{ asset('/public/web/imagenes/i-flecha-abajo.svg') }}" alt="">
                         </div>                  
                         <div class="ocultar-acordeon">
                             <div class="grid-ocultar-acordeon">
@@ -123,7 +123,7 @@
                     <div class="ubicacion-n">
                         <div class="drop-down">
                             <p>Supermercado Mayorista 10, Los Ángeles</p>
-                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                            <img src="{{ asset('/public/web/imagenes/i-flecha-abajo.svg') }}" alt="">
                         </div>                  
                         <div class="ocultar-acordeon">
                             <div class="grid-ocultar-acordeon">
@@ -154,7 +154,7 @@
                     <div class="ubicacion-n">
                         <div class="drop-down">
                             <p>Supermercado Mayorista 10, Los Ángeles</p>
-                            <img src="{{ asset('/web/imagenes/i-flecha-abajo.svg') }}" alt="">
+                            <img src="{{ asset('/public/web/imagenes/i-flecha-abajo.svg') }}" alt="">
                         </div>                  
                         <div class="ocultar-acordeon">
                             <div class="grid-ocultar-acordeon">

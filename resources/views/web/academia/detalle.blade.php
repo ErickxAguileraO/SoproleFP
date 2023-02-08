@@ -6,8 +6,8 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-academia-escritorio.svg') }}" alt="">
-        <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-academia-movil.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-academia-escritorio.svg') }}" alt="">
+        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-academia-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">

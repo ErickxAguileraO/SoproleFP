@@ -6,8 +6,8 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-conocenos-escritorio.svg') }}" alt="">
-        <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-conocenos-movil.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-conocenos-escritorio.svg') }}" alt="">
+        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-conocenos-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
        <section class="proposito">
@@ -21,17 +21,17 @@
                 <ul class="slides slider-proposito">
                     <!-- 1 -->
                     <li style=" z-index:0; opacity: 1;" class="li-slider">
-                        <img src="{{ asset('/web/imagenes/img-proposito.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/img-proposito.svg') }}" alt="">
                     </li>
         
                     <!-- 2 -->
                     <li style=" z-index:0; opacity: 1;" class="li-slider">
-                        <img src="{{ asset('/web/imagenes/img-proposito.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/img-proposito.svg') }}" alt="">
                     </li>
         
                     <!-- 3 -->
                     <li style=" z-index:0; opacity: 1;" class="li-slider">
-                        <img src="{{ asset('/web/imagenes/img-proposito.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/img-proposito.svg') }}" alt="">
                     </li>
                 </ul>
             </div>
@@ -49,12 +49,12 @@
             <br>
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="alianzas-img">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
                 
             </div>
         </section>

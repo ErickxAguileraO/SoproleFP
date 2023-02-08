@@ -6,8 +6,8 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
-        <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-tendencia-movil.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
+        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
@@ -23,12 +23,12 @@
             
             <h2>Galería de imágenes</h2>
             <div class="galeria-img">
-                <a href="{{ asset('/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-1.svg') }}" alt=""></a>
-                <a href="{{ asset('/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-2.svg') }}" alt=""></a>
-                <a href="{{ asset('/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-1.svg') }}" alt=""></a>
-                <a href="{{ asset('/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-2.svg') }}" alt=""></a>
-                <a href="{{ asset('/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-1.svg') }}" alt=""></a>
-                <a href="{{ asset('/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/web/imagenes/galeria-2.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-1.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-2.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-1.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-2.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-1.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-1.svg') }}" alt=""></a>
+                <a href="{{ asset('/public/web/imagenes/galeria-2.svg') }}" class="fresco"><img src="{{ asset('/public/web/imagenes/galeria-2.svg') }}" alt=""></a>
             </div>
             <div class="flex-ver-mas-galeria">
                 <a href="" class="ver-mas-galeria">Ver más fotos</a>

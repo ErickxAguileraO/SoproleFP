@@ -6,8 +6,8 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
-        <img class="ocultar-escritorio" src="{{ asset('/web/imagenes/portada-productos-movil.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-productos-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
         <section class="filtros">
@@ -39,29 +39,29 @@
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
@@ -78,22 +78,22 @@
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
@@ -110,29 +110,29 @@
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
@@ -149,8 +149,8 @@
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
@@ -167,22 +167,22 @@
                 </div>
             </div>
             <div class="cuadros-info cuadros-row-4">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                <a href="/producto-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>

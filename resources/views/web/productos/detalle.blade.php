@@ -9,17 +9,17 @@
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
                 <div class="img-principal">
-                    <img class="main_img" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+                    <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
                 </div>        
                 <div class="carruselImagenes thumbnail_container">
-                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
                 
                 </div>
             </div>
@@ -32,11 +32,11 @@
                     </div>
                 </div>
                 <div class="estrellas">
-                    <img src="{{ asset('/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/web/imagenes/i-estrella.svg') }}" alt="">
-                    <img src="{{ asset('/web/imagenes/i-estrella.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-estrella.svg') }}" alt="">
                 </div>
                 <br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -58,7 +58,7 @@
 
                     <a href="" class="btn-ficha">
                         <p>Ver ficha técnica</p>
-                        <img src="{{ asset('/web/imagenes/i-ficha.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/i-ficha.svg') }}" alt="">
                     </a>
                 </div>
             </div>
@@ -67,21 +67,21 @@
             <h4>Recetas que puedes preparar con este producto</h4>
             <div class="carruselRecetas">
                 <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
                 <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
                 <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
@@ -89,14 +89,14 @@
                 
 
                 <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
                 <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>

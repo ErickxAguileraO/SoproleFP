@@ -9,17 +9,17 @@
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
                 <div class="img-principal">
-                    <img class="main_img" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+                    <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
                 </div>        
                 <div class="carruselImagenes thumbnail_container">
-                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
                 
                 </div>
             </div>
@@ -58,37 +58,37 @@
        <section class="slider-recetas">
             <h4>Recetas que puedes preparar con este producto</h4>
             <div class="carruselRecetas">
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
                 
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
