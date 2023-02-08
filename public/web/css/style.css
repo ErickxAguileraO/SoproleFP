@@ -82,6 +82,8 @@ textarea{
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
+    padding: 0px 10px;
+    margin-top: 20px;
 }
 .bg-red{background: #D0392A;}
 .bg-blue{background: #13355D;}
