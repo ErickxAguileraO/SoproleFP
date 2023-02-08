@@ -46,7 +46,7 @@
                         <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
                         <p>Ir a la tienda</p>
                     </a>
-                    <a href="" class="cliente">
+                    <a href="/hazte-cliente" class="cliente">
                         <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
                         <p>Hazte cliente</p>
                     </a>
