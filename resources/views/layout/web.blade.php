@@ -55,7 +55,7 @@
 
             <div class="logo-txt">
                 <a href="/"><img src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
-                <div><h2>Apasionados por tu negocio gastronómico</h2></div>
+                <div><h2>Apasionados por el desarrollo de tu negocio gastronómico</h2></div>
             </div>
         </div>
         {{-- Menu movil --}}
