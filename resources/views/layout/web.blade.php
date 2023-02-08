@@ -12,15 +12,15 @@
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
-    <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/niceselect/nice-select.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/slick/slick.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/flexslider/flexslider.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/js/fresco/fresco.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/fresco/fresco.css') }}">
 
     @stack('extra-css')
 </head>
@@ -31,8 +31,8 @@
         <div class="flex-menu">
             <div class="menu">
                 <div class="rrss-header">
-                    <a href=""><img src="{{ asset('/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                    <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                    <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                    <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                 </div>
                 <div class="menu-op">
                     <a href="/conocenos">Conócenos</a>
@@ -43,26 +43,26 @@
                 </div>
                 <div class="botones-header">
                     <a href="" class="tienda">
-                        <img src="{{ asset('/web/imagenes/i-carro.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
                         <p>Ir a la tienda</p>
                     </a>
                     <a href="" class="cliente">
-                        <img src="{{ asset('/web/imagenes/i-user.svg') }}" alt="">
+                        <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
                         <p>Hazte cliente</p>
                     </a>
                 </div>
             </div>
 
             <div class="logo-txt">
-                <a href="/"><img src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
+                <a href="/"><img src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
                 <div><h2>Apasionados por tu negocio gastronómico</h2></div>
             </div>
         </div>
         {{-- Menu movil --}}
         <div class="flex-bar-menu-movil">
             <div class="bar-menu-movil">
-                <a href="/"><img width="130px" src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
-                <div><img src="{{ asset('/web/imagenes/i-bar.svg') }}" alt=""></div>
+                <a href="/"><img width="130px" src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
+                <div><img src="{{ asset('/public/web/imagenes/i-bar.svg') }}" alt=""></div>
             </div>
         </div>
        
@@ -76,13 +76,13 @@
         
         <div class="contenido-footer">
             <div class="logo-footer">
-                <a href="/"><img src="{{ asset('/web/imagenes/logo.svg') }}" alt=""></a>
+                <a href="/"><img src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
                 <div>
-                    <img src="{{ asset('/web/imagenes/i-correo.svg') }}" alt="">   
+                    <img src="{{ asset('/public/web/imagenes/i-correo.svg') }}" alt="">   
                     <a href="">soproleFP@soprole.cl</a>
                 </div>
                 <div>
-                    <img src="{{ asset('/web/imagenes/i-telefono.svg') }}" alt="">
+                    <img src="{{ asset('/public/web/imagenes/i-telefono.svg') }}" alt="">
                     <h3>600 600 6600</h3>
                 </div>
             </div>
@@ -108,8 +108,8 @@
                 <div>
                     <p>Encuéntranos en redes sociales</p>
                     <div class="logos-rrrss-footer">
-                        <a href=""><img src="{{ asset('/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                        <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                        <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                        <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                     </div>
                 </div>
                 

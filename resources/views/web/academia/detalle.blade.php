@@ -12,7 +12,8 @@
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
             <div class="video-academia">
-                <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
+                <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            
+            </div>
             <h4>Esta es la bajada</h4>
             <span>02/01/2023</span>
             <div>
