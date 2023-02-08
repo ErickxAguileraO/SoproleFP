@@ -132,7 +132,8 @@
     <script src="{{ asset('/public/web/js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/fresco/fresco.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
-    
+    <script src="{{ asset('/public/web/js/product-viewer.js') }}"></script>
+
     <script src="{{ asset('/public/web/js/script.js') }}"></script>
     <script>
         $('select').niceSelect();
