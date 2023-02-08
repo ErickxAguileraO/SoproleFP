@@ -4,6 +4,11 @@
 
 @section('content')
     @push('extra-css')
+    <style>
+        .seccion-home {
+            padding-top: 0px;
+        }
+    </style>
     @endpush
     <div class="contenido">
         <div class="flexslider-seccion">
