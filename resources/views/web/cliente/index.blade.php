@@ -1,6 +1,6 @@
 @extends('layout.web')
 
-@section('title', 'Políticas de privacidad')
+@section('title', 'Hazte cliente')
 
 @section('content')
     @push('extra-css')
@@ -234,7 +234,7 @@
                 <br>
                 <br>
                 <h6>Dirección</h6>
-                <div class="form-row-4">
+                <div class="form-row-3">
                     <div class="form-input-n">
                         <label for="">Calle del negocio</label>
                         <input type="text">

@@ -96,7 +96,7 @@
             </div>
             <div class="linea-columna"></div>
             <div class="menu-footer-2">
-                <a href="">Contáctenos</a>
+                <a href="/contacto">Contáctenos</a>
                 <a href="/academia">Academia</a>
                 <a href="/productos">Productos</a>
                 <a href="/nuestras-recetas">Recetas</a>
