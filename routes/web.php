@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Management\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,5 +79,14 @@ Route::get('/hazte-cliente', function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'administracion', 'as' => 'administracion.'], function () {
         Route::view('dashboard', 'management.home.index')->name('index');
+
+        Route::controller(UserController::class)->prefix('usuarios')->group(function () {
+            Route::get('', 'index')->name('usuarios.index');
+            Route::post('', 'store')->name('usuarios.store');
+            Route::get('listado', 'getUsers')->name('usuarios.get.users');
+            Route::get('{usuario}/perfil', 'edit')->name('usuarios.edit');
+            Route::post('{id}', 'update')->name('usuarios.update');
+            Route::get('nuevo-usuario', 'create')->name('usuarios.create');
+        });
     });
 });

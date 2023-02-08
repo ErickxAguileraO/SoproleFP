@@ -12,16 +12,16 @@
                 <ol class="list-group list-group-light list-group-numbered">
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
-                            <div class="fw-bold">Productos</div>
-                            <span>Creación de productos para la web</span><br>
+                            <div class="fw-bold">Ejemplo</div>
+                            <span>Ejemplo</span><br>
                             <a href="#"><button type="button" class="btn btn-outline-danger btn-rounded my-1"
                                     data-mdb-ripple-color="dark">Crear</button></a>
                         </div>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
-                            <div class="fw-bold">Marcas</div>
-                            <span>Creación de marcas para la web</span><br>
+                            <div class="fw-bold">Ejemplo</div>
+                            <span>Ejemplo</span><br>
                             <a href="#"><button type="button" class="btn btn-outline-danger btn-rounded my-1"
                                     data-mdb-ripple-color="dark">Crear</button></a>
                         </div>
