@@ -111,6 +111,7 @@
                         <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
                         <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                     </div>
+                    <a href="https://www.soprole.cl/" class="btn-ir-soprole">Ir a soprole.cl</a>
                 </div>
                 
             </div>

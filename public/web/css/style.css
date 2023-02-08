@@ -69,6 +69,20 @@ textarea{
     color: white;
     border-radius: 30px;
 }
+.btn-ir-soprole{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    background: #D0392A;
+    border-radius: 28px;
+    /* Tipografia */
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+}
 .bg-red{background: #D0392A;}
 .bg-blue{background: #13355D;}
 .bg-white{background: #FFFFFF;}
