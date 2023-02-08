@@ -128,12 +128,12 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="{{ asset('web/js/niceselect/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('web/js/slick/slick.min.js') }}"></script>
-    <script src="{{ asset('web/js/fresco/fresco.min.js') }}"></script>
-    <script src="{{ asset('web/js/flexslider/jquery.flexslider.js') }}"></script>
+    <script src="{{ asset('/public/web/js/niceselect/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/slick/slick.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/fresco/fresco.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
     
-    <script src="{{ asset('web/js/script.js') }}"></script>
+    <script src="{{ asset('/public/web/js/script.js') }}"></script>
     <script>
         $('select').niceSelect();
     </script>
