@@ -1,0 +1,861 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video,dl,dt,dd {
+	font-size: 100%;
+	font-style: normal;
+	/* vertical-align: baseline; */
+	margin: 0;
+	padding: 0;
+	border: 0;
+
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: bebasRegular;
+    src: url('/public/web/fonts/BebasNeueRegular.otf');
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+			font-family: 'Roboto Condensed', sans-serif;
+           
+}
+
+h1{
+	font-size: 2.3rem;
+	font-weight: bold;
+	color: #1C2126;
+}
+a:hover{text-decoration: underline;}
+a:focus{outline:0px;}
+
+input::-webkit-input-placeholder {
+    /* Google Chrome y Safari */
+    color: #707070;
+	opacity:1;
+}
+input:-moz-placeholder {
+    /* Firefox anterior a 19 */
+    color: #707070;
+	opacity:1;
+}
+input::-moz-placeholder {
+    /* Firefox 19 y superior */
+    color: #707070;
+	opacity:1;
+}
+input:-ms-input-placeholder {
+    /* Internet Explorer 10 y superior */
+    color: #707070;
+	opacity:1;
+}
+
+
+.errors-list{
+    list-style-type: none; 
+    
+}
+.errors-list li{
+    text-align: left;
+    color: rgba(255, 255, 255, 0.776);
+}
+
+#spinner-div {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 99999;
+}
+.spinner-border{
+    top: 45%;
+    position: absolute;
+}
+
+.text-small{
+    font-size: 13px;
+}
+
+/* LOGIN */
+
+#login {
+  max-width: 400px;
+  width: 90%;
+  margin: 0 auto 10%;
+}
+#login .form-group { margin-bottom: 20px;}
+
+.input-style{
+    border-radius: 100px;
+    padding: 12px;
+}
+.input-group-addon .bi {
+    font-size: 25px;
+}
+.btnLogin{
+	border-radius: 100px;
+	background-color: #B22F2F;
+	border-color: #8d1010;
+	width: 150px;
+    color: #fff;
+    padding: 10px;
+}
+.btn-crear-libro{
+	border-radius: 100px;
+	background-color: #B22F2F;
+	border-color: #8d1010;
+	width: 150px;
+    color: #fff;
+    padding: 10px;
+}
+
+input[readonly]{
+	background-color:#f9f9f9;
+}
+.logo{
+    width: 190px;
+    margin: 30px auto;
+    display: block;
+}
+
+.logo-mail{
+    width: 400px;
+    margin: 30px auto;
+    display: block;
+}
+.hidden{ 
+	display: none; 
+}
+.dropdown-dashboard{
+	margin-right: 10px;
+}
+
+.dropdown-menu-admin{
+	margin-left: -30px !important;
+}
+
+.dropdown-menu-admin li a{
+	cursor: pointer;
+}
+.alertify-notifier,.alertify { 
+    z-index:999999 !important;
+    text-align: center;
+    font-size: 12px;
+}
+.wp-dashboard{
+	margin-top: 160px;
+}
+.float-right{
+	float: right;
+}
+.loading-buttons{
+	position: relative;
+    width: 150px;
+	margin: auto;
+}
+
+
+
+/* DASHBOARD */
+
+.navbar-row{
+	margin-bottom: 140px;
+}
+
+.login-admin{
+	width: 100px;
+	margin-left: 20px;
+	display: block;
+}
+.navbar {
+	background-color: #FFF;
+}
+#sidebarMenu {
+	width: 100%;
+}
+
+.accordion-body{
+	/* padding: 0 !important; */
+}
+
+.pdtb { padding: 100px 0 10px;}
+
+.height-58{
+    height: 58px !important;
+}
+
+.height-50 span i{
+    font-size: 20px;
+    line-height: 43px;
+}
+
+.input-group span .bi{
+    font-size: 20px;
+}
+
+input[readonly] {
+    cursor: text;
+    background-color: #fff;
+}
+
+.table th {
+    font-weight: 700 !important;
+}
+
+.btn-action{
+    width: 50px;
+    padding: 10px !important;
+}
+
+.form-group label{
+    display: block;
+}
+
+.wp-layout-multiple{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.wp-two-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+/* CROPPIE*/
+
+.croppie-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+}
+
+/* PROFILE */
+
+.miCuenta{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.miCuenta .enlace{
+    display: block;
+    width: max-content;
+    margin-bottom: 40px;
+}
+
+.grillaCuenta{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-top: 30px;
+}
+.grillaCuenta div{
+    border: 1px solid #D6D6D6;
+    text-align: center;
+    padding: 50px 0;
+    border-radius: 10px;
+    position: relative;
+}
+.grillaCuenta div a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.grillaCuenta div img{
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+}
+.grillaCuenta h3{
+    margin-bottom: 0;
+}
+
+.datoPerfil {
+    position: relative;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.datoPerfil label {
+    display: block !important;
+    margin-bottom: 10px;
+}
+form fieldset{
+	position: relative;
+}
+.datoPerfil fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0 0 7px 0;
+    position: relative;
+}
+
+.datoPerfil input[type="text"]:disabled, .datoPerfil input[type="date"]:disabled, .datoPerfil textarea:disabled {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 30px;
+    resize: none;
+    color: var(--colorNegro);
+    overflow: hidden;
+}
+
+.datoPerfil .enlacePerfil {
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    font-weight: 500;
+}
+
+.datoPerfil input{
+	max-width: 400px;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+    width: 100%;
+    line-height: 40px;
+    padding: 5px 20px;
+    border: 1px solid #D3D3D3;
+    font-size: 1rem;
+    /* border-radius: 100px; */
+}
+
+.actualizarPass fieldset .bi {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    cursor: pointer;
+}
+
+.list-rules-password{
+    text-align: left;
+}
+
+.list-rules-password li{
+    font-size: 13px;
+}
+
+.btn > .bi{
+    font-size: 16px;
+}
+
+.form-floating .bi{
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.wp-check{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Secciones */
+.formulario-admin-secciones{
+    margin-bottom: 50px;
+}
+.input-txt-seccion{
+    width: 96% !important;
+    outline: none;
+}
+.input-txt-seccion2{
+    width: 40% !important;
+    outline: none;
+}
+.text-tarea-seccion{
+    width: 97%;
+    height: 150px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    padding: 10px;
+}
+.tipo-seleccion{
+    width: 100% !important;
+    height: 58px !important;
+    margin-bottom: 15px;
+    border-radius: 5px !important;
+}
+.tipo-n{
+    display: none;
+    flex-direction: column;
+}
+/* Seccion imagenes mas texto */
+#dinamic{
+    margin-top: 10px;
+}
+#agregar{
+    float: right;
+}
+.drop-container {
+  position: relative;
+  display: flex;
+  width: 150px;
+  height: 150px;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px dashed rgb(140, 140, 140);
+  color: #444;
+  cursor: pointer;
+  margin: 10px;
+}
+.input-img-solo{
+    width: 96% !important;
+    color: #444;
+    padding: 5px !important;
+    background: #fff;
+    border-radius: 5px !important;
+    border: 1px solid rgb(192, 192, 192);
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.input-img-solo::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: auto;
+}
+
+.input-img-admin{
+  width: 86% !important;
+  color: #444;
+  padding: 5px !important;
+  background: #fff;
+  border-radius: 5px !important;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.input-img-admin::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #084cdf !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    width: auto;
+}
+
+.input-img-admin2{
+  width: 46% !important;
+  color: #444;
+  padding: 5px 20px !important;
+  background: #084cdf !important;
+  color: white;
+  border-radius: 5px !important;
+  border: 1px solid rgb(192, 192, 192);
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.input-img-admin2::file-selector-button {
+    display: none;
+}
+.img-file{
+    width: 50px;
+}
+.flex-btn-file-img{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.btn-file-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    /* border: 1px solid rgb(192, 192, 192); */
+    cursor: pointer;
+    margin: 10px;
+    color: white;
+    background-color: black;
+}
+.btn-eliminar-file{
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    width: 10%;
+    height: 72px;
+    background-color: red;
+    color: white;
+}
+.btn-eliminar-file2{
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    width: 10%;
+    height: 52px;
+    background-color: red;
+    color: white;
+}
+.btn-agregar-seccion{
+    background-color: rgb(9, 176, 40);
+    color: white;
+    padding: 5px 15px 5px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+
+
+/* WIZARD */
+
+.smallCenter {
+    max-width: 1000px;
+    width: 90%;
+    margin: 40px auto;
+    padding-top: 20px;
+}
+
+.progressStatus {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.progressStatus .circulo {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #e9e9e9;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 1000px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.tituloPasos {
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 35px;
+    font-weight: 500;
+}
+
+.tituloPasos b {
+    display: block;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.grillaPasoUno {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-column-gap: 50px;
+    margin: 50px 0;
+}
+
+.grillaPasoUno > div {
+    position: relative;
+}
+
+.messages_liveware_imagen {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.subirArchivo {
+    height: 300px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.contenedorDobleWizard {
+    display: grid;
+}
+
+.contenedorDobleWizard .region .selectores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.grillaPasoUno fieldset {
+    margin-top: 20px;
+}
+
+.botonesPasos {
+    padding-top: 30px;
+    /* border-top: 1px solid #ccc; */
+    display: flex;
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+
+.botonesPasos .btnPrimary {
+    width: 200px;
+    justify-content: center;
+}
+
+.layout-row{
+    height: 200px;
+}
+
+.wp-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content;
+    height: 100%;
+}
+
+.grillaSeleccionLayout .layout-item:hover {
+    cursor: pointer;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.layout-item{
+    height: 200px;
+    position: relative;
+    transition: all .1;
+    border: 1px solid #eee;
+}
+
+.layout-item-two-column{
+    display: grid;
+    grid-template-columns: 1fr 1fr max-content;
+}
+
+.wp-check-wizard, .check-wizard {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: #999;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.activeLayout {
+    border:3px solid #d07e8c;
+    /* #f9b9c4 */
+}
+
+.formPaso2 {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+input[type="file"]{
+    width: 100%;
+    line-height: 40px;
+    padding: 5px 20px;
+    border: 1px solid #D3D3D3;
+    font-size: 1rem;
+    border-radius: 100px;
+}
+
+.grillaDoble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    margin-top: 40px;
+}
+
+.grillaDoble h3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    margin: 30px 0 50px;
+}
+
+.contenedorInputFile {
+    position: relative;
+}
+
+.contenedorInputFile label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.inputStyle {
+    /* background: #f1f1f1 url(/web/imagenes/i-upload-input.svg) no-repeat center center; */
+    width: 100%;
+    height: 290px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+    margin-top: 20px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.formPaso2 .subirArchivo {
+    height: 290px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.list-group-light>.list-group-item{
+    cursor: pointer;
+}
+
+.tituloUbicacion{
+    display: flex;
+    grid-column-gap: 10px;
+    margin-bottom: 10px;
+}
+.tituloUbicacion h3{
+    margin-bottom: 0;
+}
+
+
+.inputStyle{
+    /* background: #f1f1f1 url(/web/imagenes/i-upload-input.svg) no-repeat center center; */
+    width: 320px;
+    height: 290px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px dashed #ccc;
+    margin-top: 20px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.cargarFotos{
+    background-image: url(/public/web/imagenes/cargar-fotos.svg);
+}
+
+.grillaCargarImagenes{
+    /* margin-bottom: 40px; */
+}
+.galeriaImagenesUpload{
+    /* padding-top: 50px; */
+}
+.galeriaImagenesUpload h3{
+    text-align: center;
+}
+.grillaGaleria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: 40px;
+}
+.grillaGaleria img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.grillaGaleria .item{
+    position: relative;
+    height: 200px;
+}
+.grillaGaleria .item .overlay{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 9;
+    background-image: linear-gradient(#ffffff00, #0000007d);
+}
+.grillaGaleria .item .deleteItem img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    z-index: 99;
+    cursor: pointer;
+}
+.galeriaImagenesUpload h3,
+.contenedorVideo h3{
+    margin-bottom: 40px;
+}
+
+.paginaExito{
+    max-width: 700px;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 360px;
+}
+.paginaExito b{
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.paginaExito p{
+    margin: 40px 0;
+}
+.paginaExito a{
+    margin: 0 5px;
+}
+.paginaExito .botones{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0;
+}
+.paginaExito .imagen{
+    margin: 0 auto;
+    display: block;
+}
+
+.wp-datos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.ajs-header{
+    display: none;
+}
+.ck-editor__editable {
+    min-height: 500px;
+
+}
+.ck-editor{
+    min-width: 1000px;
+}
