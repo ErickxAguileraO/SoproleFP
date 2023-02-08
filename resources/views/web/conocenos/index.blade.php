@@ -58,6 +58,21 @@
                 
             </div>
         </section>
+
+        <section class="seccion-home">
+            <h2>Confian en nosotros</h2>
+            <br>
+            <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando nuevos usos lácteos, perfectos para cada propósito</p>
+            <div class="alianzas-img">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
+                
+            </div>
+        </section>
     </div>
     
     @push('extra-js')
