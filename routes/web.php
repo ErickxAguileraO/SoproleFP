@@ -74,3 +74,9 @@ Route::get('/hazte-cliente', function () {
 });
 
 
+//ADMINISTRACIÓN
+Route::group(['middleware' => ['auth']], function () {
+    Route::group(['prefix' => 'administracion', 'as' => 'administracion.'], function () {
+        Route::view('dashboard', 'management.home.index')->name('index');
+    });
+});
