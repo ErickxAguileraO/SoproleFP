@@ -8,7 +8,7 @@
     
     <div class="contenido">
        <section class="hazte-cliente">
-            <h2>Hazte cliente</h2>
+            <h2>Contáctanos</h2>
             <form action="">
                 <div class="form-row-2">
                     <div class="form-input-n">
