@@ -26,6 +26,10 @@
                         <option value="">value 2</option>
                     </select>
                 </div>
+
+                <div>
+                    <a href="" style="color: #1362B6;">Limpiar filtros</a>
+                </div>
             </div>
             <br>
         </section>
