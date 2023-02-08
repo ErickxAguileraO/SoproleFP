@@ -1072,7 +1072,7 @@ footer a{
     font-size: 0;
     border: 0;
     background-color: transparent;
-    background-image: url(/../web/imagenes/i-prev-carrusel.svg);
+    background-image: url(/public/web/imagenes/i-prev-carrusel.svg);
     background-size: cover;
     background-repeat: none;
     cursor: pointer;
@@ -1097,7 +1097,7 @@ footer a{
     font-size: 0;
     border: 0;
     background-color: transparent;
-    background-image: url(/../web/imagenes/i-next-carrusel.svg);
+    background-image: url(/public/web/imagenes/i-next-carrusel.svg);
     background-repeat: none;
     cursor: pointer;
     opacity: .5;
