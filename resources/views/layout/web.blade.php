@@ -16,7 +16,7 @@
     <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -157,7 +157,7 @@
     <script src="{{ asset('/public/web/js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/fresco/fresco.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
-    <script src="{{ asset('/web/js/product-viewer.js') }}"></script>
+    <script src="{{ asset('/public/web/js/product-viewer.js') }}"></script>
 
     <script src="{{ asset('/public/web/js/script.js') }}"></script>
     <script>
