@@ -81,13 +81,14 @@
                                             cuenta</a></li>
                                     <li><a class="dropdown-item" id="logoutLink"><i class="bi bi-box-arrow-left"></i>
                                             Cerrar sesión</a></li>
-                                    <form action="{{route('logout')}}" method="POST" id="logoutForm" class="oculto">
+                                    <form action="{{ route('logout') }}" method="POST" id="logoutForm" class="oculto">
                                         @csrf</form>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-3">
                         <nav id="sidebarMenu"
@@ -105,10 +106,7 @@
                                 </div>
                             </div>
                         </nav>
-                    </div>
 
-                <div class="row">
-                    <div class="col-3">
                         <nav id="sidebarMenu"
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
@@ -116,7 +114,8 @@
                                     <p class="text-center bg-info text-white mb-0 rounded-top">Configuración</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.usuarios.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.usuarios.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
                                         <i class="bi bi-list-columns-reverse"></i>
                                         &nbsp;Usuarios
@@ -126,7 +125,7 @@
                         </nav>
                     </div>
 
-                    
+
                     <div class="col-9">
                         @yield('content')
                     </div>
