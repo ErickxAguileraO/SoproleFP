@@ -26,7 +26,11 @@
                         <option value="">value 2</option>
                     </select>
                 </div>
+                <div>
+                    <a href="" style="color: #1362B6;">Limpiar filtros</a>
+                </div>
             </div>
+            <br>
             <br>
             <h2>Filtrado por: <p>Leche</p> </h2>
         </section>

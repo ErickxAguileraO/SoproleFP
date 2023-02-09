@@ -13,13 +13,6 @@
         <section class="filtros">
             <div class="select-filtros">
                 <div>
-                    <label for="">Segmento</label>
-                    <select name="" id="">
-                        <option value="">Todos</option>
-                        <option value="">value 1</option>
-                    </select>
-                </div>
-                <div>
                     <label for="">Categoría</label>
                     <select name="" id="">
                         <option value="">value 1</option>
@@ -38,7 +31,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Pastelería</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo pastelería</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -77,7 +70,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Italiana</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo comida italiana</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -109,7 +102,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Rápida</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo comida rapida</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -148,7 +141,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Cafetería</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo cafetería</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -166,7 +159,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Servicios de alimentación</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo servicios de alimentación</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
