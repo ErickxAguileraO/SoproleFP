@@ -175,24 +175,106 @@ textarea{
 .dropdown {
     display: flex !important;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     display: inline-block;
     height: 100%;
 }
 
 .dropdown-content {
     display: none;
-    width: 300px;
-    height: 100px;
-    background: red;
+    justify-content: center;
+    width: 100%;
     position: absolute;
     top: 48px;
+    left: 0px;
     border-radius: 10px;
 }
 
+.linea-op-drop{
+    width: 1px;
+    height: 100%;
+    background: #D9D9D9;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: flex;}
 .dropdown-content:hover {display: block;}
+
+.contenido-drop{
+    display: grid; 
+    grid-template-columns: 350px 1px 1fr;
+    max-width: 80%;
+    width: 950px;
+    height: auto;
+    padding: 35px;
+    background: #FFFFFF;
+    box-shadow: 0px 314px 126px rgba(0, 0, 0, 0.01), 0px 177px 106px rgba(0, 0, 0, 0.05), 0px 79px 79px rgba(0, 0, 0, 0.09), 0px 20px 43px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    gap: 24px;
+    position: relative;
+
+}
+.titulo-drop{
+    display: grid;
+    grid-template-columns: 1fr 98px;
+    align-items: center;
+}
+.titulo-drop h5{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #13355D;
+}
+.titulo-drop .boton-ver-op{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94px;
+    height: 40px;
+    border-radius: 28px;
+    z-index: 1;
+}
+.opcion-drop-n{
+    display: grid;
+    grid-template-columns: 40px 1fr 20px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.opcion-drop-n:hover .sub-content-drop{
+    display: flex;
+}
+.sub-content-drop:hover{
+    display: flex;
+}
+.sub-content-drop{
+    display: none;
+    flex-direction: column;
+    width: 570px;
+    height: 100%;
+    position: absolute; 
+    left: 375px;
+    top: 35px;
+    padding-left: 60px;
+}
+.sub-content-drop .link-op{
+    margin-top: 54px;
+}
+.color-panaderia{
+    color: #3D757D !important;
+}
+.color-italiana{
+    color: #BE5B5E !important;
+}
+.color-rapida{
+    color: #E5841B !important;
+}
+.color-cafeteria{
+    color: #883F7C !important;
+}
+.color-servicios{
+    color: #5187BF !important;
+}
 /* Slogan */
 .portada{
     width: 100%;
@@ -1177,10 +1259,13 @@ footer a{
 @media (max-width: 1200px) {  
     .flex-menu .menu {
         display: grid;
-        grid-template-columns: 0px 1fr 340px;
+        grid-template-columns: 170px 1fr 340px;
     }
     .flex-menu .menu .rrss-header a{
-        display: none;
+        /* display: none; */
+    }
+    .sub-content-drop {
+        width: 54%;
     }
     /* Conocenos */
     .proposito {
@@ -1219,6 +1304,23 @@ footer a{
 @media (max-width: 1100px) { 
     .rrss-footer{
         display: none;
+    }
+    /* Menu */
+    .flex-menu .menu {
+        display: grid;
+        grid-template-columns: 170px 1fr 150px;
+    }
+    .flex-menu .menu .menu-op {
+        gap: 15px;
+    }
+    .flex-menu .menu .botones-header p{
+        display: none;
+    }
+    .menu {
+        width: 95%;
+    }
+    .sub-content-drop {
+        width: 50%;
     }
     /* Conocenos */
     .mostrar-1920{
@@ -1271,16 +1373,10 @@ footer a{
 
 @media (max-width: 992px) {  
     /* Menu */
-    .flex-menu .menu {
-        display: grid;
-        grid-template-columns: 0px 1fr 150px;
+    .sub-content-drop {
+        width: 45%;
     }
-    .flex-menu .menu .menu-op {
-        gap: 15px;
-    }
-    .flex-menu .menu .botones-header p{
-        display: none;
-    }
+    
     /* Cuadros row 4 */
     .cuadros-row-4{
         display: grid;

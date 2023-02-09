@@ -16,7 +16,7 @@
     <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -31,39 +31,132 @@
         <div class="flex-menu">
             <div class="menu">
                 <div class="rrss-header">
-                    <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                    <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
-                    <a href="https://www.soprole.cl/" target="_blank"><img src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
+                    <a href=""><img src="{{ asset('/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                    <a href=""><img src="{{ asset('/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                    <a href="https://www.soprole.cl/" target="_blank"><img src="{{ asset('/web/imagenes/i-soprole.svg') }}" alt=""></a>
 
                 </div>
                 <div class="menu-op">
                     <div class="dropdown">
                         <a href="/conocenos" class="dropbtn">Conócenos</a> 
-                        <div class="dropdown-content">
-                        </div>
                     </div>
                     
                     <div class="dropdown">
                         <a href="/academia" class="dropbtn">Academia</a> 
-                        <div class="dropdown-content">
-                        </div>
                     </div>
 
                     <div class="dropdown">
-                        <a href="/productos" class="dropbtn">Productos</a> 
+                        <a class="dropbtn">Productos</a> 
                         <div class="dropdown-content">
+                            <div class="contenido-drop">
+                               <div>
+                                    <div class="titulo-drop">
+                                        <h5>Segmentos</h5>
+                                        <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
+                                    </div>
+                                    <div class="opcion-drop-n">
+                                        <img style="width: 36px;" src="{{ asset('/web/imagenes/i-pasteleria.svg') }}" alt="">
+                                        <p class="color-panaderia">Pastelería</p>
+                                        <img src="{{ asset('/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                        <div class="sub-content-drop">
+                                            <div class="titulo-drop">
+                                                <h5>Productos</h5>
+                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                            </div>
+                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 3</a>
+                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 4</a>
+                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 5</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="opcion-drop-n">
+                                        <img style="width: 36px;" src="{{ asset('/web/imagenes/i-citaliana.svg') }}" alt="">
+                                        <p class="color-italiana">Comida Italiana</p>
+                                        <img src="{{ asset('/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                        <div class="sub-content-drop">
+                                            <div class="titulo-drop">
+                                                <h5>Productos</h5>
+                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                            </div>
+                                            <a href="/producto-detalle" class="link-op color-italiana">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-italiana">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-italiana">Producto 3</a>
+                                            <a href="/producto-detalle" class="link-op color-italiana">Producto 4</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="opcion-drop-n">
+                                        <img style="width: 36px;" src="{{ asset('/web/imagenes/i-crapida.svg') }}" alt="">
+                                        <p class="color-rapida">Comida Rápida</p>
+                                        <img src="{{ asset('/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                        <div class="sub-content-drop">
+                                            <div class="titulo-drop">
+                                                <h5>Productos</h5>
+                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                            </div>
+                                            <a href="/producto-detalle" class="link-op color-rapida">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-rapida">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-rapida">Producto 3</a>
+                                            <a href="/producto-detalle" class="link-op color-rapida">Producto 4</a>
+                                            <a href="/producto-detalle" class="link-op color-rapida">Producto 5</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="opcion-drop-n">
+                                        <img style="width: 36px;" src="{{ asset('/web/imagenes/i-cafeteria.svg') }}" alt="">
+                                        <p class="color-cafeteria">Cafetería</p>
+                                        <img src="{{ asset('/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                        <div class="sub-content-drop">
+                                            <div class="titulo-drop">
+                                                <h5>Productos</h5>
+                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                            </div>
+                                            <a href="/producto-detalle" class="link-op color-cafeteria">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-cafeteria">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-cafeteria">Producto 3</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="opcion-drop-n">
+                                        <img style="width: 36px;" src="{{ asset('/web/imagenes/i-salimentacion.svg') }}" alt="">
+                                        <p class="color-servicios">Servicios de alimentación</p>
+                                        <img src="{{ asset('/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                        <div class="sub-content-drop">
+                                            <div class="titulo-drop">
+                                                <h5>Productos</h5>
+                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                            </div>
+                                            <a href="/producto-detalle" class="link-op color-servicios">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-servicios">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-servicios">Producto 3</a>
+                                            <a href="/producto-detalle" class="link-op color-servicios">Producto 4</a>
+                                        </div>
+                                    </div>
+                               </div>
+                               <div class="linea-op-drop"></div>
+                               <div></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <a href="/nuestras-recetas" class="dropbtn">Recetas</a> 
-                        <div class="dropdown-content">
-                        </div>
                     </div>
 
                     <div class="dropdown">
                         <a href="/noticias-tendencias" class="dropbtn">Noticias y tendencias</a> 
                         <div class="dropdown-content">
+                            <div class="contenido-drop">
+                                <ul>
+                                    <li>opcion 1 aaaaa ></li>
+                                    <li>opcion 1 aaaaa ></li>
+                                    <li>opcion 1 aaaaa ></li>
+                                    <li>opcion 1 aaaaa ></li>
+                                </ul>
+                                <div style="width: 1px; heigth: 100%; background: red;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
