@@ -64,6 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 alertify.success(`${response.message}. Revise su email.`);
+
+                setTimeout(function () {
+                    document.location.reload(true)
+                }, 1000);
+
+
             })
             .catch(function (error) {
                 alertify.error(error);
