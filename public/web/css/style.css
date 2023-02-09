@@ -175,11 +175,13 @@ textarea{
 .dropdown {
     display: flex !important;
     align-items: center;
-    /* position: relative; */
     display: inline-block;
     height: 100%;
 }
+.dropdown-noticias{
+    position: relative !important;
 
+}
 .dropdown-content {
     display: none;
     justify-content: center;
@@ -189,7 +191,9 @@ textarea{
     left: 0px;
     border-radius: 10px;
 }
-
+.dropdown-content-noticias{
+    width: 420px !important;
+}
 .linea-op-drop{
     width: 1px;
     height: 100%;
@@ -213,10 +217,14 @@ textarea{
     position: relative;
 
 }
+.contenido-drop-noticias{
+    max-width: 90% !important;
+}
 .titulo-drop{
     display: grid;
     grid-template-columns: 1fr 98px;
     align-items: center;
+    padding-left: 10px;
 }
 .titulo-drop h5{
     font-weight: 600;
@@ -238,9 +246,29 @@ textarea{
     grid-template-columns: 40px 1fr 20px;
     align-items: center;
     gap: 12px;
-    margin-top: 50px;
+    margin-top: 12px;
     cursor: pointer;
+    padding: 24px 10px;
+    border-radius: 10px;
 }
+.btn-color-panaderia:hover{
+    background: #F2F9F9;
+}
+.btn-color-italiana:hover{
+    background: #FBF6F5;
+
+}
+.btn-color-rapida:hover{
+    background: #FEF8EC;
+}
+.btn-color-cafeteria:hover{
+    background: #FCF7FC;
+}
+.btn-color-servicios:hover{
+    background: #F4F7FB;
+}
+
+
 .opcion-drop-n:hover .sub-content-drop{
     display: flex;
 }
@@ -1321,6 +1349,13 @@ footer a{
     }
     .sub-content-drop {
         width: 50%;
+    }
+    .dropdown-content-noticias {
+        width: 420px !important;
+        left: 300px;
+    }
+    .dropdown-noticias{
+        position: static !important;
     }
     /* Conocenos */
     .mostrar-1920{
