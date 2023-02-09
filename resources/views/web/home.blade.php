@@ -145,6 +145,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
 
@@ -152,6 +153,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
 
@@ -159,6 +161,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
             </div>
@@ -175,6 +178,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
 
@@ -182,6 +186,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
 
@@ -189,6 +194,7 @@
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
+                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                     </div>
                 </a>
             </div>

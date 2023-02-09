@@ -8,7 +8,10 @@
     <div class="contenido">
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
-                <div id="product_viewer"></div>
+                <div id="product_viewer">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-360.svg') }}" alt="">
+                    
+                </div>
                 {{-- <div class="img-principal">
                     <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
                 </div>        
@@ -51,7 +54,7 @@
                     </div>
 
                     <a href="" class="btn-ficha">
-                        <p>Ver ficha técnica</p>
+                        <p>Ver ficha de producto</p>
                         <img src="{{ asset('/public/web/imagenes/i-ficha.svg') }}" alt="">
                     </a>
                 </div>
