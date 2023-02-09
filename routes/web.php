@@ -1,9 +1,10 @@
 <?php
 
-
+use App\Http\Controllers\Management\EditableController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +79,9 @@ Route::get('/hazte-cliente', function () {
 
 Route::get('/contacto', function () {
     return view('web.contacto.index');
-}); 
+});
+
+Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
 
 //ADMINISTRACIÓN
 Route::group(['middleware' => ['auth']], function () {
@@ -94,7 +97,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('nuevo-usuario', 'create')->name('usuarios.create');
         });
 
-        Route::controller(SliderController::class)->prefix('slider')->group(function(){
+        Route::controller(SliderController::class)->prefix('slider')->group(function () {
             Route::get('', 'index')->name('slider.index');
             Route::get('crear', 'crear')->name('slider.crear');
             Route::get('editar/{slider}', 'editar')->name('slider.editar');
@@ -102,6 +105,17 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{slider}', 'eliminar')->name('slider.eliminar');
             Route::post('store', 'store')->name('slider.store');
             Route::post('update', 'update')->name('slider.update');
+        });
+
+        Route::controller(EditableController::class)->prefix('editable')->group(function () {
+            Route::get('', 'index')->name('editable.index');
+            Route::get('crear', 'crear')->name('editable.crear');
+            Route::get('editar/{editable}', 'editar')->name('editable.editar');
+            Route::get('listar', 'listar')->name('editable.listar');
+            Route::get('eliminar/{editable}', 'eliminar')->name('editable.eliminar');
+            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('editable.eliminar.imagen');
+            Route::post('store', 'store')->name('editable.store');
+            Route::post('update', 'update')->name('editable.update');
         });
     });
 });

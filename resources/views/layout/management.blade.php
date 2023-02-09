@@ -100,8 +100,22 @@
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.slider.index')}}" class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-list-columns-reverse"></i>
+                                        <i class="bi bi-caret-right-fill"></i>
                                         &nbsp;Slider
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.editable.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        &nbsp;Editables
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right-fill"></i>
+                                        &nbsp;Alianzas
                                     </a>
                                 </div>
                             </div>
@@ -117,7 +131,7 @@
                                     <a href="{{ route('administracion.usuarios.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-list-columns-reverse"></i>
+                                        <i class="bi bi-caret-right-fill"></i>
                                         &nbsp;Usuarios
                                     </a>
                                 </div>
