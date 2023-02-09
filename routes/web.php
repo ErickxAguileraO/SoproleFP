@@ -1,7 +1,9 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Management\UserController;
+use App\Http\Controllers\Management\SliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +78,7 @@ Route::get('/hazte-cliente', function () {
 
 Route::get('/contacto', function () {
     return view('web.contacto.index');
-});
+}); 
 
 //ADMINISTRACIÓN
 Route::group(['middleware' => ['auth']], function () {
@@ -90,6 +92,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('{usuario}/perfil', 'edit')->name('usuarios.edit');
             Route::post('{id}', 'update')->name('usuarios.update');
             Route::get('nuevo-usuario', 'create')->name('usuarios.create');
+        });
+
+        Route::controller(SliderController::class)->prefix('slider')->group(function(){
+            Route::get('', 'index')->name('slider.index');
+            Route::get('crear', 'crear')->name('slider.crear');
+            Route::get('editar/{slider}', 'editar')->name('slider.editar');
+            Route::get('listar', 'listar')->name('slider.listar');
+            Route::get('eliminar/{slider}', 'eliminar')->name('slider.eliminar');
+            Route::post('store', 'store')->name('slider.store');
+            Route::post('update', 'update')->name('slider.update');
         });
     });
 });
