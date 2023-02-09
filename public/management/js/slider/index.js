@@ -61,6 +61,15 @@
                     displayExpr: 'name'
                 },
             },
+            ,
+            {
+                caption: 'Ver imagen',
+                alignment: 'center',
+                hidingPriority: 0,
+                cellTemplate(container, options) {
+                    return $('<a target="_blank" href="' + options.data.sli_imagen + '"><i class="fas fa-eye"></i></a>');
+                }
+            },
             {
                 caption: 'Acciones',
                 alignment: 'center',
