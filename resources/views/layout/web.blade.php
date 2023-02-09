@@ -33,6 +33,8 @@
                 <div class="rrss-header">
                     <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
                     <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                    <a href="https://www.soprole.cl/" target="_blank"><img src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
+
                 </div>
                 <div class="menu-op">
                     <div class="dropdown">
@@ -135,7 +137,6 @@
                         <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
                         <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                     </div>
-                    <a href="https://www.soprole.cl/" class="btn-ir-soprole" target="_blank">Ir a soprole.cl</a>
                 </div>
                 
             </div>

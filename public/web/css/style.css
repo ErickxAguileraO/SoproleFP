@@ -119,7 +119,7 @@ textarea{
 }
 .menu{
     display: grid;
-    grid-template-columns: 100px 1fr 400px;
+    grid-template-columns: 170px 1fr 400px;
     justify-content: center;
     width: 90%;
     height: 48px;
