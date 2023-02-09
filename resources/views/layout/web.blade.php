@@ -16,7 +16,7 @@
     <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -35,11 +35,35 @@
                     <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                 </div>
                 <div class="menu-op">
-                    <a href="/conocenos">Conócenos</a>
-                    <a href="/academia">Academia</a>
-                    <a href="/productos">Productos</a>
-                    <a href="/nuestras-recetas">Recetas</a>
-                    <a href="/noticias-tendencias">Noticias y tendencias</a>
+                    <div class="dropdown">
+                        <a href="/conocenos" class="dropbtn">Conócenos</a> 
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
+                    
+                    <div class="dropdown">
+                        <a href="/academia" class="dropbtn">Academia</a> 
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="/productos" class="dropbtn">Productos</a> 
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="/nuestras-recetas" class="dropbtn">Recetas</a> 
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a href="/noticias-tendencias" class="dropbtn">Noticias y tendencias</a> 
+                        <div class="dropdown-content">
+                        </div>
+                    </div>
                 </div>
                 <div class="botones-header">
                     <a href="" class="tienda">

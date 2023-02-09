@@ -171,6 +171,23 @@ textarea{
     border-bottom-right-radius: 20px;
 
 }
+/* Menu Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    width: 300px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    top: 35px;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
 /* Slogan */
 .portada{
     width: 100%;
