@@ -1,4 +1,4 @@
-@extends('layouts.management', ['header' => false])
+@extends('layout.management', ['header' => false])
 
 @section('title', 'Olvidaste contraseña')
 
@@ -8,7 +8,7 @@
     <div id="login">
         <figure>
             <a href="{{ route('login') }}">
-                <img src="{{ asset('/public/web/images/logo-soprole.png') }}" class="logo" />
+                <img src="{{ asset('/public/web/imagenes/logo-soprole.png') }}" class="logo" />
             </a>
         </figure>
 

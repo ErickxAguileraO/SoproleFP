@@ -94,6 +94,25 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top">Home</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-list-columns-reverse"></i>
+                                        &nbsp;Slider
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                <div class="row">
+                    <div class="col-3">
+                        <nav id="sidebarMenu"
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
                                     <p class="text-center bg-info text-white mb-0 rounded-top">Configuración</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
@@ -103,8 +122,11 @@
                                         &nbsp;Usuarios
                                     </a>
                                 </div>
+                            </div>
                         </nav>
                     </div>
+
+                    
                     <div class="col-9">
                         @yield('content')
                     </div>
