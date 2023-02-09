@@ -98,7 +98,7 @@
                                     <p class="text-center bg-info text-white mb-0 rounded-top">Home</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.slider.index')}}" class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
                                         <i class="bi bi-list-columns-reverse"></i>
                                         &nbsp;Slider
