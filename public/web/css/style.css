@@ -173,8 +173,11 @@ textarea{
 }
 /* Menu Dropdown */
 .dropdown {
+    display: flex !important;
+    align-items: center;
     position: relative;
     display: inline-block;
+    height: 100%;
 }
 
 .dropdown-content {
@@ -183,11 +186,13 @@ textarea{
     height: 100px;
     background: red;
     position: absolute;
-    top: 35px;
+    top: 48px;
     border-radius: 10px;
 }
 
+
 .dropdown:hover .dropdown-content {display: block;}
+.dropdown-content:hover {display: block;}
 /* Slogan */
 .portada{
     width: 100%;
