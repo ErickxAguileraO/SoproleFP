@@ -882,7 +882,7 @@ textarea{
 }
 .encabezado-detalle-info{
     display: grid;
-    grid-template-columns: 250px 80px;
+    grid-template-columns: 270px 100px;
     gap: 20px;
     align-items: center;
 }
