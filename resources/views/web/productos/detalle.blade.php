@@ -115,7 +115,7 @@
         <script>
             var productViewer = new ProductViewer ({
             element: document.getElementById('product_viewer'),
-            imagePath: '/web/imagenes/img360',
+            imagePath: '/public/web/imagenes/img360',
             filePrefix: 'img',
             fileExtension: '.jpg'
             });
