@@ -27,7 +27,7 @@
                 </div>
                 <br>
                 <div class="flex-boton">
-                    <button>Enviar mensajeS</button>
+                    <button>Enviar mensaje</button>
                 </div>
             </form>
         </section>
