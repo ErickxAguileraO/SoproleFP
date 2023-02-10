@@ -19,4 +19,11 @@ class Editable extends Model
         'edi_video',
         'edi_tipo',
     ];
+
+    public function imagenes()
+    {
+        return $this->hasMany(ImagenEditable::class,'ied_editable_id', 'edi_id');
+    }
+
+
 }

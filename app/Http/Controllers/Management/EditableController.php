@@ -31,8 +31,7 @@ class EditableController extends Controller
     public function editar(Editable $editable)
     {
         return view('management.editable.editar', [
-            "editable" => $editable,
-            "imagenes" => ImagenEditable::where('ied_editable_id', $editable->edi_id)->get()
+            "editable" => $editable
         ]);
     }
 

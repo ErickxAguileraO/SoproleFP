@@ -68,7 +68,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($imagenes as $imagen)
+                                    @foreach ($editable->imagenes as $imagen)
                                         <tr style="vertical-align: middle;">
                                             <td>
                                                 <img src="{{ $imagen->ied_imagen }}" alt=""

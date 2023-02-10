@@ -18,4 +18,10 @@ class Noticia extends Model
         'not_titulo2',
         'not_contenido',
     ];
+
+    public function imagenes()
+    {
+        return $this->hasMany(ImagenNoticia::class,'ino_noticia_id', 'not_id');
+    }
+
 }
