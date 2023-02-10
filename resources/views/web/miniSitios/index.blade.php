@@ -26,6 +26,7 @@
         </div>
         <div class="flex-tu-negocio">
             <h2>¿De qué es tu negocio?</h2>
+            <br>
             <div class="tu-negocio">
                 <button class="segmento-n bg-minisitio color-mini-sitio">Papas fritas</button>
                 <button class="segmento-n bg-minisitio color-mini-sitio">Hamburguesas</button>
