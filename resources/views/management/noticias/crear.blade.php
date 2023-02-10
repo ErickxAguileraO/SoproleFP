@@ -15,21 +15,23 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-
+                        <label for="titulo">Título</label>
                         <div class="form-floating my-3">
-                            <input type="text" name="titulo" class="form-control" id="titulo" placeholder="titulo"
-                                autocomplete="new-password" value="" required>
-                            <label for="titulo">Título</label>
+                            <input type="text" name="titulo" class="form-control" id="titulo"  value="" required>
                         </div>
+                        <label for="titulo2">Título 2</label>
                         <div class="form-floating my-3">
-                            <input type="text" name="titulo2" class="form-control" id="titulo2" placeholder="titulo2"
-                                autocomplete="new-password" value="" required>
-                            <label for="titulo2">Título 2</label>
+                            <input type="text" name="titulo2" class="form-control" id="titulo2" value="" required>
                         </div>
 
-
+                        <label for="fecha">Fecha</label>
                         <div class="form-floating my-3">
-                            <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50" placeholder="Contenido"></textarea>
+                            <input type="date" name="fecha" class="form-control" id="fecha" value="" required>
+                        </div>
+
+                        <label for="">Contenido</label>
+                        <div class="form-floating my-3">
+                            <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50"></textarea>
                         </div>
 
                         <div class="wp-documentos-right tipo-img-txt">
@@ -42,6 +44,16 @@
                             </div>
                             <div class="flex-btn-file-img">
                                 <div class="btn-file-img" id="agregar-imagenes">Agregar</div>
+                            </div>
+                        </div>
+                        <label for="estado">Estado</label>
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <select name="estado" id="estado" class="tipo-seleccion">
+                                    <option  value="1">Activo
+                                    </option>
+                                    <option  value="0">Inactivo</option>
+                                </select>
                             </div>
                         </div>
                         <button class="btn btn-success btn-agregar">Agregar</button>

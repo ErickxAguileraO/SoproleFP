@@ -16,6 +16,8 @@ class AlianzaService
 
             $insert = [
                 'ali_nombre' => $request->nombre,
+                'ali_estado' => $request->estado,
+                'ali_orden' => $request->orden,
                 'ali_editable_id' => $request->pagina_editable,
             ];
             
@@ -34,6 +36,7 @@ class AlianzaService
                 'message' => 'Registro creado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
@@ -49,6 +52,8 @@ class AlianzaService
 
             $alianza = Alianza::find($request->alianza_id);
             $alianza->ali_nombre = $request->nombre;
+            $alianza->ali_estado = $request->estado;
+            $alianza->ali_orden = $request->orden;
             $alianza->ali_editable_id = $request->pagina_editable;
 
             if($request->file('imagen')){
@@ -64,6 +69,7 @@ class AlianzaService
                 'message' => 'Registro actualizado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',

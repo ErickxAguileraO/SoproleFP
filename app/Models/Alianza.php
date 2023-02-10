@@ -16,6 +16,8 @@ class Alianza extends Model
     protected $fillable = [
         'ali_nombre',
         'ali_imagen',
+        'ali_estado',
+        'ali_orden',
         'ali_editable_id',
     ];
 

@@ -16,18 +16,21 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
+                        <label for="titulo">Título</label>
                         <div class="form-floating my-3">
                             <input type="text" name="titulo" class="form-control" id="titulo" placeholder="titulo"
                                 autocomplete="new-password" value="{{ $editable->edi_titulo }}" required>
-                            <label for="titulo">Título</label>
+                           
                         </div>
+                        <label for="contenido">Contenido</label>
                         <div class="form-floating my-3">
-                            <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50" placeholder="Contenido">{{ $editable->edi_contenido }}</textarea>
+                            <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50">{{ $editable->edi_contenido }}</textarea>
                         </div>
+                        <label for="video">Video</label>
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video" placeholder="video"
                                 autocomplete="new-password" value="{{ $editable->edi_video }}" required>
-                            <label for="video">Video</label>
+                           
                         </div>
                         <label for="tipo" class="col-md-4 col-form-label">Tipo</label>
                         <div class="row mb-3">
@@ -81,7 +84,7 @@
                                             </td>
                                             <td>
                                                 <a target="_blank" style="color:rgb(178, 16, 16)"
-                                                    codigo='{{$imagen->ied_id }}'>
+                                                    codigo='{{ $imagen->ied_id }}'>
                                                     <i class="fas fa-trash delete_imagen_cargada"></i>
                                                 </a>
                                             </td>
@@ -91,6 +94,19 @@
                             </table>
                             <div>
 
+                                <label for="estado">Estado</label>
+                                <div class="row mb-3">
+                                    <div class="form-floating my-3">
+
+                                        <select name="estado" id="estado" class="tipo-seleccion">
+                                            <option {{ $editable->edi_estado == 1 ? 'selected' : false }} value="1">
+                                                Activo
+                                            </option>
+                                            <option {{ $editable->edi_estado == 0 ? 'selected' : false }} value="0">
+                                                Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <button class="btn btn-success btn-agregar">Agregar</button>
                             </div>
                         </div>

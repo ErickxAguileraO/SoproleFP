@@ -27,6 +27,10 @@
                                 autocomplete="new-password" value="{{ $noticia->not_titulo2 }}" required>
                             <label for="titulo2">Título 2</label>
                         </div>
+                        <label for="fecha">Fecha</label>
+                        <div class="form-floating my-3">
+                            <input type="date" name="fecha" class="form-control" id="fecha" value="{{$noticia->not_fecha}}" required>
+                        </div>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50" placeholder="Contenido">{{ $noticia->not_contenido }}</textarea>
                         </div>
@@ -76,7 +80,16 @@
                                 </tbody>
                             </table>
                             <div>
-
+                                <label for="estado">Estado</label>
+                                <div class="row mb-3">
+                                    <div class="form-floating my-3">
+                                        <select name="estado" id="estado" class="tipo-seleccion">
+                                            <option {{ $noticia->not_estado == 1 ? 'selected' : false }} value="1">Activo
+                                            </option>
+                                            <option {{ $noticia->not_estado == 0 ? 'selected' : false }} value="0">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <button class="btn btn-success btn-agregar">Agregar</button>
                             </div>
                         </div>

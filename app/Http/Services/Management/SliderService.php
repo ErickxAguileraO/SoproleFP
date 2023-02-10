@@ -32,6 +32,7 @@ class SliderService
                 'message' => 'Registro creado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
@@ -63,6 +64,7 @@ class SliderService
                 'message' => 'Registro actualizado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',

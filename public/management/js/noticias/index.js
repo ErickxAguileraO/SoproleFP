@@ -43,6 +43,35 @@
                 allowEditing: false,
             },
             {
+                dataField: 'not_fecha',
+                caption: 'Fecha',
+                allowEditing: false,
+            },
+            {
+                dataField: 'not_estado',
+                caption: 'Estado',
+                allowEditing: false,
+                lookup: {
+                    dataSource: {
+                        store: {
+                            type: 'array',
+                            data: [{
+                                id: 0,
+                                name: 'Inactivo'
+                            },
+                            {
+                                id: 1,
+                                name: 'Activo'
+                            },
+                            ],
+                            key: "id"
+                        },
+                    },
+                    valueExpr: 'id',
+                    displayExpr: 'name'
+                },
+            },
+            {
                 caption: 'Acciones',
                 alignment: 'center',
                 hidingPriority: 0,
