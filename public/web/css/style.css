@@ -2041,4 +2041,21 @@ footer a{
         height: 400px;
         margin-bottom: 20px;
     }
+    /* Minisitios */
+    .segmento-n {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 70px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+    }
 }
