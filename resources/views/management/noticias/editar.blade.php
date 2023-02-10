@@ -54,7 +54,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($imagenes as $imagen)
+                                    @foreach ($noticia->imagenes as $imagen)
                                         <tr style="vertical-align: middle;">
                                             <td>
                                                 <img src="{{ $imagen->ino_imagen }}" alt=""

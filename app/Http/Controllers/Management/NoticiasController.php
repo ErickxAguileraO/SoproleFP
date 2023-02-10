@@ -38,8 +38,7 @@ class NoticiasController extends Controller
         return view('management.noticias.editar', [
             "noticia" => $noticia,
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen,
-            "imagenes" => ImagenNoticia::where('ino_noticia_id', $noticia->not_id)->get()
+            'alto' => $this->altoImagen
         ]);
     }
 

@@ -20,7 +20,7 @@ class EditableService
                 'edi_tipo' => $request->tipo,
             ]);
 
-            if(count($request->file('imagenes'))>0){
+            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach($request->file('imagenes') as $imagen){
                     ImagenEditable::create([
                         "ied_imagen" => FileService::upload($imagen,'imagenes/editables'),
@@ -54,9 +54,7 @@ class EditableService
             $editable->edi_video = $request->video;
             $editable->edi_tipo = $request->tipo;
 
-            $editable->save();
-
-            if(count($request->file('imagenes'))>0){
+            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach($request->file('imagenes') as $imagen){
                     ImagenEditable::create([
                         "ied_imagen" => FileService::upload($imagen,'imagenes/editables'),

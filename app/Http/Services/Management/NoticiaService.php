@@ -20,7 +20,7 @@ class NoticiaService
                 'not_contenido' => $request->contenido,
             ]);
 
-            if (count($request->file('imagenes')) > 0) {
+            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenNoticia::create([
                         "ino_imagen" => FileService::upload($imagen, 'imagenes/noticias'),
@@ -54,7 +54,7 @@ class NoticiaService
             $noticia->not_contenido = $request->video;
             $noticia->save();
 
-            if (count($request->file('imagenes')) > 0) {
+            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenNoticia::create([
                         "ino_imagen" => FileService::upload($imagen, 'imagenes/noticias'),
