@@ -16,13 +16,14 @@
                 <div class="col-sm-4">
                     <div class="form-group">
 
+                        <label for="nombre">Nombre</label>
                         <div class="form-floating my-3">
                             <input type="text" name="nombre" class="form-control" id="pro_nombre"
                                 placeholder="pro_nombre" autocomplete="new-password" value="" required>
-                            <label for="nombre">Nombre</label>
+                            
                         </div>
 
-                        <label for="imagen" class="col-md-4 col-form-label">Imagen</label>
+                        <label for="imagen">Imagen ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
                         <div class="row mb-3">
                             <div class="form-floating my-3">
 
@@ -35,9 +36,13 @@
                                 @enderror
                             </div>
                         </div>
+                        <label for="orden">Orden</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="orden" class="form-control" id="orden"
+                                placeholder="orden" autocomplete="new-password" value="" required  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" >
+                        </div>
 
-
-                        <label for="estado" class="col-md-4 col-form-label">Estado</label>
+                        <label for="estado">Estado</label>
                         <div class="row mb-3">
                             <div class="form-floating my-3">
 
@@ -46,7 +51,6 @@
                                     <option value="0">Inactivo</option>
                                 </select>
                             </div>
-
                         </div>
                         <button class="btn btn-success btn-agregar">Agregar</button>
                     </div>

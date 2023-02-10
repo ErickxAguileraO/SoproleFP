@@ -15,6 +15,7 @@ class SliderService
             $insert = [
                 'sli_nombre' => $request->nombre,
                 'sli_estado' => $request->estado,
+                'sli_orden' => $request->orden,
             ];
             $uploadFile = FileService::upload($request->file('imagen'),'imagenes/slider');
 
@@ -47,6 +48,7 @@ class SliderService
             $slider = Slider::find($request->slider_id);
             $slider->sli_nombre = $request->nombre;
             $slider->sli_estado = $request->estado;
+            $slider->sli_orden = $request->orden;
 
             if($request->file('imagen')){
                 $slider->sli_imagen = FileService::upload($request->file('imagen'),'imagenes/slider');
