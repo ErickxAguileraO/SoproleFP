@@ -1,8 +1,8 @@
 $(".btn-agregar").on("click", function (event) {
 
     event.preventDefault();
-    $('#spinner-div').show();
-    fetch("/administracion/slider/store", {
+    $("#spinner-div").show();
+    fetch("/administracion/alianza/store", {
         method: "POST",
         headers: {
             'X-CSRF-TOKEN': $("input[name='_token']").val(),
@@ -20,7 +20,7 @@ $(".btn-agregar").on("click", function (event) {
             alertify.set('notifier', 'position', 'top-right');
             alertify.success(response.message).dismissOthers();
             setTimeout(() => {
-                document.location.href = "/administracion/slider";
+                document.location.href = "/administracion/alianza";
             }, 1000);
         }
     }).catch(mensajeError => {

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\Management\AlianzaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,5 +118,18 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('store', 'store')->name('editable.store');
             Route::post('update', 'update')->name('editable.update');
         });
+
+        
+        Route::controller(AlianzaController::class)->prefix('alianza')->group(function () {
+            Route::get('', 'index')->name('alianza.index');
+            Route::get('crear', 'crear')->name('alianza.crear');
+            Route::get('editar/{alianza}', 'editar')->name('alianza.editar');
+            Route::get('listar', 'listar')->name('alianza.listar');
+            Route::get('eliminar/{alianza}', 'eliminar')->name('alianza.eliminar');
+            Route::post('store', 'store')->name('alianza.store');
+            Route::post('update', 'update')->name('alianza.update');
+        });
+
+
     });
 });
