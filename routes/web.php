@@ -6,6 +6,7 @@ use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
+use App\Http\Controllers\Management\NoticiasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -119,7 +120,6 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('editable.update');
         });
 
-        
         Route::controller(AlianzaController::class)->prefix('alianza')->group(function () {
             Route::get('', 'index')->name('alianza.index');
             Route::get('crear', 'crear')->name('alianza.crear');
@@ -130,6 +130,15 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('alianza.update');
         });
 
-
+        Route::controller(NoticiasController::class)->prefix('noticia')->group(function () {
+            Route::get('', 'index')->name('noticia.index');
+            Route::get('crear', 'crear')->name('noticia.crear');
+            Route::get('editar/{noticia}', 'editar')->name('noticia.editar');
+            Route::get('listar', 'listar')->name('noticia.listar');
+            Route::get('eliminar/{noticia}', 'eliminar')->name('noticia.eliminar');
+            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('noticia.eliminar.imagen');
+            Route::post('store', 'store')->name('noticia.store');
+            Route::post('update', 'update')->name('noticia.update');
+        });
     });
 });
