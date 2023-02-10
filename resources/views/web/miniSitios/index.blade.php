@@ -24,6 +24,21 @@
                 </li>
             </ul>
         </div>
+        <div class="flex-tu-negocio">
+            <h2>¿De qué es tu negocio?</h2>
+            <div class="tu-negocio">
+                <button class="segmento-n bg-minisitio color-mini-sitio">Papas fritas</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Hamburguesas</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Sushi</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Subsegmento</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Subsegmento</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Subsegmento</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Subsegmento</button>
+                <button class="segmento-n bg-minisitio color-mini-sitio">Subsegmento</button>
+
+
+            </div> 
+        </div>
         <section class="seccion-home">
             <h2>Mira nuestros productos</h2>
             <br>

@@ -107,7 +107,22 @@ textarea{
     display: flex !important;
 }
 /* Menu */
+.barra-productos-movil{
+    display: none;
+}
+.barra-productos-lista-movil{
+    display: none;
+}
+.barra-noticias-movil{
+    display: none;
+}
+.barra-menu-movil{
+    display: none;
+}
 .bar-menu-movil{
+    display: none;
+}
+.barra-menu-movil{
     display: none;
 }
 .flex-menu{
@@ -165,6 +180,7 @@ textarea{
 }
 .botones-header .tienda{
     background-color: var(--azul700);
+    cursor: pointer;
 }
 .botones-header .cliente{
     background-color: var(--rojo);
@@ -302,6 +318,26 @@ textarea{
 }
 .color-servicios{
     color: #5187BF !important;
+}
+
+/* Modal tienda */
+.flex-modal-tienda{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 20;
+    background-color: #00000016;
+    top: 0px;
+    left: 0px;
+}
+.modal-tienda{
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: white;
 }
 /* Slogan */
 .portada{
@@ -620,13 +656,35 @@ textarea{
 .color-mini-sitio p{
     color: #606060 !important;
 }
+.color-mini-sitio button{
+    color: #E5841B !important;
+}
 .bg-minisitio{
     background-color: #FEF8EC !important;
 }
 .bg-minisitio .cuadros-info-n{
     box-shadow: 0px 273px 109px rgba(239, 183, 75, 0.01), 0px 153px 92px rgba(239, 183, 75, 0.05), 0px 68px 68px rgba(239, 183, 75, 0.09), 0px 17px 38px rgba(239, 183, 75, 0.1), 0px 0px 0px rgba(239, 183, 75, 0.1);
 }
-
+.segmento-n{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 192px;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+}
+.segmento-n:hover{
+    background: #EDA532 !important;
+    color: white !important;
+}
 /* Nuestras recetas y productos */
 .filtros{
     display: flex;
@@ -1607,6 +1665,133 @@ footer a{
     }
     .flex-menu{
         display: none;
+    }
+    .barra-productos-movil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 100%;
+        transition: all 300ms;
+        overflow-y: scroll;
+        z-index: 10;
+    }
+    .barra-productos-lista-movil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 100%;
+        transition: all 300ms;
+        overflow-y: scroll;
+        z-index: 10;
+    }
+    .barra-noticias-movil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 100%;
+        transition: all 300ms;
+        overflow-y: scroll;
+        z-index: 10;
+    }
+    .flex-barra-menu-movil .titulo-drop .boton-ver-op {
+        font-size: 12px;
+    }
+    .flex-volver-movil{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        position: absolute;
+        bottom: 50px;
+    }
+    .volver-movil{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 154px;
+        height: 48px;
+        border: 1px solid #D0392A;
+        border-radius: 28px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #D0392A;
+        /* position: absolute;
+        bottom: 50px; */
+    }
+    .titulo-drop {
+        margin-bottom: 40px;
+    }
+    .barra-menu-movil{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background-color: var(--azul1);
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 100%;
+        transition: all 300ms;
+        overflow-y: scroll;
+    }
+    .flex-barra-menu-movil{
+        width: 90%;
+        padding: 40px 0px;
+    }
+    .flex-barra-menu-movil a{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .close{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .opcion-barra-n{
+        display: grid;
+        grid-template-columns: 1fr 20px;
+        max-width: 100%;
+        padding: 24px 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .opcion-barra-n:hover{
+        background-color: #114E93;
+    }
+    .otros-opcion-barra-n{
+        display: grid;
+        grid-template-columns: 40px 1fr !important;
+        padding-left: 18px;
+        max-width: 100%;
+    }
+    .tienda-movil{
+        border: 0.5px solid #1362B6;
+    }
+    .cliente-movil{
+        border: 0.5px solid #D0392A;
     }
     /* Nuestras recetas y productos */
     .filtros{

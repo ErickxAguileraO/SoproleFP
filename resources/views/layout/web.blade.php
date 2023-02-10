@@ -60,8 +60,8 @@
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
-                                                <h5>Productos</h5>
-                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                                <h5>Productos Pastelería</h5>
+                                                <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
                                             <a href="/producto-detalle" class="link-op color-panaderia">Producto 1</a>
                                             <a href="/producto-detalle" class="link-op color-panaderia">Producto 2</a>
@@ -77,8 +77,8 @@
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
-                                                <h5>Productos</h5>
-                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                                <h5>Productos Comida Italiana</h5>
+                                                <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
                                             <a href="/producto-detalle" class="link-op color-italiana">Producto 1</a>
                                             <a href="/producto-detalle" class="link-op color-italiana">Producto 2</a>
@@ -93,8 +93,8 @@
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
-                                                <h5>Productos</h5>
-                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                                <h5>Productos Comida Rápida</h5>
+                                                <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
                                             <a href="/producto-detalle" class="link-op color-rapida">Producto 1</a>
                                             <a href="/producto-detalle" class="link-op color-rapida">Producto 2</a>
@@ -110,8 +110,8 @@
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
-                                                <h5>Productos</h5>
-                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                                <h5>Productos Cafetería</h5>
+                                                <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
                                             <a href="/producto-detalle" class="link-op color-cafeteria">Producto 1</a>
                                             <a href="/producto-detalle" class="link-op color-cafeteria">Producto 2</a>
@@ -125,8 +125,8 @@
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
-                                                <h5>Productos</h5>
-                                                <a href="/" class="boton-ver-op bg-red">Ver mas</a>
+                                                <h5>Productos Servicios de alimentación</h5>
+                                                <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
                                             <a href="/producto-detalle" class="link-op color-servicios">Producto 1</a>
                                             <a href="/producto-detalle" class="link-op color-servicios">Producto 2</a>
@@ -152,7 +152,7 @@
                                <div>
                                     <div class="titulo-drop">
                                         <h5>Noticias y tendencias</h5>
-                                        <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
+                                        <a href="/noticias-tendencias" class="boton-ver-op bg-red">Ver mas</a>
                                     </div>
                                     <div class="opcion-drop-n btn-color-panaderia">
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
@@ -184,10 +184,15 @@
                     </div>
                 </div>
                 <div class="botones-header">
-                    <a href="" class="tienda">
+                    <a class="tienda">
                         <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
                         <p>Ir a la tienda</p>
                     </a>
+                    <div class="flex-modal-tienda">
+                        <div class="modal-tienda">
+                            <div class="cerrar-modal">cerrar</div>
+                        </div>
+                    </div>
                     <a href="/hazte-cliente" class="cliente">
                         <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
                         <p>Hazte cliente</p>
@@ -204,10 +209,155 @@
         <div class="flex-bar-menu-movil">
             <div class="bar-menu-movil">
                 <a href="/"><img width="130px" src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
-                <div><img src="{{ asset('/public/web/imagenes/i-bar.svg') }}" alt=""></div>
+                <div><img class="btn-hamburger" src="{{ asset('/public/web/imagenes/i-bar.svg') }}" alt=""></div>
             </div>
         </div>
-       
+       <div class="barra-menu-movil">
+            <div class="flex-barra-menu-movil">
+                <div class="close">
+                    <img class="btn-close" src="{{ asset('/public/web/imagenes/i-close.svg') }}" alt="">
+                </div>
+                <div class="opcion-barra-n">
+                    <a href="/conocenos">Conócenos</a>
+                </div>
+                <div class="opcion-barra-n">
+                    <a href="/academia">Academia</a>
+                </div>
+                <div class="opcion-barra-n btn-productos-movil">
+                    <a>Productos</a>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
+                </div>
+                <div class="opcion-barra-n">
+                    <a href="/nuestras-recetas">Recetas</a>
+                </div>
+                <div class="opcion-barra-n btn-noticias-movil">
+                    <a>Noticias y Tendencias</a>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
+                </div>
+                <br>
+                <div class="opcion-barra-n tienda-movil otros-opcion-barra-n">
+                    <img src="{{ asset('/public/web/imagenes/i-carro-2.svg') }}" alt="">
+                    <a>Ir a la tienda</a>
+                </div>
+
+                <div class="opcion-barra-n cliente-movil otros-opcion-barra-n">
+                    <img src="{{ asset('/public/web/imagenes/i-user-2.svg') }}" alt="">
+                    <a href="/hazte-cliente">Hazte cliente</a>
+                </div>
+
+            </div>    
+       </div>
+        {{-- sub menu Segmentos-productos --}}
+       <div class="barra-productos-movil">
+            <div class="flex-barra-menu-movil">
+                <div class="titulo-drop">
+                    <h5>Segmentos</h5>
+                    <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
+                </div>
+                <div class="opcion-drop-n btn-color-panaderia producto-lista">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                    <p class="color-panaderia">Pastelería</p>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                </div>
+
+                <div class="opcion-drop-n btn-color-italiana producto-lista">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
+                    <p class="color-italiana">Comida Italiana</p>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                </div>
+
+                <div class="opcion-drop-n btn-color-rapida producto-lista">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
+                    <p class="color-rapida">Comida Rápida</p>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                </div>
+
+                <div class="opcion-drop-n btn-color-cafeteria producto-lista">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
+                    <p class="color-cafeteria">Cafetería</p>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                </div>
+
+                <div class="opcion-drop-n btn-color-servicios producto-lista">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
+                    <p class="color-servicios">Servicios de alimentación</p>
+                    <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                </div>
+                <div class="flex-volver-movil">
+                    <div class="volver-movil">Volver</div>
+                </div>
+            </div>  
+        </div>  
+
+        {{-- sub menu productos --}}
+       <div class="barra-productos-lista-movil">
+            <div class="flex-barra-menu-movil">
+                <div class="titulo-drop">
+                    <h5>Produtos</h5>
+                    <a href="" class="boton-ver-op bg-red">Ver mas</a>
+                </div>
+                <div class="opcion-drop-n btn-color-panaderia">
+                    <p class="color-panaderia">Producto</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-italiana">
+                    <p class="color-italiana">Producto</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-rapida">
+                    <p class="color-rapida">Producto</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-cafeteria">
+                    <p class="color-cafeteria">Producto</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-servicios">
+                    <p class="color-servicios">Producto</p>
+                </div>
+                <div class="flex-volver-movil">
+                    <div class="volver-movil">Volver</div>
+                </div>
+            </div>  
+        </div>  
+
+        {{-- Submenu noticias y tendencias --}}
+        <div class="barra-noticias-movil">
+            <div class="flex-barra-menu-movil">
+                <div class="titulo-drop">
+                    <h5>Noticias y tendencias</h5>
+                    <a href="/noticias-tendencias" class="boton-ver-op bg-red">Ver mas</a>
+                </div>
+                <div class="opcion-drop-n btn-color-panaderia">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                    <p class="color-panaderia">Pastelería</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-italiana">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
+                    <p class="color-italiana">Comida Italiana</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-rapida">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
+                    <p class="color-rapida">Comida Rápida</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-cafeteria">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
+                    <p class="color-cafeteria">Cafetería</p>
+                </div>
+
+                <div class="opcion-drop-n btn-color-servicios">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
+                    <p class="color-servicios">Servicios de alimentación</p>
+                </div>
+                <div class="flex-volver-movil">
+                    <div class="volver-movil">Volver</div>
+                </div>
+            </div>  
+        </div>  
+   </div>
     </header>
     
     @yield('content')
@@ -242,7 +392,7 @@
                 <a href="/academia">Academia</a>
                 <a href="/productos">Productos</a>
                 <a href="/nuestras-recetas">Recetas</a>
-                <a href="/noticias-tendencias">Tendencias y noticias</a>
+                <a href="/noticias-tendencias"> Noticias y tendencias</a>
                 <a href="/hazte-cliente">Hazte cliente</a>
                 <a href="">Ir a la tienda</a>
             </div>

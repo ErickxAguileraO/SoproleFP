@@ -14,6 +14,48 @@ $(".cerrar-ventana-ubicacion").click(function(){
     $(".flex-ventana-locales").css({'display':'none'});
 });
 
+// Menu movil
+$(".btn-hamburger").click(function(){
+  $(".barra-menu-movil").css({'left':'0%'});
+});
+$(".btn-close").click(function(){
+  $(".barra-menu-movil").css({'left':'100%'});
+});
+$(".btn-productos-movil").click(function(){
+  $(".barra-productos-movil").css({'left':'0%'});
+});
+$(".volver-movil").click(function(){
+  $(".barra-productos-movil").css({'left':'100%'});
+});
+
+$(".btn-noticias-movil").click(function(){
+  $(".barra-noticias-movil").css({'left':'0%'});
+});
+$(".volver-movil").click(function(){
+  $(".barra-noticias-movil").css({'left':'100%'});
+});
+
+
+$(".producto-lista").click(function(){
+  $(".barra-productos-lista-movil").css({'left':'0%'});
+});
+$(".volver-movil").click(function(){
+  $(".barra-productos-lista-movil").css({'left':'100%'});
+});
+
+
+$(".tienda").click(function(){
+  $(".flex-modal-tienda").css({'display':'flex'});
+});
+$(".cerrar-modal").click(function(){
+  $(".flex-modal-tienda").css({'display':'none'});
+});
+
+
+
+
+
+
 // Acordeones
 $('.drop-down').click(function(event) {
     event.preventDefault();
