@@ -15,7 +15,9 @@ class CreateTipoNegocioTable extends Migration
     {
         Schema::create('tipo_negocio', function (Blueprint $table) {
             $table->id('tne_id');
-            $table->string('tne_nombre');
+            $table->string('tne_nombre')->nullable();
+            $table->integer('tne_estado')->nullable();
+
             $table->softDeletes();
             $table->timestamps();
         });

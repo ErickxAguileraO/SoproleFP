@@ -15,10 +15,13 @@ class CreateNoticiasTable extends Migration
     {
         Schema::create('noticias', function (Blueprint $table) {
             $table->id('not_id');
-            $table->string('not_titulo');
-            $table->string('not_titulo2');
-            $table->text('not_contenido');
-            
+            $table->date('not_fecha')->nullable();
+            $table->string('not_url')->nullable();
+            $table->string('not_titulo')->nullable();
+            $table->string('not_titulo2')->nullable();
+            $table->text('not_contenido')->nullable();
+            $table->integer('not_estado')->nullable();
+
             $table->softDeletes();
             $table->timestamps();
         });

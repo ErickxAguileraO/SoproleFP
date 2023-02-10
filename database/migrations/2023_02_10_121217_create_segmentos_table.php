@@ -15,10 +15,13 @@ class CreateSegmentosTable extends Migration
     {
         Schema::create('segmentos', function (Blueprint $table) {
             $table->id('seg_id');
-            $table->string('seg_nombre');
-            $table->string('seg_color');
-            $table->string('seg_color_anterior');
-            $table->string('seg_imagen');
+            $table->string('seg_nombre')->nullable();
+            $table->string('seg_color')->nullable();
+            $table->string('seg_color_anterior')->nullable();
+            $table->string('seg_imagen')->nullable();
+            $table->integer('seg_orden')->nullable();
+            $table->integer('seg_estado')->nullable();
+
             $table->softDeletes();
             $table->timestamps();
         });

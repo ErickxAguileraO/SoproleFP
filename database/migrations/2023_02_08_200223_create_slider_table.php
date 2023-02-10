@@ -15,9 +15,11 @@ class CreateSliderTable extends Migration
     {
         Schema::create('slider', function (Blueprint $table) {
             $table->id('sli_id');
-            $table->string('sli_nombre');
-            $table->string('sli_imagen');
-            $table->boolean('sli_estado');
+            $table->string('sli_nombre')->nullable();
+            $table->string('sli_imagen')->nullable();
+            $table->boolean('sli_estado')->nullable();
+            $table->integer('sli_orden')->nullable();
+            
             $table->softDeletes();
             $table->timestamps();
         });
