@@ -1735,6 +1735,22 @@ footer a{
         /* position: absolute;
         bottom: 50px; */
     }
+    .volver-movil2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 154px;
+        height: 48px;
+        border: 1px solid #D0392A;
+        border-radius: 28px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #D0392A;
+        /* position: absolute;
+        bottom: 50px; */
+    }
     .titulo-drop {
         margin-bottom: 40px;
     }

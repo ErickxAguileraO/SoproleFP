@@ -316,7 +316,7 @@
                     <p class="color-servicios">Producto</p>
                 </div>
                 <div class="flex-volver-movil">
-                    <div class="volver-movil">Volver</div>
+                    <div class="volver-movil2">Volver</div>
                 </div>
             </div>  
         </div>  

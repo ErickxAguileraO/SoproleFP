@@ -27,6 +27,10 @@ $(".btn-productos-movil").click(function(){
 $(".volver-movil").click(function(){
   $(".barra-productos-movil").css({'left':'100%'});
 });
+$(".volver-movil2").click(function(){
+  $(".barra-productos-lista-movil").css({'left':'100%'});
+});
+
 
 $(".btn-noticias-movil").click(function(){
   $(".barra-noticias-movil").css({'left':'0%'});
