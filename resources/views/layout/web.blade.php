@@ -12,11 +12,11 @@
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
-    <script src="{{ asset('/public/web/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -27,6 +27,19 @@
 
 <body>
     <header>
+        {{-- Modal ir a tienda --}}
+        <div class="flex-modal-tienda">
+            <div class="modal-tienda">
+                <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, cum quod molestias id est harum quibusdam provident ut? Cum rerum possimus quam nesciunt porro animi laborum doloribus temporibus eum labore!</p>
+                <h5>Estás a punto de salir de este sitio para ir a la tienda. ¿Confirmas esto?</h5>
+                <div class="botones-tienda">
+                    <a class="btn-ir-tienda no-ir cerrar-modal">No, quiero quedarme aquí </a>
+                    <a href="" class="btn-ir-tienda" target="_blank">Sí, quiero ir a la tienda</a>
+                </div>
+                
+            </div>
+        </div>
         {{-- Menu escritorio --}}
         <div class="flex-menu">
             <div class="menu">
@@ -188,18 +201,6 @@
                         <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
                         <p>Ir a la tienda</p>
                     </a>
-                    <div class="flex-modal-tienda">
-                        <div class="modal-tienda">
-                            <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, cum quod molestias id est harum quibusdam provident ut? Cum rerum possimus quam nesciunt porro animi laborum doloribus temporibus eum labore!</p>
-                            <h5>Estás a punto de salir de este sitio para ir a la tienda. ¿Confirmas esto?</h5>
-                            <div class="botones-tienda">
-                                <a class="btn-ir-tienda no-ir cerrar-modal">No, quiero quedarme aquí </a>
-                                <a href="" class="btn-ir-tienda">Sí, quiero ir a la tienda</a>
-                            </div>
-                            
-                        </div>
-                    </div>
                     <a href="/hazte-cliente" class="cliente">
                         <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
                         <p>Hazte cliente</p>
@@ -242,7 +243,7 @@
                     <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
                 </div>
                 <br>
-                <div class="opcion-barra-n tienda-movil otros-opcion-barra-n">
+                <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
                     <img src="{{ asset('/public/web/imagenes/i-carro-2.svg') }}" alt="">
                     <a>Ir a la tienda</a>
                 </div>
@@ -433,7 +434,7 @@
     <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
     <script src="{{ asset('/public/web/js/product-viewer.js') }}"></script>
 
-    <script src="{{ asset('/public/web/js/script.js') }}"></script>
+    <script src="{{ asset('/web/js/script.js') }}"></script>
     <script>
         $('select').niceSelect();
     </script>
