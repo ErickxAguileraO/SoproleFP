@@ -11,6 +11,8 @@ class AlianzaResource extends JsonResource
         return [
             'id' => $this->ali_id,
             'nombre' => $this->ali_nombre,
+            'orden' => $this->ali_orden,
+            'estado' => $this->ali_estado,
             'pagina' => $this->pagina_editable->edi_titulo,
         ];
     }

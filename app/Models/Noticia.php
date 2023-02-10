@@ -17,6 +17,9 @@ class Noticia extends Model
         'not_titulo',
         'not_titulo2',
         'not_contenido',
+        'not_fecha',
+        'not_url',
+        'not_estado'
     ];
 
     public function imagenes()

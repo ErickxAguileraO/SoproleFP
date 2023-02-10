@@ -39,6 +39,7 @@ class EditableController extends Controller
     {
         $reglasValidacion = [
             'titulo' => ['required', 'string', 'max:250'],
+            'estado' => ['required'],
             'contenido' => ['required','max:2000' ],
             'tipo' => ['required', 'max:250'],
             'video' => ['required', 'url'],
@@ -64,6 +65,7 @@ class EditableController extends Controller
     {
         $reglasValidacion = [
             'editable_id' => ['required'],
+            'estado' => ['required'],
             'titulo' => ['required', 'string', 'max:250'],
             'contenido' => ['required','max:2000' ],
             'tipo' => ['required', 'max:250'],

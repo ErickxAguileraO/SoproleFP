@@ -18,6 +18,7 @@ class Editable extends Model
         'edi_contenido',
         'edi_video',
         'edi_tipo',
+        'edi_estado'
     ];
 
     public function imagenes()

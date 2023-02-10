@@ -18,6 +18,8 @@ class EditableService
                 'edi_contenido' => $request->contenido,
                 'edi_video' => $request->video,
                 'edi_tipo' => $request->tipo,
+                'edi_estado' => $request->estado,
+                
             ]);
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
@@ -35,6 +37,7 @@ class EditableService
                 'message' => 'Registro creado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
@@ -53,6 +56,7 @@ class EditableService
             $editable->edi_contenido = $request->contenido;
             $editable->edi_video = $request->video;
             $editable->edi_tipo = $request->tipo;
+            $editable->edi_estado = $request->estado;
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach($request->file('imagenes') as $imagen){
@@ -63,6 +67,7 @@ class EditableService
                 }
             }
 
+            $editable->save();
             DB::commit();
 
             return response()->json([
@@ -70,6 +75,7 @@ class EditableService
                 'message' => 'Registro actualizado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',

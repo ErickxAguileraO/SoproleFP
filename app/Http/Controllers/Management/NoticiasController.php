@@ -48,6 +48,8 @@ class NoticiasController extends Controller
             'titulo' => ['required', 'string', 'max:250'],
             'titulo2' => ['required', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
+            'fecha' => ['required', 'date'],
+            'estado' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -74,6 +76,8 @@ class NoticiasController extends Controller
             'titulo' => ['required', 'string', 'max:250'],
             'titulo2' => ['required', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
+            'fecha' => ['required', 'date'],
+            'estado' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

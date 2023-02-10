@@ -38,6 +38,11 @@
                 allowEditing: false,
             },
             {
+                dataField: 'sli_orden',
+                caption: 'Orden',
+                allowEditing: false,
+            },
+            {
                 dataField: 'sli_estado',
                 caption: 'Estado',
                 allowEditing: false,
@@ -61,7 +66,6 @@
                     displayExpr: 'name'
                 },
             },
-            ,
             {
                 caption: 'Ver imagen',
                 alignment: 'center',

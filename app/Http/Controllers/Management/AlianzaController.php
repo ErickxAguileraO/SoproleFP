@@ -50,6 +50,8 @@ class AlianzaController extends Controller
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:250', 'unique:alianzas,ali_nombre'],
             'pagina_editable' => ['required'],
+            'estado' => ['required'],
+            'orden' => ['required','numeric'],
             'imagen' => ['required', 'mimes:jpg,jpeg,png'],
         ];
 
@@ -74,6 +76,8 @@ class AlianzaController extends Controller
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:250'],
             'pagina_editable' => ['required'],
+            'estado' => ['required'],
+            'orden' => ['required','numeric'],
             'imagen' => ['mimes:jpg,jpeg,png'],
         ];
 
@@ -93,11 +97,11 @@ class AlianzaController extends Controller
         }
     }
 
-    public function eliminar(Slider $slider)
+    public function eliminar(Alianza $alianza)
     {
         try {
-            FileService::destroy($slider->sli_imagen);
-            $slider->delete();
+            FileService::destroy($alianza->ali_imagen);
+            $alianza->delete();
 
             return response()->json([
                 'status' => 'T',

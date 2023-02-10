@@ -5,6 +5,8 @@ namespace App\Http\Services\Management;
 use App\Models\ImagenNoticia;
 use App\Models\Noticia;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
 
 class NoticiaService
 {
@@ -18,6 +20,9 @@ class NoticiaService
                 'not_titulo' => $request->titulo,
                 'not_titulo2' => $request->titulo2,
                 'not_contenido' => $request->contenido,
+                'not_fecha' => Carbon::createFromFormat('Y-m-d', $request->fecha)->toDateString(),
+                'not_estado' =>$request->estado,
+                'not_url' => Str::slug($request->titulo)
             ]);
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
@@ -35,6 +40,7 @@ class NoticiaService
                 'message' => 'Registro creado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
@@ -50,8 +56,12 @@ class NoticiaService
 
             $noticia = Noticia::find($request->noticia_id);
             $noticia->not_titulo = $request->titulo;
-            $noticia->not_titulo2 = $request->contenido;
-            $noticia->not_contenido = $request->video;
+            $noticia->not_titulo2 = $request->titulo2;
+            $noticia->not_contenido = $request->contenido;
+            $noticia->not_fecha =Carbon::createFromFormat('Y-m-d',  $request->fecha)->toDateString();
+            $noticia->not_estado = $request->estado;
+            $noticia->not_url = Str::slug($request->titulo);
+    
             $noticia->save();
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
@@ -70,6 +80,7 @@ class NoticiaService
                 'message' => 'Registro actualizado correctamente',
             ], 201);
         } catch (\Exception $exc) {
+            DB::rollBack();
             return response()->json([
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
