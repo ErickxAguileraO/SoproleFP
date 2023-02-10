@@ -63,7 +63,7 @@
                 <br>
                 <p class="sub-titulo">Nos apasiona ayudar a nuestros clientes, logrando la optimización de sus recursos, haciendo más eficiente sus procesos, alcanzando una mayor calidad y  expertíz en su negocio</p>
                 <div class="cuadros-info cuadros-row-4">
-                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
+                    <a href="/academia-detalle" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -71,7 +71,7 @@
                         </div>
                     </a>
 
-                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
+                    <a href="/academia-detalle" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -79,7 +79,7 @@
                         </div>
                     </a>
 
-                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
+                    <a href="/academia-detalle" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -87,7 +87,7 @@
                         </div>
                     </a>
 
-                    <a href="/detalle-noticia-tendencia" class="cuadros-info-n ocultar-576">
+                    <a href="/academia-detalle" class="cuadros-info-n ocultar-576">
                         <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                         <div class="texto">
                             <h5>Título con una línea</h5>
@@ -174,7 +174,7 @@
             <br>
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
-                <a href="" class="cuadros-info-n">
+                <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
@@ -182,7 +182,7 @@
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
@@ -190,7 +190,7 @@
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n ocultar-576">
+                <a href="/detalle-noticia-tendencia" class="cuadros-info-n ocultar-576">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
@@ -198,7 +198,7 @@
                     </div>
                 </a>
             </div>
-            <a href="/noticias-tendencias" class="boton bg-red">Ver todas las noticias</a>
+            <a href="/noticias-tendencias" class="boton bg-red">Ver todas las noticias y tendencias</a>
             
         </section>
         {{-- Conocenos Escritorio --}}

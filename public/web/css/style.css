@@ -242,6 +242,12 @@ textarea{
     align-items: center;
     padding-left: 10px;
 }
+.contenido-drop-noticias .titulo-drop{
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    align-items: center;
+    padding-left: 10px;
+}
 .titulo-drop h5{
     font-weight: 600;
     font-size: 20px;
