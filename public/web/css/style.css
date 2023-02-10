@@ -1750,6 +1750,7 @@ footer a{
         left: 100%;
         transition: all 300ms;
         overflow-y: scroll;
+        z-index: 5;
     }
     .flex-barra-menu-movil{
         width: 90%;
