@@ -21,7 +21,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/fresco/fresco.css') }}">
-
+    {{-- Favicon --}}
+    <link href="{{ asset('/public/favicon.ico') }}" rel="icon">
     @stack('extra-css')
 </head>
 
