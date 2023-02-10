@@ -17,5 +17,6 @@ class Slider extends Model
         'sli_nombre',
         'sli_imagen',
         'sli_estado',
+        'sli_orden',
     ];
 }
