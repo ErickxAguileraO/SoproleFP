@@ -35,7 +35,7 @@
                 <h5>Estás a punto de salir de este sitio para ir a la tienda. ¿Confirmas esto?</h5>
                 <div class="botones-tienda">
                     <a class="btn-ir-tienda no-ir cerrar-modal">No, quiero quedarme aquí </a>
-                    <a href="" class="btn-ir-tienda" target="_blank">Sí, quiero ir a la tienda</a>
+                    <a href="https://www.soprolecontigo.cl/" class="btn-ir-tienda" target="_blank">Sí, quiero ir a la tienda</a>
                 </div>
                 
             </div>
