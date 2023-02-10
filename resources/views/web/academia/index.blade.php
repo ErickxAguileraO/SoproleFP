@@ -29,7 +29,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Pastelería</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo Pastelería</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -79,7 +79,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Italiana</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo Comida Italiana</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -129,7 +129,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Comida Rápida</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo Comida Rápida</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -167,7 +167,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Cafetería</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todo Cafetería</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>
@@ -218,7 +218,7 @@
             <div class="encabezado-titulo-btn">
                 <h2>Servicios de alimentación</h2>
                 <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los productos</a>
+                    <a href="" class="boton bg-blue ocultar-movil">Ver todos los Servicios de alimentación</a>
                     <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
                 </div>
             </div>

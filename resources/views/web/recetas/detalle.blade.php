@@ -46,7 +46,7 @@
                         <li>Ingrediente 4</li>
                     </div>
                     <div class="porciones">
-                        <h6>Ingredientes</h6>
+                        <h6>Porciones</h6>
                         <p>4 personas</p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
         </section>
         
        <section class="slider-recetas">
-            <h4>Recetas que puedes preparar con este producto</h4>
+            <h4>Para preparar esto necesitas</h4>
             <div class="carruselRecetas">
                 <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>

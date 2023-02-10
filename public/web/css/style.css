@@ -188,6 +188,9 @@ textarea{
 
 }
 /* Menu Dropdown */
+.dropbtn{
+    cursor: pointer;
+}
 .dropdown {
     display: flex !important;
     align-items: center;
