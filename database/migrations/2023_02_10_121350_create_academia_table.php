@@ -15,10 +15,12 @@ class CreateAcademiaTable extends Migration
     {
         Schema::create('academia', function (Blueprint $table) {
             $table->id('aca_id');
-            $table->text('aca_titulo');
-            $table->text('aca_titulo2');
-            $table->text('aca_contenido');
-            $table->string('aca_video');
+            $table->text('aca_titulo')->nullable();
+            $table->text('aca_titulo2')->nullable();
+            $table->text('aca_contenido')->nullable();
+            $table->string('aca_video')->nullable();
+            $table->integer('aca_orden')->nullable();
+            $table->integer('aca_estado')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -15,7 +15,12 @@ class CreateSubSegmentosTable extends Migration
     {
         Schema::create('sub_segmentos', function (Blueprint $table) {
             $table->id('sse_id');
-            $table->string('sse_nombre');
+            $table->string('sse_nombre')->nullable();
+            $table->integer('sse_orden')->nullable();
+            $table->integer('sse_estado')->nullable();
+
+
+
         });
     }
 

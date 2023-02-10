@@ -15,12 +15,15 @@ class CreateAlianzasTable extends Migration
     {
         Schema::create('alianzas', function (Blueprint $table) {
             $table->id('ali_id');
-            $table->string('ali_nombre');
-            $table->string('ali_imagen');
+            $table->string('ali_nombre')->nullable();
+            $table->string('ali_imagen')->nullable();
 
-            $table->unsignedBigInteger('ali_editable_id');
+            $table->unsignedBigInteger('ali_editable_id')->nullable();
             $table->foreign('ali_editable_id')->references('edi_id')->on('editables')->onDelete('cascade');
             
+            $table->integer('ali_estado')->nullable();
+            $table->integer('ali_orden')->nullable();
+
             $table->softDeletes();
             $table->timestamps();
         });

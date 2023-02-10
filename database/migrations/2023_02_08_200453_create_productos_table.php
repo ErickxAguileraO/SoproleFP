@@ -15,17 +15,21 @@ class CreateProductosTable extends Migration
     {
         Schema::create('productos', function (Blueprint $table) {
             $table->id('pro_id');
-            $table->string('pro_titulo');
-            $table->string('pro_sku');
-            $table->string('pro_formato');
-            $table->integer('pro_estrellas');
-            $table->text('pro_contenido');
-            $table->text('pro_conservacion');
-            $table->string('pro_vida_util');
-            $table->string('pro_unidades_venta');
+            $table->string('pro_titulo')->nullable();
+            $table->string('pro_sku')->nullable();
+            $table->string('pro_formato')->nullable();
+            $table->integer('pro_estrellas')->nullable();
+            $table->text('pro_contenido')->nullable();
+            $table->text('pro_conservacion')->nullable();
+            $table->string('pro_vida_util')->nullable();
+            $table->string('pro_unidades_venta')->nullable();
 
             $table->unsignedBigInteger('pro_categoria_id');
             $table->foreign('pro_categoria_id')->references('cat_id')->on('categorias')->onDelete('cascade');
+
+            $table->integer('pro_orden')->nullable();
+            $table->integer('pro_estado')->nullable();
+            $table->string('pro_url')->nullable();
 
             $table->softDeletes();
             $table->timestamps();

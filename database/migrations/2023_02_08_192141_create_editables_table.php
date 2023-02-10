@@ -15,10 +15,11 @@ class CreateEditablesTable extends Migration
     {
         Schema::create('editables', function (Blueprint $table) {
             $table->id('edi_id');
-            $table->string('edi_titulo');
-            $table->text('edi_contenido');
-            $table->string('edi_video');
-            $table->integer('edi_tipo');
+            $table->string('edi_titulo')->nullable();
+            $table->text('edi_contenido')->nullable();
+            $table->string('edi_video')->nullable();
+            $table->integer('edi_tipo')->nullable();
+            $table->integer('edi_estado')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
