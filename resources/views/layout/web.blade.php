@@ -190,7 +190,14 @@
                     </a>
                     <div class="flex-modal-tienda">
                         <div class="modal-tienda">
-                            <div class="cerrar-modal">cerrar</div>
+                            <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, cum quod molestias id est harum quibusdam provident ut? Cum rerum possimus quam nesciunt porro animi laborum doloribus temporibus eum labore!</p>
+                            <h5>Estás a punto de salir de este sitio para ir a la tienda. ¿Confirmas esto?</h5>
+                            <div class="botones-tienda">
+                                <a class="btn-ir-tienda no-ir cerrar-modal">No, quiero quedarme aquí </a>
+                                <a href="" class="btn-ir-tienda">Sí, quiero ir a la tienda</a>
+                            </div>
+                            
                         </div>
                     </div>
                     <a href="/hazte-cliente" class="cliente">

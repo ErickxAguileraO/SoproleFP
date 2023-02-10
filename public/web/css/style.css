@@ -231,7 +231,7 @@ textarea{
     border-radius: 20px;
     gap: 24px;
     position: relative;
-
+    z-index: 1;
 }
 .contenido-drop-noticias{
     max-width: 90% !important;
@@ -334,10 +334,53 @@ textarea{
     left: 0px;
 }
 .modal-tienda{
-    width: 500px;
-    height: 400px;
-    border-radius: 10px;
+    max-width: 674px;
+    width: 674px;
+    height: auto;
+    border-radius: 20px;
     background-color: white;
+    padding: 36px;
+}
+.modal-tienda h5{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #13355D;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+.modal-tienda iframe{
+    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    margin-bottom: 36px;
+}
+
+.modal-tienda .btn-ir-tienda{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    background: #D0392A;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border-radius: 28px;
+    text-decoration: none;
+} 
+.modal-tienda .no-ir{
+    background-color: white !important;
+    color: #D0392A !important;
+    border: 1px solid #D0392A;
+}
+.botones-tienda{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
 }
 /* Slogan */
 .portada{
