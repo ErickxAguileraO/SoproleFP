@@ -63,21 +63,21 @@
         <section class="slider-recetas">
             <h4>Recetas que puedes preparar con este producto</h4>
             <div class="carruselRecetas">
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
@@ -85,14 +85,14 @@
                 </a>
                 
 
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
 
-                <a href="" class="cuadros-info-n">
+                <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
                     <div class="texto">
                         <h5>Título con una línea</h5>
