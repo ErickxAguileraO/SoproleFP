@@ -35,7 +35,7 @@
         <br>
         <br>
         <section class="filtros">
-            <div class="select-filtros">
+            <div class="select-filtros" style="margin-bottom: 50px;">
                 <div>
                     <label for="">Segmento</label>
                     <select name="" id="">

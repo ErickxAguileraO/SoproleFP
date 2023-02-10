@@ -30,9 +30,7 @@
                     <a href="" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>
-            <br>
-            <br>
-            <h2>Filtrado por: <p>Leche</p> </h2>
+            <h2 style="margin-top: 50px">Filtrado por: <p>Leche</p> </h2>
         </section>
 
         <section class="seccion-home seccion-listas">
