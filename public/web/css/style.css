@@ -267,7 +267,7 @@ textarea{
     padding: 24px 10px;
     border-radius: 10px;
 }
-.btn-color-panaderia:hover{
+.btn-color-pasteleria:hover{
     background: #F2F9F9;
 }
 .btn-color-italiana:hover{
@@ -304,7 +304,7 @@ textarea{
 .sub-content-drop .link-op{
     margin-top: 54px;
 }
-.color-panaderia{
+.color-pasteleria{
     color: #3D757D !important;
 }
 .color-italiana{
@@ -1826,10 +1826,19 @@ footer a{
         text-decoration: none;
     }
     .close{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 30px;
+        padding-left: 12px;
+    }
+    .close div{
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
         width: 100%;
-        margin-bottom: 10px;
+        height: 100%;
+        justify-content: flex-end;
     }
     .opcion-barra-n{
         display: grid;
@@ -1853,6 +1862,21 @@ footer a{
     }
     .cliente-movil{
         border: 0.5px solid #D0392A;
+    }
+    .producto-lista-pasteleria{
+        display: none;
+    }
+    .producto-lista-italiana{
+        display: none;
+    }
+    .producto-lista-rapida{
+        display: none;
+    }
+    .producto-lista-cafeteria{
+        display: none;
+    }
+    .producto-lista-servicios{
+        display: none;
     }
     /* Nuestras recetas y productos */
     .filtros{

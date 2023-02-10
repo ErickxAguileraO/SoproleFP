@@ -12,11 +12,11 @@
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
-    <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -67,20 +67,20 @@
                                         <h5>Segmentos</h5>
                                         <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
                                     </div>
-                                    <div class="opcion-drop-n btn-color-panaderia">
+                                    <div class="opcion-drop-n btn-color-pasteleria">
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
-                                        <p class="color-panaderia">Pastelería</p>
+                                        <p class="color-pasteleria">Pastelería</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                                         <div class="sub-content-drop">
                                             <div class="titulo-drop">
                                                 <h5>Productos Pastelería</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                             </div>
-                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 1</a>
-                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 2</a>
-                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 3</a>
-                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 4</a>
-                                            <a href="/producto-detalle" class="link-op color-panaderia">Producto 5</a>
+                                            <a href="/producto-detalle" class="link-op color-pasteleria">Producto 1</a>
+                                            <a href="/producto-detalle" class="link-op color-pasteleria">Producto 2</a>
+                                            <a href="/producto-detalle" class="link-op color-pasteleria">Producto 3</a>
+                                            <a href="/producto-detalle" class="link-op color-pasteleria">Producto 4</a>
+                                            <a href="/producto-detalle" class="link-op color-pasteleria">Producto 5</a>
                                         </div>
                                     </div>
 
@@ -167,9 +167,9 @@
                                         <h5>Noticias y tendencias</h5>
                                         <a href="/noticias-tendencias" class="boton-ver-op bg-red">Ver mas</a>
                                     </div>
-                                    <div class="opcion-drop-n btn-color-panaderia">
+                                    <div class="opcion-drop-n btn-color-pasteleria">
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
-                                        <p class="color-panaderia">Pastelería</p>
+                                        <p class="color-pasteleria">Pastelería</p>
                                     </div>
 
                                     <div class="opcion-drop-n btn-color-italiana">
@@ -223,7 +223,10 @@
        <div class="barra-menu-movil">
             <div class="flex-barra-menu-movil">
                 <div class="close">
-                    <img class="btn-close" src="{{ asset('/public/web/imagenes/i-close.svg') }}" alt="">
+                    <a href="https://www.soprole.cl/" target="_blank"><img style="width: 35px;" src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
+                    <div>
+                        <img class="btn-close" src="{{ asset('/public/web/imagenes/i-close.svg') }}" alt="">
+                    </div>
                 </div>
                 <div class="opcion-barra-n">
                     <a href="/conocenos">Conócenos</a>
@@ -262,31 +265,31 @@
                     <h5>Segmentos</h5>
                     <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
                 </div>
-                <div class="opcion-drop-n btn-color-panaderia producto-lista">
+                <div class="opcion-drop-n btn-color-pasteleria producto-lista btn-pasteleria-segmento">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
-                    <p class="color-panaderia">Pastelería</p>
+                    <p class="color-pasteleria">Pastelería</p>
                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                 </div>
 
-                <div class="opcion-drop-n btn-color-italiana producto-lista">
+                <div class="opcion-drop-n btn-color-italiana producto-lista btn-italiana-segmento">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
                     <p class="color-italiana">Comida Italiana</p>
                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                 </div>
 
-                <div class="opcion-drop-n btn-color-rapida producto-lista">
+                <div class="opcion-drop-n btn-color-rapida producto-lista btn-rapida-segmento">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
                     <p class="color-rapida">Comida Rápida</p>
                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                 </div>
 
-                <div class="opcion-drop-n btn-color-cafeteria producto-lista">
+                <div class="opcion-drop-n btn-color-cafeteria producto-lista btn-cafeteria-segmento">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
                     <p class="color-cafeteria">Cafetería</p>
                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                 </div>
 
-                <div class="opcion-drop-n btn-color-servicios producto-lista">
+                <div class="opcion-drop-n btn-color-servicios producto-lista btn-servicios-segmento">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                     <p class="color-servicios">Servicios de alimentación</p>
                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -304,28 +307,125 @@
                     <h5>Produtos</h5>
                     <a href="" class="boton-ver-op bg-red">Ver mas</a>
                 </div>
-                <div class="opcion-drop-n btn-color-panaderia">
-                    <p class="color-panaderia">Producto</p>
+                {{-- Lista productos pasteleria --}}
+                <div class="producto-lista-pasteleria ocultar-producto-lista">
+                    <div class="opcion-drop-n btn-color-pasteleria">
+                        <p class="color-pasteleria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-pasteleria">
+                        <p class="color-pasteleria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-pasteleria">
+                        <p class="color-pasteleria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-pasteleria">
+                        <p class="color-pasteleria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-pasteleria">
+                        <p class="color-pasteleria">Producto</p>
+                    </div>
                 </div>
 
-                <div class="opcion-drop-n btn-color-italiana">
-                    <p class="color-italiana">Producto</p>
+                {{-- Lista productos italiana --}}
+                <div class="producto-lista-italiana ocultar-producto-lista">
+                    <div class="opcion-drop-n btn-color-italiana">
+                        <p class="color-italiana">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-italiana">
+                        <p class="color-italiana">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-italiana">
+                        <p class="color-italiana">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-italiana">
+                        <p class="color-italiana">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-italiana">
+                        <p class="color-italiana">Producto</p>
+                    </div>
                 </div>
 
-                <div class="opcion-drop-n btn-color-rapida">
-                    <p class="color-rapida">Producto</p>
+                {{-- Lista productos rapida --}}
+                <div class="producto-lista-rapida ocultar-producto-lista">
+                    <div class="opcion-drop-n btn-color-rapida">
+                        <p class="color-rapida">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-rapida">
+                        <p class="color-rapida">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-rapida">
+                        <p class="color-rapida">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-rapida">
+                        <p class="color-rapida">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-rapida">
+                        <p class="color-rapida">Producto</p>
+                    </div>
                 </div>
 
-                <div class="opcion-drop-n btn-color-cafeteria">
-                    <p class="color-cafeteria">Producto</p>
+                {{-- Lista productos cafeteria --}}
+                <div class="producto-lista-cafeteria ocultar-producto-lista">
+                    <div class="opcion-drop-n btn-color-cafeteria">
+                        <p class="color-cafeteria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-cafeteria">
+                        <p class="color-cafeteria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-cafeteria">
+                        <p class="color-cafeteria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-cafeteria">
+                        <p class="color-cafeteria">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-cafeteria">
+                        <p class="color-cafeteria">Producto</p>
+                    </div>
                 </div>
 
-                <div class="opcion-drop-n btn-color-servicios">
-                    <p class="color-servicios">Producto</p>
+                {{-- Lista productos servicios --}}
+                <div class="producto-lista-servicios ocultar-producto-lista">
+                    <div class="opcion-drop-n btn-color-servicios">
+                        <p class="color-servicios">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-servicios">
+                        <p class="color-servicios">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-servicios">
+                        <p class="color-servicios">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-servicios">
+                        <p class="color-servicios">Producto</p>
+                    </div>
+    
+                    <div class="opcion-drop-n btn-color-servicios">
+                        <p class="color-servicios">Producto</p>
+                    </div>
                 </div>
+
                 <div class="flex-volver-movil">
                     <div class="volver-movil2">Volver</div>
                 </div>
+                
             </div>  
         </div>  
 
@@ -336,9 +436,9 @@
                     <h5>Noticias y tendencias</h5>
                     <a href="/noticias-tendencias" class="boton-ver-op bg-red">Ver mas</a>
                 </div>
-                <div class="opcion-drop-n btn-color-panaderia">
+                <div class="opcion-drop-n btn-color-pasteleria">
                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
-                    <p class="color-panaderia">Pastelería</p>
+                    <p class="color-pasteleria">Pastelería</p>
                 </div>
 
                 <div class="opcion-drop-n btn-color-italiana">
@@ -434,7 +534,7 @@
     <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
     <script src="{{ asset('/public/web/js/product-viewer.js') }}"></script>
 
-    <script src="{{ asset('/web/js/script.js') }}"></script>
+    <script src="{{ asset('/public/web/js/script.js') }}"></script>
     <script>
         $('select').niceSelect();
     </script>

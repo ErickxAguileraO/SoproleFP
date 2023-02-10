@@ -29,6 +29,7 @@ $(".volver-movil").click(function(){
 });
 $(".volver-movil2").click(function(){
   $(".barra-productos-lista-movil").css({'left':'100%'});
+  $(".ocultar-producto-lista").css({'display':'none'});
 });
 
 
@@ -45,6 +46,27 @@ $(".producto-lista").click(function(){
 });
 $(".volver-movil").click(function(){
   $(".barra-productos-lista-movil").css({'left':'100%'});
+});
+
+// Botones de segmentos a lista
+$(".btn-pasteleria-segmento").click(function(){
+  $(".producto-lista-pasteleria").css({'display':'block'});
+});
+
+$(".btn-italiana-segmento").click(function(){
+  $(".producto-lista-italiana").css({'display':'block'});
+});
+
+$(".btn-rapida-segmento").click(function(){
+  $(".producto-lista-rapida").css({'display':'block'});
+});
+
+$(".btn-cafeteria-segmento").click(function(){
+  $(".producto-lista-cafeteria").css({'display':'block'});
+});
+
+$(".btn-servicios-segmento").click(function(){
+  $(".producto-lista-servicios").css({'display':'block'});
 });
 
 
