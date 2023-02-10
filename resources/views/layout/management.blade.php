@@ -95,46 +95,148 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i class="bi bi-house-door"></i> Home</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
+                                            class="bi bi-house-door"></i>&nbsp;&nbsp;&nbsp;Home</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.slider.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.slider.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right-fill"></i>
+                                        <i class="bi bi-caret-right"></i>
                                         &nbsp;Slider
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.editable.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.editable.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right-fill"></i>
+                                        <i class="bi bi-caret-right"></i>
                                         &nbsp;Editables
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.alianza.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.alianza.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right-fill"></i>
+                                        <i class="bi bi-caret-right"></i>
                                         &nbsp;Alianzas
                                     </a>
                                 </div>
                             </div>
                         </nav>
-
                         <nav id="sidebarMenu"
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i class="bi bi-gear-wide-connected"></i> Configuración</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
+                                            class="bi bi-box-seam"></i>&nbsp;&nbsp;&nbsp;Productos</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Productos
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Categorias
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Recetas
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Segmentos
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Academia
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav id="sidebarMenu"
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
+                                            class="bi bi-newspaper"></i>&nbsp;&nbsp;&nbsp;Noticias</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Noticias
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav id="sidebarMenu"
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
+                                            class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;&nbsp;Formularios</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Clientes
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Contactos
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <nav id="sidebarMenu"
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
+                                            class="bi bi-gear-wide-connected"></i>&nbsp;&nbsp;&nbsp;Configuración</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Tipo de negocios
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Sub-segmentos
+                                    </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.usuarios.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right-fill"></i>
+                                        <i class="bi bi-caret-right"></i>
                                         &nbsp;Usuarios
                                     </a>
                                 </div>
+
                             </div>
                         </nav>
                     </div>
