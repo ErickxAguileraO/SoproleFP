@@ -1717,7 +1717,7 @@ footer a{
         justify-content: center;
         width: 90%;
         position: absolute;
-        bottom: 50px;
+        bottom: 20px;
     }
     .volver-movil{
         display: flex;
