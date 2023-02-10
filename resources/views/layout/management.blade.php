@@ -90,12 +90,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-2">
                         <nav id="sidebarMenu"
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top">Home</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i class="bi bi-house-door"></i> Home</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.slider.index')}}" class="list-group-item list-group-item-action px-5 border-0"
@@ -112,7 +112,7 @@
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.alianza.index')}}" class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
                                         <i class="bi bi-caret-right-fill"></i>
                                         &nbsp;Alianzas
@@ -125,7 +125,7 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top">Configuración</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i class="bi bi-gear-wide-connected"></i> Configuración</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.usuarios.index') }}"
@@ -140,7 +140,7 @@
                     </div>
 
 
-                    <div class="col-9">
+                    <div class="col-10">
                         @yield('content')
                     </div>
                 </div>
