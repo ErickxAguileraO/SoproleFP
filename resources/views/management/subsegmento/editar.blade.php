@@ -1,10 +1,10 @@
 @extends('layout.management')
 
-@section('title', 'Editar slider')
+@section('title', 'Editar subsegmento')
 
 @section('content')
     <div class="formulario-admin-secciones">
-        <a href="{{ route('administracion.slider.index') }}" class="enlace btn btn-primary my-3"><i
+        <a href="{{ route('administracion.subsegmento.index') }}" class="enlace btn btn-primary my-3"><i
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
