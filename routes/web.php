@@ -7,6 +7,7 @@ use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\NoticiasController;
+use App\Http\Controllers\Management\TipoNegocioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -139,6 +140,17 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('noticia.eliminar.imagen');
             Route::post('store', 'store')->name('noticia.store');
             Route::post('update', 'update')->name('noticia.update');
+        });
+
+        Route::controller(TipoNegocioController::class)->prefix('tipo-negocio')->group(function () {
+            Route::get('', 'index')->name('tipo.negocio.index');
+            Route::get('crear', 'crear')->name('tipo.negocio.crear');
+            Route::get('editar/{tipoNegocio}', 'editar')->name('tipo.negocio.editar');
+            Route::get('listar', 'listar')->name('tipo.negocio.listar');
+            Route::get('eliminar/{tipoNegocio}', 'eliminar')->name('tipo.negocio.eliminar');
+            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('tipo.negocio.eliminar.imagen');
+            Route::post('store', 'store')->name('tipo.negocio.store');
+            Route::post('update', 'update')->name('tipo.negocio.update');
         });
     });
 });
