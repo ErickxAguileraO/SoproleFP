@@ -8,6 +8,7 @@ use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\NoticiasController;
+use App\Http\Controllers\Management\ProductoController;
 use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
@@ -183,6 +184,17 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{categoria}', 'eliminar')->name('categoria.eliminar');
             Route::post('store', 'store')->name('categoria.store');
             Route::post('update', 'update')->name('categoria.update');
+        });
+
+        Route::controller(ProductoController::class)->prefix('producto')->group(function () {
+            Route::get('', 'index')->name('producto.index');
+            Route::get('crear', 'crear')->name('producto.crear');
+            Route::get('editar/{producto}', 'editar')->name('producto.editar');
+            Route::get('listar', 'listar')->name('producto.listar');
+            Route::get('eliminar/{producto}', 'eliminar')->name('producto.eliminar');
+            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('producto.eliminar.imagen');
+            Route::post('store', 'store')->name('producto.store');
+            Route::post('update', 'update')->name('producto.update');
         });
     });
 });
