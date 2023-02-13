@@ -3,32 +3,32 @@
 namespace App\Http\Controllers\Management;
 
 use App\Http\Controllers\Controller;
-use App\Http\Services\Management\SubSegmentoService;
-use App\Models\SubSegmento;
+use App\Http\Services\Management\CategoriaService;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class SubSegmentosController extends Controller
+class CategoriaController extends Controller
 {
     public function index()
     {
-        return view('management.subsegmento.index');
+        return view('management.categoria.index');
     }
 
     public function crear()
     {
-        return view('management.subsegmento.crear');
+        return view('management.categoria.crear');
     }
 
     public function listar()
     {
-        return SubSegmento::all();
+        return Categoria::all();
     }
 
-    public function editar(SubSegmento $subsegmento)
+    public function editar(Categoria $categoria)
     {
-        return view('management.subsegmento.editar', [
-            "subSegmento" => $subsegmento
+        return view('management.categoria.editar', [
+            "categoria" => $categoria
         ]);
     }
 
@@ -52,14 +52,14 @@ class SubSegmentosController extends Controller
                 'message' => $layoutError
             ], 400);
         } else {
-            return SubSegmentoService::guardar($request);
+            return CategoriaService::guardar($request);
         }
     }
 
     public function update(Request $request)
     {
         $reglasValidacion = [
-            'subsegmento_id' => ['required', 'exists:sub_segmentos,sse_id'],
+            'categoria_id' => ['required', 'exists:categorias,cat_id'],
             'nombre' => ['required', 'string', 'max:250'],
             'estado' => ['required'],
             'orden' => ['required', 'numeric'],
@@ -77,14 +77,14 @@ class SubSegmentosController extends Controller
                 'message' => $layoutError
             ], 400);
         } else {
-            return SubSegmentoService::editar($request);
+            return CategoriaService::editar($request);
         }
     }
 
-    public function eliminar(SubSegmento $subSegmento)
+    public function eliminar(Categoria $categoria)
     {
         try {
-            $subSegmento->delete();
+            $categoria->delete();
 
             return response()->json([
                 'status' => 'T',
