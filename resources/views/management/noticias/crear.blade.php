@@ -1,5 +1,10 @@
 @extends('layout.management')
 
+@push('extra-css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/management/css/checkbox.css') }}">
+@endpush
+
+
 @section('title', 'Crear slider')
 
 @section('content')
@@ -46,6 +51,18 @@
                                 <div class="btn-file-img" id="agregar-imagenes">Agregar</div>
                             </div>
                         </div>
+
+                        <label for="orden">Sub-Segmentos</label>
+                        <div style="margin-top: 15px;">
+                            @foreach ($subsegmentos as $subsegmento)
+                                <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
+                                    <input type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
+                                    <span class="checkmark"></span>
+                                </label>
+                            @endforeach
+                        </div>
+                        <br />
+
                         <label for="estado">Estado</label>
                         <div class="row mb-3">
                             <div class="form-floating my-3">

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Management;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Management\SegmentoService;
 use App\Models\Segmento;
+use App\Models\SubSegmento;
+use App\Models\PivoteSubSegmentos;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -22,7 +24,8 @@ class SegmentoController extends Controller
     {
         return view('management.segmento.crear', [
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'subsegmentos' => SubSegmento::all(),
         ]);
     }
 
@@ -36,7 +39,9 @@ class SegmentoController extends Controller
         return view('management.segmento.editar', [
             "segmento" => $segmento,
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'subsegmentos' => SubSegmento::all(),
+            'subsegmentosSeleccionados' => PivoteSubSegmentos::where('psse_segmento_id', $segmento->seg_id)->pluck('psse_subsegmento_id')->toArray()
         ]);
     }
 
