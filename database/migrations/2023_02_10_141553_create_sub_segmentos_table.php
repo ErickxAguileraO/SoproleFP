@@ -18,9 +18,7 @@ class CreateSubSegmentosTable extends Migration
             $table->string('sse_nombre')->nullable();
             $table->integer('sse_orden')->nullable();
             $table->integer('sse_estado')->nullable();
-
-
-
+            $table->timestamps();
         });
     }
 
