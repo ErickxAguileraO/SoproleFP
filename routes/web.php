@@ -7,6 +7,7 @@ use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\NoticiasController;
+use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 
 /*
@@ -148,9 +149,21 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('editar/{tipoNegocio}', 'editar')->name('tipo.negocio.editar');
             Route::get('listar', 'listar')->name('tipo.negocio.listar');
             Route::get('eliminar/{tipoNegocio}', 'eliminar')->name('tipo.negocio.eliminar');
-            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('tipo.negocio.eliminar.imagen');
             Route::post('store', 'store')->name('tipo.negocio.store');
             Route::post('update', 'update')->name('tipo.negocio.update');
         });
+
+        
+        Route::controller(SubSegmentosController::class)->prefix('subsegmento')->group(function () {
+            Route::get('', 'index')->name('subsegmento.index');
+            Route::get('crear', 'crear')->name('subsegmento.crear');
+            Route::get('editar/{subsegmento}', 'editar')->name('subsegmento.editar');
+            Route::get('listar', 'listar')->name('subsegmento.listar');
+            Route::get('eliminar/{subsegmento}', 'eliminar')->name('subsegmento.eliminar');
+            Route::post('store', 'store')->name('subsegmento.store');
+            Route::post('update', 'update')->name('subsegmento.update');
+        });
+
+
     });
 });
