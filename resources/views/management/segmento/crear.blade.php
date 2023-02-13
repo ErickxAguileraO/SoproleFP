@@ -45,7 +45,7 @@
                         <div class="form-floating my-3">
                             <div id="picker"></div>
                             <input type="hidden" name="color" class="form-control" id="color" placeholder="nombre"
-                                value="" required>
+                                value="#f00" required>
                         </div>
 
                         <label for="orden">Orden</label>
