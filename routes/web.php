@@ -7,6 +7,7 @@ use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\NoticiasController;
+use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 
@@ -153,7 +154,6 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('tipo.negocio.update');
         });
 
-        
         Route::controller(SubSegmentosController::class)->prefix('subsegmento')->group(function () {
             Route::get('', 'index')->name('subsegmento.index');
             Route::get('crear', 'crear')->name('subsegmento.crear');
@@ -164,6 +164,14 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('subsegmento.update');
         });
 
-
+        Route::controller(SegmentoController::class)->prefix('segmento')->group(function () {
+            Route::get('', 'index')->name('segmento.index');
+            Route::get('crear', 'crear')->name('segmento.crear');
+            Route::get('editar/{segmento}', 'editar')->name('segmento.editar');
+            Route::get('listar', 'listar')->name('segmento.listar');
+            Route::get('eliminar/{segmento}', 'eliminar')->name('segmento.eliminar');
+            Route::post('store', 'store')->name('segmento.store');
+            Route::post('update', 'update')->name('segmento.update');
+        });
     });
 });
