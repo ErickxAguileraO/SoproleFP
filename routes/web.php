@@ -9,6 +9,7 @@ use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\ProductoController;
+use App\Http\Controllers\Management\RecetaController;
 use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
@@ -195,6 +196,17 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('producto.eliminar.imagen');
             Route::post('store', 'store')->name('producto.store');
             Route::post('update', 'update')->name('producto.update');
+        });
+
+        Route::controller(RecetaController::class)->prefix('receta')->group(function () {
+            Route::get('', 'index')->name('receta.index');
+            Route::get('crear', 'crear')->name('receta.crear');
+            Route::get('editar/{receta}', 'editar')->name('receta.editar');
+            Route::get('listar', 'listar')->name('receta.listar');
+            Route::get('eliminar/{receta}', 'eliminar')->name('receta.eliminar');
+            Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('receta.eliminar.imagen');
+            Route::post('store', 'store')->name('receta.store');
+            Route::post('update', 'update')->name('receta.update');
         });
     });
 });
