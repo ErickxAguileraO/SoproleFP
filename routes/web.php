@@ -6,6 +6,7 @@ use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AlianzaController;
+use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
@@ -172,6 +173,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{segmento}', 'eliminar')->name('segmento.eliminar');
             Route::post('store', 'store')->name('segmento.store');
             Route::post('update', 'update')->name('segmento.update');
+        });
+
+        Route::controller(CategoriaController::class)->prefix('categoria')->group(function () {
+            Route::get('', 'index')->name('categoria.index');
+            Route::get('crear', 'crear')->name('categoria.crear');
+            Route::get('editar/{categoria}', 'editar')->name('categoria.editar');
+            Route::get('listar', 'listar')->name('categoria.listar');
+            Route::get('eliminar/{categoria}', 'eliminar')->name('categoria.eliminar');
+            Route::post('store', 'store')->name('categoria.store');
+            Route::post('update', 'update')->name('categoria.update');
         });
     });
 });
