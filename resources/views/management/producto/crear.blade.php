@@ -84,7 +84,7 @@
                             </div>
                         </div>
 
-                        <label for="orden">SubSecciones</label>
+                        <label for="orden">Sub-Segmentos</label>
                         <div style="margin-top: 15px;">
                             @foreach ($subsegmentos as $subsegmento)
                                 <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}

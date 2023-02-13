@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Services\Management\NoticiaService;
 use App\Models\ImagenNoticia;
 use App\Models\Noticia;
+use App\Models\PivoteSubSegmentos;
 use Illuminate\Http\Request;
+use App\Models\SubSegmento;
 use Illuminate\Support\Facades\Validator;
 
 class NoticiasController extends Controller
@@ -24,7 +26,8 @@ class NoticiasController extends Controller
     {
         return view('management.noticias.crear', [
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'subsegmentos' => SubSegmento::all(),
         ]);
     }
 
@@ -38,7 +41,9 @@ class NoticiasController extends Controller
         return view('management.noticias.editar', [
             "noticia" => $noticia,
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'subsegmentos' => SubSegmento::all(),
+            'subsegmentosSeleccionados' => PivoteSubSegmentos::where('psse_noticia_id', $noticia->not_id)->pluck('psse_subsegmento_id')->toArray()
         ]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Services\Management;
 
 use App\Models\Segmento;
 use Illuminate\Support\Facades\DB;
+use App\Models\PivoteSubSegmentos;
 
 class SegmentoService
 {
@@ -25,7 +26,18 @@ class SegmentoService
                 $insert['seg_imagen'] = $uploadFile;
             }
 
-            Segmento::create($insert);
+            $segmento = Segmento::create($insert);
+
+            if($request->subsegmentos != null && is_array($request->subsegmentos)){
+                foreach($request->subsegmentos as $sse){
+                    PivoteSubSegmentos::create([
+                        "psse_subsegmento_id" => intval($sse),
+                        "psse_segmento_id" =>  intval($segmento->seg_id)
+                    ]);
+                }
+            }
+
+
 
             DB::commit();
 
@@ -59,6 +71,19 @@ class SegmentoService
             if($request->file('imagen')){
                 $segmento->seg_imagen = FileService::upload($request->file('imagen'),'imagenes/segmento');
             }
+
+            PivoteSubSegmentos::where('psse_segmento_id',$segmento->seg_id)->delete();
+
+            if($request->subsegmentos != null && is_array($request->subsegmentos)){
+                foreach($request->subsegmentos as $sse){
+                    PivoteSubSegmentos::create([
+                        "psse_subsegmento_id" => intval($sse),
+                        "psse_segmento_id" =>  intval($segmento->seg_id)
+                    ]);
+                }
+            }
+
+
 
             $segmento->save();
 

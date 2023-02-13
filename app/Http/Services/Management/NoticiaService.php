@@ -4,6 +4,7 @@ namespace App\Http\Services\Management;
 
 use App\Models\ImagenNoticia;
 use App\Models\Noticia;
+use App\Models\PivoteSubSegmentos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
@@ -33,6 +34,17 @@ class NoticiaService
                     ]);
                 }
             }
+
+            if($request->subsegmentos != null && is_array($request->subsegmentos)){
+                foreach($request->subsegmentos as $sse){
+                    PivoteSubSegmentos::create([
+                        "psse_subsegmento_id" => intval($sse),
+                        "psse_noticia_id" =>  intval($noticia->not_id)
+                    ]);
+                }
+            }
+
+
             DB::commit();
 
             return response()->json([
@@ -72,6 +84,18 @@ class NoticiaService
                     ]);
                 }
             }
+
+            PivoteSubSegmentos::where('psse_noticia_id',$noticia->not_id)->delete();
+
+            if($request->subsegmentos != null && is_array($request->subsegmentos)){
+                foreach($request->subsegmentos as $sse){
+                    PivoteSubSegmentos::create([
+                        "psse_subsegmento_id" => intval($sse),
+                        "psse_noticia_id" =>  intval($noticia->not_id)
+                    ]);
+                }
+            }
+
 
             DB::commit();
 

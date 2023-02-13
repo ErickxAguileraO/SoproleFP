@@ -1,4 +1,7 @@
 @extends('layout.management')
+@push('extra-css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/management/css/checkbox.css') }}">
+@endpush
 
 @section('title', 'Crear slider')
 
@@ -79,6 +82,21 @@
                                     @endforeach
                                 </tbody>
                             </table>
+
+                            <label for="orden">Sub-Segmentos</label>
+                            <div style="margin-top: 15px;">
+                                @foreach ($subsegmentos as $subsegmento)
+                                    <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
+                                        <input
+                                            {{ in_array($subsegmento->sse_id, $subsegmentosSeleccionados) ? 'checked' : false }}
+                                            type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                @endforeach
+                            </div>
+                            <br />
+
+                            
                             <div>
                                 <label for="estado">Estado</label>
                                 <div class="row mb-3">
