@@ -8,7 +8,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Crear</h1>
+            <h1>Crear slider</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             @csrf

@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/management/css/checkbox.css') }}">
 @endpush
 
-@section('title', 'Crear producto')
+@section('title', 'Editar producto')
 
 @section('content')
     <div class="formulario-admin-secciones">
@@ -12,7 +12,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Crear</h1>
+            <h1>Editar producto</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             <input type="hidden" name="producto_id" value="{{ $producto->pro_id }}" />
@@ -153,7 +153,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button class="btn btn-success btn-agregar">Agregar</button>
+                                <button class="btn btn-success btn-agregar">Actualizar</button>
                             </div>
                         </div>
                     </div>

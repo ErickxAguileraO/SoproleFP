@@ -8,7 +8,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Editar</h1>
+            <h1>Editar cliente</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             @csrf
@@ -77,7 +77,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button class="btn btn-success btn-agregar">Agregar</button>
+                        <button class="btn btn-success btn-agregar">Actualizar</button>
                     </div>
                 </div>
             </div>
