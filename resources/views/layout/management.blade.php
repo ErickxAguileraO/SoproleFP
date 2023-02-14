@@ -41,7 +41,11 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <style>
         .bg-info {
-            background-color: #386bc0 !important;
+            background-color: #13355D !important;
+        }
+        .list-group-light .active {
+            background-color: #d1d9e6;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -95,14 +99,13 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
-                                            class="bi bi-house-door"></i>&nbsp;&nbsp;&nbsp;Home</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Home</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.slider.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-card-image"></i>
                                         &nbsp;Slider
                                     </a>
                                 </div>
@@ -110,7 +113,7 @@
                                     <a href="{{ route('administracion.editable.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-columns"></i>
                                         &nbsp;Editables
                                     </a>
                                 </div>
@@ -118,7 +121,7 @@
                                     <a href="{{ route('administracion.alianza.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-people"></i>
                                         &nbsp;Alianzas
                                     </a>
                                 </div>
@@ -128,41 +131,45 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
-                                            class="bi bi-box-seam"></i>&nbsp;&nbsp;&nbsp;Productos</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Productos</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.producto.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.producto.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-box-seam"></i>
                                         &nbsp;Productos
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.categoria.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.categoria.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-columns"></i>
                                         &nbsp;Categorias
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route("administracion.receta.index")}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.receta.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-list-check"></i>
                                         &nbsp;Recetas
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.segmento.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.segmento.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-columns-gap"></i>
                                         &nbsp;Segmentos
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.academia.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.academia.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-mortarboard"></i>
                                         &nbsp;Academia
                                     </a>
                                 </div>
@@ -172,13 +179,13 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
-                                            class="bi bi-newspaper"></i>&nbsp;&nbsp;&nbsp;Noticias</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Noticias</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.noticia.index') }}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.noticia.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-newspaper"></i>
                                         &nbsp;Noticias
                                     </a>
                                 </div>
@@ -188,14 +195,14 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
-                                            class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;&nbsp;Formularios</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Formularios</p>
                                 </div>
-                            
+
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.contacto.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.contacto.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-person-lines-fill"></i>
                                         &nbsp;Contactos
                                     </a>
                                 </div>
@@ -205,34 +212,43 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"><i
-                                            class="bi bi-gear-wide-connected"></i>&nbsp;&nbsp;&nbsp;Configuración</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Configuración</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.tipo.negocio.index') }}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.tipo.negocio.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-ui-radios"></i>
                                         &nbsp;Tipo de negocios
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.subsegmento.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.subsegmento.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-tags-fill"></i>
                                         &nbsp;Sub-segmentos
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.cliente.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.cliente.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-person-vcard" viewBox="0 0 16 16">
+                                            <path
+                                                d="M5 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm4-2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5ZM9 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4A.5.5 0 0 1 9 8Zm1 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z" />
+                                            <path
+                                                d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H8.96c.026-.163.04-.33.04-.5C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1.006 1.006 0 0 1 1 12V4Z" />
+                                        </svg>
                                         &nbsp;Clientes
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{route('administracion.local.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                    <a href="{{ route('administracion.local.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <i class="bi bi-shop"></i>
                                         &nbsp;Locales
                                     </a>
                                 </div>
@@ -240,7 +256,11 @@
                                     <a href="{{ route('administracion.usuarios.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-person-gear" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z" />
+                                        </svg>
                                         &nbsp;Usuarios
                                     </a>
                                 </div>
@@ -291,7 +311,7 @@
     <script src="{{ asset('/public/management/js/header.js') }}"></script>
     <script>
         $('.container-fluid').find('.list-group-item').each(function(indice, elemento) {
-            if ($(this).attr('href') == window.location.href || $(this).attr('href') == window.location.pathname) {
+            if (this.href.substring(this.href.lastIndexOf('/') + 1) == "{{ Request::segment(2) }}") {
                 $(this).addClass('active')
                 $(this).parent().parent().parent().parent().children().children().click()
             }
