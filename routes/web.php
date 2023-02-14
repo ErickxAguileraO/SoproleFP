@@ -9,6 +9,7 @@ use App\Http\Controllers\Management\AcademiaController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\ClienteController;
+use App\Http\Controllers\Management\ContactoController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\ProductoController;
 use App\Http\Controllers\Management\RecetaController;
@@ -229,6 +230,13 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{cliente}', 'eliminar')->name('cliente.eliminar');
             Route::post('store', 'store')->name('cliente.store');
             Route::post('update', 'update')->name('cliente.update');
+        });
+
+        
+        Route::controller(ContactoController::class)->prefix('contacto')->group(function () {
+            Route::get('', 'index')->name('contacto.index');
+            Route::get('ver/{contacto}', 'editar')->name('contacto.editar');
+            Route::get('listar', 'listar')->name('contacto.listar');
         });
     });
 });
