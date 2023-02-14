@@ -8,6 +8,10 @@ use App\Models\Cliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
+use Malahierba\ChileRut\ChileRut;
+use Malahierba\ChileRut\Rules\ValidChileanRut;
+
+
 class ClienteController extends Controller
 {
     public function index()
@@ -36,7 +40,7 @@ class ClienteController extends Controller
     {
         $reglasValidacion = [
             'razon_social' => ['required', 'string', 'max:250'],
-            'rut' => ['required', 'string', 'max:12'],
+            'rut' => ['required', 'string', 'max:12', new ValidChileanRut(new ChileRut)],
             'otro_tipo' => ['required', 'string', 'max:250'],
             'calle' => ['required', 'string', 'max:250'],
             'numero' => ['required', 'numeric'],
@@ -66,7 +70,7 @@ class ClienteController extends Controller
     {
         $reglasValidacion = [
             'razon_social' => ['required', 'string', 'max:250'],
-            'rut' => ['required', 'string', 'max:12'],
+            'rut' => ['required', 'string', 'max:12', new ValidChileanRut(new ChileRut)],
             'otro_tipo' => ['required', 'string', 'max:250'],
             'calle' => ['required', 'string', 'max:250'],
             'numero' => ['required', 'numeric'],
