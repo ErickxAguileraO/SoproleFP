@@ -191,13 +191,7 @@
                                     <p class="text-center bg-info text-white mb-0 rounded-top"><i
                                             class="bi bi-person-lines-fill"></i>&nbsp;&nbsp;&nbsp;Formularios</p>
                                 </div>
-                                <div class="list-group list-group-light accordion-item">
-                                    <a href="" class="list-group-item list-group-item-action px-5 border-0"
-                                        style="padding-left: 2rem !important;">
-                                        <i class="bi bi-caret-right"></i>
-                                        &nbsp;Clientes
-                                    </a>
-                                </div>
+                            
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="" class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
@@ -226,6 +220,13 @@
                                         style="padding-left: 2rem !important;">
                                         <i class="bi bi-caret-right"></i>
                                         &nbsp;Sub-segmentos
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{route('administracion.cliente.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Clientes
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
