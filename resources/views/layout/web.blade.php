@@ -12,11 +12,11 @@
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
-    <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
