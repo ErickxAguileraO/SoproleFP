@@ -10,6 +10,7 @@ use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\ClienteController;
 use App\Http\Controllers\Management\ContactoController;
+use App\Http\Controllers\Management\LocalController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\ProductoController;
 use App\Http\Controllers\Management\RecetaController;
@@ -232,11 +233,21 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('cliente.update');
         });
 
-        
         Route::controller(ContactoController::class)->prefix('contacto')->group(function () {
             Route::get('', 'index')->name('contacto.index');
             Route::get('ver/{contacto}', 'editar')->name('contacto.editar');
             Route::get('listar', 'listar')->name('contacto.listar');
+        });
+
+        Route::controller(LocalController::class)->prefix('local')->group(function () {
+            Route::get('', 'index')->name('local.index');
+            Route::get('crear', 'crear')->name('local.crear');
+            Route::get('editar/{local}', 'editar')->name('local.editar');
+            Route::get('listar', 'listar')->name('local.listar');
+            Route::get('eliminar/{local}', 'eliminar')->name('local.eliminar');
+            Route::post('store', 'store')->name('local.store');
+            Route::post('update', 'update')->name('local.update');
+            Route::get('get-comuna-by-region/{region}', 'getComunaByRegion')->name('local.get.comuna,by.region');
         });
     });
 });
