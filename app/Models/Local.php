@@ -5,15 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Region extends Model
+class Local extends Model
 {
     use HasFactory;
 
-    protected $table = 'region';
+    protected $table = 'locales';
 
-    protected $primaryKey = 'reg_id';
+    protected $primaryKey = 'loc_id';
 
     protected $fillable = [
-        'reg_nombre',
+        'loc_nombre',
+        'loc_comuna_id',
+        'loc_orden',
+        'loc_estado'
     ];
 }

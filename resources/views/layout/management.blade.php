@@ -230,6 +230,13 @@
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
+                                    <a href="{{route('administracion.local.index')}}" class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-caret-right"></i>
+                                        &nbsp;Locales
+                                    </a>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.usuarios.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
@@ -241,8 +248,6 @@
                             </div>
                         </nav>
                     </div>
-
-
                     <div class="col-10">
                         @yield('content')
                     </div>
