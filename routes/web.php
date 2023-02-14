@@ -8,6 +8,7 @@ use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Management\AcademiaController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
+use App\Http\Controllers\Management\ClienteController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\ProductoController;
 use App\Http\Controllers\Management\RecetaController;
@@ -218,6 +219,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{academia}', 'eliminar')->name('academia.eliminar');
             Route::post('store', 'store')->name('academia.store');
             Route::post('update', 'update')->name('academia.update');
+        });
+
+        Route::controller(ClienteController::class)->prefix('cliente')->group(function () {
+            Route::get('', 'index')->name('cliente.index');
+            Route::get('crear', 'crear')->name('cliente.crear');
+            Route::get('editar/{cliente}', 'editar')->name('cliente.editar');
+            Route::get('listar', 'listar')->name('cliente.listar');
+            Route::get('eliminar/{cliente}', 'eliminar')->name('cliente.eliminar');
+            Route::post('store', 'store')->name('cliente.store');
+            Route::post('update', 'update')->name('cliente.update');
         });
     });
 });
