@@ -12,11 +12,11 @@
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
-    <script src="{{ asset('/public/web/js/jquery-3.6.0.min.js') }}"></script>
-    <script src="{{ asset('/public/web/js/jquery-ui.js') }}"></script>
+    <script src="{{ asset('/web/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('/web/js/jquery-ui.js') }}"></script>
 
     <!-- Estilos -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/web/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/niceselect/nice-select.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
@@ -62,7 +62,7 @@
                                <div>
                                     <div class="titulo-drop">
                                         <h5>Academia</h5>
-                                        <a href="/academia" class="boton-ver-op bg-red">Ver mas</a>
+                                        <a href="/academia" class="boton-ver-op bg-red">Ver todos</a>
                                     </div>
                                     <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
@@ -100,13 +100,13 @@
                                <div>
                                     <div class="titulo-drop">
                                         <h5>Segmentos</h5>
-                                        <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
+                                        <a href="/productos" class="boton-ver-op bg-red">Ver todos</a>
                                     </div>
                                     <div class="opcion-drop-n btn-color-pasteleria">
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
                                         <p class="color-pasteleria">Pastelería</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-                                        <div class="sub-content-drop">
+                                        <div class="sub-content-drop ocultar-drop drop-default">
                                             <div class="titulo-drop">
                                                 <h5>Productos Pastelería</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
@@ -123,7 +123,7 @@
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
                                         <p class="color-italiana">Comida Italiana</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-                                        <div class="sub-content-drop">
+                                        <div class="sub-content-drop ocultar-drop">
                                             <div class="titulo-drop">
                                                 <h5>Productos Comida Italiana</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
@@ -139,7 +139,7 @@
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
                                         <p class="color-rapida">Comida Rápida</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-                                        <div class="sub-content-drop">
+                                        <div class="sub-content-drop ocultar-drop">
                                             <div class="titulo-drop">
                                                 <h5>Productos Comida Rápida</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
@@ -156,7 +156,7 @@
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
                                         <p class="color-cafeteria">Cafetería</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-                                        <div class="sub-content-drop">
+                                        <div class="sub-content-drop ocultar-drop">
                                             <div class="titulo-drop">
                                                 <h5>Productos Cafetería</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
@@ -171,7 +171,7 @@
                                         <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                                         <p class="color-servicios">Servicios de alimentación</p>
                                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-                                        <div class="sub-content-drop">
+                                        <div class="sub-content-drop ocultar-drop">
                                             <div class="titulo-drop">
                                                 <h5>Productos Servicios de alimentación</h5>
                                                 <a href="" class="boton-ver-op bg-red">Ver mas</a>

@@ -292,11 +292,16 @@ textarea{
 .btn-color-servicios:hover{
     background: #F4F7FB;
 }
-
+/* .drop-default{
+    display: flex !important;
+} */
 
 .opcion-drop-n:hover .sub-content-drop{
     display: flex;
 }
+
+
+
 .sub-content-drop:hover{
     display: flex;
 }
