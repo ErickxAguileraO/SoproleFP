@@ -3,7 +3,6 @@
 namespace App\Http\Services\Management;
 
 use App\Models\Alianza;
-use App\Models\Slider;
 use Illuminate\Support\Facades\DB;
 
 class AlianzaService
