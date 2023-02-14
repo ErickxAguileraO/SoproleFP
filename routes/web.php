@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\Management\AcademiaController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\NoticiasController;
@@ -207,6 +208,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar-imagen/{imagen}', 'eliminar_imagen')->name('receta.eliminar.imagen');
             Route::post('store', 'store')->name('receta.store');
             Route::post('update', 'update')->name('receta.update');
+        });
+
+        Route::controller(AcademiaController::class)->prefix('academia')->group(function () {
+            Route::get('', 'index')->name('academia.index');
+            Route::get('crear', 'crear')->name('academia.crear');
+            Route::get('editar/{academia}', 'editar')->name('academia.editar');
+            Route::get('listar', 'listar')->name('academia.listar');
+            Route::get('eliminar/{academia}', 'eliminar')->name('academia.eliminar');
+            Route::post('store', 'store')->name('academia.store');
+            Route::post('update', 'update')->name('academia.update');
         });
     });
 });
