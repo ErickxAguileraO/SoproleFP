@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/management/css/checkbox.css') }}">
 @endpush
 
-@section('title', 'Crear slider')
+@section('title', 'Editar noticia')
 
 @section('content')
     <div class="formulario-admin-secciones">
@@ -11,7 +11,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Crear</h1>
+            <h1>Editar noticia</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             <input type="hidden" name="noticia_id" value="{{ $noticia->not_id }}" />
@@ -108,7 +108,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button class="btn btn-success btn-agregar">Agregar</button>
+                                <button class="btn btn-success btn-agregar">Actualizar</button>
                             </div>
                         </div>
                     </div>

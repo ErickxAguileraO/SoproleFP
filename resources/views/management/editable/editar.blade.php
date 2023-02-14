@@ -1,6 +1,6 @@
 @extends('layout.management')
 
-@section('title', 'Crear slider')
+@section('title', 'Editar editable')
 
 @section('content')
     <div class="formulario-admin-secciones">
@@ -8,7 +8,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Crear</h1>
+            <h1>Editar editable</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             <input type="hidden" name="editable_id" value="{{ $editable->edi_id }}" />
@@ -20,7 +20,7 @@
                         <div class="form-floating my-3">
                             <input type="text" name="titulo" class="form-control" id="titulo" placeholder="titulo"
                                 autocomplete="new-password" value="{{ $editable->edi_titulo }}" required>
-                           
+
                         </div>
                         <label for="contenido">Contenido</label>
                         <div class="form-floating my-3">
@@ -30,7 +30,7 @@
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video" placeholder="video"
                                 autocomplete="new-password" value="{{ $editable->edi_video }}" required>
-                           
+
                         </div>
                         <label for="tipo" class="col-md-4 col-form-label">Tipo</label>
                         <div class="row mb-3">
@@ -107,7 +107,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <button class="btn btn-success btn-agregar">Agregar</button>
+                                <button class="btn btn-success btn-agregar">Actualizar</button>
                             </div>
                         </div>
                     </div>

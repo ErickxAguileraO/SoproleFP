@@ -1,6 +1,6 @@
 @extends('layout.management')
 
-@section('title', 'Crear slider')
+@section('title', 'Editar alianza')
 
 @section('content')
     <div class="formulario-admin-secciones">
@@ -8,7 +8,7 @@
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Editar</h1>
+            <h1>Editar alianza</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             <input type="hidden" name="alianza_id" value="{{ $alianza->ali_id }}" />
@@ -65,7 +65,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button class="btn btn-success btn-agregar">Agregar</button>
+                        <button class="btn btn-success btn-agregar">Actualizar</button>
                     </div>
                 </div>
             </div>

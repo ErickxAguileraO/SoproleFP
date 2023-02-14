@@ -46,7 +46,7 @@ class ClienteController extends Controller
             'numero' => ['required', 'numeric'],
             'nombre_contacto' => ['required', 'string', 'max:250'],
             'telefono_contacto' => ['required', 'string', 'max:250'],
-            'correo_contacto' => ['required', 'string', 'max:250'],
+            'correo_contacto' => ['required', 'email', 'max:250'],
             'estado' => ['required'],
         ];
 
@@ -76,7 +76,7 @@ class ClienteController extends Controller
             'numero' => ['required', 'numeric'],
             'nombre_contacto' => ['required', 'string', 'max:250'],
             'telefono_contacto' => ['required', 'string', 'max:250'],
-            'correo_contacto' => ['required', 'string', 'max:250'],
+            'correo_contacto' => ['required', 'email', 'max:250'],
             'estado' => ['required'],
         ];
 

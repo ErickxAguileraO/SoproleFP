@@ -1,14 +1,14 @@
 @extends('layout.management')
 
-@section('title', 'Crear slider')
+@section('title', 'Crear editable')
 
 @section('content')
     <div class="formulario-admin-secciones">
-        <a href="{{ route('administracion.slider.index') }}" class="enlace btn btn-primary my-3"><i
+        <a href="{{ route('administracion.editable.index') }}" class="enlace btn btn-primary my-3"><i
                 class="bi bi-arrow-bar-left"></i> volver
             al listado</a>
         <div class="row">
-            <h1>Crear</h1>
+            <h1>Crear editable</h1>
         </div>
         <form name="formSubmit" class="formulario" id="formSubmit" enctype="multipart/form-data" method="post">
             @csrf
