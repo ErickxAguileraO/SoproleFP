@@ -10,6 +10,7 @@ use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\ClienteController;
 use App\Http\Controllers\Management\ContactoController;
+use App\Http\Controllers\Management\HomeController;
 use App\Http\Controllers\Management\LocalController;
 use App\Http\Controllers\Management\NoticiasController;
 use App\Http\Controllers\Management\ProductoController;
@@ -98,8 +99,13 @@ Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(
 //ADMINISTRACIÓN
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'administracion', 'as' => 'administracion.'], function () {
-        Route::view('dashboard', 'management.home.index')->name('index');
 
+        
+        Route::controller(HomeController::class)->prefix('dashboard')->group(function () {  
+            Route::get('', 'index')->name('index');
+            Route::get('contar', 'contar')->name('contar');
+        });
+        
         Route::controller(UserController::class)->prefix('usuarios')->group(function () {
             Route::get('', 'index')->name('usuarios.index');
             Route::post('', 'store')->name('usuarios.store');
