@@ -212,7 +212,7 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Configuración</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Configuraciones</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.tipo.negocio.index') }}"
@@ -264,7 +264,14 @@
                                         &nbsp;Usuarios
                                     </a>
                                 </div>
-
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.configuracion.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-gear-wide-connected"></i>
+                                        &nbsp;Configuracion General
+                                    </a>
+                                </div>
                             </div>
                         </nav>
                     </div>

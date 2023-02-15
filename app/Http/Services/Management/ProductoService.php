@@ -32,7 +32,7 @@ class ProductoService
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenProducto::create([
-                        "ipr_imagen" => FileService::upload($imagen, 'imagenes/productos'),
+                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/'.$producto->pro_id),
                         "ipr_producto_id" => $producto->pro_id
                     ]);
                 }
@@ -86,7 +86,7 @@ class ProductoService
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenProducto::create([
-                        "ipr_imagen" => FileService::upload($imagen, 'imagenes/productos'),
+                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/'.$producto->pro_id),
                         "ipr_producto_id" => $producto->pro_id
                     ]);
                 }
@@ -147,7 +147,6 @@ class ProductoService
 
     public static function eliminarImagen($imagen)
     {
-
         try {
             FileService::destroy($imagen->ino_imagen);
             $imagen->delete();

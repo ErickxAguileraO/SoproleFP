@@ -19,4 +19,10 @@ class FileService
         $imagen = str_replace('/public/storage/', 'public/', $imagen);
         Storage::delete($imagen);
     }
+
+    public static function uploadCustomName($imagen, $ruta)
+    {
+        $imagen->storeAs('public/'.$ruta, $imagen->getClientOriginalName());
+        return '/public/storage/' . $ruta. '/' . $imagen->getClientOriginalName();
+    }
 }

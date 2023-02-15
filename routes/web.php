@@ -9,6 +9,7 @@ use App\Http\Controllers\Management\AcademiaController;
 use App\Http\Controllers\Management\AlianzaController;
 use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\ClienteController;
+use App\Http\Controllers\Management\ConfiguracionController;
 use App\Http\Controllers\Management\ContactoController;
 use App\Http\Controllers\Management\HomeController;
 use App\Http\Controllers\Management\LocalController;
@@ -100,7 +101,6 @@ Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'administracion', 'as' => 'administracion.'], function () {
 
-        
         Route::controller(HomeController::class)->prefix('dashboard')->group(function () {  
             Route::get('', 'index')->name('index');
             Route::get('contar', 'contar')->name('contar');
@@ -255,5 +255,17 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('update', 'update')->name('local.update');
             Route::get('get-comuna-by-region/{region}', 'getComunaByRegion')->name('local.get.comuna,by.region');
         });
+
+        Route::controller(ConfiguracionController::class)->prefix('configuracion')->group(function () {
+            Route::get('', 'index')->name('configuracion.index');
+            Route::get('crear', 'crear')->name('configuracion.crear');
+            Route::get('editar/{configuracion}', 'editar')->name('configuracion.editar');
+            Route::get('listar', 'listar')->name('configuracion.listar');
+            Route::get('eliminar/{configuracion}', 'eliminar')->name('configuracion.eliminar');
+            Route::post('store', 'store')->name('configuracion.store');
+            Route::post('update', 'update')->name('configuracion.update');
+        });
+
+
     });
 });
