@@ -16,7 +16,6 @@
             encontrar las diferentes secciones para poder administrar el sitio web, puede dirigirse a este con el siguiente
             <a target="_blank" href="{{ env('APP_URL') }}">enlace <i class="bi bi-box-arrow-up-right"></i></a>.
         </p>
-
         <table class="styled-table">
             <thead>
                 <tr>
@@ -83,11 +82,7 @@
                 </tr>
             </tbody>
         </table>
-
-
     </div>
-
-
 @endsection
 @push('extra-js')
     <script src="{{ asset('public/management/js/home/index.js?v=' . rand()) }}"></script>
