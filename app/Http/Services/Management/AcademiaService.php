@@ -4,33 +4,33 @@ namespace App\Http\Services\Management;
 
 use App\Models\Academia;
 use App\Models\AcademiaSegmento;
-use App\Models\ImagenNoticia;
-use App\Models\ImagenReceta;
-use App\Models\Noticia;
 use App\Models\PivoteSubSegmentos;
-use App\Models\Receta;
-use App\Models\RecetaProducto;
-use App\Models\RecetaSegmento;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Carbon\Carbon;
 
 class AcademiaService
 {
     public static function guardar($request)
     {
         DB::beginTransaction();
-
-        try {
-
-            $academia =  Academia::create([
+ 
+            $insert = [
                 'aca_titulo' => $request->titulo,
+                'aca_url' => Str::slug($request->titulo),
                 'aca_titulo2' => $request->titulo2,
                 'aca_contenido' => $request->contenido,
                 'aca_video' => $request->video,
                 'aca_orden' => $request->orden,
                 'aca_estado' =>$request->estado,
-            ]);
+            ];
+
+            $uploadFile = FileService::upload($request->file('imagen'),'imagenes/academia');
+            if($uploadFile){
+                $insert['aca_imagen'] = $uploadFile;
+            }
+            $academia =  Academia::create($insert);
+
+
 
             if($request->subsegmentos != null && is_array($request->subsegmentos)){
                 foreach($request->subsegmentos as $sse){
@@ -56,13 +56,7 @@ class AcademiaService
                 'status' => 'T',
                 'message' => 'Registro creado correctamente',
             ], 201);
-        } catch (\Exception $exc) {
-            DB::rollBack();
-            return response()->json([
-                'status' => 'F',
-                'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
-            ], 500);
-        }
+       
     }
 
     public static function editar($request)
@@ -73,11 +67,18 @@ class AcademiaService
         
             $academia = Academia::find($request->academia_id);
             $academia->aca_titulo =  $request->titulo;
+            $academia->aca_url =  Str::slug($request->titulo);
             $academia->aca_titulo2 =  $request->titulo2;
             $academia->aca_contenido = $request->contenido;
             $academia->aca_video = $request->video;
             $academia->aca_orden =  $request->orden;
             $academia->aca_estado = $request->estado;
+
+            if($request->file('imagen')){
+                $academia->aca_imagen = FileService::upload($request->file('imagen'),'imagenes/academia');
+            }
+
+
             $academia->save();
 
             PivoteSubSegmentos::where('psse_academia_id',$academia->aca_id)->delete();

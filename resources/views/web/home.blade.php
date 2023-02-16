@@ -11,10 +11,9 @@
 
                 @foreach ($sliders as $slider)
                     <li style=" z-index:0; opacity: 1;" class="li-slider" enlace="{{ $slider->sli_link }}">
-                        <img class="ocultar-movil" style="{{ $slider->sli_link ? 'cursor:pointer' : '' }}" src="{{ asset($slider->sli_imagen) }}"
-                            alt="">
-                        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-home-movil.svg') }}"
-                            alt="">
+                        <img class="ocultar-movil" style="{{ $slider->sli_link ? 'cursor:pointer' : '' }}"
+                            src="{{ asset($slider->sli_imagen) }}" alt="">
+                        <img class="ocultar-escritorio" src="{{ asset($slider->sli_imagen_movil) }}" alt="">
                     </li>
                 @endforeach
             </ul>
@@ -39,47 +38,18 @@
                 <p class="sub-titulo">Nos apasiona ayudar a nuestros clientes, logrando la optimización de sus recursos,
                     haciendo más eficiente sus procesos, alcanzando una mayor calidad y expertíz en su negocio</p>
                 <div class="cuadros-info cuadros-row-4">
-                    <a href="/academia-detalle" class="cuadros-info-n">
-                        <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt="">
-                        </div>
-                        <div class="texto">
-                            <h5>Título con una línea</h5>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea
-                                de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        </div>
-                    </a>
+                    @foreach ($academias as $academia)
+                        <a href="/academia-detalle/{{ $academia->aca_url }}" class="cuadros-info-n">
+                            <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
+                            </div>
+                            <div class="texto">
+                                <h5>{{ $academia->aca_titulo }}</h5>
+                                <p>{{ $academia->aca_titulo2 }}</p>
+                            </div>
+                        </a>
+                    @endforeach
 
-                    <a href="/academia-detalle" class="cuadros-info-n">
-                        <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt="">
-                        </div>
-                        <div class="texto">
-                            <h5>Título con una línea</h5>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea
-                                de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        </div>
-                    </a>
-
-                    <a href="/academia-detalle" class="cuadros-info-n">
-                        <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt="">
-                        </div>
-                        <div class="texto">
-                            <h5>Título con una línea</h5>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea
-                                de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        </div>
-                    </a>
-
-                    <a href="/academia-detalle" class="cuadros-info-n ocultar-576">
-                        <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt="">
-                        </div>
-                        <div class="texto">
-                            <h5>Título con una línea</h5>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea
-                                de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        </div>
-                    </a>
                 </div>
-
                 <a href="/academia" class="boton bg-red">Ver más cursos</a>
             </div>
         </section>
@@ -90,37 +60,17 @@
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-4">
-                <a href="/producto-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
 
-                <a href="/producto-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
 
-                <a href="/producto-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/producto-detalle" class="cuadros-info-n ocultar-576">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
+                @foreach ($productos as $producto)
+                    <a href="/producto-detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
+                        <div class="img"><img src="{{ asset($producto->imagenes[0]->ipr_imagen) }}" alt="">
+                        </div>
+                        <div class="texto">
+                            <h5>{{ $producto->pro_titulo }}</h5>
+                        </div>
+                    </a>
+                @endforeach
             </div>
             <a href="/productos" class="boton bg-red">Ver todos los productos</a>
         </section>
@@ -263,9 +213,9 @@
     @push('extra-js')
         <script>
             $(document).ready(function() {
-                $(".li-slider").click(function(){
+                $(".li-slider").click(function() {
                     let enlace = $(this).attr('enlace');
-                    if(enlace){
+                    if (enlace) {
                         window.open(enlace, '_blank');
                     }
                 })
