@@ -48,6 +48,13 @@
                                 value="#f00" required>
                         </div>
 
+                        <label for="color">Color texto</label>
+                        <div class="form-floating my-3">
+                            <div id="picker_texto"></div>
+                            <input type="hidden" name="color_texto" class="form-control" id="color_texto" placeholder="nombre"
+                                value="#f00" required>
+                        </div>
+
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
                             <input type="text" name="orden" class="form-control" id="orden" placeholder="orden"

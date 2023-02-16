@@ -62,8 +62,19 @@ $(document).ready(function () {
     $(document).on('click', '#btn-reset-color', function () {
         colorPicker.color.hexString = colorAnterior
     });
-
 });
+
+$(document).ready(function () {
+    var colorPickerTexto = new iro.ColorPicker("#picker_texto", {
+        width: 250,
+        color: color_texto
+    });
+    colorPickerTexto.on('color:change', function (color) {
+        $("#color_texto").val(color.hexString);
+    });
+});
+
+
 
 
 

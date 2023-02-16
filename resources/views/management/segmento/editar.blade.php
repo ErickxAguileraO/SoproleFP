@@ -52,6 +52,16 @@
                         </div>
                         <a class="btn btn-success btn-reset-color" id="btn-reset-color">Setear color anterior</a><br/><br/>
                     
+
+                        <label for="color">Color texto</label>
+                        <div class="form-floating my-3">
+                            <div id="picker_texto"></div>
+                            <input type="hidden" name="color_texto" class="form-control" id="color_texto" placeholder="nombre"
+                                value="{{ $segmento->seg_color_texto }}" required>
+                        </div>
+
+
+
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
                             <input type="text" name="orden" class="form-control" id="orden" placeholder="orden"
@@ -96,6 +106,7 @@
         let ancho = {{ $ancho }}
         let alto = {{ $alto }}
         let color = "{{ $segmento->seg_color }}";
+        let color_texto = "{{ $segmento->seg_color_texto }}";
         let colorAnterior = "{{ $segmento->seg_color_anterior }}";
     </script>
 @endpush

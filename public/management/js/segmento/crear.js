@@ -51,6 +51,14 @@ function ValidarMedidas(ancho, alto, input, file) {
 $(document).on('change', '#imagen', function () {
     ValidarMedidas(ancho, alto, $(this), this.files[0]);
 });
+$(document).on('change', '#imagen_movil', function () {
+    ValidarMedidas(anchoMovil, altoMovil, $(this), this.files[0]);
+});
+
+
+
+
+
 $(document).ready(function () {
     var colorPicker = new iro.ColorPicker("#picker", {
         width: 250,
@@ -60,5 +68,17 @@ $(document).ready(function () {
         $("#color").val(color.hexString);
     });
 });
+
+$(document).ready(function () {
+    var colorPickerTexto = new iro.ColorPicker("#picker_texto", {
+        width: 250,
+        color: "#f00"
+    });
+    colorPickerTexto.on('color:change', function (color) {
+        $("#color_texto").val(color.hexString);
+    });
+});
+
+
 
 
