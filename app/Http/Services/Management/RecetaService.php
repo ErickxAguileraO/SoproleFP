@@ -20,16 +20,22 @@ class RecetaService
 
         try {
 
-            $receta =  Receta::create([
+            $insert = [
                 'rec_titulo' => $request->titulo,
                 'rec_url' => Str::slug($request->titulo),
                 'rec_contenido' => $request->contenido,
                 'rec_video' => $request->video,
                 'rec_orden' => $request->orden,
-                'rec_estado' =>$request->estado,
-            ]);
+                'rec_estado' => $request->estado,
+            ];
 
-            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
+            if ($request->file('imagen')) {
+                $insert['rec_imagen'] = FileService::upload($request->file('imagen'), 'imagenes/recetas');
+            }
+
+            $receta =  Receta::create($insert);
+
+            if ($request->file('imagenes') != null && count($request->file('imagenes')) > 0) {
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenReceta::create([
                         "ire_imagen" => FileService::upload($imagen, 'imagenes/recetas'),
@@ -38,8 +44,8 @@ class RecetaService
                 }
             }
 
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
+            if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+                foreach ($request->subsegmentos as $sse) {
                     PivoteSubSegmentos::create([
                         "psse_subsegmento_id" => intval($sse),
                         "psse_receta_id" =>  intval($receta->rec_id)
@@ -47,8 +53,8 @@ class RecetaService
                 }
             }
 
-            if($request->segmentos != null && is_array($request->segmentos)){
-                foreach($request->segmentos as $seg){
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
                     RecetaSegmento::create([
                         "recseg_segmento_id" => intval($seg),
                         "recseg_receta_id" =>  intval($receta->rec_id)
@@ -56,8 +62,8 @@ class RecetaService
                 }
             }
 
-            if($request->productos != null && is_array($request->productos)){
-                foreach($request->productos as $pro){
+            if ($request->productos != null && is_array($request->productos)) {
+                foreach ($request->productos as $pro) {
                     RecetaProducto::create([
                         "prorec_producto_id" => intval($pro),
                         "prorec_receta_id" =>  intval($receta->rec_id)
@@ -85,7 +91,7 @@ class RecetaService
         DB::beginTransaction();
 
         try {
-        
+
             $receta = Receta::find($request->receta_id);
             $receta->rec_titulo =  $request->titulo;
             $receta->rec_url =  Str::slug($request->titulo);
@@ -93,9 +99,16 @@ class RecetaService
             $receta->rec_video = $request->video;
             $receta->rec_orden =  $request->orden;
             $receta->rec_estado = $request->estado;
+
+            if ($request->file('imagen')) {
+                $receta->rec_imagen = FileService::upload($request->file('imagen'), 'imagenes/recetas');
+            }
+
+
+
             $receta->save();
 
-            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
+            if ($request->file('imagenes') != null && count($request->file('imagenes')) > 0) {
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenReceta::create([
                         "ire_imagen" => FileService::upload($imagen, 'imagenes/recetas'),
@@ -104,10 +117,10 @@ class RecetaService
                 }
             }
 
-            PivoteSubSegmentos::where('psse_receta_id',$receta->rec_id)->delete();
+            PivoteSubSegmentos::where('psse_receta_id', $receta->rec_id)->delete();
 
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
+            if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+                foreach ($request->subsegmentos as $sse) {
                     PivoteSubSegmentos::create([
                         "psse_subsegmento_id" => intval($sse),
                         "psse_receta_id" =>  intval($receta->rec_id)
@@ -116,8 +129,8 @@ class RecetaService
             }
 
             RecetaSegmento::where('recseg_receta_id', $receta->rec_id)->delete();
-            if($request->segmentos != null && is_array($request->segmentos)){
-                foreach($request->segmentos as $seg){
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
                     RecetaSegmento::create([
                         "recseg_segmento_id" => intval($seg),
                         "recseg_receta_id" =>  intval($receta->rec_id)
@@ -126,8 +139,8 @@ class RecetaService
             }
 
             RecetaProducto::where('prorec_receta_id', $receta->rec_id)->delete();
-            if($request->productos != null && is_array($request->productos)){
-                foreach($request->productos as $pro){
+            if ($request->productos != null && is_array($request->productos)) {
+                foreach ($request->productos as $pro) {
                     RecetaProducto::create([
                         "prorec_producto_id" => intval($pro),
                         "prorec_receta_id" =>  intval($receta->rec_id)

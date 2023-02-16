@@ -64,7 +64,7 @@
 
                 @foreach ($productos as $producto)
                     <a href="/producto-detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
-                        <div class="img"><img src="{{ asset($producto->imagenes[0]->ipr_imagen) }}" alt="">
+                        <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
                         </div>
                         <div class="texto">
                             <h5>{{ $producto->pro_titulo }}</h5>
@@ -81,39 +81,23 @@
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
+                @foreach ($recetas as $receta)
+                    <a href="/receta-detalle/{{$receta->rec_url}}" class="cuadros-info-n">
+                        <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
+                        </div>
+                        <div class="texto">
+                            <h5>{{$receta->rec_titulo}}</h5>
+                        </div>
+                    </a>
+                @endforeach
 
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
 
-                <a href="/receta-detalle" class="cuadros-info-n ocultar-576">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
+
+
+
             </div>
             <a href="/nuestras-recetas" class="boton bg-red">Ver todas las recetas</a>
         </section>
-
 
         <section class="seccion-home">
             <h2>Tendencias y Noticias</h2>
@@ -121,40 +105,20 @@
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
-                <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
-
-                <a href="/detalle-noticia-tendencia" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
-
-                <a href="/detalle-noticia-tendencia" class="cuadros-info-n ocultar-576">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-3.svg') }}" alt="">
-                    </div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                        <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de
-                            cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                    </div>
-                </a>
+                @foreach ($noticias as $noticia)
+                    <a href="/detalle-noticia-tendencia/{{ $noticia->not_url }}" class="cuadros-info-n ocultar-576">
+                        <div class="img"><img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
+                        </div>
+                        <div class="texto">
+                            <h5>{{ $noticia->not_titulo }}</h5>
+                            <p>{{ $noticia->not_titulo2 }}</p>
+                        </div>
+                    </a>
+                @endforeach
             </div>
             <a href="/noticias-tendencias" class="boton bg-red">Ver todas las noticias y tendencias</a>
-
         </section>
-        {{-- Conocenos Escritorio --}}
+
         <section class="conocenos mostrar-1920">
             <div class="concenos-txt">
                 <div></div>

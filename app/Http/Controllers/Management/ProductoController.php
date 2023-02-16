@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Validator;
 class ProductoController extends Controller
 {
     
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 300;
+    private $altoImagen =  320;
 
     public function index()
     {
@@ -29,7 +29,9 @@ class ProductoController extends Controller
             'ancho' => $this->anchoImagen,
             'alto' => $this->altoImagen,
             'categorias' => Categoria::all(),
-            'subsegmentos' => SubSegmento::all()
+            'subsegmentos' => SubSegmento::all(),
+            'ancho' => $this->anchoImagen,
+            'alto' => $this->altoImagen
         ]);
     }
 
@@ -47,7 +49,9 @@ class ProductoController extends Controller
             'alto' => $this->altoImagen,
             'categorias' => Categoria::all(),
             'subsegmentos' => SubSegmento::all(),
-            'subsegmentosSeleccionados' => PivoteSubSegmentos::where('psse_producto_id', $producto->pro_id)->pluck('psse_subsegmento_id')->toArray()
+            'subsegmentosSeleccionados' => PivoteSubSegmentos::where('psse_producto_id', $producto->pro_id)->pluck('psse_subsegmento_id')->toArray(),
+            'ancho' => $this->anchoImagen,
+            'alto' => $this->altoImagen
         ]);
     }
 
@@ -64,6 +68,7 @@ class ProductoController extends Controller
             'orden' => ['required', 'numeric'],
             'categoria' => ['required', 'numeric'],
             'estado' => ['required'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -97,6 +102,7 @@ class ProductoController extends Controller
             'orden' => ['required', 'numeric'],
             'categoria' => ['required', 'numeric'],
             'estado' => ['required'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

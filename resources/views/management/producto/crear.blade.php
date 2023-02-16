@@ -71,6 +71,13 @@
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                         </div>
 
+                        <label for="imagen">Imagen listado ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen" name="imagen">
+                            </div>
+                        </div>
+
                         <div class="wp-documentos-right tipo-img-txt">
                             <label for="">Imagenes</label>
                             <div id="galeria_imagenes">
@@ -121,4 +128,8 @@
 @push('extra-js')
     <script src="{{ asset('public/management/js/producto/crear.js?v=' . rand()) }}"></script>
     <script src="{{ asset('public/management/js/producto/imagenes.js?v=' . rand()) }}"></script>
+    <script>
+        let ancho = {{ $ancho }}
+        let alto = {{ $alto }}
+    </script>
 @endpush
