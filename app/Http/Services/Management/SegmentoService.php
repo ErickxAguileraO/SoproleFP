@@ -4,6 +4,8 @@ namespace App\Http\Services\Management;
 
 use App\Models\Segmento;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+
 use App\Models\PivoteSubSegmentos;
 
 class SegmentoService
@@ -15,9 +17,11 @@ class SegmentoService
         try {
             $insert = [
                 'seg_nombre' => $request->nombre,
+                'seg_url' => Str::slug($request->nombre),
                 'seg_estado' => $request->estado,
                 'seg_orden' => $request->orden,
                 'seg_color' => $request->color,
+                'seg_color_texto' => $request->color_texto,
                 'seg_color_anterior' => $request->color,
             ];
             $uploadFile = FileService::upload($request->file('imagen'),'imagenes/segmento');
@@ -63,10 +67,12 @@ class SegmentoService
             $segmento = Segmento::find($request->segmento_id);
 
             $segmento->seg_nombre = $request->nombre;
+            $segmento->seg_url =Str::slug($request->nombre);
             $segmento->seg_estado = $request->estado;
             $segmento->seg_orden = $request->orden;
             $segmento->seg_color_anterior = $segmento->seg_color;
             $segmento->seg_color = $request->color;
+            $segmento->seg_color_texto = $request->color_texto;
 
             if($request->file('imagen')){
                 $segmento->seg_imagen = FileService::upload($request->file('imagen'),'imagenes/segmento');

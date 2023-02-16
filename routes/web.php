@@ -20,6 +20,8 @@ use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 
+use App\Http\Controllers\Web\HomeController as WebHomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,9 +33,11 @@ use App\Http\Controllers\Management\TipoNegocioController;
 |
 */
 
-Route::get('/', function () {
-    return view('web.home');
-});
+
+
+Route::get('/', [WebHomeController::class, 'index']);
+
+
 Route::get('/conocenos', function () {
     return view('web.conocenos.index');
 });

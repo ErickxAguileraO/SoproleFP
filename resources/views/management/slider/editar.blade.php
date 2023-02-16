@@ -24,6 +24,12 @@
 
                         </div>
 
+                        <label for="nombre">Enlace</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="enlace" class="form-control"  value="{{$slider->sli_link}}" required>
+                            
+                        </div>
+
                         <label for="imagen">Imagen ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>
                         @if ($slider->sli_imagen != '')
                             <a target="_blank" href='{{ $slider->sli_imagen }} '>Ver
@@ -31,16 +37,24 @@
                         @endif
                         <div class="row mb-3">
                             <div class="form-floating my-3">
-
                                 <input type="file" class="input-img-solo" id="imagen" name="imagen">
-
-                                @error('imagen')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
+
+
+                        <label for="imagen">Imagen movil ({{ $anchoMovil ."px ancho x ".$altoMovil."px alto"}})</label>
+                        @if ($slider->sli_imagen_movil != '')
+                            <a target="_blank" href='{{ $slider->sli_imagen_movil }} '>Ver
+                                imagen adjunta <i class="fas fa-eye"></i></a>
+                        @endif
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen_movil" name="imagen_movil">
+                            </div>
+                        </div>
+
+
+
 
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
@@ -75,5 +89,7 @@
     <script>
         let ancho = {{ $ancho }}
         let alto = {{ $alto }}
+        let anchoMovil = {{ $anchoMovil }}
+        let altoMovil = {{ $altoMovil }}
     </script>
 @endpush
