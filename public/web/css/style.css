@@ -106,6 +106,8 @@ textarea{
 .ocultar-movil{
     display: flex !important;
 }
+
+
 /* Menu */
 .barra-productos-movil{
     display: none;
