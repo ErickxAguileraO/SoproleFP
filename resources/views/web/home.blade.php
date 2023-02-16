@@ -10,8 +10,8 @@
             <ul class="slides">
 
                 @foreach ($sliders as $slider)
-                    <li style=" z-index:0; opacity: 1;" class="li-slider">
-                        <img class="ocultar-movil" src="{{ asset($slider->sli_imagen) }}"
+                    <li style=" z-index:0; opacity: 1;" class="li-slider" enlace="{{ $slider->sli_link }}">
+                        <img class="ocultar-movil" style="{{ $slider->sli_link ? 'cursor:pointer' : '' }}" src="{{ asset($slider->sli_imagen) }}"
                             alt="">
                         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-home-movil.svg') }}"
                             alt="">
@@ -24,7 +24,7 @@
             <div class="tu-negocio">
                 @foreach ($segmentos as $segmento)
                     <a href="/mini-sitio/{{ $segmento->seg_url }}" class="tu-negocio-n neg-1"
-                        style="background:{{ $segmento->seg_color }}">
+                        style="background:{{ $segmento->seg_color }};color:{{ $segmento->seg_color_texto }};">
                         <img src="{{ asset($segmento->seg_imagen) }}" alt="">
                         <p>{{ $segmento->seg_nombre }}</p>
                     </a>
@@ -262,8 +262,13 @@
 
     @push('extra-js')
         <script>
-            // Flex Slider
             $(document).ready(function() {
+                $(".li-slider").click(function(){
+                    let enlace = $(this).attr('enlace');
+                    if(enlace){
+                        window.open(enlace, '_blank');
+                    }
+                })
                 $('.flexslider-seccion').flexslider({
                     animation: "slide",
                 });
