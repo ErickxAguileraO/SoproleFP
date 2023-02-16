@@ -42,6 +42,15 @@
                                 autocomplete="new-password" value="" required>
                         </div>
 
+                        <label for="imagen">Imagen ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen" name="imagen">
+                            </div>
+                        </div>
+
+
+                        
                         <label for="orden">Segmentos</label>
                         <div style="margin-top: 15px;">
                             @foreach ($segmentos as $segmento)
@@ -92,5 +101,8 @@
 @endsection
 @push('extra-js')
     <script src="{{ asset('public/management/js/academia/crear.js?v=' . rand()) }}"></script>
-    <script src="{{ asset('public/management/js/academia/imagenes.js?v=' . rand()) }}"></script>
+    <script>
+        let ancho = {{ $ancho }}
+        let alto = {{ $alto }}
+    </script>
 @endpush

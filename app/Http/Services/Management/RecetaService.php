@@ -4,14 +4,13 @@ namespace App\Http\Services\Management;
 
 use App\Models\ImagenNoticia;
 use App\Models\ImagenReceta;
-use App\Models\Noticia;
 use App\Models\PivoteSubSegmentos;
 use App\Models\Receta;
 use App\Models\RecetaProducto;
 use App\Models\RecetaSegmento;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Carbon\Carbon;
+
 
 class RecetaService
 {
@@ -23,6 +22,7 @@ class RecetaService
 
             $receta =  Receta::create([
                 'rec_titulo' => $request->titulo,
+                'rec_url' => Str::slug($request->titulo),
                 'rec_contenido' => $request->contenido,
                 'rec_video' => $request->video,
                 'rec_orden' => $request->orden,
@@ -88,6 +88,7 @@ class RecetaService
         
             $receta = Receta::find($request->receta_id);
             $receta->rec_titulo =  $request->titulo;
+            $receta->rec_url =  Str::slug($request->titulo);
             $receta->rec_contenido = $request->contenido;
             $receta->rec_video = $request->video;
             $receta->rec_orden =  $request->orden;
