@@ -54,7 +54,7 @@ class SliderController extends Controller
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:250', 'unique:slider,sli_nombre'],
             'estado' => ['required'],
-            'enlace' => ['url'],
+            'enlace' => ['nullable','url'],
             'orden' => ['required','numeric'],
             'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
             'imagen_movil' => ['required', 'mimes:jpg,jpeg,png,svg'],
@@ -82,7 +82,7 @@ class SliderController extends Controller
             'slider_id' => ['required', 'exists:slider,sli_id'],
             'nombre' => ['required', 'string', 'max:250'],
             'estado' => ['required'],
-            'enlace' => ['url'],
+            'enlace' => ['nullable','url'],
             'orden' => ['required','numeric'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
             'imagen_movil' => ['mimes:jpg,jpeg,png,svg'],
