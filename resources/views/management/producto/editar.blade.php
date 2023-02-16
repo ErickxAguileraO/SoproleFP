@@ -74,6 +74,16 @@
                         </div>
 
 
+                        <label for="imagen">Imagen listado ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>
+                        @if ($producto->pro_imagen != '')
+                            <a target="_blank" href='{{ $producto->pro_imagen }} '>Ver
+                                imagen adjunta <i class="fas fa-eye"></i></a>
+                        @endif
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen" name="imagen">
+                            </div>
+                        </div>
 
 
                         <div>
@@ -163,4 +173,8 @@
 @push('extra-js')
     <script src="{{ asset('public/management/js/producto/editar.js?v=' . rand()) }}"></script>
     <script src="{{ asset('public/management/js/producto/imagenes.js?v=' . rand()) }}"></script>
+    <script>
+        let ancho = {{ $ancho }}
+        let alto = {{ $alto }}
+    </script>
 @endpush

@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Validator;
 
 class RecetaController extends Controller
 {
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 407;
+    private $altoImagen =  320;
 
     public function index()
     {
@@ -66,6 +66,7 @@ class RecetaController extends Controller
             'productos' => ['required'],
             'orden' => ['required','numeric'],
             'estado' => ['required','numeric'],
+            'imagen' => ['required','mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -96,6 +97,7 @@ class RecetaController extends Controller
             'productos' => ['required'],
             'orden' => ['required','numeric'],
             'estado' => ['required','numeric'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

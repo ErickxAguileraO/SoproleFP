@@ -17,6 +17,7 @@ class Producto extends Model
         'pro_titulo',
         'pro_sku',
         'pro_formato',
+        'pro_imagen',
         'pro_estrellas',
         'pro_contenido',
         'pro_conservacion',
