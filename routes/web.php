@@ -21,6 +21,8 @@ use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
+use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
+use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,10 +39,13 @@ use App\Http\Controllers\Web\HomeController as WebHomeController;
 
 Route::get('/', [WebHomeController::class, 'index']);
 
-
-Route::get('/conocenos', function () {
-    return view('web.conocenos.index');
+Route::controller(WebAcademiaController::class)->prefix('academia')->group(function () {  
+    Route::get('', 'index')->name('index');
+    Route::get('detalle/{academia}', 'detalle')->name('detalle');
 });
+
+Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
+
 
 Route::get('/politicas-de-privacidad', function () {
     return view('web.politicas.index');
@@ -80,16 +85,6 @@ Route::get('/noticias-tendencias', function () {
 Route::get('/detalle-noticia-tendencia', function () {
     return view('web.noticias.detalle');
 });
-
-
-Route::get('/academia', function () {
-    return view('web.academia.index');
-});
-
-Route::get('/academia-detalle', function () {
-    return view('web.academia.detalle');
-});
-
 
 Route::get('/hazte-cliente', function () {
     return view('web.cliente.index');

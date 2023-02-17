@@ -28,4 +28,9 @@ class Segmento extends Model
     {
         return $this->belongsToMany(Receta::class, 'receta_segmento', 'recseg_segmento_id', 'recseg_receta_id')->with('Producto');
     }
+
+    public function Academia()
+    {
+        return $this->belongsToMany(Academia::class,'academia_segmento','acaseg_segmento_id','acaseg_academia_id')->distinct();
+    }
 }

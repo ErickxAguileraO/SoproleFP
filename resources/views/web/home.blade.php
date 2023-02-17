@@ -39,7 +39,7 @@
                     haciendo más eficiente sus procesos, alcanzando una mayor calidad y expertíz en su negocio</p>
                 <div class="cuadros-info cuadros-row-4">
                     @foreach ($academias as $academia)
-                        <a href="/academia-detalle/{{ $academia->aca_url }}" class="cuadros-info-n">
+                        <a href="/academia/detalle/{{ $academia->aca_url }}" class="cuadros-info-n">
                             <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
                             </div>
                             <div class="texto">
@@ -48,7 +48,6 @@
                             </div>
                         </a>
                     @endforeach
-
                 </div>
                 <a href="/academia" class="boton bg-red">Ver más cursos</a>
             </div>
@@ -60,8 +59,6 @@
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-4">
-
-
                 @foreach ($productos as $producto)
                     <a href="/producto-detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
@@ -82,19 +79,14 @@
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($recetas as $receta)
-                    <a href="/receta-detalle/{{$receta->rec_url}}" class="cuadros-info-n">
+                    <a href="/receta-detalle/{{ $receta->rec_url }}" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
                         </div>
                         <div class="texto">
-                            <h5>{{$receta->rec_titulo}}</h5>
+                            <h5>{{ $receta->rec_titulo }}</h5>
                         </div>
                     </a>
                 @endforeach
-
-
-
-
-
             </div>
             <a href="/nuestras-recetas" class="boton bg-red">Ver todas las recetas</a>
         </section>
@@ -135,14 +127,10 @@
                     </div>
                 </div>
                 <div>
-                    <p>Nosotros somos expertos en la industria láctea y entendemos el rol fundamental que juega en tu
-                        cocina. El sabor, textura y apariencia en los platos que entregan los productos lácteos, son clave
-                        para entregar calidad a los miles de consumidores que se atienden día a día.</p>
-                    <br>
-                    <p> En Soprole Food Professionals, trabajamos en conjunto con nuestros clientes, en sus negocios,
-                        compartiendo ideas y formas de trabajo de manera permanente. Nos concentramos en esas preparaciones,
-                        en que los lácteos son el factor diferenciador, y que son el motivo por el que los consumidores
-                        entran a esa pastelería, pizzería, restaurante o cafeteria.</p>
+                    @php
+                        echo $conocenos->edi_contenido;
+                    @endphp
+                    </p>
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
                 </div>
             </div>
