@@ -29,12 +29,12 @@ class SegmentoController extends Controller
         ]);
     }
 
-    public function listar()
+    public static function listar()
     {
         return Segmento::all();
     }
 
-    public function listarWithProducto()
+    public static function listarWithProducto()
     {
         return Segmento::with('Producto')->get();
     }

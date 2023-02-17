@@ -32,7 +32,7 @@ class AcademiaController extends Controller
         ]);
     }
 
-    public function listar()
+    public static function listar()
     {
         return Academia::all();
     }
