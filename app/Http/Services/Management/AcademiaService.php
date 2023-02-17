@@ -13,50 +13,50 @@ class AcademiaService
     public static function guardar($request)
     {
         DB::beginTransaction();
- 
-            $insert = [
-                'aca_titulo' => $request->titulo,
-                'aca_url' => Str::slug($request->titulo),
-                'aca_titulo2' => $request->titulo2,
-                'aca_contenido' => $request->contenido,
-                'aca_video' => $request->video,
-                'aca_orden' => $request->orden,
-                'aca_estado' =>$request->estado,
-            ];
 
-            $uploadFile = FileService::upload($request->file('imagen'),'imagenes/academia');
-            if($uploadFile){
-                $insert['aca_imagen'] = $uploadFile;
+        $insert = [
+            'aca_titulo' => $request->titulo,
+            'aca_url' => Str::slug($request->titulo),
+            'aca_titulo2' => $request->titulo2,
+            'aca_contenido' => $request->contenido,
+            'aca_video' => $request->video,
+            'aca_fecha' => $request->fecha,
+            'aca_orden' => $request->orden,
+            'aca_estado' => $request->estado,
+        ];
+
+        $uploadFile = FileService::upload($request->file('imagen'), 'imagenes/academia');
+        if ($uploadFile) {
+            $insert['aca_imagen'] = $uploadFile;
+        }
+        $academia =  Academia::create($insert);
+
+
+
+        if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+            foreach ($request->subsegmentos as $sse) {
+                PivoteSubSegmentos::create([
+                    "psse_subsegmento_id" => intval($sse),
+                    "psse_academia_id" =>  intval($academia->aca_id)
+                ]);
             }
-            $academia =  Academia::create($insert);
+        }
 
-
-
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
-                    PivoteSubSegmentos::create([
-                        "psse_subsegmento_id" => intval($sse),
-                        "psse_academia_id" =>  intval($academia->aca_id)
-                    ]);
-                }
+        if ($request->segmentos != null && is_array($request->segmentos)) {
+            foreach ($request->segmentos as $seg) {
+                AcademiaSegmento::create([
+                    "acaseg_segmento_id" => intval($seg),
+                    "acaseg_academia_id" =>  intval($academia->aca_id)
+                ]);
             }
+        }
 
-            if($request->segmentos != null && is_array($request->segmentos)){
-                foreach($request->segmentos as $seg){
-                    AcademiaSegmento::create([
-                        "acaseg_segmento_id" => intval($seg),
-                        "acaseg_academia_id" =>  intval($academia->aca_id)
-                    ]);
-                }
-            }
+        DB::commit();
 
-            DB::commit();
-
-            return response()->json([
-                'status' => 'T',
-                'message' => 'Registro creado correctamente',
-            ], 201);
-       
+        return response()->json([
+            'status' => 'T',
+            'message' => 'Registro creado correctamente',
+        ], 201);
     }
 
     public static function editar($request)
@@ -64,7 +64,7 @@ class AcademiaService
         DB::beginTransaction();
 
         try {
-        
+
             $academia = Academia::find($request->academia_id);
             $academia->aca_titulo =  $request->titulo;
             $academia->aca_url =  Str::slug($request->titulo);
@@ -72,18 +72,19 @@ class AcademiaService
             $academia->aca_contenido = $request->contenido;
             $academia->aca_video = $request->video;
             $academia->aca_orden =  $request->orden;
+            $academia->aca_fecha =  $request->fecha;
             $academia->aca_estado = $request->estado;
 
-            if($request->file('imagen')){
-                $academia->aca_imagen = FileService::upload($request->file('imagen'),'imagenes/academia');
+            if ($request->file('imagen')) {
+                $academia->aca_imagen = FileService::upload($request->file('imagen'), 'imagenes/academia');
             }
 
 
             $academia->save();
 
-            PivoteSubSegmentos::where('psse_academia_id',$academia->aca_id)->delete();
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
+            PivoteSubSegmentos::where('psse_academia_id', $academia->aca_id)->delete();
+            if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+                foreach ($request->subsegmentos as $sse) {
                     PivoteSubSegmentos::create([
                         "psse_subsegmento_id" => intval($sse),
                         "psse_academia_id" =>  intval($academia->aca_id)
@@ -92,8 +93,8 @@ class AcademiaService
             }
 
             AcademiaSegmento::where('acaseg_academia_id', $academia->aca_id)->delete();
-            if($request->segmentos != null && is_array($request->segmentos)){
-                foreach($request->segmentos as $seg){
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
                     AcademiaSegmento::create([
                         "acaseg_segmento_id" => intval($seg),
                         "acaseg_academia_id" =>  intval($academia->aca_id)
@@ -121,7 +122,7 @@ class AcademiaService
 
         try {
 
-            PivoteSubSegmentos::where('psse_academia_id',$academia->aca_id)->delete();
+            PivoteSubSegmentos::where('psse_academia_id', $academia->aca_id)->delete();
             AcademiaSegmento::where('acaseg_academia_id', $academia->aca_id)->delete();
 
             $academia->delete();

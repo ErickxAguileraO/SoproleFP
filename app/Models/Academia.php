@@ -17,6 +17,7 @@ class Academia extends Model
     protected $fillable = [
         'aca_titulo',
         'aca_url',
+        'aca_fecha',
         'aca_imagen',
         'aca_titulo2',
         'aca_contenido',
