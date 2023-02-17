@@ -27,35 +27,24 @@ $(".btn-agregar").on("click", function (event) {
         alertify.error('Ha ocurrido un error');
     });
 });
+var _URL = window.URL || window.webkitURL;
 
-document.addEventListener('input', (e) => {
-    const rut = document.getElementById('rut');
-
-    if (e.target === rut) {
-        let rutFormateado = darFormatoRUT(rut.value);
-        rut.value = rutFormateado;
+function ValidarMedidas(ancho, alto, input, file) {
+    var file, img;
+    if (file) {
+        img = new Image();
+        var objectUrl = _URL.createObjectURL(file);
+        img.onload = function () {
+            if (this.width != ancho || this.height != alto) {
+                input.val('')
+                alertify.set('notifier', 'position', 'top-right');
+                alertify.error('La imagen debe tener ' + ancho + 'px de ancho y ' + alto + 'px de alto');
+            }
+            _URL.revokeObjectURL(objectUrl);
+        };
+        img.src = objectUrl;
     }
-});
-
-function darFormatoRUT(rut) {
-    const rutLimpio = rut.replace(/[^0-9kK]/g, '');
-    const cuerpo = rutLimpio.slice(0, -1);
-    const dv = rutLimpio.slice(-1).toUpperCase();
-
-    if (rutLimpio.length < 2) return rutLimpio;
-
-    let cuerpoFormatoMiles = cuerpo
-        .toString()
-        .split('')
-        .reverse()
-        .join('')
-        .replace(/(?=\d*\.?)(\d{3})/g, '$1.');
-
-    cuerpoFormatoMiles = cuerpoFormatoMiles
-        .split('')
-        .reverse()
-        .join('')
-        .replace(/^[\.]/, '');
-
-    return `${cuerpoFormatoMiles}-${dv}`;
 }
+$(document).on('change', '#imagen', function () {
+    ValidarMedidas(ancho, alto, $(this), this.files[0]);
+});

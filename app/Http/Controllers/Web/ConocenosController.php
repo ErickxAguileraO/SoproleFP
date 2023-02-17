@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\Alianza;
+use App\Models\Cliente;
 use App\Models\Editable;
 
 class ConocenosController extends Controller
@@ -14,7 +15,8 @@ class ConocenosController extends Controller
         
         return view('web.conocenos.index', [
             "conocenos" => $editable,
-            "alianzas" => Alianza::where('ali_estado',1)->where('ali_editable_id',$editable->edi_id)->orderby('ali_orden', 'asc')->get()
+            "alianzas" => Alianza::where('ali_estado',1)->where('ali_editable_id',$editable->edi_id)->orderby('ali_orden', 'asc')->get(),
+            "clientes" => Cliente::where('clie_estado',1)->where('clie_editable_id',$editable->edi_id)->orderby('clie_nombre', 'asc')->get(),
         ]);
     }
 }

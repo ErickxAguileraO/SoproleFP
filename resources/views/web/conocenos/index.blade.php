@@ -53,22 +53,19 @@
                 </div>
             </section>
         @endif
-
+        @if (count($clientes) > 0)
         <section class="seccion-home">
             <h2>Confian en nosotros</h2>
             <br>
             <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="alianzas-img">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-                <img src="{{ asset('/public/web/imagenes/img-prueba.svg') }}" alt="">
-
+                @foreach ($clientes as $cliente)
+                <img src="{{ asset($cliente->clie_imagen) }}" alt="">
+                @endforeach
             </div>
         </section>
+        @endif
     </div>
 
     @push('extra-js')
