@@ -12,8 +12,8 @@ use Illuminate\Support\Facades\Validator;
 
 class SegmentoController extends Controller
 {
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 76;
+    private $altoImagen =  75;
 
     public function index()
     {
@@ -57,7 +57,7 @@ class SegmentoController extends Controller
             'color' => ['required'],
             'estado' => ['required'],
             'orden' => ['required', 'numeric'],
-            'imagen' => ['required', 'mimes:jpg,jpeg,png'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -84,6 +84,7 @@ class SegmentoController extends Controller
             'color' => ['required'],
             'estado' => ['required'],
             'orden' => ['required', 'numeric'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

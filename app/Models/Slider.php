@@ -16,6 +16,8 @@ class Slider extends Model
     protected $fillable = [
         'sli_nombre',
         'sli_imagen',
+        'sli_imagen_movil',
+        'sli_link',
         'sli_estado',
         'sli_orden',
     ];

@@ -14,8 +14,8 @@ use App\Models\PivoteSubSegmentos;
 
 class AcademiaController extends Controller
 {
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 300;
+    private $altoImagen =  320;
 
     public function index()
     {
@@ -59,6 +59,7 @@ class AcademiaController extends Controller
             'video' => ['url', 'max:250'],
             'segmentos' => ['required'],
             'orden' => ['required','numeric'],
+            'imagen' => ['required','mimes:jpg,jpeg,png,svg'],
             'estado' => ['required','numeric'],
         ];
 
@@ -87,6 +88,7 @@ class AcademiaController extends Controller
             'contenido' => ['required', 'max:2000'],
             'video' => ['url', 'max:250'],
             'segmentos' => ['required'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
             'orden' => ['required','numeric'],
             'estado' => ['required','numeric'],
         ];

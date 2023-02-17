@@ -15,6 +15,8 @@ class Receta extends Model
 
     protected $fillable = [
         'rec_titulo',
+        'rec_url',
+        'rec_imagen',
         'rec_contenido',
         'rec_video',
         'rec_orden',

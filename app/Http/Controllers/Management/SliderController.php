@@ -12,8 +12,11 @@ use Illuminate\Support\Facades\Validator;
 class SliderController extends Controller
 {
 
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 1440;
+    private $altoImagen =  508;
+
+    private $anchoImagenMovil = 375;
+    private $altoImagenMovil =  375;
 
     public function index()
     {
@@ -24,7 +27,9 @@ class SliderController extends Controller
     {
         return view('management.slider.crear', [
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'anchoMovil' => $this->anchoImagenMovil,
+            'altoMovil' => $this->altoImagenMovil,
         ]);
     }
 
@@ -38,7 +43,9 @@ class SliderController extends Controller
         return view('management.slider.editar', [
             "slider" => $slider,
             'ancho' => $this->anchoImagen,
-            'alto' => $this->altoImagen
+            'alto' => $this->altoImagen,
+            'anchoMovil' => $this->anchoImagenMovil,
+            'altoMovil' => $this->altoImagenMovil,
         ]);
     }
 
@@ -47,8 +54,10 @@ class SliderController extends Controller
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:250', 'unique:slider,sli_nombre'],
             'estado' => ['required'],
+            'enlace' => ['nullable','url'],
             'orden' => ['required','numeric'],
-            'imagen' => ['required', 'mimes:jpg,jpeg,png'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
+            'imagen_movil' => ['required', 'mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -73,8 +82,10 @@ class SliderController extends Controller
             'slider_id' => ['required', 'exists:slider,sli_id'],
             'nombre' => ['required', 'string', 'max:250'],
             'estado' => ['required'],
+            'enlace' => ['nullable','url'],
             'orden' => ['required','numeric'],
-            'imagen' => ['mimes:jpg,jpeg,png'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
+            'imagen_movil' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

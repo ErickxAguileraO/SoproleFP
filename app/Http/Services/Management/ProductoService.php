@@ -15,7 +15,7 @@ class ProductoService
         DB::beginTransaction();
 
         try {
-            $producto= Producto::create([
+            $insert = [
                 'pro_titulo' => $request->titulo,
                 'pro_sku' => $request->sku,
                 'pro_formato' => $request->formato,
@@ -27,19 +27,26 @@ class ProductoService
                 'pro_orden' => $request->orden,
                 'pro_estado' => $request->estado,
                 'pro_url' => Str::slug($request->titulo)
-            ]);
+            ];
 
-            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
+            if ($request->file('imagen')) {
+                $insert['pro_imagen'] = FileService::upload($request->file('imagen'), 'imagenes/productos');
+            }
+
+
+            $producto = Producto::create($insert);
+
+            if ($request->file('imagenes') != null && count($request->file('imagenes')) > 0) {
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenProducto::create([
-                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/'.$producto->pro_id),
+                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/' . $producto->pro_id),
                         "ipr_producto_id" => $producto->pro_id
                     ]);
                 }
             }
 
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
+            if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+                foreach ($request->subsegmentos as $sse) {
                     PivoteSubSegmentos::create([
                         "psse_subsegmento_id" => intval($sse),
                         "psse_producto_id" =>  intval($producto->pro_id)
@@ -80,22 +87,27 @@ class ProductoService
             $producto->pro_orden = $request->orden;
             $producto->pro_estado = $request->estado;
             $producto->pro_url = Str::slug($request->titulo);
-    
+
+            if ($request->file('imagen')) {
+                $producto->pro_imagen = FileService::upload($request->file('imagen'), 'imagenes/productos');
+            }
+
+
             $producto->save();
 
-            if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
+            if ($request->file('imagenes') != null && count($request->file('imagenes')) > 0) {
                 foreach ($request->file('imagenes') as $imagen) {
                     ImagenProducto::create([
-                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/'.$producto->pro_id),
+                        "ipr_imagen" => FileService::uploadCustomName($imagen, 'imagenes/productos/' . $producto->pro_id),
                         "ipr_producto_id" => $producto->pro_id
                     ]);
                 }
             }
-            
-            PivoteSubSegmentos::where('psse_producto_id',$producto->pro_id)->delete();
 
-            if($request->subsegmentos != null && is_array($request->subsegmentos)){
-                foreach($request->subsegmentos as $sse){
+            PivoteSubSegmentos::where('psse_producto_id', $producto->pro_id)->delete();
+
+            if ($request->subsegmentos != null && is_array($request->subsegmentos)) {
+                foreach ($request->subsegmentos as $sse) {
                     PivoteSubSegmentos::create([
                         "psse_subsegmento_id" => intval($sse),
                         "psse_producto_id" =>  intval($producto->pro_id)
@@ -128,8 +140,8 @@ class ProductoService
                 FileService::destroy($imagen->ipr_imagen);
                 $imagen->delete();
             }
-            
-            PivoteSubSegmentos::where('psse_producto_id',$producto->pro_id)->delete();
+
+            PivoteSubSegmentos::where('psse_producto_id', $producto->pro_id)->delete();
 
             $producto->delete();
 

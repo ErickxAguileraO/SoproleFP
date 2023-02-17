@@ -29,6 +29,18 @@
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50">{{$receta->rec_contenido}}</textarea>
                         </div>
 
+                        <label for="imagen">Imagen ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>
+                        @if ($receta->rec_imagen != '')
+                            <a target="_blank" href='{{ $receta->rec_imagen }} '>Ver
+                                imagen adjunta <i class="fas fa-eye"></i></a>
+                        @endif
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen" name="imagen">
+                            </div>
+                        </div>
+
+
                         <label for="video">Video</label>
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video"
@@ -151,4 +163,8 @@
 @push('extra-js')
     <script src="{{ asset('public/management/js/receta/editar.js?v=' . rand()) }}"></script>
     <script src="{{ asset('public/management/js/receta/imagenes.js?v=' . rand()) }}"></script>
+    <script>
+        let ancho = {{ $ancho }}
+        let alto = {{ $alto }}
+    </script>
 @endpush

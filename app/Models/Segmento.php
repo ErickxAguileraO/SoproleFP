@@ -15,7 +15,9 @@ class Segmento extends Model
 
     protected $fillable = [
         'seg_nombre',
+        'seg_url',
         'seg_color',
+        'seg_color_texto',
         'seg_color_anterior',
         'seg_imagen',
         'seg_orden',

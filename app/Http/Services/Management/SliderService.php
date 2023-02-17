@@ -16,12 +16,18 @@ class SliderService
                 'sli_nombre' => $request->nombre,
                 'sli_estado' => $request->estado,
                 'sli_orden' => $request->orden,
+                'sli_link' => $request->enlace,
             ];
             $uploadFile = FileService::upload($request->file('imagen'),'imagenes/slider');
+            $uploadFileMovil = FileService::upload($request->file('imagen_movil'),'imagenes/slider');
 
             if($uploadFile){
                 $insert['sli_imagen'] = $uploadFile;
             }
+            if($uploadFileMovil){
+                $insert['sli_imagen_movil'] = $uploadFileMovil;
+            }
+
 
             Slider::create($insert);
 
@@ -50,9 +56,14 @@ class SliderService
             $slider->sli_nombre = $request->nombre;
             $slider->sli_estado = $request->estado;
             $slider->sli_orden = $request->orden;
+            $slider->sli_link = $request->enlace;
 
             if($request->file('imagen')){
                 $slider->sli_imagen = FileService::upload($request->file('imagen'),'imagenes/slider');
+            }
+
+            if($request->file('imagen_movil')){
+                $slider->sli_imagen_movil = FileService::upload($request->file('imagen_movil'),'imagenes/slider');
             }
 
             $slider->save();

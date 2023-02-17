@@ -16,6 +16,8 @@ class CreateRecetasTable extends Migration
         Schema::create('recetas', function (Blueprint $table) {
             $table->id('rec_id');
             $table->string('rec_titulo')->nullable();
+            $table->text('rec_url')->nullable();
+            $table->text('rec_imagen')->nullable();
             $table->text('rec_contenido')->nullable();
             $table->string('rec_video')->nullable();
             $table->integer('rec_orden')->nullable();

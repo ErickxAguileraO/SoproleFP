@@ -14,7 +14,7 @@
             <div class="select-filtros">
                 <div>
                     <label for="">Categoría</label>
-                    <select name="" id="">
+                    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
                         <option value="">value 1</option>
                         <option value="">value 2</option>
                     </select>
@@ -195,6 +195,11 @@
                 $('.flexslider-seccion').flexslider({
                     animation: "slide",
                 });
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.js-example-basic-multiple').select2();
             });
         </script>
     @endpush

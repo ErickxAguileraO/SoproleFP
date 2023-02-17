@@ -17,9 +17,10 @@ class CreateSliderTable extends Migration
             $table->id('sli_id');
             $table->string('sli_nombre')->nullable();
             $table->string('sli_imagen')->nullable();
+            $table->string('sli_imagen_movil')->nullable();
             $table->boolean('sli_estado')->nullable();
             $table->integer('sli_orden')->nullable();
-            
+            $table->string('sli_link')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
