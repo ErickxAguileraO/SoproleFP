@@ -24,9 +24,9 @@ class Segmento extends Model
         'seg_estado',
     ];
 
-    public function Producto() // tiene muchos Producto
+    public function Receta() // tiene muchos Receta
     {
-        return $this->belongsToMany(Producto::class, 'pivote_sub_segmentos', 'psse_segmento_id', 'psse_producto_id')->distinct();
+        return $this->belongsToMany(Receta::class, 'receta_segmento', 'recseg_segmento_id', 'recseg_receta_id')->with('Producto');
     }
 
     public function Academia()

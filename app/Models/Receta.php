@@ -27,4 +27,9 @@ class Receta extends Model
     {
         return $this->hasMany(ImagenReceta::class, 'ire_receta_id', 'rec_id');
     }
+
+    public function Producto() // tiene muchos Producto
+    {
+        return $this->belongsToMany(Producto::class, 'producto_receta', 'prorec_receta_id', 'prorec_producto_id')->distinct();
+    }
 }
