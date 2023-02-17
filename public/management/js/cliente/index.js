@@ -33,22 +33,12 @@
         columns: [
 
             {
-                dataField: 'cli_razon_social',
-                caption: 'Razón social',
+                dataField: 'clie_nombre',
+                caption: 'Nombre',
                 allowEditing: false,
             },
             {
-                dataField: 'cli_rut',
-                caption: 'Rut',
-                allowEditing: false,
-            },
-            {
-                dataField: 'cli_correo_contacto',
-                caption: 'Correo',
-                allowEditing: false,
-            },
-            {
-                dataField: 'cli_estado',
+                dataField: 'clie_estado',
                 caption: 'Estado',
                 allowEditing: false,
                 lookup: {
@@ -76,8 +66,8 @@
                 alignment: 'center',
                 hidingPriority: 0,
                 cellTemplate(container, options) {
-                    let html_editar = '<a href="/administracion/cliente/editar/' + options.data.cli_id + '" class="edit" style="color: #DD5702; font-size: 20px; margin-right:10px;"><i class="fas fa-edit"></i></a>';
-                    let html_eliminar = '<a class="eliminar" codigo="' + options.data.cli_id + '" style="color: #DD5702; font-size: 20px;"><i class="fas fa-trash"></i></a>';
+                    let html_editar = '<a href="/administracion/cliente/editar/' + options.data.clie_id + '" class="edit" style="color: #DD5702; font-size: 20px; margin-right:10px;"><i class="fas fa-edit"></i></a>';
+                    let html_eliminar = '<a class="eliminar" codigo="' + options.data.clie_id + '" style="color: #DD5702; font-size: 20px;"><i class="fas fa-trash"></i></a>';
                     return $(html_editar + html_eliminar);
                 }
             }],

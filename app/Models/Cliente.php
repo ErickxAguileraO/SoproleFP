@@ -9,19 +9,14 @@ class Cliente extends Model
 {
     use HasFactory;
 
-    protected $table = 'clientes';
+    protected $table = 'cliente';
 
-    protected $primaryKey = 'cli_id';
+    protected $primaryKey = 'clie_id';
 
     protected $fillable = [
-        'cli_razon_social',
-        'cli_rut',
-        'cli_otro_tipo',
-        'cli_direccion_calle',
-        'cli_direccion_numero',
-        'cli_nombre_contacto',
-        'cli_telefono_contacto',
-        'cli_correo_contacto',
-        'cli_estado',
+        'clie_editable_id',
+        'clie_nombre',
+        'clie_imagen',
+        'clie_estado',
     ];
 }

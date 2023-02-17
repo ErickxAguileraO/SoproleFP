@@ -12,17 +12,16 @@ class ClienteService
         DB::beginTransaction();
 
         try {
-            Cliente::create([
-                'cli_razon_social' => $request->razon_social,
-                'cli_rut' => $request->rut,
-                'cli_otro_tipo' => $request->otro_tipo,
-                'cli_direccion_calle' => $request->calle,
-                'cli_direccion_numero' => $request->numero,
-                'cli_nombre_contacto' => $request->nombre_contacto,
-                'cli_telefono_contacto' => $request->telefono_contacto,
-                'cli_correo_contacto' => $request->correo_contacto,
-                'cli_estado' => $request->estado,
-            ]);
+            $insert = [
+                'clie_nombre' => $request->nombre,
+                'clie_editable_id' => $request->editable,
+                'clie_estado' => $request->estado,
+            ];
+
+            if ($request->file('imagen')) {
+                $insert['clie_imagen'] = FileService::upload($request->file('imagen'), 'imagenes/clientes');
+            }
+            Cliente::create($insert);
 
             DB::commit();
 
@@ -43,18 +42,17 @@ class ClienteService
     {
         DB::beginTransaction();
 
-        try {   
+        try {
 
             $cli = Cliente::find($request->cliente_id);
-            $cli->cli_razon_social = $request->razon_social;
-            $cli->cli_rut =  $request->rut;
-            $cli->cli_otro_tipo = $request->otro_tipo;
-            $cli->cli_direccion_calle = $request->calle;
-            $cli->cli_direccion_numero =  $request->numero;
-            $cli->cli_nombre_contacto =  $request->nombre_contacto;
-            $cli->cli_telefono_contacto =  $request->telefono_contacto;
-            $cli->cli_correo_contacto =  $request->correo_contacto;
-            $cli->cli_estado =  $request->estado;
+            $cli->clie_nombre = $request->nombre;
+            $cli->clie_estado = $request->estado;
+            $cli->clie_editable_id =  $request->editable;
+
+            if ($request->file('imagen')) {
+                $cli->clie_imagen = FileService::upload($request->file('imagen'), 'imagenes/clientes');
+            }
+
             $cli->save();
 
             DB::commit();

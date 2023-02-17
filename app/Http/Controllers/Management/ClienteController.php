@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Management;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Management\ClienteService;
 use App\Models\Cliente;
+use App\Models\Editable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -14,6 +15,9 @@ use Malahierba\ChileRut\Rules\ValidChileanRut;
 
 class ClienteController extends Controller
 {
+    private $anchoImagen = 407;
+    private $altoImagen =  320;
+
     public function index()
     {
         return view('management.cliente.index');
@@ -21,7 +25,11 @@ class ClienteController extends Controller
 
     public function crear()
     {
-        return view('management.cliente.crear');
+        return view('management.cliente.crear',[
+            'editables' => Editable::all(),
+            'ancho' => $this->anchoImagen,
+            'alto' => $this->altoImagen,
+        ]);
     }
 
     public function listar()
@@ -32,21 +40,19 @@ class ClienteController extends Controller
     public function editar(Cliente $cliente)
     {
         return view('management.cliente.editar', [
-            "cliente" => $cliente
+            "cliente" => $cliente,
+            'editables' => Editable::all(),
+            'ancho' => $this->anchoImagen,
+            'alto' => $this->altoImagen,
         ]);
     }
 
     public function store(Request $request)
     {
         $reglasValidacion = [
-            'razon_social' => ['required', 'string', 'max:250'],
-            'rut' => ['required', 'string', 'max:12', new ValidChileanRut(new ChileRut)],
-            'otro_tipo' => ['required', 'string', 'max:250'],
-            'calle' => ['required', 'string', 'max:250'],
-            'numero' => ['required', 'numeric'],
-            'nombre_contacto' => ['required', 'string', 'max:250'],
-            'telefono_contacto' => ['required', 'string', 'max:250'],
-            'correo_contacto' => ['required', 'email', 'max:250'],
+            'nombre' => ['required', 'string', 'max:250'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
+            'editable' => ['required','numeric'],
             'estado' => ['required'],
         ];
 
@@ -69,14 +75,9 @@ class ClienteController extends Controller
     public function update(Request $request)
     {
         $reglasValidacion = [
-            'razon_social' => ['required', 'string', 'max:250'],
-            'rut' => ['required', 'string', 'max:12', new ValidChileanRut(new ChileRut)],
-            'otro_tipo' => ['required', 'string', 'max:250'],
-            'calle' => ['required', 'string', 'max:250'],
-            'numero' => ['required', 'numeric'],
-            'nombre_contacto' => ['required', 'string', 'max:250'],
-            'telefono_contacto' => ['required', 'string', 'max:250'],
-            'correo_contacto' => ['required', 'email', 'max:250'],
+            'nombre' => ['required', 'string', 'max:250'],
+            'imagen' => ['nullable', 'mimes:jpg,jpeg,png,svg'],
+            'editable' => ['required','numeric'],
             'estado' => ['required'],
         ];
 
