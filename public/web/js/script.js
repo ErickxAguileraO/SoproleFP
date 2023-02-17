@@ -49,25 +49,25 @@ $(".volver-movil").click(function(){
 });
 
 // Botones de segmentos a lista
-$(".btn-pasteleria-segmento").click(function(){
-  $(".producto-lista-pasteleria").css({'display':'block'});
-});
+// $(".btn-pasteleria-segmento").click(function(){
+//   $(".producto-lista-pasteleria").css({'display':'block'});
+// });
 
-$(".btn-italiana-segmento").click(function(){
-  $(".producto-lista-italiana").css({'display':'block'});
-});
+// $(".btn-italiana-segmento").click(function(){
+//   $(".producto-lista-italiana").css({'display':'block'});
+// });
 
-$(".btn-rapida-segmento").click(function(){
-  $(".producto-lista-rapida").css({'display':'block'});
-});
+// $(".btn-rapida-segmento").click(function(){
+//   $(".producto-lista-rapida").css({'display':'block'});
+// });
 
-$(".btn-cafeteria-segmento").click(function(){
-  $(".producto-lista-cafeteria").css({'display':'block'});
-});
+// $(".btn-cafeteria-segmento").click(function(){
+//   $(".producto-lista-cafeteria").css({'display':'block'});
+// });
 
-$(".btn-servicios-segmento").click(function(){
-  $(".producto-lista-servicios").css({'display':'block'});
-});
+// $(".btn-servicios-segmento").click(function(){
+//   $(".producto-lista-servicios").css({'display':'block'});
+// });
 
 
 $(".tienda").click(function(){

@@ -35,30 +35,36 @@
                                     <h5>Academia</h5>
                                     <a href="/academia" class="boton-ver-op bg-red">Ver todos</a>
                                 </div>
-                                <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
+                                @foreach (App\Http\Controllers\Management\AcademiaController::listar() as $item)
+                                    <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
+                                        <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                                        <p class="color-pasteleria">{{$item->aca_titulo}}</p>
+                                    </a>
+                                @endforeach
+                                {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
                                     <p class="color-pasteleria">Pastelería</p>
-                                </a>
+                                </a> --}}
 
-                                <a href="/academia-detalle" class="opcion-drop-n btn-color-italiana">
+                                {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-italiana">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
                                     <p class="color-italiana">Comida Italiana</p>
-                                </a>
+                                </a> --}}
 
-                                <a href="/academia-detalle" class="opcion-drop-n btn-color-rapida">
+                                {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-rapida">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
                                     <p class="color-rapida">Comida Rápida</p>
-                                </a>
+                                </a> --}}
 
-                                <a href="/academia-detalle" class="opcion-drop-n btn-color-cafeteria">
+                                {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-cafeteria">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
                                     <p class="color-cafeteria">Cafetería</p>
-                                </a>
+                                </a> --}}
 
-                                <a href="/academia-detalle" class="opcion-drop-n btn-color-servicios">
+                                {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-servicios">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                                     <p class="color-servicios">Servicios de alimentación</p>
-                                </a>
+                                </a> --}}
                            </div>
                         </div>
                     </div>
@@ -73,7 +79,27 @@
                                     <h5>Segmentos</h5>
                                     <a href="/productos" class="boton-ver-op bg-red">Ver todos</a>
                                 </div>
-                                <div class="opcion-drop-n btn-color-pasteleria">
+                                
+                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                                    <div class="opcion-drop-n btn-color-pasteleria">
+                                        <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                                        <p class="color-pasteleria">{{$item->seg_nombre}}</p>
+                                        @if (count($item->producto)>0)
+                                            <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                                            <div class="sub-content-drop ocultar-drop drop-default">
+                                                <div class="titulo-drop">
+                                                    <h5>Productos {{$item->seg_nombre}}</h5>
+                                                    <a href="" class="boton-ver-op bg-red">Ver mas</a>
+                                                </div>
+                                                @foreach ($item->producto as $producto)
+                                                    <a href="/producto-detalle" class="link-op color-pasteleria">{{$producto->pro_titulo}}</a>
+                                                @endforeach
+                                            </div>
+                                        @endif
+                                    </div>
+                                @endforeach
+
+                                {{-- <div class="opcion-drop-n btn-color-pasteleria">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
                                     <p class="color-pasteleria">Pastelería</p>
                                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -88,9 +114,9 @@
                                         <a href="/producto-detalle" class="link-op color-pasteleria">Producto 4</a>
                                         <a href="/producto-detalle" class="link-op color-pasteleria">Producto 5</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="opcion-drop-n btn-color-italiana">
+                                {{-- <div class="opcion-drop-n btn-color-italiana">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-citaliana.svg') }}" alt="">
                                     <p class="color-italiana">Comida Italiana</p>
                                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -104,9 +130,9 @@
                                         <a href="/producto-detalle" class="link-op color-italiana">Producto 3</a>
                                         <a href="/producto-detalle" class="link-op color-italiana">Producto 4</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="opcion-drop-n btn-color-rapida">
+                                {{-- <div class="opcion-drop-n btn-color-rapida">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-crapida.svg') }}" alt="">
                                     <p class="color-rapida">Comida Rápida</p>
                                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -121,9 +147,9 @@
                                         <a href="/producto-detalle" class="link-op color-rapida">Producto 4</a>
                                         <a href="/producto-detalle" class="link-op color-rapida">Producto 5</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="opcion-drop-n btn-color-cafeteria">
+                                {{-- <div class="opcion-drop-n btn-color-cafeteria">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-cafeteria.svg') }}" alt="">
                                     <p class="color-cafeteria">Cafetería</p>
                                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -136,9 +162,9 @@
                                         <a href="/producto-detalle" class="link-op color-cafeteria">Producto 2</a>
                                         <a href="/producto-detalle" class="link-op color-cafeteria">Producto 3</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="opcion-drop-n btn-color-servicios">
+                                {{-- <div class="opcion-drop-n btn-color-servicios">
                                     <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                                     <p class="color-servicios">Servicios de alimentación</p>
                                     <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -152,7 +178,7 @@
                                         <a href="/producto-detalle" class="link-op color-servicios">Producto 3</a>
                                         <a href="/producto-detalle" class="link-op color-servicios">Producto 4</a>
                                     </div>
-                                </div>
+                                </div> --}}
                            </div>
                            <div class="linea-op-drop"></div>
                            <div></div>
@@ -237,7 +263,18 @@
                 <h5>Segmentos</h5>
                 <a href="/productos" class="boton-ver-op bg-red">Ver mas</a>
             </div>
-            <div class="opcion-drop-n btn-color-pasteleria producto-lista btn-pasteleria-segmento">
+            
+            @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                <div class="opcion-drop-n btn-color-pasteleria producto-lista btn-pasteleria-segmento" name="Segmentos" id="{{$item->seg_id}}">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                    <p class="color-pasteleria">{{$item->seg_nombre}}</p>
+                    @if (count($item->producto)>0)
+                        <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
+                    @endif
+                </div>
+            @endforeach
+
+            {{-- <div class="opcion-drop-n btn-color-pasteleria producto-lista btn-pasteleria-segmento">
                 <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
                 <p class="color-pasteleria">Pastelería</p>
                 <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
@@ -265,7 +302,7 @@
                 <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                 <p class="color-servicios">Servicios de alimentación</p>
                 <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
-            </div>
+            </div> --}}
             <div class="flex-volver-movil">
                 <div class="volver-movil">Volver</div>
             </div>
@@ -279,8 +316,19 @@
                 <h5>Produtos</h5>
                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
             </div>
+            @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                <div class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos" id="div_SegmentoProductos{{$item->seg_id}}">
+                    @if (count($item->producto)>0)
+                        @foreach ($item->producto as $producto)
+                            <div class="opcion-drop-n btn-color-pasteleria">
+                                <p class="color-pasteleria">{{$producto->pro_titulo}}</p>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            @endforeach
             {{-- Lista productos pasteleria --}}
-            <div class="producto-lista-pasteleria ocultar-producto-lista">
+            {{-- <div class="producto-lista-pasteleria ocultar-producto-lista">
                 <div class="opcion-drop-n btn-color-pasteleria">
                     <p class="color-pasteleria">Producto</p>
                 </div>
@@ -300,10 +348,10 @@
                 <div class="opcion-drop-n btn-color-pasteleria">
                     <p class="color-pasteleria">Producto</p>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Lista productos italiana --}}
-            <div class="producto-lista-italiana ocultar-producto-lista">
+            {{-- <div class="producto-lista-italiana ocultar-producto-lista">
                 <div class="opcion-drop-n btn-color-italiana">
                     <p class="color-italiana">Producto</p>
                 </div>
@@ -323,10 +371,10 @@
                 <div class="opcion-drop-n btn-color-italiana">
                     <p class="color-italiana">Producto</p>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Lista productos rapida --}}
-            <div class="producto-lista-rapida ocultar-producto-lista">
+            {{-- <div class="producto-lista-rapida ocultar-producto-lista">
                 <div class="opcion-drop-n btn-color-rapida">
                     <p class="color-rapida">Producto</p>
                 </div>
@@ -346,10 +394,10 @@
                 <div class="opcion-drop-n btn-color-rapida">
                     <p class="color-rapida">Producto</p>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Lista productos cafeteria --}}
-            <div class="producto-lista-cafeteria ocultar-producto-lista">
+            {{-- <div class="producto-lista-cafeteria ocultar-producto-lista">
                 <div class="opcion-drop-n btn-color-cafeteria">
                     <p class="color-cafeteria">Producto</p>
                 </div>
@@ -369,10 +417,10 @@
                 <div class="opcion-drop-n btn-color-cafeteria">
                     <p class="color-cafeteria">Producto</p>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- Lista productos servicios --}}
-            <div class="producto-lista-servicios ocultar-producto-lista">
+            {{-- <div class="producto-lista-servicios ocultar-producto-lista">
                 <div class="opcion-drop-n btn-color-servicios">
                     <p class="color-servicios">Producto</p>
                 </div>
@@ -392,7 +440,7 @@
                 <div class="opcion-drop-n btn-color-servicios">
                     <p class="color-servicios">Producto</p>
                 </div>
-            </div>
+            </div> --}}
 
             <div class="flex-volver-movil">
                 <div class="volver-movil2">Volver</div>
@@ -408,7 +456,14 @@
                 <h5>Academia</h5>
                 <a href="/academia" class="boton-ver-op bg-red">Ver mas</a>
             </div>
-            <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
+            
+            @foreach (App\Http\Controllers\Management\AcademiaController::listar() as $item)
+                <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
+                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
+                    <p class="color-pasteleria">{{$item->aca_titulo}}</p>
+                </a>
+            @endforeach
+            {{-- <a href="/academia-detalle" class="opcion-drop-n btn-color-pasteleria">
                 <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-pasteleria.svg') }}" alt="">
                 <p class="color-pasteleria">Pastelería</p>
             </a>
@@ -431,7 +486,7 @@
             <a href="/academia-detalle" class="opcion-drop-n btn-color-servicios">
                 <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-salimentacion.svg') }}" alt="">
                 <p class="color-servicios">Servicios de alimentación</p>
-            </a>
+            </a> --}}
             <div class="flex-volver-movil">
                 <div class="volver-movil">Volver</div>
             </div>
@@ -439,3 +494,26 @@
     </div>  
 </div>
 </header>
+<script>
+    // menú responsivo, al seleccionar segmento desplegar los productos
+
+    var Segmentos = document.getElementsByName("Segmentos"),
+    len_Segmentos = Segmentos.length,
+    i;
+    
+    var SegmentoProductos = {!! json_encode(App\Http\Controllers\Management\SegmentoController::listarWithProducto()); !!}
+    for(i=0;i<len_Segmentos;i+=1){
+        Segmentos[i].onclick=click_SegmentoProductos;
+    }
+    function click_SegmentoProductos(){
+        SegmentoProductos.forEach((SegmentoProducto, i) => {
+            if (SegmentoProducto.seg_id == this.id) {
+            var y = document.getElementById("div_SegmentoProductos"+this.id);
+            y.style.display = "block";
+            }else{
+            var y = document.getElementById("div_SegmentoProductos"+SegmentoProducto.seg_id);
+            y.style.display = "none";
+            }
+        });
+    }
+</script>

@@ -34,6 +34,11 @@ class SegmentoController extends Controller
         return Segmento::all();
     }
 
+    public function listarWithProducto()
+    {
+        return Segmento::with('Producto')->get();
+    }
+
     public function editar(Segmento $segmento)
     {
         return view('management.segmento.editar', [
