@@ -38,6 +38,7 @@ $(".btn-agregar").on("click", function (event) {
 
 var textContenido;
 ClassicEditor.create(document.querySelector('#contenido'), {
+    extraPlugins: 'sourcedialog',
     ckfinder: {
         uploadUrl: '/image-upload?_token=' + $("input[name='_token']").val(),
     }

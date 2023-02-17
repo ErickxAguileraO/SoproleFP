@@ -43,7 +43,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
                 
@@ -56,7 +56,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
                 
@@ -106,7 +106,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
                 
@@ -156,7 +156,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
                 
@@ -194,7 +194,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
 
@@ -207,7 +207,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
             </div>
@@ -232,7 +232,7 @@
                             <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
                         
                         </div>
-                        <a href="/academia-detalle" class="boton-noticia-tendencia">Ver ahora</a>
+                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
                     </div>
                 </div>
             </div>

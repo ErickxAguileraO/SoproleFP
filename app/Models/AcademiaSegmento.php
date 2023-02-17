@@ -17,4 +17,11 @@ class AcademiaSegmento extends Model
         'acaseg_academia_id',
         'acaseg_segmento_id',
     ];
+
+    public function academias()
+    {
+        return $this->belongsToMany(Academia::class,'aca_id', 'acaseg_academia_id');
+    }
+
+
 }

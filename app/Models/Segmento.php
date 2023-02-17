@@ -28,4 +28,9 @@ class Segmento extends Model
     {
         return $this->belongsToMany(Producto::class, 'pivote_sub_segmentos', 'psse_segmento_id', 'psse_producto_id')->distinct();
     }
+
+    public function Academia()
+    {
+        return $this->belongsToMany(Academia::class,'academia_segmento','acaseg_segmento_id','acaseg_academia_id')->distinct();
+    }
 }
