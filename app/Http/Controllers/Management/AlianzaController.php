@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 
 class AlianzaController extends Controller
 {
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    private $anchoImagen = 407;
+    private $altoImagen =  320;
 
     public function index()
     {
@@ -52,7 +52,7 @@ class AlianzaController extends Controller
             'pagina_editable' => ['required'],
             'estado' => ['required'],
             'orden' => ['required','numeric'],
-            'imagen' => ['required', 'mimes:jpg,jpeg,png'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -78,7 +78,7 @@ class AlianzaController extends Controller
             'pagina_editable' => ['required'],
             'estado' => ['required'],
             'orden' => ['required','numeric'],
-            'imagen' => ['mimes:jpg,jpeg,png'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

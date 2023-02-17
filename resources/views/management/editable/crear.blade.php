@@ -32,10 +32,10 @@
                         <div class="row mb-3">
                             <div class="form-floating my-3">
                                 <select name="tipo" id="tipo" class="tipo-seleccion">
-                                    <option value="1">Etiam tincidunt non ante</option>
-                                    <option value="2">Ut mauris sapien</option>
-                                    <option value="3">Aliquet quis fringilla ut</option>
-                                    <option value="4">Tincidunt vel erat</option>
+                                    <option value="1">Conócenos</option>
+                                    <option value="2">Políticas de privacidad</option>
+                                    <option value="3">Términos y condiciones</option>
+                                    <option value="4">Información al consumidor</option>
                                 </select>
                             </div>
                         </div>
