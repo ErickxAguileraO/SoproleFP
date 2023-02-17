@@ -186,6 +186,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('crear', 'crear')->name('segmento.crear');
             Route::get('editar/{segmento}', 'editar')->name('segmento.editar');
             Route::get('listar', 'listar')->name('segmento.listar');
+            Route::get('listarWithProducto', 'listarWithProducto')->name('segmento.listarWithProducto');
             Route::get('eliminar/{segmento}', 'eliminar')->name('segmento.eliminar');
             Route::post('store', 'store')->name('segmento.store');
             Route::post('update', 'update')->name('segmento.update');

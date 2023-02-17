@@ -1,4 +1,3 @@
-
 <footer>
     <div class="linea-footer">
     </div>
@@ -8,20 +7,18 @@
             <a href="/"><img src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
             <div>
                 <img src="{{ asset('/public/web/imagenes/i-correo.svg') }}" alt="">   
-                <a href="">soproleFP@soprole.cl</a>
+                <a href="mailto:soproleFP@soprole.cl">soproleFP@soprole.cl</a>
             </div>
             <div>
                 <img src="{{ asset('/public/web/imagenes/i-telefono.svg') }}" alt="">
-                <h3>600 600 6600</h3>
+                <a href="tel:6006006600"><h3>600 600 6600</h3></a>
             </div>
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-1">
-            <a href="">Pastelería</a>
-            <a href="">Cocina Italiana</a>
-            <a href="">Comida Rápida</a>
-            <a href="">Cafetería</a>
-            <a href="">Servicios de alimentación</a>
+            @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
+                <a href="">{{$item->seg_nombre}}</a>
+            @endforeach
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-2">

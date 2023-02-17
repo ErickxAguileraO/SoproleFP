@@ -23,4 +23,9 @@ class Segmento extends Model
         'seg_orden',
         'seg_estado',
     ];
+
+    public function Producto() // tiene muchos Producto
+    {
+        return $this->belongsToMany(Producto::class, 'pivote_sub_segmentos', 'psse_segmento_id', 'psse_producto_id')->distinct();
+    }
 }
