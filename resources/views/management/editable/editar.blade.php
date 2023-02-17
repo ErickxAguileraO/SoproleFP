@@ -36,14 +36,10 @@
                         <div class="row mb-3">
                             <div class="form-floating my-3">
                                 <select name="tipo" id="tipo" class="tipo-seleccion">
-                                    <option {{ $editable->edi_tipo == 1 ? 'selected' : false }} value="1">Etiam
-                                        tincidunt non ante</option>
-                                    <option {{ $editable->edi_tipo == 2 ? 'selected' : false }} value="2">Ut mauris
-                                        sapien</option>
-                                    <option {{ $editable->edi_tipo == 3 ? 'selected' : false }} value="3">Aliquet quis
-                                        fringilla ut</option>
-                                    <option {{ $editable->edi_tipo == 4 ? 'selected' : false }} value="4">Tincidunt vel
-                                        erat</option>
+                                    <option {{ $editable->edi_tipo == 1 ? 'selected' : false }} value="1">Conócenos</option>
+                                    <option {{ $editable->edi_tipo == 2 ? 'selected' : false }} value="2">Políticas de privacidad</option>
+                                    <option {{ $editable->edi_tipo == 3 ? 'selected' : false }} value="3">Términos y condiciones</option>
+                                    <option {{ $editable->edi_tipo == 4 ? 'selected' : false }} value="4">Información al consumidor</option>
                                 </select>
                             </div>
                         </div>

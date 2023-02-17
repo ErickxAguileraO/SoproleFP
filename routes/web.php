@@ -22,6 +22,7 @@ use App\Http\Controllers\Management\TipoNegocioController;
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
+use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,10 +44,8 @@ Route::controller(WebAcademiaController::class)->prefix('academia')->group(funct
     Route::get('detalle/{academia}', 'detalle')->name('detalle');
 });
 
+Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
 
-Route::get('/conocenos', function () {
-    return view('web.conocenos.index');
-});
 
 Route::get('/politicas-de-privacidad', function () {
     return view('web.politicas.index');
