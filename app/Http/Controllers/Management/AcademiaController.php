@@ -59,6 +59,7 @@ class AcademiaController extends Controller
             'video' => ['url', 'max:250'],
             'segmentos' => ['required'],
             'orden' => ['required','numeric'],
+            'fecha' => ['required','date'],
             'imagen' => ['required','mimes:jpg,jpeg,png,svg'],
             'estado' => ['required','numeric'],
         ];
@@ -87,6 +88,7 @@ class AcademiaController extends Controller
             'titulo2' => ['required', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
             'video' => ['url', 'max:250'],
+            'fecha' => ['required','date'],
             'segmentos' => ['required'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
             'orden' => ['required','numeric'],

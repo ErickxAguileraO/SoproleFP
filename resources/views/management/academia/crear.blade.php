@@ -31,6 +31,12 @@
                                 required>
                         </div>
 
+                        <label for="titulo">Fecha</label>
+                        <div class="form-floating my-3">
+                            <input type="date" name="fecha" class="form-control" id="fecha" value=""
+                                required>
+                        </div>
+
                         <label for="">Contenido</label>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50"></textarea>
