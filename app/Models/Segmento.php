@@ -31,6 +31,52 @@ class Segmento extends Model
 
     public function Academia()
     {
-        return $this->belongsToMany(Academia::class,'academia_segmento','acaseg_segmento_id','acaseg_academia_id')->distinct();
+        return $this->belongsToMany(Academia::class, 'academia_segmento', 'acaseg_segmento_id', 'acaseg_academia_id')
+            ->where('aca_estado', 1)
+            ->orderBy('aca_orden', 'ASC')
+            ->distinct();
+    }
+
+    public function Slider()
+    {
+        return $this->belongsToMany(Slider::class, 'slider_segmento', 'sliseg_segmento_id', 'sliseg_slider_id')
+            ->where('sli_estado', 1)
+            ->orderBy('sli_orden', 'ASC')
+            ->distinct();
+    }
+
+    public function Noticia()
+    {
+        return $this->belongsToMany(Noticia::class, 'noticia_segmento', 'notseg_segmento_id', 'notseg_noticia_id')
+            ->where('not_estado', 1)
+            ->orderBy('not_fecha', 'DESC')
+            ->distinct();
+    }
+
+    public function Subsegmento()
+    {
+        return $this->belongsToMany(SubSegmento::class, 'pivote_sub_segmentos', 'psse_segmento_id', 'psse_subsegmento_id')
+            ->where('sse_estado', 1)
+            ->orderBy('sse_orden', 'ASC')
+            ->distinct();
+    }
+
+
+    public function AcademiaMiniSitio()
+    {
+        return $this->belongsToMany(Academia::class, 'academia_segmento', 'acaseg_segmento_id', 'acaseg_academia_id')
+            ->where('aca_estado', 1)
+            ->orderBy('aca_orden', 'ASC')
+            ->take(4)
+            ->distinct();
+    }
+
+    public function NoticiaMiniSitio()
+    {
+        return $this->belongsToMany(Noticia::class, 'noticia_segmento', 'notseg_segmento_id', 'notseg_noticia_id')
+            ->where('not_estado', 1)
+            ->orderBy('not_fecha', 'DESC')
+            ->take(3)
+            ->distinct();
     }
 }
