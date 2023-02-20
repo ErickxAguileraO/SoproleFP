@@ -34,4 +34,9 @@ class Producto extends Model
         return $this->hasMany(ImagenProducto::class,'ipr_producto_id', 'pro_id');
     }
 
+    public function imagenListado()
+    {
+        return $this->hasOne(ImagenProducto::class,'ipr_producto_id', 'pro_id')->latest();
+    }
+
 }
