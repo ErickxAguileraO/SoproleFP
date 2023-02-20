@@ -39,6 +39,7 @@
     @include('layout.web_footer') <!-- incluye el footer -->
 
     <!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="{{ asset('/public/web/js/niceselect/jquery.nice-select.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/fresco/fresco.min.js') }}"></script>
