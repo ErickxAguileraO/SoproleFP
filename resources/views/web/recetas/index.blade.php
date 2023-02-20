@@ -37,13 +37,6 @@
         </section>
 
         <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Pastelería</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todas las recetas</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todas</a>
-                </div>
-            </div>
             <div class="cuadros-info cuadros-row-4">
                 <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
