@@ -4,6 +4,7 @@ namespace App\Http\Services\Management;
 
 use App\Models\ImagenNoticia;
 use App\Models\Noticia;
+use App\Models\NoticiaSegmento;
 use App\Models\PivoteSubSegmentos;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -31,6 +32,15 @@ class NoticiaService
                     ImagenNoticia::create([
                         "ino_imagen" => FileService::upload($imagen, 'imagenes/noticias'),
                         "ino_noticia_id" => $noticia->not_id
+                    ]);
+                }
+            }
+
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
+                    NoticiaSegmento::create([
+                        "notseg_segmento_id" => intval($seg),
+                        "notseg_noticia_id" =>  intval($noticia->not_id)
                     ]);
                 }
             }
@@ -95,6 +105,20 @@ class NoticiaService
                     ]);
                 }
             }
+
+
+            NoticiaSegmento::where('notseg_noticia_id', $noticia->not_id)->delete();
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
+                    NoticiaSegmento::create([
+                        "notseg_segmento_id" => intval($seg),
+                        "notseg_noticia_id" =>  intval($noticia->not_id)
+                    ]);
+                }
+            }
+
+
+
 
 
             DB::commit();

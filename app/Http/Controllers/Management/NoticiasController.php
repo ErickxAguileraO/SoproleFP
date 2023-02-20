@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Services\Management\NoticiaService;
 use App\Models\ImagenNoticia;
 use App\Models\Noticia;
+use App\Models\NoticiaSegmento;
 use App\Models\PivoteSubSegmentos;
+use App\Models\Segmento;
 use Illuminate\Http\Request;
 use App\Models\SubSegmento;
 use Illuminate\Support\Facades\Validator;
@@ -28,6 +30,7 @@ class NoticiasController extends Controller
             'ancho' => $this->anchoImagen,
             'alto' => $this->altoImagen,
             'subsegmentos' => SubSegmento::all(),
+            'segmentos' => Segmento::all(),
         ]);
     }
 
@@ -42,7 +45,9 @@ class NoticiasController extends Controller
             "noticia" => $noticia,
             'ancho' => $this->anchoImagen,
             'alto' => $this->altoImagen,
+            'segmentos' => Segmento::all(),
             'subsegmentos' => SubSegmento::all(),
+            'segmentosSeleccionados' => NoticiaSegmento::where('notseg_noticia_id', $noticia->not_id)->pluck('notseg_segmento_id')->toArray(),
             'subsegmentosSeleccionados' => PivoteSubSegmentos::where('psse_noticia_id', $noticia->not_id)->pluck('psse_subsegmento_id')->toArray()
         ]);
     }
@@ -55,6 +60,7 @@ class NoticiasController extends Controller
             'contenido' => ['required', 'max:2000'],
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
+            'segmentos' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -83,6 +89,7 @@ class NoticiasController extends Controller
             'contenido' => ['required', 'max:2000'],
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
+            'segmentos' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

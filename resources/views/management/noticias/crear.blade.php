@@ -52,6 +52,18 @@
                             </div>
                         </div>
 
+                        <label for="orden">Segmentos</label>
+                        <div style="margin-top: 15px;">
+                            @foreach ($segmentos as $segmento)
+                                <label class="containerCheckbox">{{ $segmento->seg_nombre }}
+                                    <input type="checkbox" name="segmentos[]" value="{{ $segmento->seg_id }}">
+                                    <span class="checkmark"></span>
+                                </label>
+                            @endforeach
+                        </div>
+                        <br />
+
+
                         <label for="orden">Sub-Segmentos</label>
                         <div style="margin-top: 15px;">
                             @foreach ($subsegmentos as $subsegmento)
