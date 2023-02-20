@@ -21,11 +21,12 @@
                     </select>
                 </div>
 
-                <div class="div-filtro">
+                <div class="ocultar-nice-select div-filtro">
                     <label for="">Categoría</label>
-                    <select>
-                        <option value="">value 1</option>
-                        <option value="">value 2</option>
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
+                        <option>Segmento 1</option>
+                        <option>Segmento 2</option>
+                        <option>Segmento 3</option>
                     </select>
                 </div>
 

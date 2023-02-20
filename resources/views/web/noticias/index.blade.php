@@ -33,15 +33,15 @@
         <br>
         <section class="filtros">
             <div class="select-filtros" style="margin-bottom: 50px;">
-                <div class="div-filtro">
+                <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select name="" id="">
-                        <option value="0">Todos</option>
-                        @foreach ($segmentos as $item)
-                            <option value="{{$item->seg_id}}">{{$item->seg_nombre}}</option>
-                        @endforeach
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
+                        <option>Segmento 1</option>
+                        <option>Segmento 2</option>
+                        <option>Segmento 3</option>
                     </select>
                 </div>
+                
                 <div class="div-filtro">
                     <a href="" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
