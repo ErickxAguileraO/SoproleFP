@@ -40,6 +40,7 @@
                                     <option {{ $editable->edi_tipo == 2 ? 'selected' : false }} value="2">Políticas de privacidad</option>
                                     <option {{ $editable->edi_tipo == 3 ? 'selected' : false }} value="3">Términos y condiciones</option>
                                     <option {{ $editable->edi_tipo == 4 ? 'selected' : false }} value="4">Información al consumidor</option>
+                                    <option {{ $editable->edi_tipo == 5 ? 'selected' : false }} value="5">Modal</option>
                                 </select>
                             </div>
                         </div>

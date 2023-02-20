@@ -36,6 +36,7 @@
                                     <option value="2">Políticas de privacidad</option>
                                     <option value="3">Términos y condiciones</option>
                                     <option value="4">Información al consumidor</option>
+                                    <option value="5">Modal</option>
                                 </select>
                             </div>
                         </div>

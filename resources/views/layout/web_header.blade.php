@@ -2,14 +2,22 @@
     {{-- Modal ir a tienda --}}
     <div class="flex-modal-tienda">
         <div class="modal-tienda">
-            <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, cum quod molestias id est harum quibusdam provident ut? Cum rerum possimus quam nesciunt porro animi laborum doloribus temporibus eum labore!</p>
+            @php
+                $modal = App\Http\Controllers\Management\EditableController::listarByTipo(5);
+            @endphp
+            @if (isset($modal->edi_video))
+                <iframe src="{{$modal->edi_video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                @php
+                    echo $modal->edi_contenido;
+                @endphp
+            @else
+                <iframe src="https://www.youtube.com/embed/jsyySdF-fQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            @endif
             <h5>Estás a punto de salir de este sitio para ir a la tienda. ¿Confirmas esto?</h5>
             <div class="botones-tienda">
                 <a class="btn-ir-tienda no-ir cerrar-modal">No, quiero quedarme aquí </a>
                 <a href="https://www.soprolecontigo.cl/" class="btn-ir-tienda" target="_blank">Sí, quiero ir a la tienda</a>
             </div>
-            
         </div>
     </div>
     {{-- Menu escritorio --}}
@@ -23,7 +31,7 @@
             </div>
             <div class="menu-op">
                 <div class="dropdown">
-                    <a href="/conocenos" class="dropbtn">Conócenos</a> 
+                    <a href="{{route('web.conocenos')}}" class="dropbtn">Conócenos</a> 
                 </div>
                 
                 <div class="dropdown dropdown-noticias">
@@ -129,7 +137,7 @@
                 </div>
             </div>
             <div class="opcion-barra-n">
-                <a href="/conocenos">Conócenos</a>
+                <a href="{{route('web.conocenos')}}">Conócenos</a>
             </div>
             <div class="opcion-barra-n btn-noticias-movil">
                 <a>Academia</a>
