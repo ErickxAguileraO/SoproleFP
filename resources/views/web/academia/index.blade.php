@@ -12,14 +12,14 @@
     <div class="contenido">
         <section class="filtros">
             <div class="select-filtros">
-                <div>
+                <div class="div-filtro">
                     <label for="">Segmento</label>
                     <select name="" id="">
                         <option value="">Todos</option>
                         <option value="">value 1</option>
                     </select>
                 </div>
-                <div>
+                <div class="div-filtro">
                     <a href="" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>

@@ -33,7 +33,7 @@
         <br>
         <section class="filtros">
             <div class="select-filtros" style="margin-bottom: 50px;">
-                <div>
+                <div class="div-filtro">
                     <label for="">Segmento</label>
                     <select name="" id="">
                         <option value="0">Todos</option>
@@ -42,7 +42,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div>
+                <div class="div-filtro">
                     <a href="" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>
