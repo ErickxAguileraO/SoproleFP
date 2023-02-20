@@ -29,13 +29,6 @@
                         <option>Producto 3</option>
                     </select>
                 </div>
-                <div class="div-filtro">
-                    <label for="">Producto</label>
-                    <select name="" id="">
-                        <option value="">value 1</option>
-                        <option value="">value 2</option>
-                    </select>
-                </div>
                 <div>
                     <a href="" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
