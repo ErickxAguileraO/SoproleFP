@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Management;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Management\FileService;
 use App\Http\Services\Management\SliderService;
+use App\Models\Segmento;
 use App\Models\Slider;
+use App\Models\SliderSegmento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,6 +32,7 @@ class SliderController extends Controller
             'alto' => $this->altoImagen,
             'anchoMovil' => $this->anchoImagenMovil,
             'altoMovil' => $this->altoImagenMovil,
+            'segmentos' => Segmento::all(),
         ]);
     }
 
@@ -46,6 +49,8 @@ class SliderController extends Controller
             'alto' => $this->altoImagen,
             'anchoMovil' => $this->anchoImagenMovil,
             'altoMovil' => $this->altoImagenMovil,
+            'segmentosSeleccionados' => SliderSegmento::where('sliseg_slider_id', $slider->sli_id)->pluck('sliseg_segmento_id')->toArray(),
+            'segmentos' => Segmento::all(),
         ]);
     }
 
@@ -58,6 +63,7 @@ class SliderController extends Controller
             'orden' => ['required','numeric'],
             'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
             'imagen_movil' => ['required', 'mimes:jpg,jpeg,png,svg'],
+            'segmentos' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -86,6 +92,7 @@ class SliderController extends Controller
             'orden' => ['required','numeric'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
             'imagen_movil' => ['mimes:jpg,jpeg,png,svg'],
+            'segmentos' => ['required'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

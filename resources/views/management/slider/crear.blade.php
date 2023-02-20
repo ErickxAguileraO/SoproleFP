@@ -1,7 +1,9 @@
 @extends('layout.management')
 
 @section('title', 'Crear slider')
-
+@push('extra-css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('/public/management/css/checkbox.css') }}">
+@endpush
 @section('content')
     <div class="formulario-admin-secciones">
         <a href="{{ route('administracion.slider.index') }}" class="enlace btn btn-primary my-3"><i
@@ -43,6 +45,16 @@
                             </div>
                         </div>
 
+                        <label for="orden">Segmentos</label>
+                        <div style="margin-top: 15px;">
+                            @foreach ($segmentos as $segmento)
+                                <label class="containerCheckbox">{{ $segmento->seg_nombre }}
+                                    <input type="checkbox" name="segmentos[]" value="{{ $segmento->seg_id }}">
+                                    <span class="checkmark"></span>
+                                </label>
+                            @endforeach
+                        </div>
+                        <br />
 
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">

@@ -3,6 +3,7 @@
 namespace App\Http\Services\Management;
 
 use App\Models\Slider;
+use App\Models\SliderSegmento;
 use Illuminate\Support\Facades\DB;
 
 class SliderService
@@ -18,6 +19,7 @@ class SliderService
                 'sli_orden' => $request->orden,
                 'sli_link' => $request->enlace,
             ];
+
             $uploadFile = FileService::upload($request->file('imagen'),'imagenes/slider');
             $uploadFileMovil = FileService::upload($request->file('imagen_movil'),'imagenes/slider');
 
@@ -29,7 +31,18 @@ class SliderService
             }
 
 
-            Slider::create($insert);
+            $slider = Slider::create($insert);
+
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
+                    SliderSegmento::create([
+                        "sliseg_segmento_id" => intval($seg),
+                        "sliseg_slider_id" =>  intval($slider->sli_id)
+                    ]);
+                }
+            }
+
+
 
             DB::commit();
 
@@ -67,6 +80,19 @@ class SliderService
             }
 
             $slider->save();
+
+
+            SliderSegmento::where('sliseg_slider_id', $slider->sli_id)->delete();
+            if ($request->segmentos != null && is_array($request->segmentos)) {
+                foreach ($request->segmentos as $seg) {
+                    SliderSegmento::create([
+                        "sliseg_segmento_id" => intval($seg),
+                        "sliseg_slider_id" =>  intval($slider->sli_id)
+                    ]);
+                }
+            }
+
+
 
             DB::commit();
 
