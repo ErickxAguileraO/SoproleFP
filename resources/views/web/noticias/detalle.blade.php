@@ -8,7 +8,6 @@
     <div class="portada">
         <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt="">
-        <h1 class="txt-portada">Insertar titulo de noticias y tendencias</h1>
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
