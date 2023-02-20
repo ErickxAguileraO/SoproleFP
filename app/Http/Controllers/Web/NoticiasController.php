@@ -12,6 +12,7 @@ class NoticiasController extends Controller
     {
         return view('web.noticias.index', [
             "noticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6),
+            "ultimasnoticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->take(3)->get(),
             "segmentos" =>  Segmento::whereHas('Academia')->where('seg_estado', 1)->orderby('seg_orden', 'asc')->get(),
         ]);
     }
