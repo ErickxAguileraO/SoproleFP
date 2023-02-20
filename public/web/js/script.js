@@ -207,3 +207,9 @@ $('.carruselRecetas').slick({
       // instead of a settings object
     ]
 })
+
+  //Bootstrap Select
+
+  $(function() {
+    $('.selectpicker').selectpicker();
+  });

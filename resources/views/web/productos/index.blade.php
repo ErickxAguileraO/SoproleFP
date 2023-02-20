@@ -12,7 +12,7 @@
     <div class="contenido">
         <section class="filtros">
             <div class="select-filtros">
-                <div>
+                <div class="ocultar-nice-select">
                     <label for="">Segmento</label>
                     <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
                         <option>Segmento 1</option>
@@ -23,7 +23,7 @@
 
                 <div>
                     <label for="">Categoría</label>
-                    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                    <select>
                         <option value="">value 1</option>
                         <option value="">value 2</option>
                     </select>

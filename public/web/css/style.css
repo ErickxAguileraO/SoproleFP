@@ -780,7 +780,9 @@ textarea{
 .select-filtros .nice-select{
     width: 300px !important;
 }
-
+.ocultar-nice-select .nice-select{
+    display: none;
+}
 
 .encabezado-titulo-btn{
     display: grid;
