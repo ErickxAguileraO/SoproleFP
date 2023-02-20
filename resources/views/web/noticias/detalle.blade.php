@@ -24,7 +24,7 @@
             <h2>Galería de imágenes</h2>
             <div class="galeria-img">
                 @foreach ($noticia->imagenes as $item)
-                    <a href="{{ isset($item->ino_imagen) ? asset($item->ino_imagen) : NULL }} }}" class="fresco"><img src="{{ isset($item->ino_imagen) ? asset($item->ino_imagen) : NULL }} }}" alt=""></a>
+                    <a href="{{ asset($item->ino_imagen) }}" class="fresco"><img src="{{ asset($item->ino_imagen) }}" alt=""></a>
                 @endforeach
             </div>
             {{-- <div class="flex-ver-mas-galeria">
