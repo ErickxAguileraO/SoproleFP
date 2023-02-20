@@ -10,6 +10,7 @@
         <img class="ocultar-escritorio"  height="360" src="{{ isset($noticia->imagenes[0]->ino_imagen) ? asset($noticia->imagenes[0]->ino_imagen) : NULL }} }}" alt="">
         {{-- <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt=""> --}}
+        <h1 class="txt-portada">Insertar titulo de academia</h1>
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
