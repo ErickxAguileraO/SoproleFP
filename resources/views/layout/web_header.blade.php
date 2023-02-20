@@ -30,11 +30,11 @@
 
             </div>
             <div class="menu-op">
-                <div class="dropdown-menu">
+                <div class="dropdown-menu-header">
                     <a href="{{route('web.conocenos')}}" class="dropbtn">Conócenos</a> 
                 </div>
                 
-                <div class="dropdown-menu dropdown-noticias">
+                <div class="dropdown-menu-header dropdown-noticias">
                     <a class="dropbtn">Academia</a> 
                     <div class="dropdown-content dropdown-content-noticias">
                         <div class="contenido-drop contenido-drop-noticias">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu-header">
                     <a class="dropbtn">Productos</a> 
                     <div class="dropdown-content">
                         <div class="contenido-drop">
@@ -96,11 +96,11 @@
                     </div>
                 </div>
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu-header">
                     <a href="/nuestras-recetas" class="dropbtn">Recetas</a> 
                 </div>
 
-                <div class="dropdown-menu">
+                <div class="dropdown-menu-header">
                     <a href="{{route('webnoticia.index')}}" class="dropbtn">Noticias y tendencias</a> 
                 </div>
             </div>
