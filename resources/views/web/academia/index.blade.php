@@ -12,11 +12,12 @@
     <div class="contenido">
         <section class="filtros">
             <div class="select-filtros">
-                <div class="div-filtro">
+                <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select name="" id="">
-                        <option value="">Todos</option>
-                        <option value="">value 1</option>
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
+                        <option>Segmento 1</option>
+                        <option>Segmento 2</option>
+                        <option>Segmento 3</option>
                     </select>
                 </div>
                 <div class="div-filtro">

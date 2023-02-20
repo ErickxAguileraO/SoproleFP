@@ -14,7 +14,7 @@
             <div class="select-filtros">
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
+                    <select class="selectpicker" multiple title="Seleccione Segmento" data-live-search="true">
                         <option>Segmento 1</option>
                         <option>Segmento 2</option>
                         <option>Segmento 3</option>
@@ -23,10 +23,10 @@
 
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Categoría</label>
-                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
-                        <option>Segmento 1</option>
-                        <option>Segmento 2</option>
-                        <option>Segmento 3</option>
+                    <select class="selectpicker" multiple title="Seleccione Categoría" data-live-search="true">
+                        <option>Categoría 1</option>
+                        <option>Categoría 2</option>
+                        <option>Categoría 3</option>
                     </select>
                 </div>
 
