@@ -35,7 +35,7 @@
                                     <h5>Academia</h5>
                                     <a href="/academia" class="boton-ver-op bg-red">Ver todos</a>
                                 </div>
-                                
+
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
                                     <a href="/academia-detalle" class="opcion-drop-n" onmouseover="this.style='background-color:{{$item->seg_color}};';" onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
@@ -72,7 +72,7 @@
                                                 @foreach ($item->receta as $receta)
                                                     @if (count($receta->producto)>0)
                                                         @foreach ($receta->producto as $producto)
-                                                            <a href="/producto-detalle" class="link-op color-pasteleria">{{$producto->pro_titulo}}</a>
+                                                            <a href="/producto-detalle" class="link-op" style="color: {{$item->seg_color_texto}}">{{$producto->pro_titulo}}</a>
                                                         @endforeach
                                                     @endif
                                                 @endforeach
@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="dropdown">
-                    <a href="/noticias-tendencias" class="dropbtn">Noticias y tendencias</a> 
+                    <a href="{{route('webnoticia.index')}}" class="dropbtn">Noticias y tendencias</a> 
                 </div>
             </div>
             <div class="botones-header">

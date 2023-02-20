@@ -23,6 +23,7 @@ use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
+use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,11 @@ Route::get('/', [WebHomeController::class, 'index']);
 Route::controller(WebAcademiaController::class)->prefix('academia')->group(function () {  
     Route::get('', 'index')->name('index');
     Route::get('detalle/{academia}', 'detalle')->name('detalle');
+});
+
+Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnoticia.')->group( function () {  
+    Route::get('', 'index')->name('index');
+    Route::get('detalle/{noticiaId}', 'detalle')->name('detalle');
 });
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
