@@ -14,9 +14,10 @@
             <div class="select-filtros">
                 <div>
                     <label for="">Segmento</label>
-                    <select name="" id="">
-                        <option value="">value 1</option>
-                        <option value="">value 2</option>
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
+                        <option>Segmento 1</option>
+                        <option>Segmento 2</option>
+                        <option>Segmento 3</option>
                     </select>
                 </div>
 
