@@ -11,8 +11,8 @@
     </div>
     <div class="contenido">
         <section class="filtros">
-            <div class="select-filtros div-filtro">
-                <div class="ocultar-nice-select">
+            <div class="select-filtros">
+                <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
                     <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
                         <option>Segmento 1</option>
