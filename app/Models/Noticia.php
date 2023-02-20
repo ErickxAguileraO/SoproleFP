@@ -27,4 +27,9 @@ class Noticia extends Model
         return $this->hasMany(ImagenNoticia::class,'ino_noticia_id', 'not_id');
     }
 
+    public function imagenListado()
+    {
+        return $this->hasOne(ImagenNoticia::class,'ino_noticia_id', 'not_id')->latest();
+    }
+
 }

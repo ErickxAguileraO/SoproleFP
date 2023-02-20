@@ -23,6 +23,7 @@ use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
+use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
 
 /*
@@ -52,6 +53,8 @@ Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnotic
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
 
+Route::get('mini-sitio/{url}', [WebMiniSitioController::class, 'index'])->name('web.mini.sitio');
+
 
 Route::get('/politicas-de-privacidad', function () {
     return view('web.politicas.index');
@@ -65,9 +68,6 @@ Route::get('/informacion-consumidor', function () {
     return view('web.informacionConsumidor.index');
 });
 
-Route::get('/mini-sitio', function () {
-    return view('web.miniSitios.index');
-});
 
 Route::get('/nuestras-recetas', function () {
     return view('web.recetas.index');

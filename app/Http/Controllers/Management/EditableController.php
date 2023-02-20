@@ -28,7 +28,7 @@ class EditableController extends Controller
         return Editable::all();
     }
 
-    public function listarByTipo($tipo)
+    public static function listarByTipo($tipo)
     {
         return Editable::where('edi_tipo',$tipo)->where('edi_estado',1)->first();
     }
