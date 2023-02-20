@@ -6,8 +6,10 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
-        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt="">
+        <img class="ocultar-movil" height="360" src="{{ isset($noticia->imagenes[0]->ino_imagen) ? asset($noticia->imagenes[0]->ino_imagen) : NULL }}" alt="">
+        <img class="ocultar-escritorio"  height="360" src="{{ isset($noticia->imagenes[0]->ino_imagen) ? asset($noticia->imagenes[0]->ino_imagen) : NULL }} }}" alt="">
+        {{-- <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
+        <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt=""> --}}
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
@@ -22,7 +24,7 @@
             <h2>Galería de imágenes</h2>
             <div class="galeria-img">
                 @foreach ($noticia->imagenes as $item)
-                    <a href="{{ asset($item->ino_imagen) }}" class="fresco"><img src="{{ asset($item->ino_imagen) }}" alt=""></a>
+                    <a href="{{ isset($item->ino_imagen) ? asset($item->ino_imagen) : NULL }} }}" class="fresco"><img src="{{ isset($item->ino_imagen) ? asset($item->ino_imagen) : NULL }} }}" alt=""></a>
                 @endforeach
             </div>
             {{-- <div class="flex-ver-mas-galeria">

@@ -13,23 +13,20 @@
     <div class="contenido">
         <div class="flexslider-seccion">
             <ul class="slides">
-                <!-- 1 -->
-                <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
-                    <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
-                </li>
+
+                @foreach ($ultimasnoticias as $item)
+                    @if (isset($item->imagenes[0]->ino_imagen))
+                        <li style=" z-index:0; opacity: 1;" class="li-slider">
+                            <img class="ocultar-movil" style="max-height: 360px;" src="{{ asset($item->imagenes[0]->ino_imagen) }}" alt="">
+                            <img class="ocultar-escritorio" style="max-height: 360px;" src="{{ asset($item->imagenes[0]->ino_imagen) }}" alt="">
+                        </li>
+                    @endif
+                @endforeach
     
-                <!-- 2 -->
-                <li style=" z-index:0; opacity: 1;" class="li-slider">
+                {{-- <li style=" z-index:0; opacity: 1;" class="li-slider">
                     <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
                     <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
-                </li>
-    
-                <!-- 3 -->
-                <li style=" z-index:0; opacity: 1;" class="li-slider">
-                    <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-noticias-escritorio.svg') }}" alt="">
-                    <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-noticias-movil.svg') }}" alt="">
-                </li>
+                </li> --}}
             </ul>
         </div>
         <br>
