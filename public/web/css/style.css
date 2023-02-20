@@ -1860,7 +1860,7 @@ footer a{
         color: #FFFFFF;
         text-decoration: none;
     }
-    .close{
+    .close-menu-movil{
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
@@ -1868,7 +1868,7 @@ footer a{
         margin-bottom: 30px;
         padding-left: 12px;
     }
-    .close div{
+    .close-menu-movil div{
         display: flex;
         align-items: center;
         width: 100%;

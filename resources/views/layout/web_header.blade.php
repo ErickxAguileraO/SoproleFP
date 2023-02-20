@@ -130,7 +130,7 @@
     </div>
     <div class="barra-menu-movil">
         <div class="flex-barra-menu-movil">
-            <div class="close">
+            <div class="close-menu-movil">
                 <a href="https://www.soprole.cl/" target="_blank"><img style="width: 35px;" src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
                 <div>
                     <img class="btn-close" src="{{ asset('/public/web/imagenes/i-close.svg') }}" alt="">
