@@ -110,6 +110,10 @@ textarea{
     position: absolute;
     bottom: 70px;
     left: 180px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 63px;
+    color: #13355D;
 }
 
 /* Menu */
@@ -1530,6 +1534,10 @@ footer a{
  }
 
 @media (max-width: 992px) {  
+    .txt-portada {
+        bottom: 50px;
+        left: 120px;
+    }
     /* Menu */
     .sub-content-drop {
         width: 45%;
@@ -1714,6 +1722,10 @@ footer a{
 }
 
 @media (max-width: 768px) {  
+    .txt-portada {
+        bottom: 50px;
+        left: 90px;
+    }
     /* Menu */
     .bar-menu-movil{
         display: grid;
