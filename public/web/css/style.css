@@ -106,7 +106,11 @@ textarea{
 .ocultar-movil{
     display: flex !important;
 }
-
+.txt-portada {
+    position: absolute;
+    bottom: 70px;
+    left: 180px;
+}
 
 /* Menu */
 .barra-productos-movil{
@@ -402,6 +406,7 @@ textarea{
 /* Slogan */
 .portada{
     width: 100%;
+    position: relative;
 }
 .portada img{
     width: 100%;

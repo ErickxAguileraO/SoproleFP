@@ -8,6 +8,7 @@
     <div class="portada">
         <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-academia-escritorio.svg') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-academia-movil.svg') }}" alt="">
+        <h1 class="txt-portada">Insertar titulo de academia</h1>
     </div>
     <div class="contenido">
         <section class="detalle-noticia-tendencia">
