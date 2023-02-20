@@ -236,7 +236,7 @@ textarea{
     display: grid; 
     grid-template-columns: 350px 1px 1fr;
     max-width: 80%;
-    width: 950px;
+    width: 960px;
     height: auto;
     padding: 35px;
     background: #FFFFFF;
@@ -247,7 +247,7 @@ textarea{
     z-index: 1;
 }
 .contenido-drop-noticias{
-    max-width: 90% !important;
+    max-width: 100% !important;
 }
 .titulo-drop{
     display: grid;
