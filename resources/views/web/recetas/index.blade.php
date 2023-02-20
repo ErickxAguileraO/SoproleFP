@@ -69,18 +69,7 @@
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
-            </div>
-        </section>
 
-        <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Comida Italiana</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todas las recetas</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todas</a>
-                </div>
-            </div>
-            <div class="cuadros-info cuadros-row-4">
                 <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
@@ -95,24 +84,6 @@
                     </div>
                 </a>
 
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Comida Rápida</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todas las recetas</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todas</a>
-                </div>
-            </div>
-            <div class="cuadros-info cuadros-row-4">
                 <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
@@ -140,36 +111,7 @@
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
-            </div>
-        </section>
 
-        <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Cafetería</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todas las recetas</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todas</a>
-                </div>
-            </div>
-            <div class="cuadros-info cuadros-row-4">
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Servicios de alimentación</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todas las recetas</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todas</a>
-                </div>
-            </div>
-            <div class="cuadros-info cuadros-row-4">
                 <a href="/receta-detalle" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
                     <div class="texto">
@@ -190,8 +132,37 @@
                         <h5>Título con una línea</h5>
                     </div>
                 </a>
+
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="texto">
+                        <h5>Título con una línea</h5>
+                    </div>
+                </a>
+
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
+                    <div class="texto">
+                        <h5>Título con una línea</h5>
+                    </div>
+                </a>
+
+                <a href="/receta-detalle" class="cuadros-info-n">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
+                    <div class="texto">
+                        <h5>Título con una línea</h5>
+                    </div>
+                </a>
             </div>
         </section>
+        <div class="numeros-pag">
+            <a href="" class="numero-antes-despues"  style="margin-right: 35px">Anterior</a>
+            <a href="" class="numero-antes-despues-movil"  style="margin-right: 35px"><img src="{{ asset('web/imagenes/i-antes.svg') }}" alt=""></a>
+            <a href="" class="numero numero-seleccionado">1</a>
+            <a href="" class="numero">2</a>
+            <a href="" class="numero-antes-despues" style="margin-left: 35px">Siguiente</a>
+            <a href="" class="numero-antes-despues-movil"  style="margin-left: 35px"><img src="{{ asset('web/imagenes/i-despues.svg') }}" alt=""></a>
+        </div>
     </div>
     
     @push('extra-js')
