@@ -26,13 +26,6 @@
         </section>
 
         <section class="seccion-home seccion-listas">
-            <div class="encabezado-titulo-btn">
-                <h2>Pastelería</h2>
-                <div>
-                    <a href="" class="boton bg-blue ocultar-movil">Ver todo Pastelería</a>
-                    <a href="" class="boton bg-blue ocultar-escritorio">Ver todos</a>
-                </div>
-            </div>
             <div class="cuadros-info cuadros-row-3">
                 <div class="cuadros-info-n noticia-tendencia academia">
                     <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
