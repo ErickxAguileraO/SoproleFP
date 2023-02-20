@@ -1305,7 +1305,7 @@ footer a{
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    width: 93%;
+    width: 100%;
     height: 54px;
     background-color: var(--azul1);
     padding-left: 5%;
@@ -1325,7 +1325,7 @@ footer a{
 }
 .sub-footer div{
     display: flex;
-    gap: 12px;
+    gap: 10px;
 }
 
 /* Slick slider */
@@ -1685,7 +1685,7 @@ footer a{
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-        width: 93%;
+        width: 100%;
         height: auto;
         background-color: var(--azul1);
         padding-left: 5%;
