@@ -21,11 +21,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/slick/slick.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/flexslider/flexslider.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/public/web/js/fresco/fresco.css') }}">
+	<link rel="StyleSheet" href="{{ asset('/public/web/css/bootstrap.min.css') }}">
 
     <!-- Bootstrap Select css -->
-	<link rel="StyleSheet" href='/public/web/js/bootstrap-select/bootstrap-select.css'>
-	<link rel="StyleSheet" href='/public/web/css/animate.css'>
-	<link rel="StyleSheet" href='/public/web/css/style.css'>
+	<link rel="StyleSheet" href="{{ asset('/public/web/js/bootstrap-select/bootstrap-select.css') }}">
+	<link rel="StyleSheet" href="{{ asset('/public/web/css/animate.css') }}">
+	<link rel="StyleSheet" href="{{ asset('/public/web/css/style.css') }}">
 
     {{-- Favicon --}}
     <link href="{{ asset('/public/favicon.ico') }}" rel="icon">
@@ -43,7 +44,8 @@
     <script src="{{ asset('/public/web/js/fresco/fresco.min.js') }}"></script>
     <script src="{{ asset('/public/web/js/flexslider/jquery.flexslider.js') }}"></script>
     <script src="{{ asset('/public/web/js/product-viewer.js') }}"></script>
-	<script src='/public/web/js/bootstrap.min.js'></script>
+	<script src="{{ asset('/public/web/js/bootstrap.min.js') }}"></script>
+    
 
     <script src="{{ asset('/public/web/js/script.js') }}"></script>
     <script>
@@ -51,7 +53,7 @@
     </script>
 
     <!-- Bootstrap Select -->
-	<script type="text/javascript" src='/public/web/js/bootstrap-select/bootstrap-select.js'></script>
+	<script src="{{ asset('/public/web/js/bootstrap-select/bootstrap-select.js') }}"></script>
 
     @stack('extra-js')
 
