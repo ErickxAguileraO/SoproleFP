@@ -204,7 +204,7 @@
                         @foreach ($item->receta as $receta)
                             @if (count($receta->producto)>0)
                                 @foreach ($receta->producto as $producto)
-                                    <div class="opcion-drop-n" onmouseover="this.style='background-color:{{$item->seg_color}};';" onmouseout="this.style='background-color:white';">
+                                    <div class="opcion-drop-n-2" onmouseover="this.style='background-color:{{$item->seg_color}};';" onmouseout="this.style='background-color:white';">
                                         <p style="color: {{$item->seg_color_texto}}">{{$producto->pro_titulo}}</p>
                                     </div>                                
                                 @endforeach
