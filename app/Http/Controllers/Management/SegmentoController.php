@@ -36,7 +36,7 @@ class SegmentoController extends Controller
 
     public static function listarWithProducto()
     {
-        return Segmento::with('Receta')->get();
+        return Segmento::with('Receta')->where('seg_estado',1)->orderBy('seg_orden','asc')->get();
     }
 
     public function editar(Segmento $segmento)
