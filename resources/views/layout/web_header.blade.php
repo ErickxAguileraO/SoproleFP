@@ -44,7 +44,7 @@
                                     <a href="/academia" class="boton-ver-op bg-red">Ver todos</a>
                                 </div>
 
-                                @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
+                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                                     <a href="/academia-detalle" class="opcion-drop-n" onmouseover="this.style='background-color:{{$item->seg_color}};';" onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                                         <p style="color: {{$item->seg_color_texto}}">{{$item->seg_nombre}}</p>
@@ -229,7 +229,7 @@
                 <a href="/academia" class="boton-ver-op bg-red">Ver mas</a>
             </div>
             
-            @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
+            @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                 <a href="/academia-detalle" class="opcion-drop-n" onmouseover="this.style='background-color:{{$item->seg_color}};';" onmouseout="this.style='background-color:white';">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{$item->seg_color_texto}}">{{$item->seg_nombre}}</p>
