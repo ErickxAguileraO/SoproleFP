@@ -28,21 +28,22 @@ class MiniSitioController extends Controller
 
     public function filtrar(SubSegmento $tag, Segmento $segmento)
     {
-        $subsegmentosDelSegmento = $segmento->Subsegmento->pluck('sse_id')->toArray();
-
-        $view =  view(
-            'web.miniSitios.dinamico',
-            [
-                "academias" => $segmento->AcademiaMiniSitio,
-                "productos" => MiniSitioService::productosBySegmento($segmento->seg_id),
-                "recetas" => $segmento->Receta,
-                "noticias" => $segmento->NoticiaMiniSitio,
-            ]
-        )->render();
+        $productosIds =  MiniSitioService::productosBySegmento($segmento->seg_id)->pluck('pro_id')->toArray();
+        $AcademiasIds =  $segmento->AcademiaMiniSitio->pluck('aca_id')->toArray();
+        $RecetasIds =  $segmento->Receta->pluck('rec_id')->toArray();
+        $NoticiasIds =  $segmento->NoticiaMiniSitio->pluck('not_id')->toArray();
 
         return response()->json([
             'status' => 'T',
-            'html' => $view,
+            'html' => view(
+                'web.miniSitios.dinamico',
+                [
+                    "academias" => MiniSitioService::academiasBySegmentoAndTag($tag, $AcademiasIds),
+                    "productos" => MiniSitioService::productosBySegmentoAndTag($tag, $productosIds),
+                    "recetas" => MiniSitioService::recetasBySegmentoAndTag($tag, $RecetasIds),
+                    "noticias" => MiniSitioService::noticiasBySegmentoAndTag($tag, $NoticiasIds),
+                ]
+            )->render(),
         ], 200);
     }
 }
