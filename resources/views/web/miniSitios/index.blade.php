@@ -43,7 +43,7 @@
                 <div class="cuadros-info cuadros-row-4">
                     @foreach ($productos as $producto)
                         <a href="/producto/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
-                            <div class="img"><img src="{{ asset($producto->imagenListado->ipr_imagen) }}" alt="">
+                            <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
                             </div>
                             <div class="texto">
                                 <h5>{{ $producto->pro_titulo }}</h5>

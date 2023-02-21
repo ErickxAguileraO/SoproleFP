@@ -13,14 +13,14 @@ class MiniSitioService
 {
     public static function productosBySegmento($segmento)
     {
-        return Producto::select('pro_id','pro_titulo','pro_url')
+        return Producto::select('pro_id','pro_titulo','pro_url','pro_imagen')
         ->join('producto_receta', 'pro_id' ,'=', 'prorec_producto_id')
         ->join('recetas', 'rec_id' ,'=', 'prorec_receta_id')
         ->join('receta_segmento', 'rec_id' ,'=', 'recseg_receta_id')
         ->where('pro_estado',1)
         ->where('rec_estado',1)
         ->where('recseg_segmento_id',$segmento)
-        ->groupBy('pro_id','pro_titulo','pro_url')
+        ->groupBy('pro_id','pro_titulo','pro_url','pro_imagen')
         ->orderBy('pro_orden','ASC')
         ->get();
     }
@@ -28,12 +28,12 @@ class MiniSitioService
 
     public static function productosBySegmentoAndTag($sse, $productosId)
     {
-        return Producto::select('pro_id','pro_titulo','pro_url')
+        return Producto::select('pro_id','pro_titulo','pro_url','pro_imagen')
         ->join('pivote_sub_segmentos',"psse_producto_id","=", "pro_id")
         ->whereIn('pro_id', $productosId)
         ->where('psse_subsegmento_id', $sse->sse_id)
         ->where('pro_estado',1)
-        ->groupBy('pro_id','pro_titulo','pro_url')
+        ->groupBy('pro_id','pro_titulo','pro_url','pro_imagen')
         ->orderBy('pro_orden','ASC')
         ->get();
     }
