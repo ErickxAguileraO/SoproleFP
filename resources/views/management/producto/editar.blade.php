@@ -143,6 +143,23 @@
                                 @endforeach
                             </div>
                             <br />
+
+
+                            <label for="imagen">Ficha</label>
+                            @if ($producto->pro_archivo != '')
+                                <a target="_blank" href='{{ $producto->pro_archivo }} '>Ver
+                                    archivo adjunto <i class="fas fa-eye"></i></a>
+                            @endif
+
+                            <div class="row mb-3">
+                                <div class="form-floating my-3">
+                                    <input type="file" class="input-img-solo" id="archivo" name="archivo">
+                                </div>
+                            </div>
+
+
+
+
                             <label for="orden">Orden</label>
                             <div class="form-floating my-3">
                                 <input type="text" name="orden" class="form-control" id="orden"

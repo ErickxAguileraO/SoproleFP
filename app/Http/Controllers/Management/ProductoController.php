@@ -69,6 +69,7 @@ class ProductoController extends Controller
             'categoria' => ['required', 'numeric'],
             'estado' => ['required'],
             'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
+            'archivo' => ['nullable', 'mimes:doc,docx,pdf,jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -103,6 +104,7 @@ class ProductoController extends Controller
             'categoria' => ['required', 'numeric'],
             'estado' => ['required'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
+            'archivo' => ['nullable', 'mimes:doc,docx,pdf,jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

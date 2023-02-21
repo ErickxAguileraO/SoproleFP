@@ -26,7 +26,7 @@ class ProductoService
 
         $query->groupBy('pro_id', 'pro_titulo', 'pro_url', 'pro_imagen');
         $query->orderBy('pro_orden', 'ASC');
-
+        //$query->paginate(1);
         $result = $query->get();
 
         return $result;

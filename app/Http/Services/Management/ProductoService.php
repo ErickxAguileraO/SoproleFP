@@ -33,6 +33,12 @@ class ProductoService
                 $insert['pro_imagen'] = FileService::upload($request->file('imagen'), 'imagenes/productos');
             }
 
+            if ($request->file('archivo')) {
+                $insert['pro_archivo'] = FileService::upload($request->file('archivo'), 'archivos/productos');
+            }
+
+
+
 
             $producto = Producto::create($insert);
 
@@ -92,6 +98,9 @@ class ProductoService
                 $producto->pro_imagen = FileService::upload($request->file('imagen'), 'imagenes/productos');
             }
 
+            if ($request->file('archivo')) {
+                $producto->pro_archivo  = FileService::upload($request->file('archivo'), 'archivos/productos');
+            }
 
             $producto->save();
 
