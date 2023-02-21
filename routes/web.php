@@ -41,19 +41,23 @@ use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
 
 Route::get('/', [WebHomeController::class, 'index']);
 
-Route::controller(WebAcademiaController::class)->prefix('academia')->group(function () {  
+Route::controller(WebAcademiaController::class)->prefix('academia')->group(function () {
     Route::get('', 'index')->name('index');
     Route::get('detalle/{academia}', 'detalle')->name('detalle');
 });
 
-Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnoticia.')->group( function () {  
+Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnoticia.')->group(function () {
     Route::get('', 'index')->name('index');
     Route::get('detalle/{noticiaId}', 'detalle')->name('detalle');
 });
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
 
-Route::get('mini-sitio/{url}', [WebMiniSitioController::class, 'index'])->name('web.mini.sitio');
+
+Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(function () {
+    Route::get('filtro/tags/{tag}/{segmento}', 'filtrar')->name('web.mini.sitio.filtrar');
+    Route::get('{url}', 'index')->name('web.mini.sitio');
+});
 
 
 Route::get('/politicas-de-privacidad', function () {
@@ -106,11 +110,11 @@ Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name(
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'administracion', 'as' => 'administracion.'], function () {
 
-        Route::controller(HomeController::class)->prefix('dashboard')->group(function () {  
+        Route::controller(HomeController::class)->prefix('dashboard')->group(function () {
             Route::get('', 'index')->name('index');
             Route::get('contar', 'contar')->name('contar');
         });
-        
+
         Route::controller(UserController::class)->prefix('usuarios')->group(function () {
             Route::get('', 'index')->name('usuarios.index');
             Route::post('', 'store')->name('usuarios.store');
@@ -271,7 +275,5 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('store', 'store')->name('configuracion.store');
             Route::post('update', 'update')->name('configuracion.update');
         });
-
-
     });
 });
