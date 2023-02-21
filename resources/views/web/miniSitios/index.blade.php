@@ -3,12 +3,8 @@
 @section('title', 'Inicio')
 @section('content')
 
-
-
-
-
-    <div class="contenido color-mini-sitio">
-
+    <div class="contenido contenidoMiniSitio color-mini-sitio">
+        <input type="hidden" id="segmento_id" value="{{$segmento->seg_id}}"/>
         @if (count($sliders) > 0)
             <div class="flexslider-seccion">
                 <ul class="slides">
@@ -28,15 +24,18 @@
                 <br>
                 <div class="tu-negocio">
                     @foreach ($tags as $tag)
-                        <button class="segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
+                        <button codigo="{{$tag->sse_id}}" class="tags segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
                     @endforeach
                 </div>
             </div>
-
         @endif
+ 
+        <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg"/>
+
+
 
         @if (count($productos) > 0)
-            <section class="seccion-home">
+            <section class="seccion-home removeSection">
                 <h2>Mira nuestros productos</h2>
                 <br>
                 <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
@@ -56,7 +55,7 @@
         @endif
 
         @if (count($academias) > 0)
-            <section class="flex-academia-home bg-minisitio">
+            <section class="flex-academia-home bg-minisitio removeSection">
                 <div class="seccion-home">
                     <h2>Academia Food Professionals</h2>
                     <br>
@@ -83,7 +82,7 @@
 
         @if (count($recetas) > 0)
 
-            <section class="seccion-home">
+            <section class="seccion-home removeSection">
                 <h2>Mira estas recetas</h2>
                 <br>
                 <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
@@ -104,7 +103,7 @@
 
 
         @if (count($noticias) > 0)
-            <section class="seccion-home">
+            <section class="seccion-home removeSection">
                 <h2>Tendencias y Noticias</h2>
                 <br>
                 <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
@@ -125,9 +124,9 @@
     </div>
 
 
-
-
     @push('extra-js')
+    <script src="{{ asset('public/web/js/mini_sitio/index.js?v=' . rand()) }}"></script>
+
         <script>
             // Flex Slider
             $(document).ready(function() {
@@ -149,4 +148,5 @@
             background-color: {{ $segmento->seg_color }} !important;
         }
     </style>
+
 @endsection
