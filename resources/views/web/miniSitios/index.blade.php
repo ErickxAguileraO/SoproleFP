@@ -2,9 +2,8 @@
 
 @section('title', 'Inicio')
 @section('content')
-
     <div class="contenido contenidoMiniSitio color-mini-sitio">
-        <input type="hidden" id="segmento_id" value="{{$segmento->seg_id}}"/>
+        <input type="hidden" id="segmento_id" value="{{ $segmento->seg_id }}" />
         @if (count($sliders) > 0)
             <div class="flexslider-seccion">
                 <ul class="slides">
@@ -24,15 +23,14 @@
                 <br>
                 <div class="tu-negocio">
                     @foreach ($tags as $tag)
-                        <button codigo="{{$tag->sse_id}}" class="tags segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
+                        <button codigo="{{ $tag->sse_id }}"
+                            class="tags segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
                     @endforeach
                 </div>
             </div>
         @endif
- 
-        <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg"/>
 
-
+        <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" />
 
         @if (count($productos) > 0)
             <section class="seccion-home removeSection">
@@ -125,7 +123,7 @@
 
 
     @push('extra-js')
-    <script src="{{ asset('public/web/js/mini_sitio/index.js?v=' . rand()) }}"></script>
+        <script src="{{ asset('public/web/js/mini_sitio/index.js?v=' . rand()) }}"></script>
 
         <script>
             // Flex Slider
