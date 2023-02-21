@@ -286,6 +286,16 @@ textarea{
     padding: 24px 10px;
     border-radius: 10px;
 }
+.opcion-drop-n-2{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    cursor: pointer;
+    padding: 24px 10px;
+    border-radius: 10px;
+}
 .btn-color-pasteleria:hover{
     background: #F2F9F9;
 }
@@ -1849,7 +1859,10 @@ footer a{
     }
     .flex-barra-menu-movil{
         width: 90%;
+        height: 100%;
+        min-height: 800px;
         padding: 40px 0px;
+        position: relative;
     }
     .flex-barra-menu-movil a{
         font-weight: 500;
