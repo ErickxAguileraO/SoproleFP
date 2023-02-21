@@ -25,6 +25,7 @@ use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
 use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
+use App\Http\Controllers\Web\ProductoController as WebProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,12 +54,21 @@ Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnotic
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
 
-
 Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(function () {
     Route::get('filtro/reset/{segmento}', 'reset')->name('web.mini.sitio.reset');
     Route::get('filtro/tags/{tag}/{segmento}', 'filtrar')->name('web.mini.sitio.filtrar');
     Route::get('{url}', 'index')->name('web.mini.sitio');
 });
+
+
+Route::controller(WebProductoController::class)->prefix('productos')->group(function () {
+    Route::post('listar', 'getProductos')->name('web.productos.getProductos');
+    Route::get('{segmento?}', 'index')->name('web.productos');
+    
+    //Route::get('{url}', 'index')->name('web.mini.sitio');
+});
+
+
 
 
 Route::get('/politicas-de-privacidad', function () {
@@ -82,9 +92,7 @@ Route::get('/receta-detalle', function () {
 });
 
 
-Route::get('/productos', function () {
-    return view('web.productos.index');
-});
+
 Route::get('/producto-detalle', function () {
     return view('web.productos.detalle');
 });

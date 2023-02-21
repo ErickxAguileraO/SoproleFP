@@ -3,6 +3,8 @@ $(document).on('click', '.tags', function (event) {
     $('.removeSection').remove()
 
     var attr = $(this).attr('style');
+
+    
     if (typeof attr !== 'undefined' && attr !== false) {
         $(".tags").each(function () {
             $(this).removeAttr('style');
@@ -17,8 +19,6 @@ $(document).on('click', '.tags', function (event) {
         }).catch(mensajeError => {
             $(".spinner").hide();
         });
-
-        return;
     } else {
 
         $(".tags").each(function () {
@@ -37,11 +37,5 @@ $(document).on('click', '.tags', function (event) {
             $(".spinner").hide();
         });
     }
-
-
-
-
-
-
 });
 
