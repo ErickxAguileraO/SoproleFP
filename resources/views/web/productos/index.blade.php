@@ -35,10 +35,9 @@
                 </div>
             </div>
             <br>
+            <img class="spinner" style="display:none;margin-top:150px" src="/public/web/imagenes/loading_icon.svg" />
         </section>
-
         <section class="seccion-home seccion-listas">
-            <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" />
             <div id="contenidorProductos" class="cuadros-info cuadros-row-4">        
             </div>
         </section>

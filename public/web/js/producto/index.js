@@ -1,5 +1,4 @@
 var getProductos = () => {
-
     $('#contenidorProductos').empty();
     $(".spinner").show();
 
@@ -24,9 +23,6 @@ var getProductos = () => {
     });
 }
 
-
-
-
 $(document).ready(function () {
     (getProductos)();
 
@@ -39,10 +35,7 @@ $(document).ready(function () {
 
         $('#segmentosSeleccionados').selectpicker('refresh');
         $('#categoriasSeleccionadas').selectpicker('refresh');
-        
-  
+
         (getProductos)();
     })
-
-
 });

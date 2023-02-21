@@ -33,13 +33,10 @@ class ProductoController extends Controller
         ], 200);
     }
 
-
-
-
-    public function detalle($academia)
+    public function detalle($producto)
     {
         return view('web.productos.detalle', [
-            // "academia" => Academia::where('aca_url', $academia)->where('aca_estado', 1)->firstOrFail(),
+            "producto" => Producto::where('pro_url', $producto)->where('pro_estado', 1)->firstOrFail(),
         ]);
     }
 }
