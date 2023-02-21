@@ -55,6 +55,7 @@ Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.cono
 
 
 Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(function () {
+    Route::get('filtro/reset/{segmento}', 'reset')->name('web.mini.sitio.reset');
     Route::get('filtro/tags/{tag}/{segmento}', 'filtrar')->name('web.mini.sitio.filtrar');
     Route::get('{url}', 'index')->name('web.mini.sitio');
 });

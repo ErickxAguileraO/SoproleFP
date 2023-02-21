@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\Web\MiniSitioService;
-use App\Models\Editable;
 use App\Models\Segmento;
 use App\Models\SubSegmento;
 
@@ -42,6 +41,22 @@ class MiniSitioController extends Controller
                     "productos" => MiniSitioService::productosBySegmentoAndTag($tag, $productosIds),
                     "recetas" => MiniSitioService::recetasBySegmentoAndTag($tag, $RecetasIds),
                     "noticias" => MiniSitioService::noticiasBySegmentoAndTag($tag, $NoticiasIds),
+                ]
+            )->render(),
+        ], 200);
+    }
+
+    public function reset(Segmento $segmento)
+    {
+        return response()->json([
+            'status' => 'T',
+            'html' => view(
+                'web.miniSitios.dinamico',
+                [
+                    "academias" => $segmento->AcademiaMiniSitio,
+                    "productos" => MiniSitioService::productosBySegmento($segmento->seg_id),
+                    "recetas" => $segmento->Receta,
+                    "noticias" => $segmento->NoticiaMiniSitio,
                 ]
             )->render(),
         ], 200);

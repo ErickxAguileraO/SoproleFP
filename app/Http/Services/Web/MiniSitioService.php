@@ -38,7 +38,6 @@ class MiniSitioService
         ->get();
     }
 
-
     public static function academiasBySegmentoAndTag($sse, $academiasId)
     {
         return Academia::select('aca_id','aca_titulo','aca_url','aca_imagen')
