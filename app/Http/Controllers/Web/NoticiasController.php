@@ -5,21 +5,43 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\Noticia;
 use App\Models\Segmento;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Http\Request;
 
 class NoticiasController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('web.noticias.index', [
-            "noticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6),
-            "ultimasnoticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->take(3)->get(),
-            "segmentos" =>  Segmento::whereHas('Academia')->where('seg_estado', 1)->orderby('seg_orden', 'asc')->get(),
-        ]);
-    }
+        if ($request->ajax()) {
+            if (is_null($request->segmentoId)) {        
+                return view('web.noticias.data', 
+                    ['noticias' => Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6), 
+                    'segmentosId' => NULL]
+                    )->render();  
+            } else {
+                return view('web.noticias.data', 
+                    ['noticias' => Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
+                        $query->whereIn('notseg_segmento_id', $request->segmentoId);
+                        })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6), 
+                    'segmentosId' => json_encode($request->segmentoId)]
+                )->render();  
+            }
+        }
 
-    public function listado($segmentoId)
-    {
-        return Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->get();
+        if ($request->has('segmentoId')) {      
+            $noticias = Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
+                $query->whereIn('notseg_segmento_id', $request->segmentoId);
+            })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6);  
+        } else {
+            $noticias = Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6);  
+        }
+
+        return view('web.noticias.index', [
+            "noticias" =>  $noticias,
+            "ultimasnoticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->take(3)->get(),
+            "segmentos" =>  Segmento::where('seg_estado', 1)->orderby('seg_orden', 'asc')->get(),
+            "segmentosId" =>  !is_null($request->segmentoId) ? json_encode($request->segmentoId) : NULL,
+        ]);
     }
 
     public function detalle($noticiaId)
