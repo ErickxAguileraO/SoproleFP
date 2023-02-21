@@ -10,7 +10,7 @@
         }
     </style>
     @endpush
-    <div class="contenido">
+    <div class="contenido" id="todito">
         <div class="flexslider-seccion">
             <ul class="slides">
 
@@ -35,10 +35,10 @@
             <div class="select-filtros" style="margin-bottom: 50px;">
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
-                        <option>Segmento 1</option>
-                        <option>Segmento 2</option>
-                        <option>Segmento 3</option>
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true" name="filtro_segmento" id="filtro_segmento">
+                        @foreach ($segmentos as $item)
+                            <option value="{{$item->seg_id}}">{{$item->seg_nombre}}</option>
+                        @endforeach
                     </select>
                 </div>
                 
@@ -47,24 +47,11 @@
                 </div>
             </div>
         </section>
+
         <section class="seccion-home">
-            <div class="cuadros-info cuadros-row-3">
-                @foreach ($noticias as $item)
-                    <div class="cuadros-info-n noticia-tendencia">
-                        <div class="img"><img src="{{ isset($item->imagenes[0]->ino_imagen) ? asset($item->imagenes[0]->ino_imagen) : NULL }}" alt=""></div>
-                        <div class="texto">
-                            <div>
-                                <h5>{{$item->not_titulo}}</h5>
-                                <span>{{$item->not_fecha}}</span>
-                                <p>{{$item->not_titulo2}}</p>                  
-                            </div>
-                            
-                            <a href="{{route('webnoticia.detalle', $item->not_id)}}" class="boton-noticia-tendencia">Ver</a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            {{ $noticias->links() }}
+            <section class="data" id="data">
+                @include('web.noticias.data')
+            </section>
         </section>
     </div>
     
@@ -76,6 +63,31 @@
                     animation: "slide",
                 });
 
+                var select = $("#filtro_segmento")[0];
+                var values = "";
+                Array.prototype.forEach.call(select.options, function(option, index) {
+                    url_string = decodeURI(window.location.href);
+                    url = new URL(url_string);
+                    options = url.searchParams.getAll("segmentoId["+index+"]");
+                    if ($("#old_filtro_segmento").val().includes('"'+options[0]+'"')) {
+                        values = values + ',' + options[0];
+                        $("#filtro_segmento").val(values.split(','));
+                        $('#filtro_segmento').trigger('change');
+                    }
+                });
+                
+
+                $("#filtro_segmento").change(function(){
+                    var url = '{{ route("webnoticia.index") }}';
+                    jQuery.ajax({
+                        url: url,
+                        method: 'get',
+                        data: {segmentoId: $("#filtro_segmento").val()},
+                        success: function(result){
+                            $('#data').empty().html(result);
+                        }
+                    });
+                });
 
             });
         </script>

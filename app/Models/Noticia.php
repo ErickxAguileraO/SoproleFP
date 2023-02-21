@@ -27,6 +27,11 @@ class Noticia extends Model
         return $this->hasMany(ImagenNoticia::class,'ino_noticia_id', 'not_id');
     }
 
+    public function segmentos()
+    {
+        return $this->belongsToMany(Segmento::class,'noticia_segmento','notseg_noticia_id','notseg_segmento_id');
+    }
+    
     public function imagenListado()
     {
         return $this->hasOne(ImagenNoticia::class,'ino_noticia_id', 'not_id')->latest();
