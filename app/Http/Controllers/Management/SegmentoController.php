@@ -36,7 +36,23 @@ class SegmentoController extends Controller
 
     public static function listarWithProducto()
     {
-        return Segmento::with('Receta')->where('seg_estado',1)->orderBy('seg_orden','asc')->get();
+        $segmentos = Segmento::with('Receta')->where('seg_estado',1)->orderBy('seg_orden','asc')->get();
+        for ($i=0; $i < count($segmentos); $i++) { 
+            $segmentos[$i]->productos = Segmento::join('receta_segmento', 'receta_segmento.recseg_segmento_id', '=', 'segmentos.seg_id')
+                ->join('recetas', 'recetas.rec_id', '=', 'receta_segmento.recseg_receta_id')
+                ->join('producto_receta', 'producto_receta.prorec_receta_id', '=', 'recetas.rec_id')
+                ->join('productos', 'productos.pro_id', '=', 'producto_receta.prorec_producto_id')
+                ->select('productos.pro_id','productos.pro_titulo')
+                ->groupBy('productos.pro_id','productos.pro_titulo')
+                ->orderBy('productos.pro_id')
+                ->where('productos.pro_estado', 1)
+                ->where('recetas.rec_estado', 1)
+                ->where('segmentos.seg_estado', 1)
+                ->where('segmentos.seg_id', $segmentos[$i]->seg_id)
+                ->take(4)
+                ->get();
+        }
+        return $segmentos;
     }
 
     public function editar(Segmento $segmento)

@@ -63,10 +63,7 @@
                     animation: "slide",
                 });
 
-                var old_filtro_segmento = $("#old_filtro_segmento").val();
-                old_filtro_segmento = old_filtro_segmento.replace('[', '');
-                old_filtro_segmento = old_filtro_segmento.replace(']', '');
-                old_filtro_segmento = old_filtro_segmento.replace(/"/g, '');
+                var old_filtro_segmento = $("#old_filtro_segmento").val().replace('[', '').replace(']', '').replace(/"/g, '');
                 if (old_filtro_segmento) {
                     $("#filtro_segmento").val(old_filtro_segmento.split(','));
                     $('#filtro_segmento').trigger('change');

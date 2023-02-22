@@ -77,7 +77,7 @@
                                         onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                                         <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
-                                        @if (count($item->receta) > 0)
+                                        @if (count($item->productos) > 0)
                                             <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}"
                                                 alt="">
                                             <div class="sub-content-drop ocultar-drop drop-default">
@@ -85,13 +85,9 @@
                                                     <h5>Productos {{ $item->seg_nombre }}</h5>
                                                     <a href="" class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
-                                                @foreach ($item->receta as $receta)
-                                                    @if (count($receta->producto) > 0)
-                                                        @foreach ($receta->producto as $producto)
-                                                            <a href="/producto-detalle" class="link-op"
-                                                                style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
-                                                        @endforeach
-                                                    @endif
+                                                @foreach ($item->productos as $producto)
+                                                    <a href="/producto-detalle" class="link-op"
+                                                        style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
                                                 @endforeach
                                             </div>
                                         @endif
@@ -193,7 +189,7 @@
                     onmouseout="this.style='background-color:white';">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
-                    @if (count($item->receta) > 0)
+                    @if (count($item->productos) > 0)
                         <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}" alt="">
                     @endif
                 </div>
@@ -216,18 +212,14 @@
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                 <div class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
                     id="div_SegmentoProductos{{ $item->seg_id }}">
-                    @if (count($item->receta) > 0)
-                        @foreach ($item->receta as $receta)
-                            @if (count($receta->producto) > 0)
-                                @foreach ($receta->producto as $producto)
-                                    <div class="opcion-drop-n-2"
-                                        onmouseover="this.style='background-color:{{ $item->seg_color }};';"
-                                        onmouseout="this.style='background-color:white';">
-                                        <p style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}
-                                        </p>
-                                    </div>
-                                @endforeach
-                            @endif
+                    @if (count($item->productos) > 0)
+                        @foreach ($item->productos as $producto)
+                            <div class="opcion-drop-n-2"
+                                onmouseover="this.style='background-color:{{ $item->seg_color }};';"
+                                onmouseout="this.style='background-color:white';">
+                                <p style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}
+                                </p>
+                            </div>
                         @endforeach
                     @endif
                 </div>
