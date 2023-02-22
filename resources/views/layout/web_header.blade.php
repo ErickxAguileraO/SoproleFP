@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a class="dropbtn">Productos</a>
+                    <a class="dropbtn" href="/productos">Productos</a>
                     <div class="dropdown-content">
                         <div class="contenido-drop">
                             <div>
@@ -84,7 +84,7 @@
                                             <div class="sub-content-drop ocultar-drop drop-default">
                                                 <div class="titulo-drop">
                                                     <h5>Productos {{ $item->seg_nombre }}</h5>
-                                                    <a href="" class="boton-ver-op bg-red">Ver mas</a>
+                                                    <a href="/productos/?segmentoId[0]={{$item->seg_id}}&page=1" class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
                                                 @foreach ($item->productos as $producto)
                                                     <a href="/producto-detalle" class="link-op"
@@ -208,7 +208,6 @@
                 <h5>Produtos</h5>
                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
             </div>
-
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                 <div class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
                     id="div_SegmentoProductos{{ $item->seg_id }}">
