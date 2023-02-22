@@ -14,14 +14,14 @@ class NoticiasController extends Controller
         if ($request->ajax()) {
             if (is_null($request->segmentoId)) {        
                 return view('web.noticias.data', 
-                    ['noticias' => Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6), 
+                    ['noticias' => Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9), 
                     'segmentosId' => NULL]
                     )->render();  
             } else {
                 return view('web.noticias.data', 
                     ['noticias' => Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
                         $query->whereIn('notseg_segmento_id', $request->segmentoId);
-                        })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6), 
+                        })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9), 
                     'segmentosId' => json_encode($request->segmentoId)]
                 )->render();  
             }
@@ -30,9 +30,9 @@ class NoticiasController extends Controller
         if ($request->has('segmentoId')) {      
             $noticias = Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
                 $query->whereIn('notseg_segmento_id', $request->segmentoId);
-            })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6);  
+            })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);  
         } else {
-            $noticias = Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(6);  
+            $noticias = Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);  
         }
 
         return view('web.noticias.index', [
