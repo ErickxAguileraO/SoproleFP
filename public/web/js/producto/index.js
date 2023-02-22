@@ -4,38 +4,23 @@ $(document).ready(function () {
         animation: "slide",
     });
 
-    var select = $("#filtro_segmento")[0];
-    var selectCat = $("#filtro_categoria")[0];
+    var old_filtro_segmento = $("#old_filtro_segmento").val().replace('[', '').replace(']', '').replace(/"/g, '');
+    var old_filtro_categoria = $("#old_filtro_categoria").val().replace('[', '').replace(']', '').replace(/"/g, '');
 
-    var values = "";
-    Array.prototype.forEach.call(select.options, function (option, index) {
-        url_string = decodeURI(window.location.href);
-        url = new URL(url_string);
-        options = url.searchParams.getAll("segmentoId[" + index + "]");
+    if (old_filtro_segmento) {
+        $("#filtro_segmento").val(old_filtro_segmento.split(','));
+        $('#filtro_segmento').trigger('change');
+    }
 
-        if ($("#old_filtro_segmento").val().includes('"' + options[0] + '"')) {
-            values = values + ',' + options[0];
-            $("#filtro_segmento").val(values.split(','));
-            $('#filtro_segmento').trigger('change');
-        }
-    });
+    if (old_filtro_categoria) {
+        $("#filtro_categoria").val(old_filtro_categoria.split(','));
+        $('#filtro_categoria').trigger('change');
+    }
 
-    var values = "";
-    Array.prototype.forEach.call(selectCat.options, function (option, index) {
-        url_string = decodeURI(window.location.href);
-        url = new URL(url_string);
-        options = url.searchParams.getAll("categoriasId[" + index + "]");
-
-        if ($("#old_filtro_categoria").val().includes('"' + options[0] + '"')) {
-            values = values + ',' + options[0];
-            $("#filtro_categoria").val(values.split(','));
-            $('#filtro_categoria').trigger('change');
-        }
-    });
     $("#filtro_segmento, #filtro_categoria").change(function () {
         jQuery.ajax({
             url: '/productos',
-            method: 'get',
+            method: 'GET',
             data: {
                 segmentoId: $("#filtro_segmento").val(),
                 categoriasId: $("#filtro_categoria").val()
