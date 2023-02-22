@@ -23,6 +23,7 @@ use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
+use App\Http\Controllers\Web\HazteClienteController as WebHazteClienteController;
 use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
 use App\Http\Controllers\Web\RecetasController as WebRecetasController;
@@ -74,6 +75,11 @@ Route::controller(WebProductoController::class)->prefix('productos')->group(func
 });
 
 
+Route::controller(WebHazteClienteController::class)->prefix('hazte-cliente')->group(function () {
+    Route::get('', 'index')->name('web.hazte.cliente');
+    Route::post('store', 'store')->name('web.hazte.cliente.store');
+});
+
 
 Route::get('/politicas-de-privacidad', function () {
     return view('web.politicas.index');
@@ -109,9 +115,7 @@ Route::get('/detalle-noticia-tendencia', function () {
     return view('web.noticias.detalle');
 });
 
-Route::get('/hazte-cliente', function () {
-    return view('web.cliente.index');
-});
+
 
 Route::get('/contacto', function () {
     return view('web.contacto.index');
