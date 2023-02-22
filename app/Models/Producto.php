@@ -40,6 +40,11 @@ class Producto extends Model
         return $this->hasOne(ImagenProducto::class,'ipr_producto_id', 'pro_id')->latest();
     }
 
+    public function Categoria()
+    {
+        return $this->hasOne(Categoria::class,'cat_id', 'pro_categoria_id');
+    }
+
     public function RecetasWeb()
     {
         return $this->belongsToMany(Receta::class, 'producto_receta', 'prorec_producto_id', 'prorec_receta_id')
