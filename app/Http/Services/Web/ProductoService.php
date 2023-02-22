@@ -12,7 +12,6 @@ class ProductoService
 
         if (count($segmentosIds) == 0 && count($categoriasIds) == 0) {
             return Producto::where('pro_estado', 1)
-                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
                 ->groupBy('pro_id')
                 ->orderBy('pro_orden', 'ASC')
                 ->paginate(12);
@@ -32,7 +31,6 @@ class ProductoService
 
         if (count($segmentosIds) == 0 && count($categoriasIds) > 0) {
             return Producto::where('pro_estado', 1)
-                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
                 ->whereIn('pro_categoria_id', $categoriasIds)
                 ->groupBy('pro_id')
                 ->orderBy('pro_orden', 'ASC')
