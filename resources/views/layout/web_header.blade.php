@@ -73,6 +73,7 @@
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                                     <div class="opcion-drop-n"
+                                    onclick="document.location.href='/productos/?segmentoId[0]={{$item->seg_id}}&page=1'"
                                         onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                         onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
@@ -93,7 +94,6 @@
                                         @endif
                                     </div>
                                 @endforeach
-
                             </div>
                             <div class="linea-op-drop"></div>
                             <div></div>
