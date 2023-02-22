@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\Noticia;
 use App\Models\Segmento;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 
 class NoticiasController extends Controller

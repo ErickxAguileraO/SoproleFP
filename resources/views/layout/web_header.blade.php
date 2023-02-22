@@ -6,7 +6,7 @@
                 $modal = App\Http\Controllers\Management\EditableController::listarByTipo(5);
             @endphp
             @if (isset($modal->edi_video))
-                <iframe src="{{ $modal->edi_video }}" title="YouTube video player" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($modal->edi_video) }}" title="YouTube video player" frameborder="0"></iframe>
                 @php
                     echo $modal->edi_contenido;
                 @endphp
@@ -106,11 +106,11 @@
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a href="/nuestras-recetas" class="dropbtn">Recetas</a>
+                    <a href="{{route('web.receta.index')}}" class="dropbtn">Recetas</a> 
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a href="{{ route('webnoticia.index') }}" class="dropbtn">Noticias y tendencias</a>
+                    <a href="{{route('web.noticia.index')}}" class="dropbtn">Noticias y tendencias</a> 
                 </div>
             </div>
             <div class="botones-header">
@@ -161,7 +161,7 @@
                 <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
             </div>
             <div class="opcion-barra-n">
-                <a href="/nuestras-recetas">Recetas</a>
+                <a href="{{route('web.receta.index')}}">Recetas</a>
             </div>
             <div class="opcion-barra-n">
                 <a href="/noticias-tendencias">Noticias y Tendencias</a>
