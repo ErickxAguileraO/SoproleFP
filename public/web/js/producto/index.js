@@ -18,6 +18,9 @@ $(document).ready(function () {
     }
 
     $("#filtro_segmento, #filtro_categoria").change(function () {
+        $(".spinner").show();
+        $("#contenidorProductos").empty();
+
         jQuery.ajax({
             url: '/productos',
             method: 'GET',
@@ -26,6 +29,8 @@ $(document).ready(function () {
                 categoriasId: $("#filtro_categoria").val()
             },
             success: function (result) {
+                $(".spinner").hide();
+                
                 $('#contenidorProductos').empty().html(result);
             }
         });
