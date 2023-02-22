@@ -9,45 +9,54 @@
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
                 <div class="img-principal">
-                    <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+                    <img class="main_img" src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : NULL}}" alt="">
                 </div>        
                 <div class="carruselImagenes thumbnail_container">
-                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                
+                    @foreach ($receta->imagenes as $item)
+                        <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}" alt=""></div>
+                    @endforeach
                 </div>
             </div>
             <div class="txt-detalle-info">
                 <div class="titulo-receta">
-                    <h2>Alfajores</h2>
+                    <h2>{{$receta->rec_titulo}}</h2>
                     <div class="dificultad">
                         <p>Dificultad de la receta</p>
-                        <div class="intermedia">
-                            <p>Intermedia</p>
-                        </div>
+                        @if ($receta->rec_dificultad == 1)
+                            <div class="facil">
+                                <p>Fácil</p>
+                            </div>
+                        @endif
+                        @if ($receta->rec_dificultad == 2)
+                            <div class="intermedia">
+                                <p>Intermedia</p>
+                            </div>
+                        @endif
+                        @if ($receta->rec_dificultad == 3)
+                            <div class="dificil">
+                                <p>Difícil</p>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <br>
                 <h6>Descripción</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                @php
+                    echo $receta->rec_contenido;
+                @endphp
                 <br>
                 <div class="ingredientes-porciones">
                     <div>
                         <h6>Ingredientes</h6>
-                        <li>Ingrediente 1</li>
-                        <li>Ingrediente 2</li>
-                        <li>Ingrediente 3</li>
-                        <li>Ingrediente 4</li>
+                        @php
+                            echo $receta->rec_ingredientes;
+                        @endphp
                     </div>
                     <div class="porciones">
                         <h6>Porciones</h6>
-                        <p>4 personas</p>
+                        @php
+                            echo $receta->rec_porciones;
+                        @endphp
                     </div>
                 </div>
                 
@@ -58,65 +67,27 @@
         <br>
         <section style="width: 90%;">
             <h6>Preparación</h6>
-            <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+            @php
+                echo $receta->rec_preparacion;
+            @endphp
         </section>
         
         <section class="video-conocenos">
             <h2>Tutorial</h2>
-            <iframe src="https://www.youtube.com/embed/qoVEdea8N1k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
         
        <section class="slider-recetas">
             <h4>Para preparar esto necesitas</h4>
             <div class="carruselRecetas">
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-                
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-                {{-- <a href="" style="width: auto; height: auto;" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a> --}}
-
-              
-            
+                @foreach ($receta->Producto as $item)
+                    <a href="#" class="cuadros-info-n">
+                        <div class="img"><img src="{{ $item->pro_imagen }}" alt=""></div>
+                        <div class="texto">
+                            <h5>{{$item->pro_titulo}}</h5>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </section>
     </div>

@@ -79,7 +79,7 @@
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($recetas as $receta)
-                    <a href="/receta-detalle/{{ $receta->rec_url }}" class="cuadros-info-n">
+                    <a href="{{route('web.receta.detalle', $receta->rec_id).'-'.$receta->rec_url }}" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
                         </div>
                         <div class="texto">
@@ -88,7 +88,7 @@
                     </a>
                 @endforeach
             </div>
-            <a href="/nuestras-recetas" class="boton bg-red">Ver todas las recetas</a>
+            <a href="{{route('web.receta.index')}}" class="boton bg-red">Ver todas las recetas</a>
         </section>
 
         <section class="seccion-home">

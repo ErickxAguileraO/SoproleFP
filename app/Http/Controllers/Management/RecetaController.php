@@ -65,6 +65,10 @@ class RecetaController extends Controller
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
+            'dificultad' => ['required', 'numeric', 'between:1,3'],
+            'porciones' => ['required', 'max:200'],
+            'ingredientes' => ['required', 'max:1000'],
+            'preparacion' => ['required', 'max:2000'],
             'estado' => ['required','numeric'],
             'imagen' => ['required','mimes:jpg,jpeg,png,svg'],
         ];
@@ -96,6 +100,10 @@ class RecetaController extends Controller
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
+            'dificultad' => ['required', 'numeric', 'between:1,3'],
+            'porciones' => ['required', 'max:200'],
+            'ingredientes' => ['required', 'max:1000'],
+            'preparacion' => ['required', 'max:2000'],
             'estado' => ['required','numeric'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
