@@ -98,7 +98,7 @@
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($noticias as $noticia)
-                    <a href="{{route('webnoticia.detalle', $noticia->not_id).'-'.$noticia->not_url }}" class="cuadros-info-n ocultar-576">
+                    <a href="{{route('web.noticia.detalle', $noticia->not_id).'-'.$noticia->not_url }}" class="cuadros-info-n ocultar-576">
                         <div class="img"><img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
                         </div>
                         <div class="texto">
@@ -108,7 +108,7 @@
                     </a>
                 @endforeach
             </div>
-            <a href="{{route('webnoticia.index')}}" class="boton bg-red">Ver todas las noticias y tendencias</a>
+            <a href="{{route('web.noticia.index')}}" class="boton bg-red">Ver todas las noticias y tendencias</a>
         </section>
 
         <section class="conocenos mostrar-1920">

@@ -43,7 +43,7 @@
                 </div>
                 
                 <div class="div-filtro">
-                    <a href="" style="color: #1362B6;">Limpiar filtros</a>
+                    <a href="{{route('web.noticia.index')}}" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>
         </section>
@@ -63,22 +63,17 @@
                     animation: "slide",
                 });
 
-                var select = $("#filtro_segmento")[0];
-                var values = "";
-                Array.prototype.forEach.call(select.options, function(option, index) {
-                    url_string = decodeURI(window.location.href);
-                    url = new URL(url_string);
-                    options = url.searchParams.getAll("segmentoId["+index+"]");
-                    if ($("#old_filtro_segmento").val().includes('"'+options[0]+'"')) {
-                        values = values + ',' + options[0];
-                        $("#filtro_segmento").val(values.split(','));
-                        $('#filtro_segmento').trigger('change');
-                    }
-                });
-                
+                var old_filtro_segmento = $("#old_filtro_segmento").val();
+                old_filtro_segmento = old_filtro_segmento.replace('[', '');
+                old_filtro_segmento = old_filtro_segmento.replace(']', '');
+                old_filtro_segmento = old_filtro_segmento.replace(/"/g, '');
+                if (old_filtro_segmento) {
+                    $("#filtro_segmento").val(old_filtro_segmento.split(','));
+                    $('#filtro_segmento').trigger('change');
+                }
 
                 $("#filtro_segmento").change(function(){
-                    var url = '{{ route("webnoticia.index") }}';
+                    var url = '{{ route("web.noticia.index") }}';
                     jQuery.ajax({
                         url: url,
                         method: 'get',

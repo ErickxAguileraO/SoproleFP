@@ -10,7 +10,7 @@
                     <p>{{$item->not_titulo2}}</p>                  
                 </div>
                 
-                <a href="{{route('webnoticia.detalle', $item->not_id).'-'.$item->not_url}}" class="boton-noticia-tendencia">Ver</a>
+                <a href="{{route('web.noticia.detalle', $item->not_id).'-'.$item->not_url}}" class="boton-noticia-tendencia">Ver</a>
             </div>
         </div>
     @endforeach

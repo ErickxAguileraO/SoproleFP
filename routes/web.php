@@ -25,6 +25,7 @@ use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
 use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
+use App\Http\Controllers\Web\RecetasController as WebRecetasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +47,15 @@ Route::controller(WebAcademiaController::class)->prefix('academia')->group(funct
     Route::get('detalle/{academia}', 'detalle')->name('detalle');
 });
 
-Route::controller(WebNoticiasController::class)->prefix('noticia')->as('webnoticia.')->group(function () {
-    Route::get('', 'index')->name('index');
-    Route::get('detalle/{noticiaId}', 'detalle')->name('detalle');
+Route::group(['as' => 'web.'], function () {
+    Route::controller(WebNoticiasController::class)->prefix('noticia')->as('noticia.')->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('detalle/{noticiaId}', 'detalle')->name('detalle');
+    });
+    Route::controller(WebRecetasController::class)->prefix('receta')->as('receta.')->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('detalle/{recetaId}', 'detalle')->name('detalle');
+    });
 });
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');

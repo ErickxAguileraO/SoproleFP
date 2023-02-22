@@ -14,151 +14,31 @@
             <div class="select-filtros">
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select class="selectpicker" multiple title="Seleccione Segmento" data-live-search="true">
-                        <option>Segmento 1</option>
-                        <option>Segmento 2</option>
-                        <option>Segmento 3</option>
+                    <select class="selectpicker" multiple title="Seleccione Segmento" data-live-search="true" id="filtro_segmento" name="filtro_segmento">
+                        @foreach ($segmentos as $item)
+                            <option value="{{$item->seg_id}}">{{$item->seg_nombre}}</option>
+                        @endforeach
                     </select>
                 </div>
 
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Producto</label>
-                    <select class="selectpicker" multiple title="Seleccione Producto" data-live-search="true">
-                        <option>Producto 1</option>
-                        <option>Producto 2</option>
-                        <option>Producto 3</option>
+                    <select class="selectpicker" multiple title="Seleccione Producto" data-live-search="true" id="filtro_producto" name="filtro_producto">
+                        @foreach ($productos as $item)
+                            <option value="{{$item->pro_id}}">{{$item->pro_titulo}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div>
-                    <a href="" style="color: #1362B6;">Limpiar filtros</a>
+                    <a href="{{route('web.receta.index')}}" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>
-            <h2 style="margin-top: 50px">Filtrado por: <p>Leche</p> </h2>
+            {{-- <h2 style="margin-top: 50px">Filtrado por: <p>Leche</p> </h2> --}}
         </section>
 
-        <section class="seccion-home seccion-listas">
-            <div class="cuadros-info cuadros-row-4">
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-1.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-
-                <a href="/receta-detalle" class="cuadros-info-n">
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-cuadro-2.svg') }}" alt=""></div>
-                    <div class="texto">
-                        <h5>Título con una línea</h5>
-                    </div>
-                </a>
-            </div>
+        <section class="data" id="data">
+            @include('web.recetas.data')
         </section>
-        <div class="numeros-pag">
-            <a href="" class="numero-antes-despues"  style="margin-right: 35px">Anterior</a>
-            <a href="" class="numero-antes-despues-movil"  style="margin-right: 35px"><img src="{{ asset('web/imagenes/i-antes.svg') }}" alt=""></a>
-            <a href="" class="numero numero-seleccionado">1</a>
-            <a href="" class="numero">2</a>
-            <a href="" class="numero-antes-despues" style="margin-left: 35px">Siguiente</a>
-            <a href="" class="numero-antes-despues-movil"  style="margin-left: 35px"><img src="{{ asset('web/imagenes/i-despues.svg') }}" alt=""></a>
-        </div>
     </div>
     
     @push('extra-js')
@@ -168,6 +48,37 @@
                 $('.flexslider-seccion').flexslider({
                     animation: "slide",
                 });
+
+                var old_filtro_segmento = $("#old_filtro_segmento").val();
+                old_filtro_segmento = old_filtro_segmento.replace('[', '');
+                old_filtro_segmento = old_filtro_segmento.replace(']', '');
+                old_filtro_segmento = old_filtro_segmento.replace(/"/g, '');
+                if (old_filtro_segmento) {
+                    $("#filtro_segmento").val(old_filtro_segmento.split(','));
+                    $('#filtro_segmento').trigger('change');
+                }
+
+                var old_filtro_producto = $("#old_filtro_producto").val();
+                old_filtro_producto = old_filtro_producto.replace('[', '');
+                old_filtro_producto = old_filtro_producto.replace(']', '');
+                old_filtro_producto = old_filtro_producto.replace(/"/g, '');
+                if (old_filtro_producto) {
+                    $("#filtro_producto").val(old_filtro_producto.split(','));
+                    $('#filtro_producto').trigger('change');
+                }
+                
+                $("#filtro_segmento, #filtro_producto").change(function(){
+                    var url = '{{ route("web.receta.index") }}';
+                    jQuery.ajax({
+                        url: url,
+                        method: 'get',
+                        data: {segmentoId: $("#filtro_segmento").val(), productoId: $("#filtro_producto").val()},
+                        success: function(result){
+                            $('#data').empty().html(result);
+                        }
+                    });
+                });
+
             });
         </script>
     @endpush

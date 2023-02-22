@@ -32,4 +32,9 @@ class Receta extends Model
     {
         return $this->belongsToMany(Producto::class, 'producto_receta', 'prorec_receta_id', 'prorec_producto_id')->distinct();
     }
+    
+    public function segmentos()
+    {
+        return $this->belongsToMany(Segmento::class,'receta_segmento','recseg_receta_id','recseg_segmento_id');
+    }
 }
