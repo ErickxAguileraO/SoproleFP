@@ -2,6 +2,7 @@
 
 namespace App\Http\Services\Web;
 
+use App\Models\Producto;
 use Illuminate\Support\Facades\DB;
 
 class ProductoService
@@ -9,26 +10,52 @@ class ProductoService
     public static function getProductos($segmentosIds, $categoriasIds)
     {
 
-        $query = DB::table('productos');
-        $query->select('pro_id', 'pro_titulo', 'pro_url', 'pro_imagen');
-        $query->join('producto_receta', 'pro_id', '=', 'prorec_producto_id');
-        $query->join('recetas', 'rec_id', '=', 'prorec_receta_id');
-        $query->join('receta_segmento', 'rec_id', '=', 'recseg_receta_id');
-        $query->where('pro_estado', 1);
-        $query->where('rec_estado', 1);
-
-        if (count($segmentosIds) > 0) {
-            $query->whereIn('recseg_segmento_id', $segmentosIds);
-        }
-        if (count($categoriasIds) > 0) {
-            $query->whereIn('pro_categoria_id', $categoriasIds);
+        if (count($segmentosIds) == 0 && count($categoriasIds) == 0) {
+            return Producto::where('pro_estado', 1)
+                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
+                ->join('recetas', 'rec_id', '=', 'prorec_receta_id')
+                ->join('receta_segmento', 'rec_id', '=', 'recseg_receta_id')
+                ->where('rec_estado', 1)
+                ->groupBy('pro_id')
+                ->orderBy('pro_orden', 'ASC')
+                ->paginate(12);
         }
 
-        $query->groupBy('pro_id', 'pro_titulo', 'pro_url', 'pro_imagen');
-        $query->orderBy('pro_orden', 'ASC');
-        //$query->paginate(1);
-        $result = $query->get();
+        if (count($segmentosIds) > 0 && count($categoriasIds) == 0) {
+            return Producto::where('pro_estado', 1)
+                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
+                ->join('recetas', 'rec_id', '=', 'prorec_receta_id')
+                ->join('receta_segmento', 'rec_id', '=', 'recseg_receta_id')
+                ->where('rec_estado', 1)
+                ->whereIn('recseg_segmento_id', $segmentosIds)
+                ->groupBy('pro_id')
+                ->orderBy('pro_orden', 'ASC')
+                ->paginate(12);
+        }
 
-        return $result;
+        if (count($segmentosIds) == 0 && count($categoriasIds) > 0) {
+            return Producto::where('pro_estado', 1)
+                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
+                ->join('recetas', 'rec_id', '=', 'prorec_receta_id')
+                ->join('receta_segmento', 'rec_id', '=', 'recseg_receta_id')
+                ->where('rec_estado', 1)
+                ->whereIn('pro_categoria_id', $categoriasIds)
+                ->groupBy('pro_id')
+                ->orderBy('pro_orden', 'ASC')
+                ->paginate(12);
+        }
+
+        if (count($segmentosIds) > 0 && count($categoriasIds) > 0) {
+            return Producto::where('pro_estado', 1)
+                ->join('producto_receta', 'pro_id', '=', 'prorec_producto_id')
+                ->join('recetas', 'rec_id', '=', 'prorec_receta_id')
+                ->join('receta_segmento', 'rec_id', '=', 'recseg_receta_id')
+                ->where('rec_estado', 1)
+                ->whereIn('recseg_segmento_id', $segmentosIds)
+                ->whereIn('pro_categoria_id', $categoriasIds)
+                ->groupBy('pro_id')
+                ->orderBy('pro_orden', 'ASC')
+                ->paginate(12);
+        }
     }
 }
