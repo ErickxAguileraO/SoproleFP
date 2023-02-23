@@ -6,7 +6,7 @@
             nuevos usos lácteos, perfectos para cada propósito</p>
         <div class="cuadros-info cuadros-row-4">
             @foreach ($productos as $producto)
-                <a href="/producto/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
+                <a href="/productos/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
                     <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
                     </div>
                     <div class="texto">

@@ -42,13 +42,10 @@ class ProductoController extends Controller
         ]);
     }
 
-    public function detalle($categoria, $url)
+    public function detalle($url)
     {
-
-        $categoria = Categoria::where('cat_id',$categoria)->where('cat_estado',1)->firstOrFail();
-
         return view('web.productos.detalle', [
-            "producto" => Producto::where('pro_url', $url)->where('pro_estado', 1)->where('pro_categoria_id', $categoria->cat_id)->firstOrFail(),
+            "producto" => Producto::where('pro_url', $url)->where('pro_estado', 1)->firstOrFail(),
         ]);
     }
 }
