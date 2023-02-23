@@ -38,17 +38,17 @@
                 </div>
 
                 <div class="dropdown-menu-header dropdown-noticias">
-                    <a class="dropbtn">Academia</a>
+                    <a class="dropbtn" href="{{route('web.academia.index')}}">Academia</a>
                     <div class="dropdown-content dropdown-content-noticias">
                         <div class="contenido-drop contenido-drop-noticias">
                             <div>
                                 <div class="titulo-drop">
                                     <h5>Academia</h5>
-                                    <a href="/academia" class="boton-ver-op bg-red">Ver todos</a>
+                                    <a href="{{route('web.academia.index')}}" class="boton-ver-op bg-red">Ver todos</a>
                                 </div>
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                                    <a href="/academia-detalle" class="opcion-drop-n"
+                                    <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}" class="opcion-drop-n"
                                         onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                         onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
@@ -160,7 +160,7 @@
                 <a href="{{route('web.receta.index')}}">Recetas</a>
             </div>
             <div class="opcion-barra-n">
-                <a href="/noticias-tendencias">Noticias y Tendencias</a>
+                <a href="{{route('web.noticia.index')}}">Noticias y Tendencias</a>
             </div>
             <br>
             <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
@@ -236,11 +236,11 @@
         <div class="flex-barra-menu-movil">
             <div class="titulo-drop">
                 <h5>Academia</h5>
-                <a href="/academia" class="boton-ver-op bg-red">Ver mas</a>
+                <a href="{{route('web.academia.index')}}" class="boton-ver-op bg-red">Ver mas</a>
             </div>
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <a href="/academia-detalle" class="opcion-drop-n"
+                <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}" class="opcion-drop-n"
                     onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                     onmouseout="this.style='background-color:white';">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
