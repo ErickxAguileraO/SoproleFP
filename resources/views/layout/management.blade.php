@@ -198,6 +198,18 @@
                                     <p class="text-center bg-info text-white mb-0 rounded-top"></i>Formularios</p>
                                 </div>
 
+
+                                
+
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.hazte.cliente.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-person-check"></i>
+                                        &nbsp;Hazte cliente
+                                    </a>
+                                </div>
+
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.contacto.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"

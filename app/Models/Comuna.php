@@ -17,4 +17,11 @@ class Comuna extends Model
         'com_nombre',
         'com_region_id',
     ];
+
+    public function Region()
+    {
+        return $this->hasOne(Region::class,'reg_id','com_region_id');
+    }
+
+
 }
