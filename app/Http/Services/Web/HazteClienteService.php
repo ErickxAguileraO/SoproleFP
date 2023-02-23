@@ -4,7 +4,11 @@ namespace App\Http\Services\Web;
 
 use App\Models\HazteCliente;
 use App\Models\Local;
+use App\Mail\ContactoHazteCliente;
+use App\Models\Comuna;
+use App\Models\TipoNegocios;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class HazteClienteService
 {
@@ -13,7 +17,8 @@ class HazteClienteService
 
         DB::beginTransaction();
         try {
-            HazteCliente::create([
+
+            $cliente = HazteCliente::create([
                 'fhc_razon_social' => $request->razon_social,
                 'fhc_rut' => $request->rut,
                 'fhc_tipo' => $request->tipo_negocio,
@@ -25,6 +30,7 @@ class HazteClienteService
                 'fhc_telefono' => $request->telefono,
                 'fhc_correo' => $request->correo,
             ]);
+            self::sendMail($cliente);
 
             DB::commit();
 
@@ -40,6 +46,20 @@ class HazteClienteService
             ], 500);
         }
     }
+
+    private static function sendMail($datos)
+    {
+        $comuna = Comuna::find($datos->fhc_comuna_id);
+
+        Mail::to(env('MAIL_HAZTE_CLIENTE'))->send(new ContactoHazteCliente([
+            'datos' =>  $datos,
+            'tipo' => TipoNegocios::find($datos->fhc_tipo)->tne_nombre,
+            'comuna' => $comuna->com_nombre,
+            'region'  => $comuna->Region->reg_nombre,
+        ]));
+    }
+
+
 
     public static function listarLocales($region, $comuna)
     {
