@@ -9,190 +9,26 @@
         <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-academia-escritorio.svg') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-academia-movil.svg') }}" alt="">
     </div>
-    <div class="contenido">
+    <div class="contenido"> 
         <section class="filtros">
             <div class="select-filtros">
                 <div class="ocultar-nice-select div-filtro">
                     <label for="">Segmento</label>
-                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true">
-                        <option>Segmento 1</option>
-                        <option>Segmento 2</option>
-                        <option>Segmento 3</option>
+                    <select class="selectpicker" multiple title="Seleccione segmento" data-live-search="true" name="filtro_segmento" id="filtro_segmento">
+                        @foreach ($segmentos as $item)
+                            <option value="{{$item->seg_id}}">{{$item->seg_nombre}}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="div-filtro">
-                    <a href="" style="color: #1362B6;">Limpiar filtros</a>
+                    <a href="{{route('web.academia.index')}}" style="color: #1362B6;">Limpiar filtros</a>
                 </div>
             </div>
         </section>
 
-        <section class="seccion-home seccion-listas">
-            <div class="cuadros-info cuadros-row-3">
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-                
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-                
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-                
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-                
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-
-                <div class="cuadros-info-n noticia-tendencia academia">
-                    <div class="img"><iframe src="https://www.youtube.com/embed/jsyySdF-fQg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-                    <div class="texto">
-                        <div>
-                            <h5>Este es el título del video</h5>
-                            <span>02/01/2023</span>
-                            <p>Este es el texto de relleno de esta tarjeta. La idea es rellenar esto para hacernos una idea de cómo el texto se va a ver en esta parte de la tarjeta.</p>
-                        
-                        </div>
-                        <a href="/academia/detalle" class="boton-noticia-tendencia">Ver ahora</a>
-                    </div>
-                </div>
-            </div>
+        <section class="data" id="data">
+            @include('web.academia.data')
         </section>
-        <div class="numeros-pag">
-            <a href="" class="numero-antes-despues"  style="margin-right: 35px">Anterior</a>
-            <a href="" class="numero-antes-despues-movil"  style="margin-right: 35px"><img src="{{ asset('web/imagenes/i-antes.svg') }}" alt=""></a>
-            <a href="" class="numero numero-seleccionado">1</a>
-            <a href="" class="numero">2</a>
-            <a href="" class="numero-antes-despues" style="margin-left: 35px">Siguiente</a>
-            <a href="" class="numero-antes-despues-movil"  style="margin-left: 35px"><img src="{{ asset('web/imagenes/i-despues.svg') }}" alt=""></a>
-        </div>
     </div>
     
     @push('extra-js')
@@ -201,6 +37,24 @@
             $(document).ready(function(){
                 $('.flexslider-seccion').flexslider({
                     animation: "slide",
+                });
+
+                var old_filtro_segmento = $("#old_filtro_segmento").val().replace('[', '').replace(']', '').replace(/"/g, '');
+                if (old_filtro_segmento) {
+                    $("#filtro_segmento").val(old_filtro_segmento.split(','));
+                    $('#filtro_segmento').trigger('change');
+                }
+
+                $("#filtro_segmento").change(function(){
+                    var url = '{{ route("web.academia.index") }}';
+                    jQuery.ajax({
+                        url: url,
+                        method: 'get',
+                        data: {segmentoId: $("#filtro_segmento").val()},
+                        success: function(result){
+                            $('#data').empty().html(result);
+                        }
+                    });
                 });
             });
         </script>

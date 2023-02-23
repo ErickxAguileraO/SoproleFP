@@ -62,7 +62,7 @@
                     <div class="cuadros-info cuadros-row-4">
 
                         @foreach ($academias as $academia)
-                            <a href="/academia/detalle/{{ $academia->aca_url }}" class="cuadros-info-n">
+                            <a href="{{route('web.academia.detalle', $academia->aca_id).'-'.$academia->aca_url }}" class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
                                 </div>
                                 <div class="texto">
@@ -72,7 +72,7 @@
                             </a>
                         @endforeach
                     </div>
-                    <a href="" class="boton bg-red">Ver más cursos</a>
+                    <a href="{{route('web.academia.index').'?segmentoId[0]='.$segmento->seg_id}}" class="boton bg-red">Ver más cursos</a>
                 </div>
             </section>
         @endif

@@ -26,4 +26,9 @@ class Academia extends Model
         'aca_estado',
 
     ];
+
+    public function segmentos()
+    {
+        return $this->belongsToMany(Segmento::class,'academia_segmento','acaseg_academia_id','acaseg_segmento_id');
+    }
 }

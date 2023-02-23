@@ -17,16 +17,16 @@
         <div class="linea-columna"></div>
         <div class="menu-footer-1">
             @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
-                <a href="">{{$item->seg_nombre}}</a>
+                <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}">{{$item->seg_nombre}}</a>
             @endforeach
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-2">
             <a href="/contacto">Contáctenos</a>
-            <a href="/academia">Academia</a>
+            <a href="{{route('web.academia.index')}}">Academia</a>
             <a href="/productos">Productos</a>
-            <a href="/nuestras-recetas">Recetas</a>
-            <a href="/noticias-tendencias"> Noticias y tendencias</a>
+            <a href="{{route('web.receta.index')}}">Recetas</a>
+            <a href="{{route('web.noticia.index')}}"> Noticias y tendencias</a>
             <a href="/hazte-cliente">Hazte cliente</a>
             <a href="">Ir a la tienda</a>
         </div>
