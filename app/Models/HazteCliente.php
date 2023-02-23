@@ -25,4 +25,14 @@ class HazteCliente extends Model
         'fhc_telefono',
         'fhc_correo',
     ];
+
+    public function Comuna()
+    {
+        return $this->hasOne(Comuna::class,'com_id','fhc_comuna_id');
+    }
+
+    public function Tipo()
+    {
+        return $this->hasOne(TipoNegocios::class,'tne_id','fhc_tipo');
+    }
 }

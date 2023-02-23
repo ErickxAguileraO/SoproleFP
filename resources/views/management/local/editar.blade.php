@@ -45,6 +45,26 @@
                                 </select>
                             </div>
                         </div>
+                        <label for="nombre">Dirección</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="direccion" class="form-control" value="{{$local->loc_direccion}}" required>
+                        </div>
+
+                        <label for="nombre">Contacto</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="contacto" class="form-control" value="{{$local->loc_contacto}}" required>
+                        </div>
+
+                        <label for="nombre">Teléfono</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="telefono" class="form-control" value="{{$local->loc_telefono}}" required>
+                        </div>
+
+                        <label for="nombre">Horario</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="horario" class="form-control" value="{{$local->loc_horario}}" required>
+                        </div>
+
 
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">

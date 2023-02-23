@@ -17,6 +17,10 @@ class Local extends Model
         'loc_nombre',
         'loc_comuna_id',
         'loc_orden',
-        'loc_estado'
+        'loc_estado',
+        'loc_direccion',
+        'loc_contacto',
+        'loc_telefono',
+        'loc_horario'
     ];
 }

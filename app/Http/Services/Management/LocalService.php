@@ -19,6 +19,10 @@ class LocalService
                 'loc_comuna_id' => $request->comuna,
                 'loc_estado' => $request->estado,
                 'loc_orden' => $request->orden,
+                'loc_direccion' => $request->direccion,
+                'loc_contacto' => $request->contacto,
+                'loc_telefono' => $request->telefono,
+                'loc_horario' => $request->horario,
             ]);
 
             DB::commit();
@@ -47,6 +51,12 @@ class LocalService
             $loc->loc_orden = $request->orden;
             $loc->loc_estado = $request->estado;
             $loc->loc_comuna_id = $request->comuna;
+            $loc->loc_direccion = $request->direccion;
+            $loc->loc_contacto = $request->contacto;
+            $loc->loc_telefono =$request->telefono;
+            $loc->loc_horario = $request->horario;
+
+
     
             $loc->save();
 

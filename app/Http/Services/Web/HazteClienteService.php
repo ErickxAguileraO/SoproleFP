@@ -3,14 +3,14 @@
 namespace App\Http\Services\Web;
 
 use App\Models\HazteCliente;
-
+use App\Models\Local;
 use Illuminate\Support\Facades\DB;
 
 class HazteClienteService
 {
     public static function guardar($request)
     {
-        
+
         DB::beginTransaction();
         try {
             HazteCliente::create([
@@ -38,6 +38,46 @@ class HazteClienteService
                 'status' => 'F',
                 'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.',
             ], 500);
+        }
+    }
+
+    public static function listarLocales($region, $comuna)
+    {
+
+        if ($region == 0 && $comuna == 0) {
+            return response()->json([
+                'status' => 'T',
+                'html' => view(
+                    'web.cliente.locales',
+                    [
+                        'result' => Local::where('loc_estado', 1)->orderBy('loc_orden', 'ASC')->get(),
+                    ]
+                )->render()
+            ], 201);
+        }
+
+        if ($region != 0 && $comuna == 0) {
+            return response()->json([
+                'status' => 'T',
+                'html' => view(
+                    'web.cliente.locales',
+                    [
+                        'result' => Local::join('comuna',"com_id","=","loc_comuna_id")->where('com_region_id',$region)->where('loc_estado', 1)->orderBy('loc_orden', 'ASC')->groupBy('loc_id')->get(),
+                    ]
+                )->render()
+            ], 201);
+        }
+
+        if ($region != 0 && $comuna != 0) {
+            return response()->json([
+                'status' => 'T',
+                'html' => view(
+                    'web.cliente.locales',
+                    [
+                        'result' => Local::where('loc_estado', 1)->where('loc_comuna_id', $comuna)->orderBy('loc_orden', 'ASC')->get(),
+                    ]
+                )->render()
+            ], 201);
         }
     }
 }
