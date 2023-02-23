@@ -20,6 +20,10 @@ class Receta extends Model
         'rec_contenido',
         'rec_video',
         'rec_orden',
+        'rec_dificultad',
+        'rec_porciones',
+        'rec_ingredientes',
+        'rec_preparacion',
         'rec_estado',
     ];
 

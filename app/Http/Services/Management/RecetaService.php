@@ -26,6 +26,10 @@ class RecetaService
                 'rec_contenido' => $request->contenido,
                 'rec_video' => $request->video,
                 'rec_orden' => $request->orden,
+                'rec_dificultad' => $request->dificultad,
+                'rec_porciones' => $request->porciones,
+                'rec_ingredientes' => $request->ingredientes,
+                'rec_preparacion' => $request->preparacion,
                 'rec_estado' => $request->estado,
             ];
 
@@ -98,6 +102,10 @@ class RecetaService
             $receta->rec_contenido = $request->contenido;
             $receta->rec_video = $request->video;
             $receta->rec_orden =  $request->orden;
+            $receta->rec_dificultad = $request->dificultad;
+            $receta->rec_porciones = $request->porciones;
+            $receta->rec_ingredientes = $request->ingredientes;
+            $receta->rec_preparacion = $request->preparacion;
             $receta->rec_estado = $request->estado;
 
             if ($request->file('imagen')) {

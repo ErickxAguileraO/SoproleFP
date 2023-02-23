@@ -1,6 +1,8 @@
 var generarFormData = () => {
     let formData = new FormData(document.forms.namedItem("formSubmit"));
     formData.append('contenido', textContenido.getData());
+    formData.append('preparacion', textPreparacion.getData());
+    formData.append('ingredientes', textIngredientes.getData());
     return formData;
 }
 
@@ -43,6 +45,22 @@ ClassicEditor.create(document.querySelector('#contenido'), {
     }
 }).then(editor => {
     textContenido = editor;
+})
+var textPreparacion;
+ClassicEditor.create(document.querySelector('#preparacion'), {
+    ckfinder: {
+        uploadUrl: '/image-upload?_token=' + $("input[name='_token']").val(),
+    }
+}).then(editor => {
+    textPreparacion = editor;
+})
+var textIngredientes;
+ClassicEditor.create(document.querySelector('#ingredientes'), {
+    ckfinder: {
+        uploadUrl: '/image-upload?_token=' + $("input[name='_token']").val(),
+    }
+}).then(editor => {
+    textIngredientes = editor;
 })
 
 var _URL = window.URL || window.webkitURL;

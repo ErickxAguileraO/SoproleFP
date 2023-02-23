@@ -24,9 +24,36 @@
                             <input type="text" name="titulo" class="form-control" id="titulo" value="{{ $receta->rec_titulo}}"
                                 required>
                         </div>
-                        <label for="">Contenido</label>
+
+                        <label for="dificultad">Dificultad</label>
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <select name="dificultad" id="dificultad" class="tipo-seleccion">
+                                    <option {{ $receta->rec_dificultad == 1 ? 'selected' : false }} value="1">Fácil</option>
+                                    <option {{ $receta->rec_dificultad == 2 ? 'selected' : false }} value="2">Intermedio</option>
+                                    <option {{ $receta->rec_dificultad == 3 ? 'selected' : false }} value="3">Difícil</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label for="">Descripción</label>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50">{{$receta->rec_contenido}}</textarea>
+                        </div>
+
+                        <label for="">Ingredientes</label>
+                        <div class="form-floating my-3">
+                            <textarea id="ingredientes" class="form-control" name="ingredientes" rows="4" cols="50">{{$receta->rec_ingredientes}}</textarea>
+                        </div>
+
+                        <label for="">Porciones</label>
+                        <div class="form-floating my-3">
+                            <textarea id="porciones" class="form-control" name="porciones" rows="4" cols="1">{{$receta->rec_porciones}}</textarea>
+                        </div>
+
+                        <label for="">Preparación</label>
+                        <div class="form-floating my-3">
+                            <textarea id="preparacion" class="form-control" name="preparacion" rows="4" cols="50">{{$receta->rec_preparacion}}</textarea>
                         </div>
 
                         <label for="imagen">Imagen ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>

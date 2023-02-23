@@ -26,11 +26,36 @@
                                 required>
                         </div>
 
+                        <label for="dificultad">Dificultad</label>
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <select name="dificultad" id="dificultad" class="tipo-seleccion">
+                                    <option value="1">Fácil</option>
+                                    <option value="2">Intermedio</option>
+                                    <option value="3">Difícil</option>
+                                </select>
+                            </div>
+                        </div>
 
-                        <label for="">Contenido</label>
+                        <label for="">Descripción</label>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50"></textarea>
                         </div>
+
+                        <label for="">Ingredientes</label>
+                        <div class="form-floating my-3">
+                            <textarea id="ingredientes" class="form-control" name="ingredientes" rows="4" cols="50"></textarea>
+                        </div>
+
+                        <label for="">Porciones</label>
+                        <div class="form-floating my-3">
+                            <textarea id="porciones" class="form-control" name="porciones" rows="4" cols="1"></textarea>
+                        </div>
+
+                        <label for="">Preparación</label>
+                        <div class="form-floating my-3">
+                            <textarea id="preparacion" class="form-control" name="preparacion" rows="4" cols="50"></textarea>
+                        </div>                        
 
                         <label for="imagen">Imagen ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
                         <div class="row mb-3">
