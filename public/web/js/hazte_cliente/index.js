@@ -31,7 +31,7 @@ $(".btn-agregar").on("click", function (event) {
         } else {
             $("#formSubmit").empty()
             $("#formSubmit").append('<h2>Su solicitud ha sido enviada correctamente</h2><h4>nos contáctaremos con usted a la brevedad</h4>');
-            $("#formSubmit").attr('style','padding: 100px;text-align: center;');   
+            $("#formSubmit").attr('style','padding: 300px;text-align: center;');   
         }
     }).catch(mensajeError => {
         $('#spinner-div').hide();
