@@ -16,7 +16,7 @@ const listarLocales = (region, comuna) => {
 
 
         $(".pagination").remove();
-        $("#ubicaciones").pagify(10, ".single-item");
+        $("#ubicaciones").pagify(5, ".single-item");
 
     }).catch(mensajeError => {
         $('#spinner-div').hide();
