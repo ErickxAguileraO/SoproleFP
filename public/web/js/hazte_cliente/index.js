@@ -1,12 +1,21 @@
 $(".btn-agregar").on("click", function (event) {
     event.preventDefault();
     $('#spinner-div').show();
+
     resetValidationMessages();
+
     if($("#rut").val().length < 11){
         document.getElementById('rut_error').innerText = 'El rut debe tener al menos 11 caracteres';
         $('#spinner-div').hide();
         return;
     }
+    
+    if($("#iniciacion-actividades").val().toLowerCase() != 'si'){
+        document.getElementById('actividades_error').innerText = 'Para enviar el formulario debe haber iniciado actividades';
+        $('#spinner-div').hide();
+        return;
+    }
+
     fetch("/hazte-cliente/store", {
         method: "POST",
         headers: {
@@ -22,7 +31,7 @@ $(".btn-agregar").on("click", function (event) {
         } else {
             $("#formSubmit").empty()
             $("#formSubmit").append('<h2>Su solicitud ha sido enviada correctamente</h2><h4>nos contáctaremos con usted a la brevedad</h4>');
-            $("#formSubmit").attr('style','padding: 100px;text-align: center;');   
+            $("#formSubmit").attr('style','padding: 300px;text-align: center;');   
         }
     }).catch(mensajeError => {
         $('#spinner-div').hide();
@@ -32,7 +41,7 @@ $(".btn-agregar").on("click", function (event) {
 $("#region").on("change", function (event) {
     event.preventDefault();
     $('#spinner-div').show();
-    fetch("/administracion/local/get-comuna-by-region/" + $(this).val(), {
+    fetch("/web/get-comuna-by-region/" + $(this).val(), {
         method: "GET",
     }).then(function (response) {
         return response.json();
@@ -49,8 +58,6 @@ $("#region").on("change", function (event) {
         $('#comuna').niceSelect('update');
     });
 });
-
-
 
 const setValidationMessages = (response) => {
     for (let i=0; i<response.errors.length; i++) {
@@ -91,7 +98,7 @@ const setValidationMessages = (response) => {
 }
 
 const resetValidationMessages = () => {
-    $("#razon_social_error, #rut_error,#tipo_negocio_error,#cual_error,#calle_error ,#numero_error ,#region_error,#comuna_error,#nombre_error,#telefono_error,#correo_error").text('');
+    $("#actividades_error, #razon_social_error, #rut_error,#tipo_negocio_error,#cual_error,#calle_error ,#numero_error ,#region_error,#comuna_error,#nombre_error,#telefono_error,#correo_error").text('');
 }
 
 

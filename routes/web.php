@@ -11,6 +11,7 @@ use App\Http\Controllers\Management\CategoriaController;
 use App\Http\Controllers\Management\ClienteController;
 use App\Http\Controllers\Management\ConfiguracionController;
 use App\Http\Controllers\Management\ContactoController;
+use App\Http\Controllers\Management\HazteClienteController;
 use App\Http\Controllers\Management\HomeController;
 use App\Http\Controllers\Management\LocalController;
 use App\Http\Controllers\Management\NoticiasController;
@@ -60,6 +61,9 @@ Route::group(['as' => 'web.'], function () {
 });
 
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
+Route::get('web/get-comuna-by-region/{region}', [LocalController::class, 'getComunaByRegion'])->name('web.local.get.comuna,by.region');
+
+
 
 Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(function () {
     Route::get('filtro/reset/{segmento}', 'reset')->name('web.mini.sitio.reset');
@@ -69,7 +73,7 @@ Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(fu
 
 
 Route::controller(WebProductoController::class)->prefix('productos')->group(function () {
-    Route::get('detalle/{categoria}/{url}', 'detalle')->name('web.productos.detalle');
+    Route::get('detalle/{url}', 'detalle')->name('web.productos.detalle');
     Route::get('', 'index')->name('web.productos');
 });
 
@@ -77,6 +81,7 @@ Route::controller(WebProductoController::class)->prefix('productos')->group(func
 Route::controller(WebHazteClienteController::class)->prefix('hazte-cliente')->group(function () {
     Route::get('', 'index')->name('web.hazte.cliente');
     Route::post('store', 'store')->name('web.hazte.cliente.store');
+    Route::get('listar/locales/{region}/{comuna}', 'getLocales')->name('web.hazte.cliente.get.locales');
 });
 
 
@@ -269,6 +274,12 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('', 'index')->name('contacto.index');
             Route::get('ver/{contacto}', 'editar')->name('contacto.editar');
             Route::get('listar', 'listar')->name('contacto.listar');
+        });
+
+        Route::controller(HazteClienteController::class)->prefix('hazte-cliente')->group(function () {
+            Route::get('', 'index')->name('hazte.cliente.index');
+            Route::get('ver/{cliente}', 'editar')->name('hazte.cliente.editar');
+            Route::get('listar', 'listar')->name('hazte.cliente.listar');
         });
 
         Route::controller(LocalController::class)->prefix('local')->group(function () {

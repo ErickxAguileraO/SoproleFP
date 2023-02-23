@@ -1232,11 +1232,18 @@ textarea{
     width: 110px;
     height: 40px;
 }
+.titulo-receta .dificultad .facil{
+    background: #F6FFF6;
+    color: #0D9401 !important;
+}
 .titulo-receta .dificultad .intermedia{
     background: #F1F7FE;
     color: #1362B6 !important;
 }
-
+.titulo-receta .dificultad .dificil{
+    background: #FEF3F2;
+    color: #D0392A !important;
+}
 
 .ingredientes-porciones{
     display: grid;

@@ -54,6 +54,10 @@ class LocalController extends Controller
             'comuna' => ['required'],
             'estado' => ['required'],
             'orden' => ['required', 'numeric'],
+            'direccion' => ['required', 'string', 'max:250'],
+            'contacto' => ['required', 'string', 'max:250'],
+            'telefono' => ['required', 'string', 'max:250'],
+            'horario' => ['required', 'string', 'max:250'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -81,6 +85,10 @@ class LocalController extends Controller
             'comuna' => ['required'],
             'estado' => ['required'],
             'orden' => ['required', 'numeric'],
+            'direccion' => ['required', 'string', 'max:250'],
+            'contacto' => ['required', 'string', 'max:250'],
+            'telefono' => ['required', 'string', 'max:250'],
+            'horario' => ['required', 'string', 'max:250'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Http\Services\Web\HazteClienteService;
+use App\Models\Local;
 use App\Models\Region;
 use App\Models\TipoNegocios;
 use Illuminate\Http\Request;
@@ -14,24 +15,26 @@ use Illuminate\Support\Facades\Validator;
 class HazteClienteController extends Controller
 {
     public function index()
-    { 
-        return view('web.cliente.index',[
+    {
+        return view('web.cliente.index', [
             "regiones" => Region::all(),
-            "tiposNegocio" => TipoNegocios::where('tne_estado',1)->get()
+            "tiposNegocio" => TipoNegocios::where('tne_estado', 1)->get(),
+            "locales" => Local::where('loc_estado', 1)->orderBy('loc_orden', 'ASC')->get()
         ]);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
 
         $reglasValidacion = [
             'razon_social' => ['required', 'string', 'max:200'],
-            'rut' => ['required','string','min:12','max:13', new ValidChileanRut(new ChileRut)],
-            'tipo_negocio' => ['required','string', 'max:200'],
+            'rut' => ['required', 'string', 'min:12', 'max:13', new ValidChileanRut(new ChileRut)],
+            'tipo_negocio' => ['required', 'string', 'max:200'],
             'cual' => ['required', 'string', 'max:200'],
             'calle' => ['required', 'string', 'max:200'],
             'numero' => ['required', 'numeric'],
-            'region' => ['required' , 'numeric'],
-            'comuna' => ['required' , 'numeric'],
+            'region' => ['required', 'numeric'],
+            'comuna' => ['required', 'numeric'],
             'nombre' => ['required', 'string', 'max:200'],
             'telefono' => ['required', 'numeric'],
             'correo' => ['required', 'email'],
@@ -47,5 +50,11 @@ class HazteClienteController extends Controller
         } else {
             return HazteClienteService::guardar($request);
         }
+    }
+
+    public function getLocales($region, $comuna){
+
+        return HazteClienteService::listarLocales($region, $comuna);
+
     }
 }
