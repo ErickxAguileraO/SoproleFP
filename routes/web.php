@@ -44,11 +44,6 @@ use App\Http\Controllers\Web\ProductoController as WebProductoController;
 
 Route::get('/', [WebHomeController::class, 'index']);
 
-Route::controller(WebAcademiaController::class)->prefix('academia')->group(function () {
-    Route::get('', 'index')->name('index');
-    Route::get('detalle/{academia}', 'detalle')->name('detalle');
-});
-
 Route::group(['as' => 'web.'], function () {
     Route::controller(WebNoticiasController::class)->prefix('noticia')->as('noticia.')->group(function () {
         Route::get('', 'index')->name('index');
@@ -57,6 +52,10 @@ Route::group(['as' => 'web.'], function () {
     Route::controller(WebRecetasController::class)->prefix('receta')->as('receta.')->group(function () {
         Route::get('', 'index')->name('index');
         Route::get('detalle/{recetaId}', 'detalle')->name('detalle');
+    });
+    Route::controller(WebAcademiaController::class)->prefix('academia')->as('academia.')->group(function () {
+        Route::get('', 'index')->name('index');
+        Route::get('detalle/{academiaId}', 'detalle')->name('detalle');
     });
 });
 
