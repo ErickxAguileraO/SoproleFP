@@ -42,7 +42,7 @@ class SegmentoController extends Controller
                 ->join('recetas', 'recetas.rec_id', '=', 'receta_segmento.recseg_receta_id')
                 ->join('producto_receta', 'producto_receta.prorec_receta_id', '=', 'recetas.rec_id')
                 ->join('productos', 'productos.pro_id', '=', 'producto_receta.prorec_producto_id')
-                ->select('productos.pro_id','productos.pro_titulo')
+                ->select('productos.pro_id','productos.pro_titulo','productos.pro_url')
                 ->groupBy('productos.pro_id','productos.pro_titulo')
                 ->orderBy('productos.pro_id')
                 ->where('productos.pro_estado', 1)

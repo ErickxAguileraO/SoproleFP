@@ -87,7 +87,7 @@
                                                     <a href="/productos/?segmentoId[0]={{$item->seg_id}}&page=1" class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
                                                 @foreach ($item->productos as $producto)
-                                                    <a href="/producto-detalle" class="link-op"
+                                                    <a href="/productos/detalle/{{ $producto->pro_url }}" class="link-op"
                                                         style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
                                                 @endforeach
                                             </div>

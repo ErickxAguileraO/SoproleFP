@@ -74,7 +74,7 @@ Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(fu
 
 
 Route::controller(WebProductoController::class)->prefix('productos')->group(function () {
-    Route::get('detalle/{categoria}/{url}', 'detalle')->name('web.productos.detalle');
+    Route::get('detalle/{url}', 'detalle')->name('web.productos.detalle');
     Route::get('', 'index')->name('web.productos');
 });
 
