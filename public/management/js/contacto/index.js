@@ -33,11 +33,6 @@
         columns: [
 
             {
-                dataField: 'con_nombre',
-                caption: 'Nombre',
-                allowEditing: false,
-            },
-            {
                 dataField: 'con_telefono',
                 caption: 'Teléfono',
                 allowEditing: false,
@@ -45,11 +40,6 @@
             {
                 dataField: 'con_email',
                 caption: 'Correo',
-                allowEditing: false,
-            },
-            {
-                dataField: 'con_empresa',
-                caption: 'Empresa',
                 allowEditing: false,
             },
             {

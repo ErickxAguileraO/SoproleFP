@@ -68,9 +68,17 @@ $('#iniciacion-actividades').on('change', function () {
     var selectValor = $(this).val();
     var asunto_tipo = document.getElementById("iniciacion-actividades");
     if (selectValor == 'no') {
+
+        $("#formSubmit input").prop("disabled", true);
+        $("#formSubmit select").prop("disabled", true);
+
+
         $(".flex-ventana-locales").css({ 'display': 'flex' });
         asunto_tipo.value = "no";
         listarLocales(0, 0);
+    }else{
+        $("#formSubmit input").prop("disabled", false);
+        $("#formSubmit select").prop("disabled", false);
     }
 });
 

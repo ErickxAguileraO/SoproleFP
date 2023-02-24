@@ -45,9 +45,9 @@ class EditableController extends Controller
         $reglasValidacion = [
             'titulo' => ['required', 'string', 'max:250'],
             'estado' => ['required'],
-            'contenido' => ['required','max:2000' ],
+            'contenido' => ['required','max:6000' ],
             'tipo' => ['required', 'max:250'],
-            'video' => ['required', 'url'],
+            'video' => ['nullable', 'url'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -72,9 +72,9 @@ class EditableController extends Controller
             'editable_id' => ['required'],
             'estado' => ['required'],
             'titulo' => ['required', 'string', 'max:250'],
-            'contenido' => ['required','max:2000' ],
+            'contenido' => ['required','max:6000' ],
             'tipo' => ['required', 'max:250'],
-            'video' => ['required', 'url', 'max:250'],
+            'video' => ['nullable', 'url', 'max:250'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

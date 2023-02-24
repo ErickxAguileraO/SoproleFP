@@ -24,6 +24,8 @@ use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
+use App\Http\Controllers\Web\ContactanosController  as WebContactanosController;
+use App\Http\Controllers\Web\EditablesController as WebEditablesController;
 use App\Http\Controllers\Web\HazteClienteController as WebHazteClienteController;
 use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
@@ -63,20 +65,16 @@ Route::group(['as' => 'web.'], function () {
 Route::get('conocenos', [WebConocenosController::class, 'show'])->name('web.conocenos');
 Route::get('web/get-comuna-by-region/{region}', [LocalController::class, 'getComunaByRegion'])->name('web.local.get.comuna,by.region');
 
-
-
 Route::controller(WebMiniSitioController::class)->prefix('mini-sitio')->group(function () {
     Route::get('filtro/reset/{segmento}', 'reset')->name('web.mini.sitio.reset');
     Route::get('filtro/tags/{tag}/{segmento}', 'filtrar')->name('web.mini.sitio.filtrar');
     Route::get('{url}', 'index')->name('web.mini.sitio');
 });
 
-
 Route::controller(WebProductoController::class)->prefix('productos')->group(function () {
     Route::get('detalle/{url}', 'detalle')->name('web.productos.detalle');
     Route::get('', 'index')->name('web.productos');
 });
-
 
 Route::controller(WebHazteClienteController::class)->prefix('hazte-cliente')->group(function () {
     Route::get('', 'index')->name('web.hazte.cliente');
@@ -84,31 +82,22 @@ Route::controller(WebHazteClienteController::class)->prefix('hazte-cliente')->gr
     Route::get('listar/locales/{region}/{comuna}', 'getLocales')->name('web.hazte.cliente.get.locales');
 });
 
-
-Route::get('/politicas-de-privacidad', function () {
-    return view('web.politicas.index');
+Route::controller(WebContactanosController::class)->prefix('contacto')->group(function () {
+    Route::get('', 'index')->name('web.contacto');
+    Route::post('store', 'store')->name('web.contacto.store');
 });
 
-Route::get('/terminos-condiciones', function () {
-    return view('web.terminos.index');
+Route::controller(WebEditablesController::class)->group(function () {
+    Route::get('politicas-de-privacidad', 'index')->name('web.politicas.privacidad');
+    Route::get('terminos-condiciones', 'index')->name('web.terminos.condiciones');
+    Route::get('informacion-consumidor', 'index')->name('web.informacion.consumidor');
 });
-
-Route::get('/informacion-consumidor', function () {
-    return view('web.informacionConsumidor.index');
-});
-
 
 Route::get('/nuestras-recetas', function () {
     return view('web.recetas.index');
 });
 Route::get('/receta-detalle', function () {
     return view('web.recetas.detalle');
-});
-
-
-
-Route::get('/producto-detalle', function () {
-    return view('web.productos.detalle');
 });
 
 Route::get('/noticias-tendencias', function () {
@@ -119,10 +108,8 @@ Route::get('/detalle-noticia-tendencia', function () {
     return view('web.noticias.detalle');
 });
 
-
-
-Route::get('/contacto', function () {
-    return view('web.contacto.index');
+Route::get('/correo', function () {
+    return view('mails.index');
 });
 
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');

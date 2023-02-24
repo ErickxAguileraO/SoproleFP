@@ -20,5 +20,6 @@ class Contacto extends Model
         'con_empresa',
         'con_calle',
         'con_ciudad',
+        'con_consulta'
     ];
 }

@@ -11,63 +11,23 @@
             Estimado/a usuario/a:</h4>
         <br>
         <p style="font-weight: 400;font-size: 16px; line-height: 24px; text-align: center;color: #2B414F;">Se ha
-            registrado una nueva solicitud del formulario <b>Hazte cliente</b>, el detalle se presenta a continuación:
+            registrado una nueva solicitud del formulario <b>Contáctenos</b>, el detalle se presenta a continuación:
         </p>
         <table style="border-collapse: collapse; margin: 0 auto; font-size: 16px; font-family: sans-serif;min-width: 400px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);width: 50%;">
             <tbody>
                 <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Razón social</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_razon_social'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Rut</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_rut'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Tipo</td>
-                    <td style="">{{ $datosFormulario['tipo'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">¿Cual?</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_cual'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Dirección</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_direccion'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Número</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_numero'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Región</td>
-                    <td style="">{{ $datosFormulario['region'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Comuna</td>
-                    <td style="">{{ $datosFormulario['comuna'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
-                    <td style=" padding: 12px 15px;font-weight: 400;">Nombre</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_nombre'] }}</td>
-                </tr>
-
-                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
                     <td style=" padding: 12px 15px;font-weight: 400;">Teléfono</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_telefono'] }}</td>
+                    <td style="">{{ $datosFormulario['datos']['con_telefono'] }}</td>
                 </tr>
 
                 <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
                     <td style=" padding: 12px 15px;font-weight: 400;">Correo</td>
-                    <td style="">{{ $datosFormulario['datos']['fhc_correo'] }}</td>
+                    <td style="">{{ $datosFormulario['datos']['con_email'] }}</td>
+                </tr>
+
+                <tr style=" padding: 12px 15px;border-bottom: 1px solid #dddddd;">
+                    <td style=" padding: 12px 15px;font-weight: 400;">Consulta</td>
+                    <td style="">{{ $datosFormulario['datos']['con_consulta'] }}</td>
                 </tr>
             </tbody>
         </table>
