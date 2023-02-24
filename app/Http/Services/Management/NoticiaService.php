@@ -18,10 +18,16 @@ class NoticiaService
 
         try {
 
+            $noticia_slider = NULL;
+            if ($request->file('imagen')) {
+                $noticia_slider = FileService::upload($request->file('imagen'), 'imagenes/noticias');
+            }
+
             $noticia = Noticia::create([
                 'not_titulo' => $request->titulo,
                 'not_titulo2' => $request->titulo2,
                 'not_contenido' => $request->contenido,
+                'not_slider' => $noticia_slider,
                 'not_fecha' => Carbon::createFromFormat('Y-m-d', $request->fecha)->toDateString(),
                 'not_estado' =>$request->estado,
                 'not_url' => Str::slug($request->titulo)
@@ -84,6 +90,10 @@ class NoticiaService
             $noticia->not_estado = $request->estado;
             $noticia->not_url = Str::slug($request->titulo);
     
+            if ($request->file('imagen')) {
+                $noticia->not_slider = FileService::upload($request->file('imagen'), 'imagenes/noticias');
+            }
+
             $noticia->save();
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){

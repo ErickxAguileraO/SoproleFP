@@ -15,10 +15,12 @@
             <ul class="slides">
 
                 @foreach ($ultimasnoticias as $item)
-                    @if (isset($item->imagenes[0]->ino_imagen))
+                    @if (isset($item->not_slider))
                         <li style=" z-index:0; opacity: 1;" class="li-slider">
-                            <img class="ocultar-movil" style="max-height: 360px;" src="{{ asset($item->imagenes[0]->ino_imagen) }}" alt="">
-                            <img class="ocultar-escritorio" style="max-height: 360px;" src="{{ asset($item->imagenes[0]->ino_imagen) }}" alt="">
+                            <a href="{{route('web.noticia.detalle', $item->not_id).'-'.$item->not_url}}">
+                                <img class="ocultar-movil" src="{{ asset($item->not_slider) }}" alt="">
+                                <img class="ocultar-escritorio" src="{{ asset($item->not_slider) }}" alt="">
+                            </a>
                         </li>
                     @endif
                 @endforeach

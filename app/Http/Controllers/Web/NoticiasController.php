@@ -37,7 +37,7 @@ class NoticiasController extends Controller
 
         return view('web.noticias.index', [
             "noticias" =>  $noticias,
-            "ultimasnoticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->take(3)->get(),
+            "ultimasnoticias" =>  Noticia::with('imagenes')->where('not_estado', 1)->whereNotNull('not_slider')->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->take(5)->get(),
             "segmentos" =>  Segmento::where('seg_estado', 1)->orderby('seg_orden', 'asc')->get(),
             "segmentosId" =>  !is_null($request->segmentoId) ? json_encode($request->segmentoId) : NULL,
         ]);

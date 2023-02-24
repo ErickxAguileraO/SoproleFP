@@ -6,8 +6,8 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" height="360" src="{{ isset($noticia->imagenes[0]->ino_imagen) ? asset($noticia->imagenes[0]->ino_imagen) : NULL }}" alt="">
-        <img class="ocultar-escritorio"  height="360" src="{{ isset($noticia->imagenes[0]->ino_imagen) ? asset($noticia->imagenes[0]->ino_imagen) : NULL }} }}" alt="">
+        <img class="ocultar-movil" src="{{ isset($noticia->not_slider) ? asset($noticia->not_slider) : NULL }}" alt="">
+        <img class="ocultar-escritorio"  src="{{ isset($noticia->not_slider) ? asset($noticia->not_slider) : NULL }} }}" alt="">
         {{-- <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-tendencia-escritorio.svg') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-tendencia-movil.svg') }}" alt=""> --}}
         <h1 class="txt-portada">{{$noticia->not_titulo}}</h1>

@@ -37,6 +37,18 @@
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50" placeholder="Contenido">{{ $noticia->not_contenido }}</textarea>
                         </div>
+                        
+                        <label for="imagen">Slider ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>
+                        @if ($noticia->not_slider != '')
+                            <a target="_blank" href='{{ $noticia->not_slider }} '>Ver
+                                imagen adjunta <i class="fas fa-eye"></i></a>
+                        @endif
+                        <div class="row mb-3">
+                            <div class="form-floating my-3">
+                                <input type="file" class="input-img-solo" id="imagen" name="imagen">
+                            </div>
+                        </div>
+
                         <div>
                             <div class="wp-documentos-right tipo-img-txt">
                                 <label for="">Galería</label>
@@ -130,4 +142,8 @@
 @push('extra-js')
     <script src="{{ asset('public/management/js/noticias/editar.js?v=' . rand()) }}"></script>
     <script src="{{ asset('public/management/js/noticias/imagenes.js?v=' . rand()) }}"></script>
+    <script>
+        let ancho = {{ $ancho }}
+        let alto = {{ $alto }}
+    </script>
 @endpush
