@@ -121,6 +121,11 @@ Route::get('/contacto', function () {
     return view('web.contacto.index');
 });
 
+
+Route::get('/correo', function () {
+    return view('web.correo.index');
+});
+
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
 
 //ADMINISTRACIÓN
