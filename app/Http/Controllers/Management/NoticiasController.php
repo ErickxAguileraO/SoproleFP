@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Validator;
 class NoticiasController extends Controller
 {
 
-    private $anchoImagen = 2208;
-    private $altoImagen =  1242;
+    // private $anchoImagen = 2208;
+    // private $altoImagen =  1242;
+    private $anchoImagen = 1440;
+    private $altoImagen =  360;
 
     public function index()
     {
@@ -61,6 +63,7 @@ class NoticiasController extends Controller
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
             'segmentos' => ['required'],
+            'imagen' => ['required', 'mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -90,6 +93,7 @@ class NoticiasController extends Controller
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
             'segmentos' => ['required'],
+            'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);

@@ -17,6 +17,7 @@ class Noticia extends Model
         'not_titulo',
         'not_titulo2',
         'not_contenido',
+        'not_slider',
         'not_fecha',
         'not_url',
         'not_estado'
