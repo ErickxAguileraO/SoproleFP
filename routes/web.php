@@ -25,6 +25,7 @@ use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
 use App\Http\Controllers\Web\ConocenosController as WebConocenosController;
 use App\Http\Controllers\Web\ContactanosController  as WebContactanosController;
+use App\Http\Controllers\Web\EditablesController as WebEditablesController;
 use App\Http\Controllers\Web\HazteClienteController as WebHazteClienteController;
 use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
@@ -86,16 +87,10 @@ Route::controller(WebContactanosController::class)->prefix('contacto')->group(fu
     Route::post('store', 'store')->name('web.contacto.store');
 });
 
-Route::get('/politicas-de-privacidad', function () {
-    return view('web.politicas.index');
-});
-
-Route::get('/terminos-condiciones', function () {
-    return view('web.terminos.index');
-});
-
-Route::get('/informacion-consumidor', function () {
-    return view('web.informacionConsumidor.index');
+Route::controller(WebEditablesController::class)->group(function () {
+    Route::get('politicas-de-privacidad', 'index')->name('web.politicas.privacidad');
+    Route::get('terminos-condiciones', 'index')->name('web.terminos.condiciones');
+    Route::get('informacion-consumidor', 'index')->name('web.informacion.consumidor');
 });
 
 Route::get('/nuestras-recetas', function () {
