@@ -2,9 +2,12 @@
 
 namespace App\Http\Services\Web;
 
-use App\Models\Contacto;
-use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+
+use App\Models\Contacto;
+use App\Mail\ContactoContactenos;
 
 class ContactenosService
 {
@@ -14,12 +17,13 @@ class ContactenosService
         DB::beginTransaction();
         try {
 
-            Contacto::create([
+            $contacto = Contacto::create([
                 'con_telefono' => $request->telefono,
                 'con_email' => $request->correo,
                 'con_consulta' => strip_tags($request->consulta),
             ]);
-
+            self::sendMail($contacto);
+            
             DB::commit();
 
             return response()->json([
@@ -34,4 +38,12 @@ class ContactenosService
             ], 500);
         }
     }
+
+    private static function sendMail($datos)
+    {
+        Mail::to(env('MAIL_CONTACTENOS'))->send(new ContactoContactenos([
+            'datos' =>  $datos,
+        ]));
+    }
+
 }
