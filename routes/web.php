@@ -112,6 +112,11 @@ Route::get('/detalle-noticia-tendencia', function () {
 
 
 
+
+Route::get('/correo', function () {
+    return view('web.correo.index');
+});
+
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
 
 //ADMINISTRACIÓN
