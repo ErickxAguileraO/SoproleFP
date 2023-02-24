@@ -15,13 +15,6 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-
-                        <label for="">Nombre</label>
-                        <div class="form-floating my-3">
-                            <input type="text" readonly class="form-control" value="{{ $contacto->con_nombre }}"
-                                required>
-                        </div>
-
                         <label for="">Teléfono</label>
                         <div class="form-floating my-3">
                             <input type="text" readonly class="form-control" value="{{ $contacto->con_telefono }}"
@@ -31,21 +24,9 @@
                         <div class="form-floating my-3">
                             <input type="text" readonly class="form-control" value="{{ $contacto->con_email }}" required>
                         </div>
-                        <label for="">Empresa</label>
-                        <div class="form-floating my-3">
-                            <input type="text" readonly class="form-control" value="{{ $contacto->con_empresa }}"
-                                required>
-                        </div>
-                        <label for="">Calle</label>
-                        <div class="form-floating my-3">
-                            <input type="text" readonly class="form-control" value="{{ $contacto->con_calle }}" required>
-                        </div>
-                        <label for="">Ciudad</label>
-                        <div class="form-floating my-3">
-                            <input type="text" readonly class="form-control" value="{{ $contacto->con_ciudad }}"
-                                required>
-                        </div>
-
+                        <label for="">Consulta </label>
+                        <textarea readonly id="contenido" class="form-control" name="contenido" rows="20" cols="50">{{ $contacto->con_consulta }}</textarea>
+                        <br />
                         <a href="{{ route('administracion.contacto.index') }}" class="btn btn-success">Volver</a>
                     </div>
                 </div>
