@@ -108,13 +108,8 @@ Route::get('/detalle-noticia-tendencia', function () {
     return view('web.noticias.detalle');
 });
 
-
-
-
-
-
 Route::get('/correo', function () {
-    return view('web.correo.index');
+    return view('mails.index');
 });
 
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');

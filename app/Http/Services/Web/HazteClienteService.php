@@ -30,7 +30,7 @@ class HazteClienteService
                 'fhc_telefono' => $request->telefono,
                 'fhc_correo' => $request->correo,
             ]);
-            //self::sendMail($cliente);
+            self::sendMail($cliente);
 
             DB::commit();
 
