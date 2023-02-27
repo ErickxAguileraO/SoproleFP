@@ -13,12 +13,22 @@
                         src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : null }}"
                         alt="">
                 </div>
-                <div class="carruselImagenes thumbnail_container">
-                    @foreach ($receta->imagenes as $item)
-                        <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}"
-                                alt=""></div>
-                    @endforeach
-                </div>
+                @if (count($receta->imagenes) > 6)
+                    <div class="carruselImagenes thumbnail_container">
+                        @foreach ($receta->imagenes as $item)
+                            <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}"
+                                    alt=""></div>
+                        @endforeach
+                    </div>
+                @else
+                    <div class="flex-wrap-6 thumbnail_container">
+                        @foreach ($receta->imagenes as $item)
+                            <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}"
+                                    alt=""></div>
+                        @endforeach
+                    </div>
+                @endif
+                
             </div>
             <div class="txt-detalle-info">
                 <div class="titulo-receta">

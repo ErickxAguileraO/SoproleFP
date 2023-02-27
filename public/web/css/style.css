@@ -596,6 +596,14 @@ textarea{
     width: 300px;
     height: auto;
 }
+/* wrap 6 */
+.flex-wrap-6{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-wrap-6 img{
+    width: 85px;
+}
 /* Cuadros row 3 */
 .cuadros-row-3{
     display: grid;
