@@ -588,6 +588,8 @@ textarea{
 }
 /* wrap 4 */
 .flex-wrap-4{
+    display: flex;
+    flex-wrap: wrap;
     margin: 50px 0px;
 }
 .flex-wrap-4 .cuadros-info-n{
