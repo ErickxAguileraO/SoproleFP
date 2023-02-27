@@ -26,10 +26,13 @@
     <div class="flex-menu">
         <div class="menu">
             <div class="rrss-header">
-                <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
-                <a href="https://www.soprole.cl/" target="_blank"><img
-                        src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
+                @php
+                    $facebook = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('facebook');
+                    $instagram = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('instagram');
+                @endphp
+                <a href="{{isset($instagram->con_link) ? $instagram->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                <a href="{{isset($facebook->con_link) ? $facebook->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                <a href="https://www.soprole.cl/" target="_blank"><img src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
 
             </div>
             <div class="menu-op">

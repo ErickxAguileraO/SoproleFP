@@ -3,15 +3,27 @@
     </div>
     
     <div class="contenido-footer">
+        @php
+            $facebook = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('facebook');
+            $instagram = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('instagram');
+            $mail = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('mail');
+            $telefono = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('telefono');
+            if (isset($mail->con_contenido)) {
+                $mail->con_contenido = str_replace(["<p>", "</p>"], "", $mail->con_contenido);
+            }
+            if (isset($telefono->con_contenido)) {
+                $telefono->con_contenido = str_replace(["<p>", "</p>"], "", $telefono->con_contenido);
+            }
+        @endphp
         <div class="logo-footer">
             <a href="/"><img src="{{ asset('/public/web/imagenes/logo.svg') }}" alt=""></a>
             <div>
                 <img src="{{ asset('/public/web/imagenes/i-correo.svg') }}" alt="">   
-                <a href="mailto:soproleFP@soprole.cl">soproleFP@soprole.cl</a>
+                <a href="mailto:{{isset($mail->con_contenido) ? $mail->con_contenido : 'soproleFP@soprole.cl'}}">{{isset($mail->con_contenido) ? $mail->con_contenido : 'soproleFP@soprole.cl'}}</a>
             </div>
             <div>
                 <img src="{{ asset('/public/web/imagenes/i-telefono.svg') }}" alt="">
-                <a href="tel:6006006600"><h3>600 600 6600</h3></a>
+                <a href="tel:{{isset($telefono->con_contenido) ? $telefono->con_contenido : 'soproleFP@soprole.cl'}}"><h3>{{isset($telefono->con_contenido) ? $telefono->con_contenido : 'soproleFP@soprole.cl'}}</h3></a>
             </div>
         </div>
         <div class="linea-columna"></div>
@@ -34,8 +46,8 @@
             <div>
                 <p>Encuéntranos en redes sociales</p>
                 <div class="logos-rrrss-footer">
-                    <a href=""><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                    <a href=""><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                    <a href="{{isset($instagram->con_link) ? $instagram->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                    <a href="{{isset($facebook->con_link) ? $facebook->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
                 </div>
             </div>
             
