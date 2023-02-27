@@ -36,7 +36,7 @@
             {{-- <h2 style="margin-top: 50px">Filtrado por: <p>Leche</p> </h2> --}}
         </section>
 
-        <section class="data" id="data">
+        <section class="data seccion-home" id="data">
             @include('web.recetas.data')
         </section>
     </div>

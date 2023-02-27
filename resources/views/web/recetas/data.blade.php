@@ -1,4 +1,4 @@
-<section class="seccion-home seccion-listas">
+<section class="seccion-listas">
     <input style="display: none;" type="text" id="old_filtro_segmento" name="old_filtro_segmento" value="{{$segmentosId}}">
     <input style="display: none;" type="text" id="old_filtro_producto" name="old_filtro_producto" value="{{$productosId}}">
     <div class="cuadros-info cuadros-row-4">
