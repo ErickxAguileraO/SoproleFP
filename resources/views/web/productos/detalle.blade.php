@@ -58,8 +58,8 @@
         @if (count($producto->RecetasWeb) > 0)
             <section class="slider-recetas">
                 <h4>Recetas que puedes preparar con este producto</h4>
-                <div class="carruselRecetas">
-                    @if (count($producto->RecetasWeb) >= 4)
+                @if (count($producto->RecetasWeb) >= 4)
+                    <div class="carruselRecetas">
                         @foreach ($producto->RecetasWeb as $rec)
                             <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
@@ -68,12 +68,19 @@
                                 </div>
                             </a>
                         @endforeach
-                        @else
-                        <h1>Hola mundo</h1>
-                    @endif
-                    
-                </div>
-
+                    </div>
+                @else
+                    <div class="cuadros-info flex-wrap-4">
+                        @foreach ($producto->RecetasWeb as $rec)
+                            <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
+                                <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
+                                <div class="texto">
+                                    <h5>{{ $rec->rec_titulo }}</h5>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                @endif
             </section>
         @endif
     </div>
