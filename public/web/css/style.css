@@ -2265,3 +2265,8 @@ footer a{
         gap: 20px;
     }
 }
+
+.nice-select .list{
+    max-height: 400px;
+    overflow-y: scroll;
+}
