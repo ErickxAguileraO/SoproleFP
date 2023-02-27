@@ -1573,7 +1573,9 @@ footer a{
     .sub-content-drop {
         width: 45%;
     }
-    
+    .flex-wrap-4{
+       justify-content: center;
+    }
     /* Cuadros row 4 */
     .cuadros-row-4{
         display: grid;
@@ -2100,6 +2102,11 @@ footer a{
     .sub-titulo {
         width: 100%;
         text-align: left !important;
+    }
+    /* flex wrap 4 */
+    .flex-wrap-4 .cuadros-info-n{
+        width: 100%;
+        height: auto;
     }
     /* Cuadros row 4 */
     .seccion-listas .cuadros-row-4{
