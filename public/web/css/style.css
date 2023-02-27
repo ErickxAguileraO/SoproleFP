@@ -1197,6 +1197,8 @@ textarea{
 }
 .carruselRecetas .cuadros-info-n {
     margin-right: 20px;
+    width: 300px;
+    height: auto;
 }
 
 #product_viewer {
