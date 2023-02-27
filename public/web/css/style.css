@@ -1197,7 +1197,7 @@ textarea{
 }
 .carruselRecetas .cuadros-info-n {
     margin-right: 20px;
-    width: 300px;
+    width: 300px !important;
     height: auto;
 }
 
@@ -2264,4 +2264,9 @@ footer a{
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
+}
+
+.nice-select .list{
+    max-height: 400px;
+    overflow-y: scroll;
 }

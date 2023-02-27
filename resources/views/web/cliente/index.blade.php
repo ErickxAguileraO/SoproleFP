@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('web.cliente.spinner')
+@include('web.cliente.spinner')
 
 
     <div class="flex-ventana-locales">
