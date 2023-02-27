@@ -13,7 +13,7 @@
                         src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : null }}"
                         alt="">
                 </div>
-                @if (count($receta->imagenes) > 6)
+                @if (count($receta->imagenes) >= 6)
                     <div class="carruselImagenes thumbnail_container">
                         @foreach ($receta->imagenes as $item)
                             <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}"

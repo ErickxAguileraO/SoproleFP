@@ -597,9 +597,13 @@ textarea{
     height: auto;
 }
 /* wrap 6 */
-.flex-wrap-6{
-    display: flex;
+.flex-wrap-6 {
+    display: flex !important;
     flex-wrap: wrap;
+    justify-content: flex-start !important;
+}
+.flex-wrap-6 .imagen-n{
+    margin-right: 5px;
 }
 .flex-wrap-6 img{
     width: 85px;
@@ -1123,7 +1127,7 @@ textarea{
 }
 
 .vista-previa .thumbnail_container {
-    height: 80px;
+    height: auto;
     display: flex;
     justify-content: space-between;
 }
