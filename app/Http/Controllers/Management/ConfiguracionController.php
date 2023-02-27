@@ -32,6 +32,11 @@ class ConfiguracionController extends Controller
         return Configuracion::all();
     }
 
+    public function listarByTipo($tipo)
+    {
+        return Configuracion::where('con_tipo', $tipo)->first();
+    }
+
     public function editar(Configuracion $configuracion)
     {
         return view('management.configuracion.editar', [
