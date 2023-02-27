@@ -26,7 +26,7 @@
             </div>
         </section>
 
-        <section class="data" id="data">
+        <section class="data seccion-home" id="data">
             @include('web.academia.data')
         </section>
     </div>

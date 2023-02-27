@@ -1,4 +1,4 @@
-<section class="seccion-home seccion-listas">
+<section class="seccion-listas">
     <div class="cuadros-info cuadros-row-3">
         <input style="display: none;" type="text" id="old_filtro_segmento" name="old_filtro_segmento" value="{{$segmentosId}}">
         @foreach ($academias as $item)
