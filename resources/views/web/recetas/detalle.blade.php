@@ -85,7 +85,7 @@
             <h4>Para preparar esto necesitas</h4>
 
 
-            @if (count($receta->Producto) >= 4)
+            @if (count($receta->Producto) > 4)
                 <div class="carruselRecetas">
                     @foreach ($receta->Producto as $item)
                         <a href="/productos/detalle/{{ $item->pro_url }}" class="cuadros-info-n">

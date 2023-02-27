@@ -58,7 +58,7 @@
         @if (count($producto->RecetasWeb) > 0)
             <section class="slider-recetas">
                 <h4>Recetas que puedes preparar con este producto</h4>
-                @if (count($producto->RecetasWeb) >= 4)
+                @if (count($producto->RecetasWeb) > 4)
                     <div class="carruselRecetas">
                         @foreach ($producto->RecetasWeb as $rec)
                             <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
