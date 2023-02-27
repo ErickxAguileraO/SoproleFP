@@ -285,6 +285,7 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('crear', 'crear')->name('configuracion.crear');
             Route::get('editar/{configuracion}', 'editar')->name('configuracion.editar');
             Route::get('listar', 'listar')->name('configuracion.listar');
+            Route::get('listarByTipo/', 'listarByTipo')->name('configuracion.listarByTipo');
             Route::get('eliminar/{configuracion}', 'eliminar')->name('configuracion.eliminar');
             Route::post('store', 'store')->name('configuracion.store');
             Route::post('update', 'update')->name('configuracion.update');
