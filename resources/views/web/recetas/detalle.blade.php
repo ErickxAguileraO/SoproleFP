@@ -97,7 +97,7 @@
                     @endforeach
                 </div>
             @else
-                <div class="cuadros-info cuadros-row-3">
+                <div class="cuadros-info flex-wrap-4">
                     @foreach ($receta->Producto as $pro)
                         <a href="/productos/detalle/{{ $pro->pro_url }}"class="cuadros-info-n">
                             <div class="img"><img src="{{ asset($pro->pro_imagen) }}" alt=""></div>
