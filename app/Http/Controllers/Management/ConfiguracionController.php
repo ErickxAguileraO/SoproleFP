@@ -32,7 +32,7 @@ class ConfiguracionController extends Controller
         return Configuracion::all();
     }
 
-    public function listarByTipo($tipo)
+    public static function listarByTipo($tipo)
     {
         return Configuracion::where('con_tipo', $tipo)->first();
     }

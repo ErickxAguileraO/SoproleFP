@@ -83,16 +83,31 @@
 
         <section class="slider-recetas">
             <h4>Para preparar esto necesitas</h4>
-            <div class="carruselRecetas">
-                @foreach ($receta->Producto as $item)
-                    <a href="/productos/detalle/{{ $item->pro_url }}" class="cuadros-info-n">
-                        <div class="img"><img src="{{ $item->pro_imagen }}" alt=""></div>
-                        <div class="texto">
-                            <h5>{{ $item->pro_titulo }}</h5>
-                        </div>
-                    </a>
-                @endforeach
-            </div>
+
+
+            @if (count($receta->Producto) >= 4)
+                <div class="carruselRecetas">
+                    @foreach ($receta->Producto as $item)
+                        <a href="/productos/detalle/{{ $item->pro_url }}" class="cuadros-info-n">
+                            <div class="img"><img src="{{ $item->pro_imagen }}" alt=""></div>
+                            <div class="texto">
+                                <h5>{{ $item->pro_titulo }}</h5>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
+            @else
+                <div class="cuadros-info cuadros-row-3">
+                    @foreach ($receta->Producto as $pro)
+                        <a href="/productos/detalle/{{ $pro->pro_url }}"class="cuadros-info-n">
+                            <div class="img"><img src="{{ asset($pro->pro_imagen) }}" alt=""></div>
+                            <div class="texto">
+                                <h5>{{ $pro->pro_titulo }}</h5>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
+            @endif
         </section>
     </div>
 
