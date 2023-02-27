@@ -60,7 +60,7 @@
                 <h4>Recetas que puedes preparar con este producto</h4>
                 <div class="carruselRecetas">
                     @foreach ($producto->RecetasWeb as $rec)
-                        <a href="/receta/detalle/{{ $rec->rec_url }}" class="cuadros-info-n">
+                        <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
                             <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
                             <div class="texto">
                                 <h5>{{ $rec->rec_titulo }}</h5>
