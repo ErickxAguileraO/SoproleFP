@@ -1197,7 +1197,7 @@ textarea{
 }
 .carruselRecetas .cuadros-info-n {
     margin-right: 20px;
-    width: 300px;
+    width: 300px !important;
     height: auto;
 }
 
