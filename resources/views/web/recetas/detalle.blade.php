@@ -9,17 +9,20 @@
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
                 <div class="img-principal">
-                    <img class="main_img" src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : NULL}}" alt="">
-                </div>        
+                    <img class="main_img"
+                        src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : null }}"
+                        alt="">
+                </div>
                 <div class="carruselImagenes thumbnail_container">
                     @foreach ($receta->imagenes as $item)
-                        <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}" alt=""></div>
+                        <div class="active imagen-n"><img class="thumbnail" src="{{ asset($item->ire_imagen) }}"
+                                alt=""></div>
                     @endforeach
                 </div>
             </div>
             <div class="txt-detalle-info">
                 <div class="titulo-receta">
-                    <h2>{{$receta->rec_titulo}}</h2>
+                    <h2>{{ $receta->rec_titulo }}</h2>
                     <div class="dificultad">
                         <p>Dificultad de la receta</p>
                         @if ($receta->rec_dificultad == 1)
@@ -59,8 +62,6 @@
                         @endphp
                     </div>
                 </div>
-                
-                
             </div>
         </div>
         <br>
@@ -71,31 +72,34 @@
                 echo $receta->rec_preparacion;
             @endphp
         </section>
-        
+
         <section class="video-conocenos">
             <h2>Tutorial</h2>
-            <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </section>
-        
-       <section class="slider-recetas">
+
+        <section class="slider-recetas">
             <h4>Para preparar esto necesitas</h4>
             <div class="carruselRecetas">
                 @foreach ($receta->Producto as $item)
-                    <a href="#" class="cuadros-info-n">
+                    <a href="/productos/detalle/{{ $item->pro_url }}" class="cuadros-info-n">
                         <div class="img"><img src="{{ $item->pro_imagen }}" alt=""></div>
                         <div class="texto">
-                            <h5>{{$item->pro_titulo}}</h5>
+                            <h5>{{ $item->pro_titulo }}</h5>
                         </div>
                     </a>
                 @endforeach
             </div>
         </section>
     </div>
-    
+
     @push('extra-js')
         <script>
             // Flex Slider
-            $(document).ready(function(){
+            $(document).ready(function() {
                 $('.flexslider-seccion').flexslider({
                     animation: "slide",
                 });
