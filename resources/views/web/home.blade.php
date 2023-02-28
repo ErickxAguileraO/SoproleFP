@@ -39,7 +39,8 @@
                     haciendo más eficiente sus procesos, alcanzando una mayor calidad y expertíz en su negocio</p>
                 <div class="cuadros-info cuadros-row-4">
                     @foreach ($academias as $academia)
-                        <a href="{{route('web.academia.detalle', $academia->aca_id).'-'.$academia->aca_url }}" class="cuadros-info-n">
+                        <a href="{{ route('web.academia.detalle', $academia->aca_id) . '-' . $academia->aca_url }}"
+                            class="cuadros-info-n">
                             <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
                             </div>
                             <div class="texto">
@@ -49,7 +50,7 @@
                         </a>
                     @endforeach
                 </div>
-                <a href="{{route('web.academia.index')}}" class="boton bg-red">Ver más cursos</a>
+                <a href="{{ route('web.academia.index') }}" class="boton bg-red">Ver más cursos</a>
             </div>
         </section>
 
@@ -79,7 +80,8 @@
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($recetas as $receta)
-                    <a href="{{route('web.receta.detalle', $receta->rec_id).'-'.$receta->rec_url }}" class="cuadros-info-n">
+                    <a href="{{ route('web.receta.detalle', $receta->rec_id) . '-' . $receta->rec_url }}"
+                        class="cuadros-info-n">
                         <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
                         </div>
                         <div class="texto">
@@ -88,7 +90,7 @@
                     </a>
                 @endforeach
             </div>
-            <a href="{{route('web.receta.index')}}" class="boton bg-red">Ver todas las recetas</a>
+            <a href="{{ route('web.receta.index') }}" class="boton bg-red">Ver todas las recetas</a>
         </section>
 
         <section class="seccion-home">
@@ -98,7 +100,8 @@
                 nuevos usos lácteos, perfectos para cada propósito</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($noticias as $noticia)
-                    <a href="{{route('web.noticia.detalle', $noticia->not_id).'-'.$noticia->not_url }}" class="cuadros-info-n ocultar-576">
+                    <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
+                        class="cuadros-info-n ocultar-576">
                         <div class="img"><img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
                         </div>
                         <div class="texto">
@@ -108,7 +111,7 @@
                     </a>
                 @endforeach
             </div>
-            <a href="{{route('web.noticia.index')}}" class="boton bg-red">Ver todas las noticias y tendencias</a>
+            <a href="{{ route('web.noticia.index') }}" class="boton bg-red">Ver todas las noticias y tendencias</a>
         </section>
 
         <section class="conocenos mostrar-1920">
@@ -135,7 +138,7 @@
                 </div>
             </div>
         </section>
-        {{-- Conocenos Movil --}}
+    
         <section class="conocenos mostrar-1100">
             <div class="concenos-img-txt">
                 <div>
@@ -148,14 +151,9 @@
                         ricos, y entregamos soluciones de alta calidad, diseñadas para cada propósito de nuestros clientes.
                     </p>
                     <br>
-                    <p>Nosotros somos expertos en la industria láctea y entendemos el rol fundamental que juega en tu
-                        cocina. El sabor, textura y apariencia en los platos que entregan los productos lácteos, son clave
-                        para entregar calidad a los miles de consumidores que se atienden día a día.</p>
-                    <br>
-                    <p> En Soprole Food Professionals, trabajamos en conjunto con nuestros clientes, en sus negocios,
-                        compartiendo ideas y formas de trabajo de manera permanente. Nos concentramos en esas preparaciones,
-                        en que los lácteos son el factor diferenciador, y que son el motivo por el que los consumidores
-                        entran a esa pastelería, pizzería, restaurante o cafeteria.</p>
+                    @php
+                        echo $conocenos->edi_contenido;
+                    @endphp
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
                 </div>
             </div>
