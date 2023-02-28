@@ -15,11 +15,11 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="form-group">
-
+                        <label for="nombre">Nombre</label>
                         <div class="form-floating my-3">
                             <input type="text" name="nombre" class="form-control" id="nombre"
                                 placeholder="nombre" autocomplete="new-password" value="" required>
-                            <label for="nombre">Nombre</label>
+                           
                         </div>
 
                         <label for="imagen">Imagen ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
