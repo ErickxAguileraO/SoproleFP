@@ -17,7 +17,7 @@ $(document).ready(function () {
         $('#filtro_categoria').trigger('change');
     }
 
-    $("#filtro_segmento, #filtro_categoria").change(function () {
+    const buscarProductos = () => {
         $(".spinner").show();
         $("#contenidorProductos").empty();
 
@@ -34,5 +34,15 @@ $(document).ready(function () {
                 $('#contenidorProductos').empty().html(result);
             }
         });
+    }
+
+    $("#filtro_segmento, #filtro_categoria").change(function () {
+        (buscarProductos)();
     });
+
+    $("#limpiarFiltros").click(function(){
+        $('#filtro_segmento,#filtro_categoria ').val('');
+        $('#filtro_segmento,#filtro_categoria ').selectpicker("refresh");
+        (buscarProductos)();
+    })
 });
