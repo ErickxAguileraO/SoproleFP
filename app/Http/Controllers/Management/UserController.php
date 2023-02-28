@@ -36,7 +36,7 @@ class UserController extends Controller
     {
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email','max:255', 'unique:Users,email'],
+            'email' => ['required', 'string', 'email','max:255', 'unique:users,email'],
             'password' => ['required','min:10', 'max:255', 'same:password_confirmation']
         ];
 
