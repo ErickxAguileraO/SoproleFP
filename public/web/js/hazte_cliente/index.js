@@ -3,12 +3,6 @@ $(".btn-agregar").on("click", function (event) {
     $('#spinner-div').show();
 
     resetValidationMessages();
-
-    if($("#rut").val().length < 11){
-        document.getElementById('rut_error').innerText = 'El rut debe tener al menos 11 caracteres';
-        $('#spinner-div').hide();
-        return;
-    }
     
     if($("#iniciacion-actividades").val().toLowerCase() != 'si'){
         document.getElementById('actividades_error').innerText = 'Para enviar el formulario debe haber iniciado actividades';
