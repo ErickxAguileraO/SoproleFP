@@ -25,6 +25,9 @@ class HazteClienteController extends Controller
 
     public function store(Request $request)
     {
+        if($request->rut && strlen($request->rut)<= 11){
+            $request->merge(['rut' => 'rut es no valido']);
+        }
 
         $reglasValidacion = [
             'razon_social' => ['required', 'string', 'max:200'],
