@@ -59,4 +59,33 @@ class UserService
             ], 500);
         }
     }
+
+
+
+    public static function editarMiCuenta($request, $id){
+
+        DB::beginTransaction();
+
+        try {
+            $usuario = User::where('id', $id)->first();
+            $usuario->name = $request->nombre;
+            $usuario->email = $request->email;
+            $usuario->password = Hash::make($request->password);
+            $usuario->save();
+
+            DB::commit();
+
+            return response()->json([
+                'status' => 'T',
+                'message' => 'El usuario se ha actualizado correctamente.',
+            ], 200);
+        } catch (\Exception $exc) {
+            DB::rollback();
+
+            return response()->json([
+                'status' => 'F',
+                'message' => 'Ha ocurrido un error inesperado. Inténtelo más tarde.'
+            ], 500);
+        }
+    }
 }

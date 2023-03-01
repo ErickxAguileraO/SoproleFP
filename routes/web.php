@@ -128,8 +128,10 @@ Route::group(['middleware' => ['auth']], function () {
             Route::post('', 'store')->name('usuarios.store');
             Route::get('listado', 'getUsers')->name('usuarios.get.users');
             Route::get('{usuario}/perfil', 'edit')->name('usuarios.edit');
+            Route::post('actualizar-cuenta', 'actualizar_cuenta')->name('usuarios.editar.cuenta.submit');
             Route::post('{id}', 'update')->name('usuarios.update');
             Route::get('nuevo-usuario', 'create')->name('usuarios.create');
+            Route::get('editar-cuenta', 'editarCuenta')->name('usuarios.editar.cuenta');
         });
 
         Route::controller(SliderController::class)->prefix('slider')->group(function () {
