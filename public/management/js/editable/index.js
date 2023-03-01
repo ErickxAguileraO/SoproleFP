@@ -102,8 +102,7 @@
                 hidingPriority: 0,
                 cellTemplate(container, options) {
                     let html_editar = '<a href="/administracion/editable/editar/' + options.data.edi_id + '" class="edit" style="color: #DD5702; font-size: 20px; margin-right:10px;"><i class="fas fa-edit"></i></a>';
-                    let html_eliminar = '<a class="eliminar" codigo="' + options.data.edi_id + '" style="color: #DD5702; font-size: 20px;"><i class="fas fa-trash"></i></a>';
-                    return $(html_editar + html_eliminar);
+                    return $(html_editar);
                 }
             }],
     }).dxDataGrid('instance');

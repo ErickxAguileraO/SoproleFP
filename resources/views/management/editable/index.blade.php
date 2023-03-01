@@ -3,9 +3,6 @@
 @section('title', 'Editables')
 
 @section('content')
-
-    <a class="btn btn-primary float-right" href="{{ route('administracion.editable.crear') }}">Crear</a>
-
     <h1>Editables</h1>
     @csrf
     <div class="dx-viewport demo-container">
