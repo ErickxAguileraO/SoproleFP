@@ -17,6 +17,17 @@ body{
     align-items: center;
 }
 
+/* Scroll */
+::-webkit-scrollbar {
+    width: 9px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #cccccc;
+}
 
 h2{
     font-weight: 700;
@@ -2059,8 +2070,8 @@ footer a{
     /* Modal ir a tienda */
     .modal-tienda{
         max-width: 500px;
-        width: 500px;
-        height: 400px;
+        width: 600px;
+        height: 700px;
         overflow-x: scroll;
     }
 }
@@ -2251,9 +2262,9 @@ footer a{
         left: 0px;
     }
     .modal-tienda{
-        max-width: 300px;
-        width: 300px;
-        height: 300px;
+        max-width: 320px;
+        width: 320px;
+        height: 600px;
         overflow-x: scroll;
     }
     .modal-tienda iframe{
