@@ -370,10 +370,11 @@ textarea{
 .modal-tienda{
     max-width: 674px;
     width: 674px;
-    height: auto;
+    height: 700px;
     border-radius: 20px;
     background-color: white;
     padding: 36px;
+    overflow-x: scroll;
 }
 .modal-tienda h5{
     font-weight: 600;
@@ -2059,10 +2060,8 @@ footer a{
     .modal-tienda{
         max-width: 500px;
         width: 500px;
-        height: auto;
-        border-radius: 20px;
-        background-color: white;
-        padding: 36px;
+        height: 400px;
+        overflow-x: scroll;
     }
 }
 
@@ -2254,10 +2253,8 @@ footer a{
     .modal-tienda{
         max-width: 300px;
         width: 300px;
-        height: auto;
-        border-radius: 20px;
-        background-color: white;
-        padding: 36px;
+        height: 300px;
+        overflow-x: scroll;
     }
     .modal-tienda iframe{
         max-width: 100%;
