@@ -81,7 +81,7 @@
                                     {{ Auth::user()->name }}
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-admin" aria-labelledby="dropdownMenuButton1">
-                                    <li><a class="dropdown-item" href=""><i class="bi bi-person-fill"></i> Mi
+                                    <li><a class="dropdown-item" href="{{route('administracion.usuarios.editar.cuenta')}}"><i class="bi bi-person-fill"></i> Mi
                                             cuenta</a></li>
                                     <li><a class="dropdown-item" id="logoutLink"><i class="bi bi-box-arrow-left"></i>
                                             Cerrar sesión</a></li>

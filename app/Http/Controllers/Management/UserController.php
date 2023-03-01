@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Management\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
@@ -36,8 +37,8 @@ class UserController extends Controller
     {
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email','max:255', 'unique:users,email'],
-            'password' => ['required','min:10', 'max:255', 'same:password_confirmation']
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'password' => ['required', 'min:10', 'max:255', 'same:password_confirmation']
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -56,7 +57,7 @@ class UserController extends Controller
     {
         $reglasValidacion = [
             'nombre' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email','max:255', 'unique:Users,email,'.$id], 
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:Users,email,' . $id],
         ];
 
         $validacion = Validator::make($request->all(), $reglasValidacion);
@@ -68,6 +69,37 @@ class UserController extends Controller
             ], 400);
         } else {
             return UserService::editar($request, $id);
-        }  
+        }
+    }
+
+    public function editarCuenta()
+    {
+
+        return view('management.users.editar_cuenta', [
+            "usuario" =>  Auth::user()
+        ]);
+    }
+
+
+    public function actualizar_cuenta(Request $request)
+    {
+        $user = Auth::user(); 
+
+        $reglasValidacion = [
+            'nombre' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users,email,'.$user->id],
+            'password' => ['nullable', 'min:10', 'max:255', 'same:password_confirmation']
+        ];
+
+        $validacion = Validator::make($request->all(), $reglasValidacion);
+
+        if ($validacion->fails()) {
+            return response()->json([
+                'status' => 'F',
+                'message' =>  $validacion->errors()->all()
+            ], 400);
+        } else {
+            return UserService::editarMiCuenta($request,$user->id );
+        }
     }
 }
