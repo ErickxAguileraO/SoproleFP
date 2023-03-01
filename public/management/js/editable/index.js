@@ -1,4 +1,4 @@
-(function(){ 
+(function () {
     DevExpress.localization.locale(navigator.language);
     $('#grid-container').dxDataGrid({
         dataSource: '/administracion/editable/listar',
@@ -41,6 +41,36 @@
                 dataField: 'edi_tipo',
                 caption: 'Tipo',
                 allowEditing: false,
+                lookup: {
+                    dataSource: {
+                        store: {
+                            type: 'array',
+                            data: [{
+                                id: 1,
+                                name: 'Conócenos'
+                            },
+                            {
+                                id: 2,
+                                name: 'Políticas de privacidad'
+                            },
+                            {
+                                id: 3,
+                                name: 'Términos y condiciones'
+                            },
+                            {
+                                id: 4,
+                                name: 'Información al consumidor'
+                            },
+                            {
+                                id: 5,
+                                name: 'Modal'
+                            }],
+                            key: "id"
+                        },
+                    },
+                    valueExpr: 'id',
+                    displayExpr: 'name'
+                },
             },
             {
                 dataField: 'edi_estado',
@@ -104,7 +134,7 @@ $(document).on('click', '.eliminar', function () {
 
     alertify.confirm(popUp, function () {
 
-        fetch('/administracion/editable/eliminar/'+codigo, {
+        fetch('/administracion/editable/eliminar/' + codigo, {
             method: 'get',
         })
             .then(response => response.json())
