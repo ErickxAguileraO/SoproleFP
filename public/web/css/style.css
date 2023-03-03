@@ -1074,7 +1074,7 @@ textarea{
 .encabezado-ventana{
     display: grid;
     grid-template-columns: 1fr 20px;
-    align-items: center;
+    gap: 5px;
 }
 .cerrar-ventana-ubicacion{
     cursor: pointer;
@@ -1690,7 +1690,7 @@ footer a{
         max-height: 80%;
         background-color: white;
         border-radius: 20px;
-        padding: 40px;
+        padding: 30px;
         overflow-y: scroll;
         /* overflow: hidden; */
     }
