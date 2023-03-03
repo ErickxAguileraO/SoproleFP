@@ -852,6 +852,9 @@ textarea{
     margin-top: 60px;
 }
 /* Noticias */
+.a-img-noticias{
+    width: 100%;
+}
 .cuadros-info-n .texto span{
     font-style: normal;
     font-weight: 500;

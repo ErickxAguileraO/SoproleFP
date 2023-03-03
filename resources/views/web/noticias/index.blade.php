@@ -17,7 +17,7 @@
                 @foreach ($ultimasnoticias as $item)
                     @if (isset($item->not_slider))
                         <li style=" z-index:0; opacity: 1;" class="li-slider">
-                            <a href="{{route('web.noticia.detalle', $item->not_id).'-'.$item->not_url}}">
+                            <a class="a-img-noticias" href="{{route('web.noticia.detalle', $item->not_id).'-'.$item->not_url}}">
                                 <img class="ocultar-movil" src="{{ asset($item->not_slider) }}" alt="">
                                 <img class="ocultar-escritorio" src="{{ asset($item->not_slider) }}" alt="">
                             </a>
