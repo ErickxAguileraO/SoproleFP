@@ -10,7 +10,7 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
 .contenido{
     display: flex;
@@ -1786,7 +1786,7 @@ footer a{
 
 @media (max-width: 768px) {  
     body{
-        margin-bottom: 114px;
+        margin-top: 114px;
     }
     .txt-portada {
         bottom: 50px;
