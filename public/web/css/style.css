@@ -26,7 +26,7 @@ body{
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background: #cccccc;
+    background: #a9a9a9;
 }
 
 h2{
@@ -1164,8 +1164,7 @@ textarea{
     box-shadow: 0 5px 5px rgba(1, 23, 46, 0.6);
 }
 .encabezado-detalle-info{
-    display: grid;
-    grid-template-columns: 270px 100px;
+    display: flex;
     gap: 20px;
     align-items: center;
 }
