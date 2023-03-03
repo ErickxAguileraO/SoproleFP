@@ -10,8 +10,11 @@
     <div class="flex-ventana-locales">
         <div class="ventana-locales">
             <div class="encabezado-ventana">
-                <h6>Si no tienes iniciación de actividades, adquiere nuestros productos en:</h6>
-                <p>El stock de cada uno de los productos en los distintos locales, depende exclusivamente de dichos locales, no de Soprole.</p>
+                <div>
+                    <h6>Si no tienes iniciación de actividades, adquiere nuestros productos en:</h6>
+                    <p>El stock de cada uno de los productos en los distintos locales, depende exclusivamente de dichos locales, no de Soprole.</p>
+                </div>
+                
                 <img class="cerrar-ventana-ubicacion" src="{{ asset('/public/web/imagenes/x-black.svg') }}" alt="">
             </div>
             <div class="contenido-ventana-ubicacion">
