@@ -339,7 +339,12 @@
 
     <!-- Configuración global alertify -->
     <script src="{{ asset('public/js/configuracion_global_alertify.js') }}"></script>
-
+    <style>
+          .nice-select .list {
+        overflow-y: scroll !important;
+        max-height: 400px !important;
+    }
+    </style>
     @stack('extra-js')
 </body>
 
