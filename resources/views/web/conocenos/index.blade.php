@@ -44,8 +44,7 @@
             <section class="seccion-home">
                 <h2>Nuestras alianzas</h2>
                 <br>
-                <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
-                    nuevos usos lácteos, perfectos para cada propósito</p>
+                <p class="sub-titulo">Nos apasiona el desarrollo de la industria y forjar alianzas con distintos actores, a fin de diseñar acciones que potencien el mercado culinario desde distintos focos. </p>
                 <div class="alianzas-img">
                     @foreach ($alianzas as $alianza)
                         <img src="{{ asset($alianza->ali_imagen) }}" alt="">
@@ -57,8 +56,7 @@
         <section class="seccion-home">
             <h2>Confian en nosotros</h2>
             <br>
-            <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
-                nuevos usos lácteos, perfectos para cada propósito</p>
+            <p class="sub-titulo">Conoce a quienes trabajan con nosotros y utilizan nuestros productos </p>
             <div class="alianzas-img">
                 @foreach ($clientes as $cliente)
                 <img src="{{ asset($cliente->clie_imagen) }}" alt="">
