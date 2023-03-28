@@ -61,7 +61,7 @@ class RecetaController extends Controller
         $reglasValidacion = [
             'titulo' => ['required', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
-            'video' => ['url'],
+            //'video' => ['url'],
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
@@ -96,7 +96,7 @@ class RecetaController extends Controller
             'receta_id' => ['required', 'numeric'],
             'titulo' => ['required', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
-            'video' => ['url'],
+            //'video' => ['url'],
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
