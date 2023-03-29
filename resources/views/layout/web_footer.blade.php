@@ -40,7 +40,7 @@
             <a href="{{route('web.receta.index')}}">Recetas</a>
             <a href="{{route('web.noticia.index')}}">Tendencias y noticias</a>
             <a href="/hazte-cliente">Hazte cliente</a>
-            <a  class="tienda">Como comprar</a>
+            <a  class="tienda" style="cursor: pointer;">¿Como comprar?</a>
         </div>
         <div class="rrss-footer">
             <div>
