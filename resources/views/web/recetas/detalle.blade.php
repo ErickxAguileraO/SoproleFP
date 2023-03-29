@@ -28,7 +28,7 @@
                         @endforeach
                     </div>
                 @endif
-                
+
             </div>
             <div class="txt-detalle-info">
                 <div class="titulo-receta">
@@ -83,13 +83,15 @@
             @endphp
         </section>
 
-        <section class="video-conocenos">
-            <h2>Tutorial</h2>
-            <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </section>
+        @if ($receta->rec_video)
+            <section class="video-conocenos">
+                <h2>Tutorial</h2>
+                <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </section>
+        @endif
 
         <section class="slider-recetas">
             <h4>Para preparar esto necesitas</h4>

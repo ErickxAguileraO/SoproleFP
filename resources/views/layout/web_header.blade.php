@@ -109,13 +109,13 @@
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a href="{{route('web.noticia.index')}}" class="dropbtn">Noticias y tendencias</a> 
+                    <a href="{{route('web.noticia.index')}}" class="dropbtn">Tendencias y noticias</a> 
                 </div>
             </div>
             <div class="botones-header">
                 <a class="tienda">
                     <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
-                    <p>Ir a la tienda</p>
+                    <p>¿Como comprar?</p>
                 </a>
                 <a href="/hazte-cliente" class="cliente">
                     <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
@@ -163,12 +163,12 @@
                 <a href="{{route('web.receta.index')}}">Recetas</a>
             </div>
             <div class="opcion-barra-n">
-                <a href="{{route('web.noticia.index')}}">Noticias y Tendencias</a>
+                <a href="{{route('web.noticia.index')}}">Tendencias y noticias</a>
             </div>
             <br>
             <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
                 <img src="{{ asset('/public/web/imagenes/i-carro-2.svg') }}" alt="">
-                <a>Ir a la tienda</a>
+                <a>¿Como comprar?</a>
             </div>
 
             <div class="opcion-barra-n cliente-movil otros-opcion-barra-n">

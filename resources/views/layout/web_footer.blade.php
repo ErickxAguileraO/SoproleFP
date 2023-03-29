@@ -38,9 +38,9 @@
             <a href="{{route('web.academia.index')}}">Academia</a>
             <a href="/productos">Productos</a>
             <a href="{{route('web.receta.index')}}">Recetas</a>
-            <a href="{{route('web.noticia.index')}}"> Noticias y tendencias</a>
+            <a href="{{route('web.noticia.index')}}">Tendencias y noticias</a>
             <a href="/hazte-cliente">Hazte cliente</a>
-            <a href="">Ir a la tienda</a>
+            <a  class="tienda" style="cursor: pointer;">¿Como comprar?</a>
         </div>
         <div class="rrss-footer">
             <div>

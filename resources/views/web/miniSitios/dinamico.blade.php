@@ -2,8 +2,8 @@
     <section class="seccion-home removeSection">
         <h2>Mira nuestros productos</h2>
         <br>
-        <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
-            nuevos usos lácteos, perfectos para cada propósito</p>
+        <p class="sub-titulo">Nos apasiona entregar productos de calidad. Por ello, estamos enfocados en innovar y
+            desarrollar productos acordes a las necesidades de tu negocio.</p>
         <div class="cuadros-info cuadros-row-4">
             @foreach ($productos as $producto)
                 <a href="/productos/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
@@ -24,8 +24,9 @@
         <div class="seccion-home">
             <h2>Academia Food Professionals</h2>
             <br>
-            <p class="sub-titulo">Nos apasiona ayudar a nuestros clientes, logrando la optimización de sus recursos,
-                haciendo más eficiente sus procesos, alcanzando una mayor calidad y expertíz en su negocio</p>
+            <p class="sub-titulo">Nos apasiona potenciar el desarrollo de tu negocio gastronómico. Por ello, a través de
+                nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería, restaurante,
+                banquetera o cafetería</p>
             <div class="cuadros-info cuadros-row-4">
 
                 @foreach ($academias as $academia)
@@ -50,8 +51,8 @@
     <section class="seccion-home removeSection">
         <h2>Mira estas recetas</h2>
         <br>
-        <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
-            nuevos usos lácteos, perfectos para cada propósito</p>
+        <p class="sub-titulo">Nos apasiona ayudarte a crecer, y con estas recetas, podrás expandir tu menú y descubrir
+            nuevas técnicas para crear sonrisas en quienes disfruten de tus preparaciones. </p>
         <div class="cuadros-info cuadros-row-3">
             @foreach ($recetas as $receta)
                 <a href="/receta/detalle/{{ $receta->rec_url }}" class="cuadros-info-n">
@@ -70,8 +71,8 @@
     <section class="seccion-home removeSection">
         <h2>Tendencias y Noticias</h2>
         <br>
-        <p class="sub-titulo">Como líderes en innovación e investigación de Mercado, constantemente estamos creando
-            nuevos usos lácteos, perfectos para cada propósito</p>
+        <p class="sub-titulo">Nos apasiona mantenerte informado, y esta sección, encontrarás las últimas noticias sobre
+            capacitaciones, eventos, tendencias y todo lo relacionado al mundo gastronómico.</p>
         <div class="cuadros-info cuadros-row-3">
             @foreach ($noticias as $noticia)
                 <a href="/detalle/noticia-tendencia/{{ $noticia->not_url }}" class="cuadros-info-n">
