@@ -33,7 +33,7 @@
 
         <section class="flex-academia-home">
             <div class="seccion-home">
-                <h2>Academia Food Professionals</h2>
+                <h2>Conoce la Academia Food Professionals</h2>
                 <br>
                 <p class="sub-titulo">Nos apasiona potenciar el desarrollo de tu negocio gastronómico. Por ello, a través de
                     nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería, restaurante,
@@ -95,7 +95,7 @@
         </section>
 
         <section class="seccion-home">
-            <h2>Tendencias y Noticias</h2>
+            <h2>Conoce más sobre Tendencias y Noticias</h2>
             <br>
             <p class="sub-titulo">Nos apasiona mantenerte informado, y esta sección, encontrarás las últimas noticias sobre
                 capacitaciones, eventos, tendencias y todo lo relacionado al mundo gastronómico. </p>
