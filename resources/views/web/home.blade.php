@@ -62,7 +62,7 @@
                 desarrollar productos acordes a las necesidades de tu negocio. </p>
             <div class="cuadros-info cuadros-row-4">
                 @foreach ($productos as $producto)
-                    <a href="/producto-detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
+                    <a href="/producto/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
                         <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
                         </div>
                         <div class="texto">
