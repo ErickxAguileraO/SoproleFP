@@ -104,9 +104,11 @@
                     <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
                         class="cuadros-info-n ocultar-576">
                         <div class="img">
-                            @if(isset($noticia->imagenes[0]->ino_imagen))
+                            @if (isset($noticia->imagenes[0]->ino_imagen))
                                 <img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
-                            @endif;
+                            @else
+                                <img src="/public/web/imagenes/no-imagen.png" alt="">
+                            @endif
                         </div>
                         <div class="texto">
                             <h5>{{ $noticia->not_titulo }}</h5>
