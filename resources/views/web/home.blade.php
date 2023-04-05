@@ -164,6 +164,8 @@
                 </div>
             </div>
         </section>
+
+        <img style="width: 100%; margin-top: -5px;" src="{{ asset('/public/web/imagenes/curva2.png') }}" alt="">
     </div>
 
     @push('extra-js')
