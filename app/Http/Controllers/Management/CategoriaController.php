@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Management;
 use App\Http\Controllers\Controller;
 use App\Http\Services\Management\CategoriaService;
 use App\Models\Categoria;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -84,6 +85,22 @@ class CategoriaController extends Controller
     public function eliminar(Categoria $categoria)
     {
         try {
+
+            $productosConCategoria = Producto::where('pro_categoria_id', $categoria->cat_id)->get();
+
+            if(count($productosConCategoria)>0){
+
+                $html = '';
+                foreach($productosConCategoria as $key => $item){
+                    $html.= '('.($key+1).") ".$item->pro_titulo.'</br></br>';
+                }
+                return response()->json([
+                    'status' => 'F',
+                    'message' => 'No se puede eliminar la categoria, debido a que los siguientes productos la poseen: </br></br>'.$html,
+                ], 500);
+                exit;
+            }
+        
             $categoria->delete();
 
             return response()->json([

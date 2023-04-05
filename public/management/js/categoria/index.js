@@ -115,7 +115,8 @@ $(document).on('click', '.eliminar', function () {
                     document.location.reload();
                 } else {
                     alertify.set('notifier', 'position', 'top-right');
-                    alertify.error(response.message);
+                    alertify.set('notifier','delay', 10);
+                    alertify.warning(response.message);
                 }
             })
             .catch(response => {
