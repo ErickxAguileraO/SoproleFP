@@ -626,6 +626,8 @@ textarea{
 }
 .flex-wrap-6 .imagen-n{
     margin-right: 5px;
+}
+.carruselImagenes .imagen-n{
     height: 80px;
     border-radius: 5px;
 }
