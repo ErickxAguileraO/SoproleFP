@@ -2,11 +2,13 @@
     {{-- Modal ir a tienda --}}
     <div class="flex-modal-tienda">
         <div class="modal-tienda">
+            <a class="cerrar-modal" style="cursor:pointer;float: right;margin-bottom: 20px;"><img src="/public/web/imagenes/x-black.svg" /></a>
             @php
                 $modal = App\Http\Controllers\Management\EditableController::listarByTipo(5);
             @endphp
             @if (isset($modal->edi_video))
-                <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($modal->edi_video) }}" title="YouTube video player" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($modal->edi_video) }}"
+                    title="YouTube video player" frameborder="0"></iframe>
                 @php
                     echo $modal->edi_contenido;
                 @endphp
@@ -30,9 +32,12 @@
                     $facebook = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('facebook');
                     $instagram = App\Http\Controllers\Management\ConfiguracionController::listarByTipo('instagram');
                 @endphp
-                <a href="{{isset($instagram->con_link) ? $instagram->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
-                <a href="{{isset($facebook->con_link) ? $facebook->con_link : ''}}" target="_blank"><img src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
-                <a href="https://www.soprole.cl/" target="_blank"><img src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
+                <a href="{{ isset($instagram->con_link) ? $instagram->con_link : '' }}" target="_blank"><img
+                        src="{{ asset('/public/web/imagenes/i-insta-azul.svg') }}" alt=""></a>
+                <a href="{{ isset($facebook->con_link) ? $facebook->con_link : '' }}" target="_blank"><img
+                        src="{{ asset('/public/web/imagenes/i-facebook-azul.svg') }}" alt=""></a>
+                <a href="https://www.soprole.cl/" target="_blank"><img
+                        src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
 
             </div>
             <div class="menu-op">
@@ -41,17 +46,19 @@
                 </div>
 
                 <div class="dropdown-menu-header dropdown-noticias">
-                    <a class="dropbtn" href="{{route('web.academia.index')}}">Academia</a>
+                    <a class="dropbtn" href="{{ route('web.academia.index') }}">Academia</a>
                     <div class="dropdown-content dropdown-content-noticias">
                         <div class="contenido-drop contenido-drop-noticias">
                             <div>
                                 <div class="titulo-drop">
                                     <h5>Academia</h5>
-                                    <a href="{{route('web.academia.index')}}" class="boton-ver-op bg-red">Ver todos</a>
+                                    <a href="{{ route('web.academia.index') }}" class="boton-ver-op bg-red">Ver
+                                        todos</a>
                                 </div>
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                                    <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}" class="opcion-drop-n"
+                                    <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                                        class="opcion-drop-n"
                                         onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                         onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
@@ -76,7 +83,7 @@
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                                     <div class="opcion-drop-n"
-                                    onclick="document.location.href='/productos/?segmentoId[0]={{$item->seg_id}}&page=1'"
+                                        onclick="document.location.href='/productos/?segmentoId[0]={{ $item->seg_id }}&page=1'"
                                         onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                         onmouseout="this.style='background-color:white';">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
@@ -87,10 +94,12 @@
                                             <div class="sub-content-drop ocultar-drop drop-default">
                                                 <div class="titulo-drop">
                                                     <h5>Productos {{ $item->seg_nombre }}</h5>
-                                                    <a href="/productos/?segmentoId[0]={{$item->seg_id}}&page=1" class="boton-ver-op bg-red">Ver mas</a>
+                                                    <a href="/productos/?segmentoId[0]={{ $item->seg_id }}&page=1"
+                                                        class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
                                                 @foreach ($item->productos as $producto)
-                                                    <a href="/productos/detalle/{{ $producto->pro_url }}" class="link-op"
+                                                    <a href="/productos/detalle/{{ $producto->pro_url }}"
+                                                        class="link-op"
                                                         style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
                                                 @endforeach
                                             </div>
@@ -105,11 +114,11 @@
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a href="{{route('web.receta.index')}}" class="dropbtn">Recetas</a> 
+                    <a href="{{ route('web.receta.index') }}" class="dropbtn">Recetas</a>
                 </div>
 
                 <div class="dropdown-menu-header">
-                    <a href="{{route('web.noticia.index')}}" class="dropbtn">Tendencias y noticias</a> 
+                    <a href="{{ route('web.noticia.index') }}" class="dropbtn">Tendencias y noticias</a>
                 </div>
             </div>
             <div class="botones-header">
@@ -136,7 +145,8 @@
         <div class="bar-menu-movil">
             <a href="/"><img width="130px" src="{{ asset('/public/web/imagenes/logo.svg') }}"
                     alt=""></a>
-            <div><img class="btn-hamburger" src="{{ asset('/public/web/imagenes/i-bar.svg') }}" alt=""></div>
+            <div><img class="btn-hamburger" src="{{ asset('/public/web/imagenes/i-bar.svg') }}" alt="">
+            </div>
         </div>
     </div>
     <div class="barra-menu-movil">
@@ -160,10 +170,10 @@
                 <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
             </div>
             <div class="opcion-barra-n">
-                <a href="{{route('web.receta.index')}}">Recetas</a>
+                <a href="{{ route('web.receta.index') }}">Recetas</a>
             </div>
             <div class="opcion-barra-n">
-                <a href="{{route('web.noticia.index')}}">Tendencias y noticias</a>
+                <a href="{{ route('web.noticia.index') }}">Tendencias y noticias</a>
             </div>
             <br>
             <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
@@ -239,11 +249,11 @@
         <div class="flex-barra-menu-movil">
             <div class="titulo-drop">
                 <h5>Academia</h5>
-                <a href="{{route('web.academia.index')}}" class="boton-ver-op bg-red">Ver mas</a>
+                <a href="{{ route('web.academia.index') }}" class="boton-ver-op bg-red">Ver mas</a>
             </div>
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}" class="opcion-drop-n"
+                <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}" class="opcion-drop-n"
                     onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                     onmouseout="this.style='background-color:white';">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
