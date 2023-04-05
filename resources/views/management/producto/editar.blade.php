@@ -69,8 +69,7 @@
                         <label for="unidades_venta">Unidades en venta</label>
                         <div class="form-floating my-3">
                             <input type="text" name="unidades_venta" class="form-control" id="unidades_venta"
-                                value="{{ $producto->pro_unidades_venta }}" required
-                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                                value="{{ $producto->pro_unidades_venta }}" required>
                         </div>
 
 
