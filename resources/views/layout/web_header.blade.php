@@ -115,7 +115,7 @@
             <div class="botones-header">
                 <a class="tienda">
                     <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
-                    <p>¿Como comprar?</p>
+                    <p>¿Comó comprar?</p>
                 </a>
                 <a href="/hazte-cliente" class="cliente">
                     <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
@@ -168,7 +168,7 @@
             <br>
             <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
                 <img src="{{ asset('/public/web/imagenes/i-carro-2.svg') }}" alt="">
-                <a>¿Como comprar?</a>
+                <a>¿Cómo comprar?</a>
             </div>
 
             <div class="opcion-barra-n cliente-movil otros-opcion-barra-n">
