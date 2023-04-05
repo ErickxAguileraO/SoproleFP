@@ -2,7 +2,10 @@
     {{-- Modal ir a tienda --}}
     <div class="flex-modal-tienda">
         <div class="modal-tienda">
-            <a class="cerrar-modal" style="cursor:pointer;float: right;margin-bottom: 20px;"><img src="/public/web/imagenes/x-black.svg" /></a>
+            <a class="cerrar-modal"
+                style="cursor: pointer;float: right;margin-bottom: 20px;background-color: #e0e0e0;border-radius: 50%;width: 30px; height: 30px;text-align: center;">
+                <img src="/public/web/imagenes/x-black.svg" style="margin-top: 7px;width: 15px;" />
+            </a>
             @php
                 $modal = App\Http\Controllers\Management\EditableController::listarByTipo(5);
             @endphp
