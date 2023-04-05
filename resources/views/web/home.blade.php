@@ -137,7 +137,7 @@
                 </div>
                 <div>
                     @php
-                        echo $conocenos->edi_contenido;
+                        echo $conocenos->edi_bajada;
                     @endphp
                     </p>
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>

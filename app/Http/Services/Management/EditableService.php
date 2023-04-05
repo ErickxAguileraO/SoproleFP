@@ -16,6 +16,7 @@ class EditableService
             $editable = Editable::create([
                 'edi_titulo' => $request->titulo,
                 'edi_contenido' => $request->contenido,
+                'edi_bajada' => $request->bajada,
                 'edi_video' => $request->video,
                 'edi_tipo' => $request->tipo,
                 'edi_estado' => $request->estado,
@@ -57,6 +58,7 @@ class EditableService
             $editable->edi_video = $request->video;
             $editable->edi_tipo = $request->tipo;
             $editable->edi_estado = $request->estado;
+            $editable->edi_bajada = $request->bajada;
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
                 foreach($request->file('imagenes') as $imagen){
