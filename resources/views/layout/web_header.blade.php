@@ -127,7 +127,7 @@
             <div class="botones-header">
                 <a class="tienda">
                     <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
-                    <p>¿Comó comprar?</p>
+                    <p>¿Cómo comprar?</p>
                 </a>
                 <a href="/hazte-cliente" class="cliente">
                     <img src="{{ asset('/public/web/imagenes/i-user.svg') }}" alt="">
