@@ -19,6 +19,10 @@
                         <div class="form-floating my-3">
                             <input type="text" name="titulo" class="form-control" id="titulo" value="" required>
                         </div>
+                        <label for="titulo">Resumen</label>
+                        <div class="form-floating my-3">
+                            <textarea id="bajada" class="form-control" name="bajada" rows="4" cols="50"></textarea>
+                        </div>
                         <label for="titulo">Contenido</label>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50"></textarea>

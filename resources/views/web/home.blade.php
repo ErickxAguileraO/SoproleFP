@@ -104,9 +104,11 @@
                     <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
                         class="cuadros-info-n ocultar-576">
                         <div class="img">
-                            @if(isset($noticia->imagenes[0]->ino_imagen))
+                            @if (isset($noticia->imagenes[0]->ino_imagen))
                                 <img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
-                            @endif;
+                            @else
+                                <img src="/public/web/imagenes/no-imagen.png" alt="">
+                            @endif
                         </div>
                         <div class="texto">
                             <h5>{{ $noticia->not_titulo }}</h5>
@@ -135,7 +137,7 @@
                 </div>
                 <div>
                     @php
-                        echo $conocenos->edi_contenido;
+                        echo $conocenos->edi_bajada;
                     @endphp
                     </p>
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
@@ -162,6 +164,8 @@
                 </div>
             </div>
         </section>
+
+        <img style="width: 100%; margin-top: -5px;" src="{{ asset('/public/web/imagenes/curva2.png') }}" alt="">
     </div>
 
     @push('extra-js')

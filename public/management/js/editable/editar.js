@@ -1,6 +1,11 @@
 var generarFormData = () => {
     let formData = new FormData(document.forms.namedItem("formSubmit"));
     formData.append('contenido', textContenido.getData());
+
+
+    if(tipo == 1){
+        formData.append('bajada', textBajada.getData());
+    }
     return formData;
 }
 
@@ -45,3 +50,15 @@ ClassicEditor.create(document.querySelector('#contenido'), {
     textContenido = editor;
 })
 
+
+if (tipo == 1) {
+    var textBajada;
+    ClassicEditor.create(document.querySelector('#bajada'), {
+        ckfinder: {
+            uploadUrl: '/image-upload?_token=' + $("input[name='_token']").val(),
+        }
+    }).then(editor => {
+        textBajada = editor;
+    })
+
+}

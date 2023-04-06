@@ -18,4 +18,10 @@ class SubSegmento extends Model
         'sse_orden',
         'sse_estado',
     ];
+
+
+    public function productos()
+    {
+        return $this->belongsToMany(Producto::class, 'pivote_sub_segmentos', 'psse_subsegmento_id', 'psse_producto_id');
+    }
 }

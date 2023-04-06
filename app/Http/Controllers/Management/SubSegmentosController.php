@@ -81,10 +81,24 @@ class SubSegmentosController extends Controller
         }
     }
 
-    public function eliminar(SubSegmento $subSegmento)
+    public function eliminar(SubSegmento $subsegmento)
     {
         try {
-            $subSegmento->delete();
+            $productos = $subsegmento->productos;
+
+            if($productos && count($productos)>0){
+                $html = '';
+                foreach($productos as $key => $item){
+                    $html.= '('.($key+1).") ".$item->pro_titulo.'</br></br>';
+                }
+                return response()->json([
+                    'status' => 'F',
+                    'message' => 'No se puede eliminar el subsegmento, debido a que los siguientes productos la poseen: </br></br>'.$html,
+                ], 500);
+                exit;
+            }
+
+            $subsegmento->delete();
 
             return response()->json([
                 'status' => 'T',

@@ -20,8 +20,15 @@
                         <div class="form-floating my-3">
                             <input type="text" name="titulo" class="form-control" id="titulo" placeholder="titulo"
                                 autocomplete="new-password" value="{{ $editable->edi_titulo }}" required>
-
                         </div>
+
+                        @if ($editable->edi_tipo == 1)
+                            <label for="titulo">Resumen</label>
+                            <div class="form-floating my-3">
+                                <textarea id="bajada" class="form-control" name="bajada" rows="4" cols="50">{{ $editable->edi_bajada }}</textarea>
+                            </div>
+                        @endif
+
                         <label for="contenido">Contenido</label>
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50">{{ $editable->edi_contenido }}</textarea>
@@ -32,18 +39,7 @@
                                 autocomplete="new-password" value="{{ $editable->edi_video }}" required>
 
                         </div>
-                        <label for="tipo" class="col-md-4 col-form-label">Tipo</label>
-                        <div class="row mb-3">
-                            <div class="form-floating my-3">
-                                <select name="tipo" id="tipo" class="tipo-seleccion">
-                                    <option {{ $editable->edi_tipo == 1 ? 'selected' : false }} value="1">Conócenos</option>
-                                    <option {{ $editable->edi_tipo == 2 ? 'selected' : false }} value="2">Políticas de privacidad</option>
-                                    <option {{ $editable->edi_tipo == 3 ? 'selected' : false }} value="3">Términos y condiciones</option>
-                                    <option {{ $editable->edi_tipo == 4 ? 'selected' : false }} value="4">Información al consumidor</option>
-                                    <option {{ $editable->edi_tipo == 5 ? 'selected' : false }} value="5">Modal</option>
-                                </select>
-                            </div>
-                        </div>
+                        <input type="hidden" value="{{$editable->edi_tipo}}" name="tipo"/>
                         <div>
                             <div class="wp-documentos-right tipo-img-txt">
                                 <label for="">Galería</label>
@@ -112,6 +108,9 @@
     </div>
 @endsection
 @push('extra-js')
+    <script>
+        const tipo = {{$editable->edi_tipo}};
+    </script>
     <script src="{{ asset('public/management/js/editable/editar.js?v=' . rand()) }}"></script>
     <script src="{{ asset('public/management/js/editable/imagenes.js?v=' . rand()) }}"></script>
 @endpush
