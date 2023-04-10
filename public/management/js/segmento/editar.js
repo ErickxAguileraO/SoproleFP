@@ -12,16 +12,16 @@ $(".btn-agregar").on("click", function (event) {
     }).then(function (response) {
         return response.json();
     }).then(function (response) {
-            if (response.status == 'F') {
-                alertify.set('notifier', 'position', 'top-right');
-                alertify.error(response.message).dismissOthers();
-            } else {
-                alertify.set('notifier', 'position', 'top-right');
-                alertify.success(response.message).dismissOthers();
-                setTimeout(() => {
-                    document.location.href = "/administracion/segmento";
-                }, 1000);
-            }
+        if (response.status == 'F') {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.error(response.message).dismissOthers();
+        } else {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.success(response.message).dismissOthers();
+            setTimeout(() => {
+                document.location.href = "/administracion/segmento";
+            }, 1000);
+        }
     }).catch(mensajeError => {
         alertify.set('notifier', 'position', 'top-right');
         alertify.error('Ha ocurrido un error');
@@ -62,9 +62,17 @@ $(document).ready(function () {
     $(document).on('click', '#btn-reset-color', function () {
         colorPicker.color.hexString = colorAnterior
     });
-});
 
-$(document).ready(function () {
+    $("#color").change(function () {
+        try {
+            colorPicker.color.hexString = $(this).val()
+        } catch (e) {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.warning('El color ingresado no es válido');
+            $(this).val('');
+        }
+    });
+
     var colorPickerTexto = new iro.ColorPicker("#picker_texto", {
         width: 250,
         color: color_texto
@@ -72,7 +80,18 @@ $(document).ready(function () {
     colorPickerTexto.on('color:change', function (color) {
         $("#color_texto").val(color.hexString);
     });
+
+    $("#color_texto").change(function () {
+        try {
+            colorPickerTexto.color.hexString = $(this).val()
+        } catch (e) {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.warning('El color ingresado no es válido');
+            $(this).val('');
+        }
+    });
 });
+
 
 
 
