@@ -44,15 +44,17 @@
                         <label for="color">Color</label>
                         <div class="form-floating my-3">
                             <div id="picker"></div>
-                            <input type="hidden" name="color" class="form-control" id="color" placeholder="nombre"
+                            <br />
+                            <input type="text" name="color" class="form-control" id="color" placeholder="nombre"
                                 value="#f00" required>
                         </div>
 
                         <label for="color">Color texto</label>
                         <div class="form-floating my-3">
                             <div id="picker_texto"></div>
-                            <input type="hidden" name="color_texto" class="form-control" id="color_texto" placeholder="nombre"
-                                value="#f00" required>
+                            <br />
+                            <input type="text" name="color_texto" class="form-control" id="color_texto"
+                                placeholder="nombre" value="#f00" required>
                         </div>
 
                         <label for="orden">Orden</label>
@@ -72,7 +74,7 @@
                             @endforeach
                         </div>
                         <br />
-                        
+
                         <label for="estado">Estado</label>
                         <div class="row mb-3">
                             <div class="form-floating my-3">

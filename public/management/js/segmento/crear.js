@@ -67,9 +67,18 @@ $(document).ready(function () {
     colorPicker.on('color:change', function (color) {
         $("#color").val(color.hexString);
     });
-});
 
-$(document).ready(function () {
+    $("#color").change(function () {
+        try {
+            colorPicker.color.hexString = $(this).val()
+        } catch (e) {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.warning('El color ingresado no es válido');
+            $(this).val('');
+        }
+    });
+
+
     var colorPickerTexto = new iro.ColorPicker("#picker_texto", {
         width: 250,
         color: "#f00"
@@ -77,8 +86,18 @@ $(document).ready(function () {
     colorPickerTexto.on('color:change', function (color) {
         $("#color_texto").val(color.hexString);
     });
+
+    $("#color_texto").change(function () {
+        try {
+            colorPickerTexto.color.hexString = $(this).val()
+        } catch (e) {
+            alertify.set('notifier', 'position', 'top-right');
+            alertify.warning('El color ingresado no es válido');
+            $(this).val('');
+        }
+    });
+
+
 });
-
-
 
 

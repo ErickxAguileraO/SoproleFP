@@ -46,8 +46,8 @@
 
                         <label for="color">Color</label>
                         <div class="form-floating my-3">
-                            <div id="picker"></div>
-                            <input type="hidden" name="color" class="form-control" id="color" placeholder="nombre"
+                            <div id="picker"></div><br/>
+                            <input type="text" name="color" class="form-control" id="color" placeholder="nombre"
                                 value="{{ $segmento->seg_color }}" required>
                         </div>
                         <a class="btn btn-success btn-reset-color" id="btn-reset-color">Setear color anterior</a><br/><br/>
@@ -55,8 +55,8 @@
 
                         <label for="color">Color texto</label>
                         <div class="form-floating my-3">
-                            <div id="picker_texto"></div>
-                            <input type="hidden" name="color_texto" class="form-control" id="color_texto" placeholder="nombre"
+                            <div id="picker_texto"></div><br/>
+                            <input type="text" name="color_texto" class="form-control" id="color_texto" placeholder="nombre"
                                 value="{{ $segmento->seg_color_texto }}" required>
                         </div>
 
