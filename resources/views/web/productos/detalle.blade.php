@@ -19,7 +19,7 @@
                     <h3>{{ $producto->pro_formato }}</h3>
                 </div>
                 <div>
-                    <p>Código interno Soporle: {{ $producto->pro_sku }}</p>
+                    <p>Código interno Soprole: {{ $producto->pro_sku }}</p>
                 </div>
                 <br>
                 <p>
