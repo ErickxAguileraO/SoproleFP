@@ -57,7 +57,7 @@
                 <div class="seccion-home">
                     <h2>Conoce la Academia Food Professionals</h2>
                     <br>
-                    <p class="sub-titulo">Nos apasiona potenciar el desarrollo de tu negocio gastronómico. Por ello, a
+                    <p class="sub-titulo">Nos apasiona apoyar el desarrollo de tu negocio gastronómico. Por ello, a
                         través de nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería,
                         restaurante, banquetera o cafetería</p>
                     <div class="cuadros-info cuadros-row-4">
@@ -114,10 +114,16 @@
                     @foreach ($noticias as $noticia)
                         <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
                             class="cuadros-info-n">
-                            <div class="img"><img src="{{ asset($noticia->imagenListado->ino_imagen) }}" alt="">
+                            <div class="img">
+                                @if (isset($noticia->imagenListado->ino_imagen))
+                                    <img src="{{ asset($noticia->imagenListado->ino_imagen) }}" alt="">
+                                @else
+                                    <img src="/public/web/imagenes/no-imagen.png" alt="">
+                                @endif
                             </div>
                             <div class="texto">
-                                <h5>Título con una línea</h5>
+                                <h5>{{ $noticia->not_titulo }}</h5>
+                                <p>{{ $noticia->not_titulo2 }}</p>
                             </div>
                         </a>
                     @endforeach

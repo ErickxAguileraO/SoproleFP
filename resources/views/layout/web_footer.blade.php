@@ -23,18 +23,19 @@
             </div>
             <div>
                 <img src="{{ asset('/public/web/imagenes/i-telefono.svg') }}" alt="">
-                <a href="tel:{{isset($telefono->con_contenido) ? $telefono->con_contenido : 'soproleFP@soprole.cl'}}"><h3>{{isset($telefono->con_contenido) ? $telefono->con_contenido : 'soproleFP@soprole.cl'}}</h3></a>
+                <a href="tel:{{isset($telefono->con_contenido) ? $telefono->con_contenido : '6006006600'}}"><h3>{{isset($telefono->con_contenido) ? $telefono->con_contenido : '600 600 6600'}}</h3></a>
             </div>
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-1">
             @foreach (App\Http\Controllers\Management\SegmentoController::listar() as $item)
-                <a href="{{route('web.academia.index').'?segmentoId[0]='.$item->seg_id}}">{{$item->seg_nombre}}</a>
+                <a href="/mini-sitio/{{ $item->seg_url }}">{{ $item->seg_nombre }}</a>
             @endforeach
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-2">
-            <a href="/contacto">Contáctenos</a>
+            <a href="/contacto/">Contáctanos</a>
+            <a href="/conocenos/">Conócenos</a>
             <a href="{{route('web.academia.index')}}">Academia</a>
             <a href="/productos">Productos</a>
             <a href="{{route('web.receta.index')}}">Recetas</a>
