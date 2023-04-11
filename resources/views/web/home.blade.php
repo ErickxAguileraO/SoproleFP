@@ -35,7 +35,7 @@
             <div class="seccion-home">
                 <h2>Conoce la Academia Food Professionals</h2>
                 <br>
-                <p class="sub-titulo">Nos apasiona potenciar el desarrollo de tu negocio gastronómico. Por ello, a través de
+                <p class="sub-titulo">Nos apasiona apoyar el desarrollo de tu negocio gastronómico. Por ello, a través de
                     nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería, restaurante,
                     banquetera o cafetería. </p>
                 <div class="cuadros-info cuadros-row-4">
