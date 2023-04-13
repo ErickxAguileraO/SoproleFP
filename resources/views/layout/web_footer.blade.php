@@ -55,7 +55,6 @@
         </div>
     </div>
     <div class="sub-footer">
-        <p>©2023 Fonterra Co-operative Group</p>
         <div class="linea-footer-2"></div>
         <div>
             <a href="/politicas-de-privacidad">Políticas de privacidad</a>
