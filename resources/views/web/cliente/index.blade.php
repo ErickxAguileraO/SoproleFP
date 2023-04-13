@@ -128,7 +128,7 @@
                 </div>
                 <br>
                 <br>
-                <h6>Datos iniciales</h6>
+                <h6>Datos de contacto</h6>
                 <div class="form-row-3">
                     <div class="form-input-n">
                         <label for="">Nombre del contacto</label>
