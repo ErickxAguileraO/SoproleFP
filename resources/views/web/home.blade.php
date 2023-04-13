@@ -125,9 +125,6 @@
                 <div></div>
                 <div>
                     <h3>Conócenos</h3>
-                    <p>Soprole Food Professionals es la marca industrial de Soprole. Nosotros creamos productos sanos y
-                        ricos, y entregamos soluciones de alta calidad, diseñadas para cada propósito de nuestros clientes.
-                    </p>
                 </div>
             </div>
             <div class="concenos-img-txt">
