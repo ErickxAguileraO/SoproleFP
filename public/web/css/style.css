@@ -2334,3 +2334,6 @@ footer a{
     max-height: 400px;
     overflow-y: scroll;
 }
+.segmentoHover:hover {
+    filter: brightness(0.9) !important; 
+}
