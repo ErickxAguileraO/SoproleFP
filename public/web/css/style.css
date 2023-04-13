@@ -2335,5 +2335,6 @@ footer a{
     overflow-y: scroll;
 }
 .segmentoHover:hover {
-    filter: brightness(0.9) !important; 
+    background:rgba(0,0,0,0.1) !important;
+    opacity: .5 !important;
 }
