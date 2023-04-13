@@ -60,10 +60,9 @@
                                 </div>
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                                    <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}"
-                                        class="opcion-drop-n"
-                                        onmouseover="this.style='background-color:{{ $item->seg_color }};';"
-                                        onmouseout="this.style='background-color:white';">
+                                    <a style="background-color:{{ $item->seg_color }}"
+                                        href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                                        class="opcion-drop-n segmentoHover">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                                         <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                                     </a>
@@ -85,10 +84,8 @@
                                 </div>
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                                    <div class="opcion-drop-n"
-                                        onclick="document.location.href='/productos/?segmentoId[0]={{ $item->seg_id }}&page=1'"
-                                        onmouseover="this.style='background-color:{{ $item->seg_color }};';"
-                                        onmouseout="this.style='background-color:white';">
+                                    <div class="opcion-drop-n segmentoHover" style="background-color:{{ $item->seg_color }}"
+                                        onclick="document.location.href='/productos/?segmentoId[0]={{ $item->seg_id }}&page=1'">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                                         <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                                         @if (count($item->productos) > 0)

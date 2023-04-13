@@ -18,6 +18,36 @@ class HSTS
                 'max-age=31536000; includeSubdomains',
                 true
             );
+
+            $response->headers->set(
+                'X-Frame-Options',
+                'SAMEORIGIN',
+                true
+            );
+
+            $response->headers->set(
+                'X-Content-Type-Options',
+                'nosniff',
+                true
+            );
+
+            $response->headers->set(
+                'Referrer-Policy',
+                'no-referrer',
+                true
+            );
+
+            $response->headers->set(
+                'Permissions-Policy',
+                'microphone=(), geolocation=()',
+                true
+            );
+
+            $response->headers->set(
+                'Content-Security-Policy',
+                "frame-src 'none' script-src 'none' default-src 'self'; img-src *;",
+                true
+            );
         }
 
         return $response;

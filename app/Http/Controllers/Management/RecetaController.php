@@ -60,15 +60,15 @@ class RecetaController extends Controller
     {
         $reglasValidacion = [
             'titulo' => ['required', 'string', 'max:250'],
-            'contenido' => ['required', 'max:2000'],
+            'contenido' => ['required', 'max:5000'],
             //'video' => ['url'],
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
             'dificultad' => ['required', 'numeric', 'between:1,3'],
             'porciones' => ['required', 'max:200'],
-            'ingredientes' => ['required', 'max:1000'],
-            'preparacion' => ['required', 'max:2000'],
+            'ingredientes' => ['required', 'max:5000'],
+            'preparacion' => ['required', 'max:5000'],
             'estado' => ['required','numeric'],
             'imagen' => ['required','mimes:jpg,jpeg,png,svg'],
         ];
@@ -95,15 +95,15 @@ class RecetaController extends Controller
         $reglasValidacion = [
             'receta_id' => ['required', 'numeric'],
             'titulo' => ['required', 'string', 'max:250'],
-            'contenido' => ['required', 'max:2000'],
+            'contenido' => ['required', 'max:5000'],
             //'video' => ['url'],
             'segmentos' => ['required'],
             'productos' => ['required'],
             'orden' => ['required','numeric'],
             'dificultad' => ['required', 'numeric', 'between:1,3'],
             'porciones' => ['required', 'max:200'],
-            'ingredientes' => ['required', 'max:1000'],
-            'preparacion' => ['required', 'max:2000'],
+            'ingredientes' => ['required', 'max:5000'],
+            'preparacion' => ['required', 'max:5000'],
             'estado' => ['required','numeric'],
             'imagen' => ['mimes:jpg,jpeg,png,svg'],
         ];
