@@ -58,7 +58,7 @@ class NoticiasController extends Controller
     {
         $reglasValidacion = [
             'titulo' => ['required', 'string', 'max:250'],
-            'titulo2' => ['required', 'string', 'max:250'],
+            'titulo2' => ['nullable', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
@@ -88,7 +88,7 @@ class NoticiasController extends Controller
         $reglasValidacion = [
             'noticia_id' => ['required'],
             'titulo' => ['required', 'string', 'max:250'],
-            'titulo2' => ['required', 'string', 'max:250'],
+            'titulo2' => ['nullable', 'string', 'max:250'],
             'contenido' => ['required', 'max:2000'],
             'fecha' => ['required', 'date'],
             'estado' => ['required'],
