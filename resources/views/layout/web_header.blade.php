@@ -359,7 +359,6 @@
 
 
     $(".segmentoHover").mouseover(function() {
-        alert(1);
         $(this).css('background-color',  oscurecerColor($(this).attr('color')))
     }).mouseout(function() {
         let colorOriginal = $(this).attr('color');
