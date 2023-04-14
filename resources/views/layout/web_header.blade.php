@@ -99,9 +99,15 @@
                                                         class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
                                                 @foreach ($item->productos as $producto)
-                                                    <a href="/productos/detalle/{{ $producto->pro_url }}"
-                                                        class="link-op"
-                                                        style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
+                                                    @if ($producto->seg_color_texto === '#ffffff')
+                                                        <a href="/productos/detalle/{{ $producto->pro_url }}"
+                                                            class="link-op"
+                                                            style="color: {{ $item->seg_color }}">{{ $producto->pro_titulo }}</a>
+                                                    @else
+                                                        <a href="/productos/detalle/{{ $producto->pro_url }}"
+                                                            class="link-op"
+                                                            style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                         @endif
@@ -222,7 +228,8 @@
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                 <div class="opcion-drop-n producto-lista btn-pasteleria-segmento segmentoHover" name="Segmentos"
-                    id="{{ $item->seg_id }}" color="{{ $item->seg_color }}"  style="background-color:{{ $item->seg_color }}"  >
+                    id="{{ $item->seg_id }}" color="{{ $item->seg_color }}"
+                    style="background-color:{{ $item->seg_color }}">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                     @if (count($item->productos) > 0)
@@ -245,7 +252,7 @@
                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
             </div>
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <div  class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
+                <div class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
                     id="div_SegmentoProductos{{ $item->seg_id }}">
                     @if (count($item->productos) > 0)
                         @foreach ($item->productos as $producto)
@@ -297,9 +304,9 @@
             </div>
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}" color="{{ $item->seg_color }}" class="segmentoHover opcion-drop-n"
-                    
-                     style="background-color:{{ $item->seg_color }}" >
+                <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                    color="{{ $item->seg_color }}" class="segmentoHover opcion-drop-n"
+                    style="background-color:{{ $item->seg_color }}">
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                 </a>
@@ -359,7 +366,7 @@
 
 
     $(".segmentoHover").mouseover(function() {
-        $(this).css('background-color',  oscurecerColor($(this).attr('color')))
+        $(this).css('background-color', oscurecerColor($(this).attr('color')))
     }).mouseout(function() {
         let colorOriginal = $(this).attr('color');
         $(this).css('background-color', colorOriginal)
