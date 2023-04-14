@@ -84,7 +84,8 @@
                                 </div>
 
                                 @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                                    <div class="opcion-drop-n segmentoHover" style="background-color:{{ $item->seg_color }}"
+                                    <div class="opcion-drop-n segmentoHover"
+                                        style="background-color:{{ $item->seg_color }}"
                                         onclick="document.location.href='/productos/?segmentoId[0]={{ $item->seg_id }}&page=1'">
                                         <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                                         <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
@@ -112,10 +113,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="dropdown-menu-header dropdown-noticias">
+                    <a class="dropbtn" href="{{ route('web.receta.index') }}">Recetas</a>
+                    <div class="dropdown-content dropdown-content-noticias">
+                        <div class="contenido-drop contenido-drop-noticias">
+                            <div>
+                                <div class="titulo-drop">
+                                    <h5>Recetas</h5>
+                                    <a href="{{ route('web.receta.index') }}" class="boton-ver-op bg-red">Ver
+                                        todos</a>
+                                </div>
 
-                <div class="dropdown-menu-header">
-                    <a href="{{ route('web.receta.index') }}" class="dropbtn">Recetas</a>
+                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                                    <a color="{{ $item->seg_color }}" style="background-color:{{ $item->seg_color }}"
+                                        href="{{ route('web.receta.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                                        class="opcion-drop-n segmentoHover">
+                                        <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
+                                        <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
+                                    </a>
+                                @endforeach
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+
 
                 <div class="dropdown-menu-header">
                     <a href="{{ route('web.noticia.index') }}" class="dropbtn">Tendencias y noticias</a>
@@ -169,8 +192,9 @@
                 <a>Productos</a>
                 <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
             </div>
-            <div class="opcion-barra-n">
-                <a href="{{ route('web.receta.index') }}">Recetas</a>
+            <div class="opcion-barra-n btn-recetas-movil">
+                <a>Recetas</a>
+                <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
             </div>
             <div class="opcion-barra-n">
                 <a href="{{ route('web.noticia.index') }}">Tendencias y noticias</a>
@@ -198,8 +222,7 @@
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
                 <div class="opcion-drop-n producto-lista btn-pasteleria-segmento" name="Segmentos"
-                    id="{{ $item->seg_id }}" onmouseover="this.style='background-color:{{ $item->seg_color }};';"
-                    onmouseout="this.style='background-color:white';">
+                    id="{{ $item->seg_id }}"   style="background-color:{{ $item->seg_color }}"  >
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                     @if (count($item->productos) > 0)
@@ -222,7 +245,7 @@
                 <a href="" class="boton-ver-op bg-red">Ver mas</a>
             </div>
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <div class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
+                <div  class="producto-lista-pasteleria ocultar-producto-lista" name="SegmentoProductos"
                     id="div_SegmentoProductos{{ $item->seg_id }}">
                     @if (count($item->productos) > 0)
                         @foreach ($item->productos as $producto)
@@ -244,6 +267,27 @@
         </div>
     </div>
 
+
+    {{-- sub menu Segmentos-productos --}}
+    <div class="barra-receta-movil">
+        <div class="flex-barra-menu-movil">
+            <div class="titulo-drop">
+                <h5>Recetas</h5>
+                <a href="/receta" class="boton-ver-op bg-red">Ver mas</a>
+            </div>
+            @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                <a style="background-color:{{ $item->seg_color }}"
+                    href="{{ route('web.receta.index') . '?segmentoId[0]=' . $item->seg_id }}" class="opcion-drop-n">
+                    <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
+                    <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
+                </a>
+            @endforeach
+            <div class="flex-volver-movil">
+                <div class="volver-movil volver-recetas-movil">Volver</div>
+            </div>
+        </div>
+    </div>
+
     {{-- Submenu Academia --}}
     <div class="barra-noticias-movil">
         <div class="flex-barra-menu-movil">
@@ -253,9 +297,9 @@
             </div>
 
             @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
-                <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}" class="opcion-drop-n"
-                    onmouseover="this.style='background-color:{{ $item->seg_color }};';"
-                    onmouseout="this.style='background-color:white';">
+                <a href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}" color="{{ $item->seg_color }}" class="segmentoHover opcion-drop-n"
+                    
+                     style="background-color:{{ $item->seg_color }}" >
                     <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
                     <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
                 </a>
@@ -266,6 +310,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
     </div>
 </header>
 <script>
@@ -291,4 +341,28 @@
             }
         });
     }
+</script>
+
+<script>
+    const oscurecerColor = (color) => {
+
+        let r = parseInt(color.substr(1, 2), 16);
+        let g = parseInt(color.substr(3, 2), 16);
+        let b = parseInt(color.substr(5, 2), 16);
+
+        r = Math.round(r * 0.9);
+        g = Math.round(g * 0.9);
+        b = Math.round(b * 0.9);
+
+        return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+    }
+
+
+    $(".segmentoHover").mouseover(function() {
+        alert(1);
+        $(this).css('background-color',  oscurecerColor($(this).attr('color')))
+    }).mouseout(function() {
+        let colorOriginal = $(this).attr('color');
+        $(this).css('background-color', colorOriginal)
+    });
 </script>
