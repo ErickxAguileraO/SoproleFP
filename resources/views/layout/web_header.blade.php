@@ -99,7 +99,7 @@
                                                         class="boton-ver-op bg-red">Ver mas</a>
                                                 </div>
                                                 @foreach ($item->productos as $producto)
-                                                    @if ($producto->seg_color_texto === '#ffffff')
+                                                    @if ($item->seg_color_texto === '#ffffff')
                                                         <a href="/productos/detalle/{{ $producto->pro_url }}"
                                                             class="link-op"
                                                             style="color: {{ $item->seg_color }}">{{ $producto->pro_titulo }}</a>
