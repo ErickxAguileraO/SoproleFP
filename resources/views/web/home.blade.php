@@ -129,7 +129,7 @@
             </div>
             <div class="concenos-img-txt">
                 <div>
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-circulo2.svg') }}" alt="">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/banners/productos-47.png') }}" alt="">
                     </div>
                 </div>
                 <div>
