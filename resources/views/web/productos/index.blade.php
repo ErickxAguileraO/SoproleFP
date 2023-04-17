@@ -11,7 +11,7 @@
         </style>
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/banners/portada_productos.png') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-productos-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
