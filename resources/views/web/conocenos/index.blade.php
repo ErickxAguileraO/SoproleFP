@@ -6,7 +6,7 @@
     @push('extra-css')
     @endpush
     <div class="portada">
-        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/portada-conocenos-escritorio.svg') }}" alt="">
+        <img class="ocultar-movil" src="{{ asset('/public/web/imagenes/banners/portada_conocenos.png') }}" alt="">
         <img class="ocultar-escritorio" src="{{ asset('/public/web/imagenes/portada-conocenos-movil.svg') }}" alt="">
     </div>
     <div class="contenido">
