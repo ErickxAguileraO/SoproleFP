@@ -10,7 +10,7 @@
             <div class="vista-previa">
                 <div class="img-principal">
                     <img class="main_img"
-                        src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : null }}"
+                        src="{{ isset($receta->imagenes[0]->ire_imagen) ? asset($receta->imagenes[0]->ire_imagen) : asset($receta->rec_imagen) }}"
                         alt="">
                 </div>
                 @if (count($receta->imagenes) >= 6)
