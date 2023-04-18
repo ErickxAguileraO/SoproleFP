@@ -42,12 +42,13 @@ class HSTS
                 'microphone=(), geolocation=()',
                 true
             );
-
+            /*
             $response->headers->set(
                 'Content-Security-Policy',
                 "frame-src 'none' script-src 'none' default-src 'self'; img-src *;",
                 true
             );
+            */
         }
 
         return $response;
