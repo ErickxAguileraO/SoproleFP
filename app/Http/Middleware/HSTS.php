@@ -21,7 +21,7 @@ class HSTS
 
             $response->headers->set(
                 'X-Frame-Options',
-                'ALLOW-FROM https://www.youtube.com',
+                'SAMEORIGIN',
                 true
             );
 
@@ -45,7 +45,7 @@ class HSTS
 
             $response->headers->set(
                 'Content-Security-Policy',
-                "frame-src 'none' script-src 'none' default-src 'self'; img-src *;",
+                "frame-src youtube.com www.youtube.com",
                 true
             );
         }
