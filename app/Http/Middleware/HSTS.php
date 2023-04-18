@@ -21,7 +21,7 @@ class HSTS
 
             $response->headers->set(
                 'X-Frame-Options',
-                'SAMEORIGIN',
+                'ALLOW-FROM https://www.youtube.com',
                 true
             );
 
@@ -42,13 +42,12 @@ class HSTS
                 'microphone=(), geolocation=()',
                 true
             );
-            /*
+
             $response->headers->set(
                 'Content-Security-Policy',
                 "frame-src 'none' script-src 'none' default-src 'self'; img-src *;",
                 true
             );
-            */
         }
 
         return $response;
