@@ -45,7 +45,7 @@ class HSTS
 
             $response->headers->set(
                 'Content-Security-Policy',
-                "frame-src 'none' script-src 'none' default-src 'self'; img-src *;",
+                "frame-src youtube.com www.youtube.com",
                 true
             );
         }
