@@ -52,18 +52,6 @@
                 </div>
             </section>
         @endif
-        @if (count($clientes) > 0)
-        <section class="seccion-home">
-            <h2>Confian en nosotros</h2>
-            <br>
-            <p class="sub-titulo">Conoce a quienes trabajan con nosotros y utilizan nuestros productos </p>
-            <div class="alianzas-img">
-                @foreach ($clientes as $cliente)
-                <img src="{{ asset($cliente->clie_imagen) }}" alt="">
-                @endforeach
-            </div>
-        </section>
-        @endif
     </div>
 
     @push('extra-js')

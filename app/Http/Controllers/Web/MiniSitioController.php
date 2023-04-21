@@ -41,6 +41,7 @@ class MiniSitioController extends Controller
                     "productos" => MiniSitioService::productosBySegmentoAndTag($tag, $productosIds),
                     "recetas" => MiniSitioService::recetasBySegmentoAndTag($tag, $RecetasIds),
                     "noticias" => MiniSitioService::noticiasBySegmentoAndTag($tag, $NoticiasIds),
+                    "segmento" => $segmento
                 ]
             )->render(),
         ], 200);
@@ -57,6 +58,7 @@ class MiniSitioController extends Controller
                     "productos" => MiniSitioService::productosBySegmento($segmento->seg_id),
                     "recetas" => $segmento->Receta,
                     "noticias" => $segmento->NoticiaMiniSitio,
+                    "segmento" => $segmento
                 ]
             )->render(),
         ], 200);
