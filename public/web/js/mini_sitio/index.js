@@ -24,7 +24,7 @@ $(document).on('click', '.tags', function (event) {
         $(".tags").each(function () {
             $(this).removeAttr('style');
         });
-        $(this).attr('style', 'background:#EDA532 !important; color:white !important');
+        $(this).attr('style', 'background:'+colorTexto+' !important; color:white !important');
 
         fetch("/mini-sitio/filtro/tags/" + $(this).attr('codigo') + "/" + $("#segmento_id").val(), {
             method: "GET",

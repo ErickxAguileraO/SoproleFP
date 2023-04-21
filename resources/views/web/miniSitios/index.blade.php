@@ -2,6 +2,9 @@
 
 @section('title', 'Inicio')
 @section('content')
+
+
+
     <div class="contenido contenidoMiniSitio color-mini-sitio">
         <input type="hidden" id="segmento_id" value="{{ $segmento->seg_id }}" />
         @if (count($sliders) > 0)
@@ -19,12 +22,15 @@
 
         @if (count($tags) > 0)
             <div class="flex-tu-negocio">
-                <h2>¿Qué tipo de preparaciones desarrollas en tu negocio? </h2>
+                <h2
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    ¿Qué tipo de preparaciones desarrollas en tu
+                    negocio? </h2>
                 <br>
                 <div class="tu-negocio">
                     @foreach ($tags as $tag)
                         <button codigo="{{ $tag->sse_id }}"
-                            class="tags segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
+                            class="tags tagSeleccionado segmento-n bg-minisitio color-mini-sitio">{{ $tag->sse_nombre }}</button>
                     @endforeach
                 </div>
             </div>
@@ -34,9 +40,13 @@
 
         @if (count($productos) > 0)
             <section class="seccion-home removeSection">
-                <h2>Mira nuestros productos</h2>
+                <h2
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Mira nuestros productos</h2>
                 <br>
-                <p class="sub-titulo">Nos apasiona entregar productos de calidad. Por ello, estamos enfocados en innovar y
+                <p class="sub-titulo"
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Nos apasiona entregar productos de calidad. Por ello, estamos enfocados en innovar y
                     desarrollar productos acordes a las necesidades de tu negocio.</p>
                 <div class="cuadros-info cuadros-row-4">
                     @foreach ($productos as $producto)
@@ -44,7 +54,9 @@
                             <div class="img"><img src="{{ asset($producto->pro_imagen) }}" alt="">
                             </div>
                             <div class="texto">
-                                <h5>{{ $producto->pro_titulo }}</h5>
+                                <h5
+                                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                    {{ $producto->pro_titulo }}</h5>
                             </div>
                         </a>
                     @endforeach
@@ -55,9 +67,14 @@
         @if (count($academias) > 0)
             <section class="flex-academia-home bg-minisitio removeSection">
                 <div class="seccion-home">
-                    <h2>Conoce la Academia Food Professionals</h2>
+                    <h2
+                        style="color: {{ $segmento->seg_color_texto == $segmento->seg_color ? '#ffffff' : $segmento->seg_color_texto }} !important">
+                        Conoce la Academia Food Professionals
+                    </h2>
                     <br>
-                    <p class="sub-titulo">Nos apasiona apoyar el desarrollo de tu negocio gastronómico. Por ello, a
+                    <p class="sub-titulo"
+                        style="color: {{ $segmento->seg_color_texto == $segmento->seg_color ? '#ffffff' : $segmento->seg_color_texto }}  !important">
+                        Nos apasiona apoyar el desarrollo de tu negocio gastronómico. Por ello, a
                         través de nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería,
                         restaurante, banquetera o cafetería</p>
                     <div class="cuadros-info cuadros-row-4">
@@ -68,8 +85,12 @@
                                 <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
                                 </div>
                                 <div class="texto">
-                                    <h5>{{ $academia->aca_titulo }}</h5>
-                                    <p>{{ $academia->aca_titulo2 }}</p>
+                                    <h5
+                                        style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                        {{ $academia->aca_titulo }}</h5>
+                                    <p
+                                        style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                        {{ $academia->aca_titulo2 }}</p>
                                 </div>
                             </a>
                         @endforeach
@@ -84,9 +105,13 @@
         @if (count($recetas) > 0)
 
             <section class="seccion-home removeSection">
-                <h2>Mira estas recetas</h2>
+                <h2
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Mira estas recetas</h2>
                 <br>
-                <p class="sub-titulo">Nos apasiona ayudarte a crecer, y con estas recetas, podrás expandir tu menú y
+                <p class="sub-titulo"
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Nos apasiona ayudarte a crecer, y con estas recetas, podrás expandir tu menú y
                     descubrir nuevas técnicas para crear sonrisas en quienes disfruten de tus preparaciones. </p>
                 <div class="cuadros-info cuadros-row-3">
                     @foreach ($recetas as $receta)
@@ -95,7 +120,9 @@
                             <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
                             </div>
                             <div class="texto">
-                                <h5>{{ $receta->rec_titulo }}</h5>
+                                <h5
+                                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                    {{ $receta->rec_titulo }}</h5>
                             </div>
                         </a>
                     @endforeach
@@ -106,9 +133,13 @@
 
         @if (count($noticias) > 0)
             <section class="seccion-home removeSection">
-                <h2>Conoce más sobre Tendencias y Noticias</h2>
+                <h2
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Conoce más sobre Tendencias y Noticias</h2>
                 <br>
-                <p class="sub-titulo">Nos apasiona mantenerte informado, y esta sección, encontrarás las últimas noticias
+                <p class="sub-titulo"
+                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                    Nos apasiona mantenerte informado, y esta sección, encontrarás las últimas noticias
                     sobre capacitaciones, eventos, tendencias y todo lo relacionado al mundo gastronómico.</p>
                 <div class="cuadros-info cuadros-row-3">
                     @foreach ($noticias as $noticia)
@@ -122,8 +153,12 @@
                                 @endif
                             </div>
                             <div class="texto">
-                                <h5>{{ $noticia->not_titulo }}</h5>
-                                <p>{{ $noticia->not_titulo2 }}</p>
+                                <h5
+                                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                    {{ $noticia->not_titulo }}</h5>
+                                <p
+                                    style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
+                                    {{ $noticia->not_titulo2 }}</p>
                             </div>
                         </a>
                     @endforeach
@@ -143,19 +178,18 @@
                     animation: "slide",
                 });
             });
+
+            const colorTexto = '{{ $segmento->seg_color_texto }}';
+            const colorBG = '{{ $segmento->seg_color }}';
         </script>
     @endpush
 
     <style>
-        .color-mini-sitio h2,
-        .color-mini-sitio h6,
-        .color-mini-sitio h5 {
-            color: {{ $segmento->seg_color_texto }} !important;
-        }
-
         .bg-minisitio {
             background-color: {{ $segmento->seg_color }} !important;
         }
+        .tagSeleccionado{
+            color : {{ $segmento->seg_color_texto == $segmento->seg_color ? '#ffffff' : $segmento->seg_color_texto }} !important
+        }
     </style>
-
 @endsection
