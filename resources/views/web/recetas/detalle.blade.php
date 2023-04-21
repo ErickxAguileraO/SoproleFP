@@ -32,7 +32,7 @@
             </div>
             <div class="txt-detalle-info">
                 <div class="titulo-receta">
-                    <h2>{{ $receta->rec_titulo }}</h2>
+                    <h2 style="margin-right: 30px;">{{ $receta->rec_titulo }}</h2>
                     <div class="dificultad">
                         <p>Dificultad de la receta</p>
                         @if ($receta->rec_dificultad == 1)
