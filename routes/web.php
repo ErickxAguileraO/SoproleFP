@@ -112,6 +112,10 @@ Route::get('/correo', function () {
     return view('mails.index');
 });
 
+Route::get('/bases-legales', function () {
+    return view('web.basesLegales.index');
+});
+
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
 
 //ADMINISTRACIÓN

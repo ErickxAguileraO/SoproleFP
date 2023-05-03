@@ -63,6 +63,8 @@
             <a href="/informacion-consumidor">Información del Consumidor</a>
             <p>|</p>
             <a href="/terminos-condiciones">Términos y Condiciones</a>
+            <p>|</p>
+            <a href="/bases-legales">Bases legales</a>
         </div>
     </div>
 </footer>

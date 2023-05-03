@@ -20,7 +20,7 @@
             </div>
         @endif
 
-        @if (count($tags) > 0)
+        {{-- @if (count($tags) > 0)
             <div class="flex-tu-negocio">
                 <h2
                     style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }} !important">
@@ -36,8 +36,10 @@
             </div>
         @endif
 
-        <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" />
-
+        <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" /> --}}
+        <div class="titulo-minisitio" style="display:flex; align-items: center; justify-content: center; background:{{ $segmento->seg_color }};color:{{ $segmento->seg_color_texto }};">
+            <h1> Estás en el mundo de <h1 style="font-weight: bold;">Comida Rápida</h1></h1>
+        </div>
         @if (count($productos) > 0)
             <section class="seccion-home removeSection">
                 <h2

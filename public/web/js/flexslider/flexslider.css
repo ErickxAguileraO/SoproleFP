@@ -215,6 +215,9 @@ html[xmlns] .flexslider .slides {
   bottom: -40px;
   text-align: center;
 }
+.slider-conocenos .flex-control-nav {
+  bottom: auto;
+}
 .flex-control-nav li {
   margin: 0 6px;
   display: inline-block;
