@@ -37,8 +37,8 @@
         @endif
 
         <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" /> --}}
-        <div class="titulo-minisitio" style="display:flex; align-items: center; justify-content: center; background:{{ $segmento->seg_color }};color:{{ $segmento->seg_color_texto }};">
-            <h1> Estás en el mundo de <h1 style="font-weight: bold;">Comida Rápida</h1></h1>
+        <div class="titulo-minisitio" style="display:flex; align-items: center; justify-content: center; width: 100%; height: 100px; margin-top: 100px; gap: 10px; background:{{ $segmento->seg_color }};color:{{ $segmento->seg_color_texto }};">
+            <h1 style="font-weight: 100;"> Estás en el mundo de <h1 style="font-weight: bold;">Comida Rápida</h1></h1>
         </div>
         @if (count($productos) > 0)
             <section class="seccion-home removeSection">
