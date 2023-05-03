@@ -16,10 +16,12 @@
                 @php
                     echo $conocenos->edi_contenido;
                 @endphp
+
+                <a href="/contacto" class="btn-contactanos-conocenos">Contactanos</a>
             </div>
 
             @if ($conocenos->imagenes && count($conocenos->imagenes) > 0)
-                <div class="flexslider-seccion">
+                <div class="flexslider-seccion slider-conocenos">
                     <ul class="slides slider-proposito">
                         @foreach ($conocenos->imagenes as $imagen)
                             <li style=" z-index:0; opacity: 1;" class="li-slider">

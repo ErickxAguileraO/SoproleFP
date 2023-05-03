@@ -8,9 +8,19 @@
     <div class="contenido">
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
-                <div id="product_viewer">
-                    <img style="width: 36px;" src="{{ asset('/public/web/imagenes/i-360.svg') }}" alt="">
-
+                <div class="img-principal">
+                    <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
+                </div>        
+                <div class="carruselImagenes thumbnail_container">
+                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
+                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
+                
                 </div>
             </div>
             <div class="txt-detalle-info">
@@ -40,10 +50,7 @@
                         <p>{{ $producto->pro_vida_util }}</p>
                     </div>
 
-                    <div>
-                        <h6>Unidades de venta</h6>
-                        <p>{{ $producto->pro_unidades_venta }}</p>
-                    </div>
+                    <div></div>
 
                     @if ($producto->pro_archivo)
                         <a target="_blank" href="{{ $producto->pro_archivo }}" class="btn-ficha">
