@@ -216,7 +216,7 @@ html[xmlns] .flexslider .slides {
   text-align: center;
 }
 .slider-conocenos .flex-control-nav {
-  bottom: auto;
+  bottom: -20px;
 }
 .flex-control-nav li {
   margin: 0 6px;
