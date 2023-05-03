@@ -1519,6 +1519,10 @@ footer a{
     color: #FFFFFF;
     font-weight: 700;
     font-size: 16px;
+
+    text-decoration: none;
+
+    margin-top: 40px;
 }
 @media (max-width: 1400px) { 
     /* Cuadros */
