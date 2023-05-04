@@ -2422,3 +2422,17 @@ footer a{
     max-height: 400px;
     overflow-y: scroll;
 }
+.tabla-bases .documento-n div a {
+    width: 79px;
+    height: 32px;
+    background: #D0392A;
+    border-radius: 28px;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    text-decoration:none
+}

@@ -235,14 +235,6 @@
                                     </a>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
-                                    <a href="{{ route('administracion.subsegmento.index') }}"
-                                        class="list-group-item list-group-item-action px-5 border-0"
-                                        style="padding-left: 2rem !important;">
-                                        <i class="bi bi-tags-fill"></i>
-                                        &nbsp;Sub-segmentos
-                                    </a>
-                                </div>
-                                <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.cliente.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">

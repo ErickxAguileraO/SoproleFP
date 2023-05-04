@@ -171,7 +171,7 @@
                 $(".li-slider").click(function() {
                     let enlace = $(this).attr('enlace');
                     if (enlace) {
-                        window.open(enlace, '_blank');
+                        document.location.href=enlace;
                     }
                 })
                 $('.flexslider-seccion').flexslider({
