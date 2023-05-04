@@ -64,11 +64,6 @@
                                 required>
                         </div>
 
-                        <label for="unidades_venta">Unidades en venta</label>
-                        <div class="form-floating my-3">
-                            <input type="text" name="unidades_venta" class="form-control" id="unidades_venta"
-                                value="" required>
-                        </div>
 
                         <label for="imagen">Imagen listado ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
                         <div class="row mb-3">
