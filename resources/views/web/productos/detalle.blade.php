@@ -8,21 +8,33 @@
     <div class="contenido">
         <div class="vista-previa-producto-receta">
             <div class="vista-previa">
+
                 <div class="img-principal">
-                    <img class="main_img" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt="">
-                </div>        
-                <div class="carruselImagenes thumbnail_container">
-                    <div class="active imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/portada-productos-escritorio.svg') }}" alt=""></div>
-                    <div class="imagen-n"><img class="thumbnail" src="{{ asset('/public/web/imagenes/img-leche.svg') }}" alt=""></div>
-                
+                    <img class="main_img" src="{{ asset($producto->pro_imagen) }}" alt="">
                 </div>
+                @if (count($producto->imagenes) > 6)
+                    <div class="carruselImagenes thumbnail_container">
+                        @foreach ($producto->imagenes as $index => $img)
+                            <div class="{{ $index == 0 ? 'active' : false }} imagen-n"><img class="thumbnail"
+                                    src="{{ $img->ipr_imagen }}" alt=""></div>
+                        @endforeach
+                    </div>
+                @else
+                <div class=" thumbnail_container">
+                    @foreach ($producto->imagenes as $index => $img)
+                        <div class="{{ $index == 0 ? 'active' : false }} imagen-n"><img class="thumbnail"
+                                src="{{ $img->ipr_imagen }}" alt=""></div>
+                    @endforeach
+                </div>
+                @endif
+
             </div>
+
+
+
+
+
+
             <div class="txt-detalle-info">
                 <div class="encabezado-detalle-info">
                     <h2>{{ $producto->pro_titulo }}</h2>
@@ -68,7 +80,8 @@
                 @if (count($producto->RecetasWeb) > 4)
                     <div class="carruselRecetas">
                         @foreach ($producto->RecetasWeb as $rec)
-                            <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
+                            <a href="{{ route('web.receta.detalle', $rec->rec_id) . '-' . $rec->rec_url }}"
+                                class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
                                 <div class="texto">
                                     <h5>{{ $rec->rec_titulo }}</h5>
@@ -79,7 +92,8 @@
                 @else
                     <div class="cuadros-info flex-wrap-4">
                         @foreach ($producto->RecetasWeb as $rec)
-                            <a href="{{route('web.receta.detalle', $rec->rec_id).'-'.$rec->rec_url}}" class="cuadros-info-n">
+                            <a href="{{ route('web.receta.detalle', $rec->rec_id) . '-' . $rec->rec_url }}"
+                                class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
                                 <div class="texto">
                                     <h5>{{ $rec->rec_titulo }}</h5>

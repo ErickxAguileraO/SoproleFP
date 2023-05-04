@@ -67,18 +67,6 @@
                             @endforeach
                         </div>
                         <br />
-                        <label for="orden">Sub-Segmentos</label>
-                        <div style="margin-top: 15px;">
-                            @foreach ($subsegmentos as $subsegmento)
-                                <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
-                                    <input
-                                        {{ in_array($subsegmento->sse_id, $subsegmentosSeleccionados) ? 'checked' : false }}
-                                        type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
-                                    <span class="checkmark"></span>
-                                </label>
-                            @endforeach
-                        </div>
-                        <br />
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
                             <input type="text" name="orden" class="form-control" id="orden" placeholder="orden"

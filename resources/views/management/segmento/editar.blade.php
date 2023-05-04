@@ -68,17 +68,6 @@
                                 autocomplete="new-password" value="{{ $segmento->seg_orden }}" required
                                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                         </div>
-                        <label for="orden">Sub-Segmentos</label>
-                        <div style="margin-top: 15px;">
-                            @foreach ($subsegmentos as $subsegmento)
-                                <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
-                                    <input
-                                        {{ in_array($subsegmento->sse_id, $subsegmentosSeleccionados) ? 'checked' : false }}
-                                        type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
-                                    <span class="checkmark"></span>
-                                </label>
-                            @endforeach
-                        </div>
                         <br />
                         <label for="estado">Estado</label>
                         <div class="row mb-3">

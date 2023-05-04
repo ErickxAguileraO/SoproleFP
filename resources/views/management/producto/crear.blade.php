@@ -90,16 +90,6 @@
                             </div>
                         </div>
 
-                        <label for="orden">Sub-Segmentos</label>
-                        <div style="margin-top: 15px;">
-                            @foreach ($subsegmentos as $subsegmento)
-                                <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
-                                    <input type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
-                                    <span class="checkmark"></span>
-                                </label>
-                            @endforeach
-                        </div>
-                        <br />
 
                         <label for="imagen">Ficha</label>
                         <div class="row mb-3">

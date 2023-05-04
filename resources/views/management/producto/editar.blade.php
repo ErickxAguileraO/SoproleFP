@@ -130,19 +130,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            <label for="orden">Sub-Segmentos</label>
-                            <div style="margin-top: 15px;">
-                                @foreach ($subsegmentos as $subsegmento)
-                                    <label class="containerCheckbox">{{ $subsegmento->sse_nombre }}
-                                        <input
-                                            {{ in_array($subsegmento->sse_id, $subsegmentosSeleccionados) ? 'checked' : false }}
-                                            type="checkbox" name="subsegmentos[]" value="{{ $subsegmento->sse_id }}">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                @endforeach
-                            </div>
-                            <br />
-
+         
 
                             <label for="imagen">Ficha</label>
                             @if ($producto->pro_archivo != '')

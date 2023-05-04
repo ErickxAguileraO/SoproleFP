@@ -3,10 +3,9 @@
 @section('title', 'Bases Legales')
 
 @section('content')
-    @push('extra-css')
-    @endpush
     <div class="contenido">
         <div class="bases-legales">
+
             <h1>Bases legales</h1>
             <div class="tabla-bases">
                 <div class="titulo">
@@ -15,24 +14,14 @@
                         <p>Ver documento</p>
                     </div>
                 </div>
-                <div class="documento-n">
-                    <p>Documento 1</p>
-                    <div>
-                        <button>Ver PDF</button>
+                @foreach ($documentos as $doc)
+                    <div class="documento-n">
+                        <p>{{ $doc->dbs_nombre }}</p>
+                        <div>
+                            <a target="_blank" href="{{ $doc->dbs_archivo }}">Ver PDF</a>
+                        </div>
                     </div>
-                </div>
-                <div class="documento-n">
-                    <p>Documento 2</p>
-                    <div>
-                        <button>Ver PDF</button>
-                    </div>
-                </div>
-                <div class="documento-n">
-                    <p>Documento 3</p>
-                    <div>
-                        <button>Ver PDF</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

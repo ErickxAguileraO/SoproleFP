@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Management\EditableController;
 use Illuminate\Support\Facades\Route;
+use App\Models\DocumentosBasesLegales;
+
 use App\Http\Controllers\Management\UserController;
 use App\Http\Controllers\Management\SliderController;
 use App\Http\Controllers\ImageUploadController;
@@ -20,6 +22,9 @@ use App\Http\Controllers\Management\RecetaController;
 use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
+use App\Http\Controllers\Management\DocumentosBasesLegalesController;
+
+
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
 use App\Http\Controllers\Web\AcademiaController as WebAcademiaController;
@@ -113,7 +118,9 @@ Route::get('/correo', function () {
 });
 
 Route::get('/bases-legales', function () {
-    return view('web.basesLegales.index');
+    return view('web.basesLegales.index',[
+        'documentos' => DocumentosBasesLegales::orderBy('dbs_orden','asc')->get()
+    ]);
 });
 
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
@@ -268,6 +275,20 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('ver/{contacto}', 'editar')->name('contacto.editar');
             Route::get('listar', 'listar')->name('contacto.listar');
         });
+
+        Route::controller(DocumentosBasesLegalesController::class)->prefix('bases-legales')->group(function () {
+            Route::get('', 'index')->name('bases.legales.index');
+            Route::get('crear', 'crear')->name('bases.legales.crear');
+            Route::get('editar/{documento}', 'editar')->name('bases.legales.editar');
+            Route::get('listar', 'listar')->name('bases.legales.listar');
+            Route::get('eliminar/{documento}', 'eliminar')->name('bases.legales.eliminar');
+            Route::post('store', 'store')->name('bases.legales.store');
+            Route::post('update', 'update')->name('bases.legales.update');
+        });
+
+
+
+
 
         Route::controller(HazteClienteController::class)->prefix('hazte-cliente')->group(function () {
             Route::get('', 'index')->name('hazte.cliente.index');
