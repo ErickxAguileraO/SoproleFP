@@ -102,7 +102,7 @@
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($noticias as $noticia)
                     <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
-                        class="cuadros-info-n ocultar-576">
+                        class="cuadros-info-n">
                         <div class="img">
                             @if (isset($noticia->imagenes[0]->ino_imagen))
                                 <img src="{{ asset($noticia->imagenes[0]->ino_imagen) }}" alt="">
@@ -145,15 +145,11 @@
         <section class="conocenos mostrar-1100">
             <div class="concenos-img-txt">
                 <div>
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/img-circulo2.svg') }}" alt="">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/banners/productos-47.png') }}" alt="">
                     </div>
                 </div>
                 <div class="conocenos-txt">
                     <h3>Conócenos</h3>
-                    <p>Soprole Food Professionals es la marca industrial de Soprole. Nosotros creamos productos sanos y
-                        ricos, y entregamos soluciones de alta calidad, diseñadas para cada propósito de nuestros clientes.
-                    </p>
-                    <br>
                     @php
                         echo $conocenos->edi_contenido;
                     @endphp
