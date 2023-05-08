@@ -151,7 +151,7 @@
                 <div class="conocenos-txt">
                     <h3>Conócenos</h3>
                     @php
-                        echo $conocenos->edi_contenido;
+                        echo $conocenos->edi_bajada;
                     @endphp
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
                 </div>
