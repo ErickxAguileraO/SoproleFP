@@ -34,7 +34,7 @@
                     @endforeach
                 </div>
             </div>
-        @endif
+        @endif 
 
         <img class="spinner" style="display:none" src="/public/web/imagenes/loading_icon.svg" /> --}}
         <div class="titulo-minisitio" style="display:flex; align-items: center; justify-content: center; width: 100%; height: 100px; margin-top: 100px; gap: 10px; background:{{ $segmento->seg_color }};color:{{ $segmento->seg_color_texto }};">
