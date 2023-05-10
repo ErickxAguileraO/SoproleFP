@@ -20,5 +20,5 @@ steps:
     sshEndpoint: 'produccion'
     runOptions: 'commands'
     commands: |
-      cd /home/tsoprofo/public_html/ && php artisan migrate
+      cd /home/tsoprofo/public_html/ && php artisan migrate --force
     readyTimeout: '20000'
