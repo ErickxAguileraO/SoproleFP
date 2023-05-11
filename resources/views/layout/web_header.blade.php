@@ -259,7 +259,7 @@
                             <a href="/productos/detalle/{{ $producto->pro_url }}" class="opcion-drop-n-2"
                                 onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                 onmouseout="this.style='background-color:white';">
-                                <p style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }}">{{ $producto->pro_titulo }}
+                                <p style="color: {{ $item->seg_color_texto == '#ffffff' ? $item->seg_color : $item->seg_color_texto }}">{{ $producto->pro_titulo }}
                                 </p>
                             </a>
                         @endforeach
