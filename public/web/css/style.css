@@ -2186,6 +2186,9 @@ footer a{
 }
 
 @media (max-width: 576px) {  
+    input{
+        width: 100%;
+    }
     .ocultar-576{
         display: none;
     }
