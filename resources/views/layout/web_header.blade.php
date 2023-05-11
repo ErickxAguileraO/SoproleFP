@@ -256,12 +256,12 @@
                     id="div_SegmentoProductos{{ $item->seg_id }}">
                     @if (count($item->productos) > 0)
                         @foreach ($item->productos as $producto)
-                            <div class="opcion-drop-n-2"
+                            <a href="/productos/detalle/{{ $producto->pro_url }}" class="opcion-drop-n-2"
                                 onmouseover="this.style='background-color:{{ $item->seg_color }};';"
                                 onmouseout="this.style='background-color:white';">
-                                <p style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}
+                                <p style="color: {{ $segmento->seg_color_texto == '#ffffff' ? $segmento->seg_color : $segmento->seg_color_texto }}">{{ $producto->pro_titulo }}
                                 </p>
-                            </div>
+                            </a>
                         @endforeach
                     @endif
                 </div>
