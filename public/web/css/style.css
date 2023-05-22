@@ -2393,12 +2393,11 @@ footer a{
         top: 0px;
         left: 0px;
     }
-    .modal-tienda{
-        max-width: 320px;
-        width: 320px;
-        height: 600px;
-        overflow-x: scroll;
+    .flex-modal-cliente  .modal-tienda{
+        width: 350px;
+        padding: 20px;
     }
+   
     .modal-tienda iframe{
         max-width: 100%;
         width: 100%;
