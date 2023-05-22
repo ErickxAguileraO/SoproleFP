@@ -17,7 +17,7 @@
                     echo $conocenos->edi_contenido;
                 @endphp
 
-                <a href="/contacto" class="btn-contactanos-conocenos">Contáctanos</a>
+                <a href="/formularios" class="btn-contactanos-conocenos">Contáctanos</a>
             </div>
 
             @if ($conocenos->imagenes && count($conocenos->imagenes) > 0)

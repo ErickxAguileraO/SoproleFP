@@ -238,7 +238,7 @@
 
             <div class="opcion-barra-n cliente-movil otros-opcion-barra-n">
                 <img src="{{ asset('/public/web/imagenes/i-user-2.svg') }}" alt="">
-                <a href="/hazte-cliente">Hazte cliente</a>
+                <a class="formularios-cliente">Hazte cliente</a>
             </div>
 
         </div>
