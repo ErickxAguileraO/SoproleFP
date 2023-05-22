@@ -63,14 +63,7 @@
                     </div>
 
                     <div></div>
-
-                    @if ($producto->pro_archivo)
-                        <a target="_blank" href="{{ $producto->pro_archivo }}" class="btn-ficha">
-                            <p>Ver ficha de producto</p>
-                            <img src="{{ asset($producto->pro_archivo) }}" alt="">
-                        </a>
-                    @endif
-
+                    <div></div>
                 </div>
             </div>
         </div>
