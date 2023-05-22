@@ -37,8 +37,8 @@
             </a>
             <h5>Te comentamos que para ser nuestro cliente poseemos las siguientes condiciones:</h5>
 
-            <p>El rut indicado debe presentar iniciación de actividades en el Servicio de Impuestos Internos</p>
-            <p>El monto mínimo de cada compra es de $47.600 IVA incluido ($40.000 netos)</p>
+            <p>• El rut indicado debe presentar iniciación de actividades en el Servicio de Impuestos Internos</p>
+            <p>• El monto mínimo de cada compra es de $47.600 IVA incluido ($40.000 netos)</p>
             <br>
             <p>
                 En caso de aceptar y cumplir las condiciones indicadas, el siguiente paso es validar la cobertura 
