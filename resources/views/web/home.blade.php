@@ -129,12 +129,12 @@
             </div>
             <div class="concenos-img-txt">
                 <div>
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/banners/productos-47.png') }}" alt="">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/conocenos-home.jpg') }}" alt="">
                     </div>
                 </div>
                 <div>
                     @php
-                        echo $conocenos->edi_bajada;
+                        // echo $conocenos->edi_bajada;
                     @endphp
                     </p>
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
@@ -145,13 +145,13 @@
         <section class="conocenos mostrar-1100">
             <div class="concenos-img-txt">
                 <div>
-                    <div class="img"><img src="{{ asset('/public/web/imagenes/banners/productos-47.png') }}" alt="">
+                    <div class="img"><img src="{{ asset('/public/web/imagenes/conocenos-home.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="conocenos-txt">
                     <h3>Conócenos</h3>
                     @php
-                        echo $conocenos->edi_bajada;
+                        // echo $conocenos->edi_bajada;
                     @endphp
                     <a href="/conocenos" class="boton-conocenos">Ver más sobre nosotros</a>
                 </div>

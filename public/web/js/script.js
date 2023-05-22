@@ -41,6 +41,13 @@ $(".tienda").click(function () {
 $(".cerrar-modal").click(function () {
   $(".flex-modal-tienda").css({ 'display': 'none' });
 });
+
+$(".formularios-cliente").click(function () {
+  $(".flex-modal-cliente").css({ 'display': 'flex' });
+});
+$(".cerrar-modal").click(function () {
+  $(".flex-modal-cliente").css({ 'display': 'none' });
+});
 // Acordeones
 $('.drop-down').click(function (event) {
   event.preventDefault();

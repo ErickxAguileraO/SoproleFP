@@ -81,6 +81,9 @@ textarea{
     color: white;
     border-radius: 30px;
 }
+.margin-16{
+    margin: 16px 0px;
+}
 .btn-ir-soprole{
     display: flex;
     align-items: center;
@@ -219,6 +222,7 @@ textarea{
 .botones-header .cliente{
     background-color: var(--rojo);
     border-bottom-right-radius: 20px;
+    cursor: pointer;
 
 }
 /* Menu Dropdown */
@@ -378,8 +382,12 @@ textarea{
     color: #5187BF !important;
 }
 
+
+/* Modal hazte cliente */
+
+
 /* Modal tienda */
-.flex-modal-tienda{
+.flex-modal-tienda, .flex-modal-cliente{
     display: none;
     align-items: center;
     justify-content: center;
@@ -399,6 +407,9 @@ textarea{
     background-color: white;
     padding: 36px;
     overflow-x: scroll;
+}
+.flex-modal-cliente .modal-tienda{
+    height: auto;
 }
 .modal-tienda h5{
     font-weight: 600;
@@ -1009,6 +1020,15 @@ textarea{
     width: 100%;
     height: 100%;
     border-radius: 20px;
+}
+/* Formularios */
+.formularios{
+    width: 90%;
+}
+.tamano-formulario-iframe{
+    width: 100%;
+    /* Dinamico */
+    height: 1400px;
 }
 /* Hazte cliente */
 .hazte-cliente{
@@ -2361,7 +2381,7 @@ footer a{
         text-align: center;
     }
     /* Modal tienda */
-    .flex-modal-tienda{
+    .flex-modal-tienda, .flex-modal-cliente{
         display: none;
         align-items: center;
         justify-content: center;

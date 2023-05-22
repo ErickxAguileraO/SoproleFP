@@ -123,6 +123,11 @@ Route::get('/bases-legales', function () {
     ]);
 });
 
+Route::get('/formularios', function () {
+    return view('web.formularios.index');
+});
+
+
 Route::post('image-upload', [ImageUploadController::class, 'storeImage'])->name('image.upload');
 
 //ADMINISTRACIÓN
