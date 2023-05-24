@@ -23,7 +23,7 @@ use App\Http\Controllers\Management\SegmentoController;
 use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Management\DocumentosBasesLegalesController;
-
+use App\Http\Controllers\Management\FormularioContactoController;
 
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
@@ -36,6 +36,7 @@ use App\Http\Controllers\Web\MiniSitioController  as WebMiniSitioController;
 use App\Http\Controllers\Web\NoticiasController as WebNoticiasController;
 use App\Http\Controllers\Web\RecetasController as WebRecetasController;
 use App\Http\Controllers\Web\ProductoController as WebProductoController;
+use App\Http\Controllers\Web\FormulariosController as WebFormulariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,9 @@ use App\Http\Controllers\Web\ProductoController as WebProductoController;
 
 
 Route::get('/', [WebHomeController::class, 'index']);
+
+Route::get('formulario/{tipo}', [WebFormulariosController::class, 'index']);
+
 
 Route::group(['as' => 'web.'], function () {
     Route::controller(WebNoticiasController::class)->prefix('noticia')->as('noticia.')->group(function () {
@@ -138,6 +142,12 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('', 'index')->name('index');
             Route::get('contar', 'contar')->name('contar');
         });
+
+        Route::controller(FormularioContactoController::class)->prefix('pop-up-contacto')->group(function () {
+            Route::get('', 'index')->name('popup.contacto.index');
+            Route::post('update', 'update')->name('popup.contacto.update');
+        });
+
 
         Route::controller(UserController::class)->prefix('usuarios')->group(function () {
             Route::get('', 'index')->name('usuarios.index');

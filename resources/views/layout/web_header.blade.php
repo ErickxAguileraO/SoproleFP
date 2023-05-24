@@ -45,8 +45,8 @@
                 logística en el sector de despacho. Para ello es necesario que complete el siguiente formulario.
             </p>
             <div class="botones-tienda margin-16">
-                <a href="/formularios" class="btn-ir-tienda no-ir">Rechazar</a>
-                <a href="/formularios" class="btn-ir-tienda">Aceptar</a>
+                <a href="/formulario/rechazar/" class="btn-ir-tienda no-ir">Rechazar</a>
+                <a href="/formulario/aceptar/" class="btn-ir-tienda">Aceptar</a>
             </div>
         </div>
     </div>
