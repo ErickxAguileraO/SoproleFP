@@ -257,6 +257,18 @@
                                     </a>
                                 </div>
 
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.popup.contacto.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-ui-checks"></i>
+                                        &nbsp;Formularios de contacto
+                                    </a>
+                                </div>
+
+
+
+                                
 
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.local.index') }}"

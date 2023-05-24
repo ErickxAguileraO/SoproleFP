@@ -34,7 +34,7 @@
         </div>
         <div class="linea-columna"></div>
         <div class="menu-footer-2">
-            <a href="/formularios">Contáctanos</a>
+            <a href="/formulario/contacto/">Contáctanos</a>
             <a href="/conocenos/">Conócenos</a>
             <a href="{{route('web.academia.index')}}">Academia</a>
             <a href="/productos">Productos</a>
