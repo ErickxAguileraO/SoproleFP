@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
+use App\Models\FormularioContacto;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +27,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::defaultView('paginator.pagination');
-    
         Paginator::defaultSimpleView('paginator.pagination');
+
+
+        View::share('informacionPopUp',  FormularioContacto::find(1));
+    
     }
 }
