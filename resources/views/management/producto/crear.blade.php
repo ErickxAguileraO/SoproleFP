@@ -84,16 +84,6 @@
                                 <div class="btn-file-img" id="agregar-imagenes">Agregar</div>
                             </div>
                         </div>
-
-
-                        <label for="imagen">Ficha</label>
-                        <div class="row mb-3">
-                            <div class="form-floating my-3">
-                                <input type="file" class="input-img-solo" id="archivo" name="archivo">
-                            </div>
-                        </div>
-
-
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
                             <input type="text" name="orden" class="form-control" id="orden" placeholder="orden"
