@@ -45,7 +45,7 @@ class HSTS
 
             $response->headers->set(
                 'Content-Security-Policy',
-                "frame-src youtube.com www.youtube.com",
+                "frame-src youtube.com www.youtube.com https://forms.zohopublic.com",
                 true
             );
         }
