@@ -35,15 +35,12 @@
                 style="cursor: pointer;float: right;margin-bottom: 20px;background-color: #e0e0e0;border-radius: 50%;width: 30px; height: 30px;text-align: center;">
                 <img src="/public/web/imagenes/x-black.svg" style="margin-top: 7px;width: 15px;" />
             </a>
-            <h5>Te comentamos que para ser nuestro cliente poseemos las siguientes condiciones:</h5>
 
-            <p>• El rut indicado debe presentar iniciación de actividades en el Servicio de Impuestos Internos</p>
-            <p>• El monto mínimo de cada compra es de $47.600 IVA incluido ($40.000 netos)</p>
-            <br>
-            <p>
-                En caso de aceptar y cumplir las condiciones indicadas, el siguiente paso es validar la cobertura 
-                logística en el sector de despacho. Para ello es necesario que complete el siguiente formulario.
-            </p>
+            <h5>{{$informacionPopUp->forcon_titulo}}</h5>
+
+            <?php 
+                echo $informacionPopUp->forcon_contenido;
+            ?>
             <div class="botones-tienda margin-16">
                 <a href="/formulario/rechazar/" class="btn-ir-tienda no-ir">Rechazar</a>
                 <a href="/formulario/aceptar/" class="btn-ir-tienda">Aceptar</a>
