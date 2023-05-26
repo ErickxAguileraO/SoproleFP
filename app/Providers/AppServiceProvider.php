@@ -28,9 +28,5 @@ class AppServiceProvider extends ServiceProvider
     {
         Paginator::defaultView('paginator.pagination');
         Paginator::defaultSimpleView('paginator.pagination');
-
-
-        View::share('informacionPopUp',  FormularioContacto::find(1));
-    
     }
 }

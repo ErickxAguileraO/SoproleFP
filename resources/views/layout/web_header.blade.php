@@ -8,6 +8,7 @@
             </a>
             @php
                 $modal = App\Http\Controllers\Management\EditableController::listarByTipo(5);
+                $informacionPopUp = App\Models\FormularioContacto::find(1);
             @endphp
             @if (isset($modal->edi_video))
                 <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($modal->edi_video) }}"
