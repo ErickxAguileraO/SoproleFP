@@ -85,8 +85,18 @@
 
         @if ($receta->rec_video)
             <section class="video-conocenos">
-                <h2>Tutorial</h2>
+                <h2>{{ $receta->rec_titulo_video }}</h2>
                 <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video) }}"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </section>
+        @endif
+
+        @if ($receta->rec_video_dos)
+            <section class="video-conocenos">
+                <h2>{{ $receta->rec_titulo_video_dos }}</h2>
+                <iframe src="https://www.youtube.com/embed/{{ GetYoutubeID($receta->rec_video_dos) }}"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>

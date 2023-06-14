@@ -67,11 +67,28 @@
                             </div>
                         </div>
 
+                        <label for="titulo_video_uno">Título video 1</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="titulo_video_uno" class="form-control" id="titulo_video_uno"
+                                autocomplete="new-password" value="{{$receta->rec_titulo_video}}" required>
+                        </div>
 
                         <label for="video">Video</label>
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video"
                                 autocomplete="new-password" value="{{$receta->rec_video}}" required>
+                        </div>
+
+                        <label for="titulo_video_dos">Título video 2</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="titulo_video_dos" class="form-control" id="titulo_video_dos"
+                                autocomplete="new-password" value="{{$receta->rec_titulo_video_dos}}" required>
+                        </div>
+
+                        <label for="video_dos">Video 2</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="video_dos" class="form-control" id="video_dos"
+                                autocomplete="new-password" value="{{$receta->rec_video_dos}}" required>
                         </div>
 
                         <div>
@@ -124,7 +141,7 @@
                             <div style="margin-top: 15px;">
                                 @foreach ($segmentos as $segmento)
                                     <label class="containerCheckbox">{{ $segmento->seg_nombre }}
-                                        <input 
+                                        <input
                                         {{ in_array($segmento->seg_id, $segmentosSeleccionados) ? 'checked' : false }}
 
                                         type="checkbox" name="segmentos[]" value="{{ $segmento->seg_id }}">
@@ -154,8 +171,8 @@
                                     autocomplete="new-password" value="{{ $receta->rec_orden}}" required
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                             </div>
-    
-                            
+
+
                             <div>
                                 <label for="estado">Estado</label>
                                 <div class="row mb-3">

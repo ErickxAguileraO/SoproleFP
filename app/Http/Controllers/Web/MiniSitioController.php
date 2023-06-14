@@ -22,7 +22,7 @@ class MiniSitioController extends Controller
             "productos" => MiniSitioService::productosBySegmento($segmento->seg_id),
             "recetas" => $segmento->Receta,
             "noticias" => $segmento->NoticiaMiniSitio,
-            'result' => Titulo::find(1)
+            'result' => Titulo::first()
         ]);
     }
 
