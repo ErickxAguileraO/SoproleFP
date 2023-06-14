@@ -24,6 +24,7 @@ use App\Http\Controllers\Management\SubSegmentosController;
 use App\Http\Controllers\Management\TipoNegocioController;
 use App\Http\Controllers\Management\DocumentosBasesLegalesController;
 use App\Http\Controllers\Management\FormularioContactoController;
+use App\Http\Controllers\Management\TituloController;
 
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
@@ -141,6 +142,11 @@ Route::group(['middleware' => ['auth']], function () {
         Route::controller(HomeController::class)->prefix('dashboard')->group(function () {
             Route::get('', 'index')->name('index');
             Route::get('contar', 'contar')->name('contar');
+        });
+
+        Route::controller(TituloController::class)->prefix('titulo')->group(function () {
+            Route::get('', 'index')->name('titulo.index');
+            Route::post('update', 'update')->name('titulo.update');
         });
 
         Route::controller(FormularioContactoController::class)->prefix('pop-up-contacto')->group(function () {

@@ -19,7 +19,8 @@
             </ul>
         </div>
         <div class="flex-tu-negocio">
-            <h2>¿Qué tipo de preparaciones desarrollas en tu negocio? </h2>
+            <h2>{{ $result->titulo }} </h2>
+            <p class="sub-titulo">{{ $result->descripcion }}</p>
             <div class="tu-negocio">
                 @foreach ($segmentos as $segmento)
                     <a href="/mini-sitio/{{ $segmento->seg_url }}" class="tu-negocio-n neg-1"
@@ -33,11 +34,9 @@
 
         <section class="flex-academia-home">
             <div class="seccion-home">
-                <h2>Conoce la Academia Food Professionals</h2>
+                <h2>{{ $result->tit_titulo_dos_home }}</h2>
                 <br>
-                <p class="sub-titulo">Nos apasiona apoyar el desarrollo de tu negocio gastronómico. Por ello, a través de
-                    nuestra academia, te brindamos herramientas que buscan potenciar tu pastelería, pizzería, restaurante,
-                    banquetería o cafetería. </p>
+                <p class="sub-titulo">{{ $result->tit_descripcion_dos_home }}</p>
                 <div class="cuadros-info cuadros-row-4">
                     @foreach ($academias as $academia)
                         <a href="{{ route('web.academia.detalle', $academia->aca_id) . '-' . $academia->aca_url }}"
@@ -56,10 +55,9 @@
         </section>
 
         <section class="seccion-home">
-            <h2>Mira nuestros productos</h2>
+            <h2>{{ $result->tit_titulo_tres_home }}</h2>
             <br>
-            <p class="sub-titulo">Nos apasiona entregar productos de calidad. Por ello, estamos enfocados en innovar y
-                desarrollar productos acordes a las necesidades de tu negocio. </p>
+            <p class="sub-titulo">{{ $result->tit_descripcion_tres_home }}</p>
             <div class="cuadros-info cuadros-row-4">
                 @foreach ($productos as $producto)
                     <a href="/productos/detalle/{{ $producto->pro_url }}" class="cuadros-info-n">
@@ -75,10 +73,9 @@
         </section>
 
         <section class="seccion-home">
-            <h2>Mira estas recetas</h2>
+            <h2>{{ $result->tit_titulo_cuatro_home }}</h2>
             <br>
-            <p class="sub-titulo">Nos apasiona ayudarte a crecer, y con estas recetas, podrás expandir tu menú y descubrir
-                nuevas técnicas para crear sonrisas en quienes disfruten de tus preparaciones. </p>
+            <p class="sub-titulo">{{ $result->tit_descripcion_cuatro_home }}</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($recetas as $receta)
                     <a href="{{ route('web.receta.detalle', $receta->rec_id) . '-' . $receta->rec_url }}"
@@ -95,10 +92,9 @@
         </section>
 
         <section class="seccion-home">
-            <h2>Conoce más sobre Tendencias y Noticias</h2>
+            <h2>{{ $result->tit_titulo_cinco_home }}</h2>
             <br>
-            <p class="sub-titulo">Nos apasiona mantenerte informado, y esta sección, encontrarás las últimas noticias sobre
-                capacitaciones, eventos, tendencias y todo lo relacionado al mundo gastronómico. </p>
+            <p class="sub-titulo">{{ $result->tit_descripcion_cinco_home }}</p>
             <div class="cuadros-info cuadros-row-3">
                 @foreach ($noticias as $noticia)
                     <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
@@ -124,7 +120,7 @@
             <div class="concenos-txt">
                 <div></div>
                 <div>
-                    <h3>Conócenos</h3>
+                    <h3>{{ $result->tit_titulo_seis_home }}</h3>
                 </div>
             </div>
             <div class="concenos-img-txt">
@@ -149,7 +145,7 @@
                     </div>
                 </div>
                 <div class="conocenos-txt">
-                    <h3>Conócenos</h3>
+                    <h3>{{ $result->tit_titulo_seis_home }}</h3>
                     @php
                         echo $conocenos->edi_bajada;
                     @endphp

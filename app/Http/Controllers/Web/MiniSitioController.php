@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Services\Web\MiniSitioService;
 use App\Models\Segmento;
 use App\Models\SubSegmento;
+use App\Models\Titulo;
 
 class MiniSitioController extends Controller
 {
@@ -21,6 +22,7 @@ class MiniSitioController extends Controller
             "productos" => MiniSitioService::productosBySegmento($segmento->seg_id),
             "recetas" => $segmento->Receta,
             "noticias" => $segmento->NoticiaMiniSitio,
+            'result' => Titulo::find(1)
         ]);
     }
 
