@@ -55,7 +55,7 @@
                         <label for="">Preparación</label>
                         <div class="form-floating my-3">
                             <textarea id="preparacion" class="form-control" name="preparacion" rows="4" cols="50"></textarea>
-                        </div>                        
+                        </div>
 
                         <label for="imagen">Imagen ({{ $ancho ."px ancho x ".$alto."px alto"}})</label>
                         <div class="row mb-3">
@@ -64,9 +64,27 @@
                             </div>
                         </div>
 
-                        <label for="video">Video</label>
+                        <label for="titulo_video_uno">Título video 1</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="titulo_video_uno" class="form-control" id="titulo_video_uno"
+                                autocomplete="new-password" value="" required>
+                        </div>
+
+                        <label for="video">Video 1</label>
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video"
+                                autocomplete="new-password" value="" required>
+                        </div>
+
+                        <label for="titulo_video_dos">Título video 2</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="titulo_video_dos" class="form-control" id="titulo_video_dos"
+                                autocomplete="new-password" value="" required>
+                        </div>
+
+                        <label for="video_dos">Video 2</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="video_dos" class="form-control" id="video_dos"
                                 autocomplete="new-password" value="" required>
                         </div>
 

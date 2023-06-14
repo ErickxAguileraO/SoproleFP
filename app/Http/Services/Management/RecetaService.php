@@ -25,6 +25,9 @@ class RecetaService
                 'rec_url' => Str::slug($request->titulo),
                 'rec_contenido' => $request->contenido,
                 'rec_video' => $request->video,
+                'rec_titulo_video' => $request->titulo_video_uno,
+                'rec_titulo_video_dos' => $request->titulo_video_dos,
+                'rec_video_dos' => $request->video_dos,
                 'rec_orden' => $request->orden,
                 'rec_dificultad' => $request->dificultad,
                 'rec_porciones' => $request->porciones,
@@ -101,6 +104,9 @@ class RecetaService
             $receta->rec_url =  Str::slug($request->titulo);
             $receta->rec_contenido = $request->contenido;
             $receta->rec_video = $request->video;
+            $receta->rec_titulo_video = $request->titulo_video_uno;
+            $receta->rec_titulo_video_dos = $request->titulo_video_dos;
+            $receta->rec_video_dos = $request->video_dos;
             $receta->rec_orden =  $request->orden;
             $receta->rec_dificultad = $request->dificultad;
             $receta->rec_porciones = $request->porciones;
