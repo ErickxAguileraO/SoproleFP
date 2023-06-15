@@ -11,6 +11,7 @@ use App\Models\Receta;
 use App\Models\Segmento;
 use App\Models\Slider;
 use App\Models\Titulo;
+use App\Models\Metadatos;
 
 class HomeController extends Controller
 {
@@ -26,7 +27,8 @@ class HomeController extends Controller
             "recetas" => Receta::where('rec_estado',1)->orderBy('rec_orden','asc')->limit(3)->get(),
             "noticias" => Noticia::where('not_estado',1)->orderBy('not_fecha','desc')->limit(3)->get(),
             "conocenos" => Editable::where('edi_tipo',1)->where('edi_estado',1)->first(),
-            'result' => Titulo::first()
+            'result' => Titulo::first(),
+            'metaData' => Metadatos::first()
         ]);
     }
 }

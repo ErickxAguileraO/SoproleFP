@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Metas -->
-    <meta name="author" content="Magotteaux">
-    <meta name="title" content="">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    {{-- <meta name="author" content="SoproleFP"> --}}
+    <meta name="title" content="{{ $metaData->met_titulo ?? '' }}">
+    <meta name="keywords" content="{{ $metaData->met_key ?? '' }}">
+    <meta name="description" content="{{ $metaData->met_descripcion ?? '' }}">
     <!-- Title -->
     <title>Soprole FP | @yield('title')</title>
     <!-- Jquery-->
@@ -32,17 +32,8 @@
     {{-- Favicon --}}
     <link href="{{ asset('/public/favicon.ico') }}" rel="icon">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MF3F4LGDF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-6MF3F4LGDF');
-    </script>
+    <!-- Google tag (gtag.js) Analytics -->
+    {!! $metaData->met_codigo_analytics ?? '' !!}
 
     @stack('extra-css')
 </head>

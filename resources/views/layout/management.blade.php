@@ -314,6 +314,14 @@
                                         &nbsp;Configuracion General
                                     </a>
                                 </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.metadato.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-gear-wide-connected"></i>
+                                        &nbsp;Metadatos
+                                    </a>
+                                </div>
                             </div>
                         </nav>
                     </div>

@@ -103,33 +103,6 @@ class TituloController extends Controller
                 $nuevoRegistro->tit_descripcion_seis_mini_sitio = $request->descripcion_seis_mini_sitio;
                 $nuevoRegistro->save();
             }
-                // $form = Titulo::find(1);
-                // $form->titulo = $request->titulo_uno_home;
-                // $form->descripcion = $request->descripcion_uno_home;
-                // $form->tit_titulo_dos_home = $request->titulo_dos_home;
-                // $form->tit_descripcion_dos_home = $request->descripcion_dos_home;
-                // $form->tit_titulo_tres_home = $request->titulo_tres_home;
-                // $form->tit_descripcion_tres_home = $request->descripcion_tres_home;
-                // $form->tit_titulo_cuatro_home = $request->titulo_cuatro_home;
-                // $form->tit_descripcion_cuatro_home = $request->descripcion_cuatro_home;
-                // $form->tit_titulo_cinco_home = $request->titulo_cinco_home;
-                // $form->tit_descripcion_cinco_home = $request->descripcion_cinco_home;
-                // $form->tit_titulo_seis_home = $request->titulo_seis_home;
-                // $form->tit_descripcion_seis_home = $request->descripcion_seis_home;
-
-                // $form->tit_titulo_uno_mini_sitio = $request->titulo_uno_mini_sitio;
-                // $form->tit_descripcion_uno_mini_sitio = $request->descripcion_uno_mini_sitio;
-                // $form->tit_titulo_dos_mini_sitio = $request->titulo_dos_mini_sitio;
-                // $form->tit_descripcion_dos_mini_sitio = $request->descripcion_dos_mini_sitio;
-                // $form->tit_titulo_tres_mini_sitio = $request->titulo_tres_mini_sitio;
-                // $form->tit_descripcion_tres_mini_sitio = $request->descripcion_tres_mini_sitio;
-                // $form->tit_titulo_cuatro_mini_sitio = $request->titulo_cuatro_mini_sitio;
-                // $form->tit_descripcion_cuatro_mini_sitio = $request->descripcion_cuatro_mini_sitio;
-                // $form->tit_titulo_cinco_mini_sitio = $request->titulo_cinco_mini_sitio;
-                // $form->tit_descripcion_cinco_mini_sitio = $request->descripcion_cinco_mini_sitio;
-                // $form->tit_titulo_seis_mini_sitio = $request->titulo_seis_mini_sitio;
-                // $form->tit_descripcion_seis_mini_sitio = $request->descripcion_seis_mini_sitio;
-                // $form->save();
 
                 return response()->json([
                     'status' => 'T',
