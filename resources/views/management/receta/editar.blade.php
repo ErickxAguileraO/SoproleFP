@@ -73,7 +73,7 @@
                                 autocomplete="new-password" value="{{$receta->rec_titulo_video}}" required>
                         </div>
 
-                        <label for="video">Video</label>
+                        <label for="video">Video 1</label>
                         <div class="form-floating my-3">
                             <input type="text" name="video" class="form-control" id="video"
                                 autocomplete="new-password" value="{{$receta->rec_video}}" required>
