@@ -7,9 +7,9 @@
                 <div>
                     <h5>{{$item->not_titulo}}</h5>
                     <span>{{$item->not_fecha}}</span>
-                    <p>{{$item->not_titulo2}}</p>                  
+                    <p>{{$item->not_titulo2}}</p>
                 </div>
-                
+
                 <a href="{{route('web.noticia.detalle', $item->not_id).'-'.$item->not_url}}" class="boton-noticia-tendencia">Ver</a>
             </div>
         </div>

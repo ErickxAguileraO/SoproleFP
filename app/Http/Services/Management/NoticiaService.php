@@ -30,7 +30,8 @@ class NoticiaService
                 'not_slider' => $noticia_slider,
                 'not_fecha' => Carbon::createFromFormat('Y-m-d', $request->fecha)->toDateString(),
                 'not_estado' =>$request->estado,
-                'not_url' => Str::slug($request->titulo)
+                // 'not_url' => Str::slug($request->titulo)
+                'not_url' => strtolower(str_replace(' ', '-', $request->nombre_url))
             ]);
 
             if($request->file('imagenes') != null && count($request->file('imagenes'))>0){
@@ -88,8 +89,9 @@ class NoticiaService
             $noticia->not_contenido = $request->contenido;
             $noticia->not_fecha =Carbon::createFromFormat('Y-m-d',  $request->fecha)->toDateString();
             $noticia->not_estado = $request->estado;
-            $noticia->not_url = Str::slug($request->titulo);
-    
+            // $noticia->not_url = Str::slug($request->titulo);
+            $noticia->not_url = strtolower(str_replace(' ', '-', $request->nombre_url));
+
             if ($request->file('imagen')) {
                 $noticia->not_slider = FileService::upload($request->file('imagen'), 'imagenes/noticias');
             }

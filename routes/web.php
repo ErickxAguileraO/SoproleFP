@@ -65,7 +65,7 @@ Route::group(['as' => 'web.'], function () {
     });
     Route::controller(WebRecetasController::class)->prefix('receta')->as('receta.')->group(function () {
         Route::get('', 'index')->name('index');
-        Route::get('detalle/{recetaId}', 'detalle')->name('detalle');
+        Route::get('detalle/{recetaId}/', 'detalle')->name('detalle');
     });
     Route::controller(WebAcademiaController::class)->prefix('academia')->as('academia.')->group(function () {
         Route::get('', 'index')->name('index');

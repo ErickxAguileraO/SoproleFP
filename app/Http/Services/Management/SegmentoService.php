@@ -17,7 +17,8 @@ class SegmentoService
         try {
             $insert = [
                 'seg_nombre' => $request->nombre,
-                'seg_url' => Str::slug($request->nombre),
+                // 'seg_url' => Str::slug($request->nombre),
+                'seg_url' => strtolower(str_replace(' ', '-', $request->nombre_url)),
                 'seg_estado' => $request->estado,
                 'seg_orden' => $request->orden,
                 'seg_color' => $request->color,
@@ -67,7 +68,8 @@ class SegmentoService
             $segmento = Segmento::find($request->segmento_id);
 
             $segmento->seg_nombre = $request->nombre;
-            $segmento->seg_url =Str::slug($request->nombre);
+            // $segmento->seg_url =Str::slug($request->nombre);
+            $segmento->seg_url = strtolower(str_replace(' ', '-', $request->nombre_url));
             $segmento->seg_estado = $request->estado;
             $segmento->seg_orden = $request->orden;
             $segmento->seg_color_anterior = $segmento->seg_color;

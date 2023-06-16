@@ -9,7 +9,7 @@
                         <h5>{{$item->aca_titulo}}</h5>
                         <span>{{$item->aca_fecha}}</span>
                         <p>{{$item->aca_titulo2}}</p>
-                    
+
                     </div>
                     <a href="{{route('web.academia.detalle', $item->aca_id).'-'.$item->aca_url }}" class="boton-noticia-tendencia">Ver ahora</a>
                 </div>
