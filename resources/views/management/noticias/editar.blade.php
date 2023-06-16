@@ -37,7 +37,7 @@
                         <div class="form-floating my-3">
                             <textarea id="contenido" class="form-control" name="contenido" rows="4" cols="50" placeholder="Contenido">{{ $noticia->not_contenido }}</textarea>
                         </div>
-                        
+
                         <label for="imagen">Slider ({{ $ancho . 'px ancho x ' . $alto . 'px alto' }})</label>
                         @if ($noticia->not_slider != '')
                             <a target="_blank" href='{{ $noticia->not_slider }} '>Ver
@@ -106,7 +106,13 @@
                                 @endforeach
                             </div>
                             <br />
-                            
+
+                            <label for="nombre_url">Nombre de URL</label>
+                            <div class="form-floating my-3">
+                                <input type="text" name="nombre_url" class="form-control" id="nombre_url"
+                                    autocomplete="new-password" value="{{$noticia->not_url}}" required>
+                            </div>
+
                             <div>
                                 <label for="estado">Estado</label>
                                 <div class="row mb-3">

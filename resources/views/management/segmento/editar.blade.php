@@ -51,7 +51,7 @@
                                 value="{{ $segmento->seg_color }}" required>
                         </div>
                         <a class="btn btn-success btn-reset-color" id="btn-reset-color">Setear color anterior</a><br/><br/>
-                    
+
 
                         <label for="color">Color texto</label>
                         <div class="form-floating my-3">
@@ -60,6 +60,11 @@
                                 value="{{ $segmento->seg_color_texto }}" required>
                         </div>
 
+                        <label for="nombre_url">Nombre de URL</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="nombre_url" class="form-control" id="nombre_url"
+                                autocomplete="new-password" value="{{$segmento->seg_url}}" required>
+                        </div>
 
 
                         <label for="orden">Orden</label>

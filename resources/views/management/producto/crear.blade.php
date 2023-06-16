@@ -84,6 +84,12 @@
                                 <div class="btn-file-img" id="agregar-imagenes">Agregar</div>
                             </div>
                         </div>
+
+                        <label for="nombre_url">Nombre de URL</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="nombre_url" class="form-control" id="nombre_url"
+                                autocomplete="new-password" value="" required>
+                        </div>
                         <label for="orden">Orden</label>
                         <div class="form-floating my-3">
                             <input type="text" name="orden" class="form-control" id="orden" placeholder="orden"

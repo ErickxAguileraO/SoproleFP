@@ -16,7 +16,8 @@ class AcademiaService
 
         $insert = [
             'aca_titulo' => $request->titulo,
-            'aca_url' => Str::slug($request->titulo),
+            // 'aca_url' => Str::slug($request->titulo),
+            'aca_url' => strtolower(str_replace(' ', '-', $request->nombre_url)),
             'aca_titulo2' => $request->titulo2,
             'aca_contenido' => $request->contenido,
             'aca_video' => $request->video,
@@ -67,7 +68,8 @@ class AcademiaService
 
             $academia = Academia::find($request->academia_id);
             $academia->aca_titulo =  $request->titulo;
-            $academia->aca_url =  Str::slug($request->titulo);
+            // $academia->aca_url =  Str::slug($request->titulo);
+            $academia->aca_url =  strtolower(str_replace(' ', '-', $request->nombre_url));
             $academia->aca_titulo2 =  $request->titulo2;
             $academia->aca_contenido = $request->contenido;
             $academia->aca_video = $request->video;

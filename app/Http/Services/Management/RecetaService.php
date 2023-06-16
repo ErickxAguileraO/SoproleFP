@@ -22,7 +22,8 @@ class RecetaService
 
             $insert = [
                 'rec_titulo' => $request->titulo,
-                'rec_url' => Str::slug($request->titulo),
+                // 'rec_url' => Str::slug($request->titulo),
+                'rec_url' => strtolower(str_replace(' ', '-', $request->nombre_url)),
                 'rec_contenido' => $request->contenido,
                 'rec_video' => $request->video,
                 'rec_titulo_video' => $request->titulo_video_uno,
@@ -101,7 +102,8 @@ class RecetaService
 
             $receta = Receta::find($request->receta_id);
             $receta->rec_titulo =  $request->titulo;
-            $receta->rec_url =  Str::slug($request->titulo);
+            // $receta->rec_url =  Str::slug($request->titulo);
+            $receta->rec_url =  strtolower(str_replace(' ', '-', $request->nombre_url));
             $receta->rec_contenido = $request->contenido;
             $receta->rec_video = $request->video;
             $receta->rec_titulo_video = $request->titulo_video_uno;

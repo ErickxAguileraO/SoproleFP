@@ -70,6 +70,12 @@
                         </div>
                         <br />
 
+                        <label for="nombre_url">Nombre de URL</label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="nombre_url" class="form-control" id="nombre_url"
+                                autocomplete="new-password" value="" required>
+                        </div>
+
                         <label for="estado">Estado</label>
                         <div class="row mb-3">
                             <div class="form-floating my-3">

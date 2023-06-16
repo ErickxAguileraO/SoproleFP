@@ -26,7 +26,8 @@ class ProductoService
                 'pro_categoria_id' => $request->categoria,
                 'pro_orden' => $request->orden,
                 'pro_estado' => $request->estado,
-                'pro_url' => Str::slug($request->titulo)
+                'pro_url' => strtolower(str_replace(' ', '-', $request->nombre_url))
+                // 'pro_url' => Str::slug($request->titulo)
             ];
 
             if ($request->file('imagen')) {
@@ -92,7 +93,8 @@ class ProductoService
             $producto->pro_categoria_id = $request->categoria;
             $producto->pro_orden = $request->orden;
             $producto->pro_estado = $request->estado;
-            $producto->pro_url = Str::slug($request->titulo);
+            $producto->pro_url = strtolower(str_replace(' ', '-', $request->nombre_url));
+            // $producto->pro_url = Str::slug($request->titulo);
 
             if ($request->file('imagen')) {
                 $producto->pro_imagen = FileService::upload($request->file('imagen'), 'imagenes/productos');
