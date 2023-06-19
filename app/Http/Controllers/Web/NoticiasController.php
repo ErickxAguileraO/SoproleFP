@@ -12,27 +12,27 @@ class NoticiasController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            if (is_null($request->segmentoId)) {        
-                return view('web.noticias.data', 
-                    ['noticias' => Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9), 
+            if (is_null($request->segmentoId)) {
+                return view('web.noticias.data',
+                    ['noticias' => Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9),
                     'segmentosId' => NULL]
-                    )->render();  
+                    )->render();
             } else {
-                return view('web.noticias.data', 
+                return view('web.noticias.data',
                     ['noticias' => Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
                         $query->whereIn('notseg_segmento_id', $request->segmentoId);
-                        })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9), 
+                        })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9),
                     'segmentosId' => json_encode($request->segmentoId)]
-                )->render();  
+                )->render();
             }
         }
 
-        if ($request->has('segmentoId')) {      
+        if ($request->has('segmentoId')) {
             $noticias = Noticia::with('imagenes','segmentos')->whereHas('segmentos', function ($query) use($request){
                 $query->whereIn('notseg_segmento_id', $request->segmentoId);
-            })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);  
+            })->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);
         } else {
-            $noticias = Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);  
+            $noticias = Noticia::with('imagenes','segmentos')->where('not_estado', 1)->orderby('not_fecha', 'desc')->orderby('not_id', 'desc')->paginate(9);
         }
 
         return view('web.noticias.index', [
@@ -46,7 +46,7 @@ class NoticiasController extends Controller
     public function detalle($noticiaId)
     {
         return view('web.noticias.detalle', [
-            "noticia" => Noticia::with('imagenes')->where('not_id', $noticiaId)->where('not_estado', 1)->firstOrFail(),
+            "noticia" => Noticia::with('imagenes')->where('not_url', $noticiaId)->where('not_estado', 1)->firstOrFail(),
         ]);
     }
 }

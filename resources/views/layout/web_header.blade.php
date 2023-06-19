@@ -39,7 +39,7 @@
 
             <h5>{{$informacionPopUp->forcon_titulo}}</h5>
 
-            <?php 
+            <?php
                 echo $informacionPopUp->forcon_contenido;
             ?>
             <div class="botones-tienda margin-16">
@@ -66,7 +66,141 @@
                         src="{{ asset('/public/web/imagenes/i-soprole.svg') }}" alt=""></a>
 
             </div>
+            @php
+                $menuDinamico = App\Models\MenuDinamico::orderBy('mdi_orden', 'asc')->get();
+            @endphp
             <div class="menu-op">
+                @foreach ($menuDinamico as $item)
+                    @switch($item->mdi_id)
+                        @case(1)
+                            @if ($item->mdi_estado === 1)
+                                <div class="dropdown-menu-header">
+                                    <a href="{{ route('web.conocenos') }}" class="dropbtn">Conócenos</a>
+                                </div>
+                            @endif
+                        @break
+
+                        @case(2)
+                            @if ($item->mdi_estado === 1)
+                                <div class="dropdown-menu-header dropdown-noticias">
+                                    <a class="dropbtn" href="{{ route('web.academia.index') }}">Academia</a>
+                                    <div class="dropdown-content dropdown-content-noticias">
+                                        <div class="contenido-drop contenido-drop-noticias">
+                                            <div>
+                                                <div class="titulo-drop">
+                                                    <h5>Academia</h5>
+                                                    <a href="{{ route('web.academia.index') }}" class="boton-ver-op bg-red">Ver
+                                                        todos</a>
+                                                </div>
+
+                                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                                                    <a style="background-color:{{ $item->seg_color }}" color="{{ $item->seg_color }}"
+                                                        href="{{ route('web.academia.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                                                        class="opcion-drop-n segmentoHover">
+                                                        <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
+                                                        <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
+                                                    </a>
+                                                @endforeach
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @break
+
+                        @case(3)
+                            @if ($item->mdi_estado === 1)
+                                <div class="dropdown-menu-header">
+                                    <a class="dropbtn" href="/productos">Productos</a>
+                                    <div class="dropdown-content">
+                                        <div class="contenido-drop">
+                                            <div>
+                                                <div class="titulo-drop">
+                                                    <h5>Segmentos</h5>
+                                                    <a href="/productos" class="boton-ver-op bg-red">Ver todos</a>
+                                                </div>
+
+                                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                                                    <div class="opcion-drop-n segmentoHover" color="{{ $item->seg_color }}"
+                                                        style="background-color:{{ $item->seg_color }}"
+                                                        onclick="document.location.href='/productos/?segmentoId[0]={{ $item->seg_id }}&page=1'">
+                                                        <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
+                                                        <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
+                                                        @if (count($item->productos) > 0)
+                                                            <img src="{{ asset('/public/web/imagenes/i-flecha-deracha-1.svg') }}"
+                                                                alt="">
+                                                            <div class="sub-content-drop ocultar-drop drop-default">
+                                                                <div class="titulo-drop">
+                                                                    <h5>Productos {{ $item->seg_nombre }}</h5>
+                                                                    <a href="/productos/?segmentoId[0]={{ $item->seg_id }}&page=1"
+                                                                        class="boton-ver-op bg-red">Ver mas</a>
+                                                                </div>
+                                                                @foreach ($item->productos as $producto)
+                                                                    @if ($item->seg_color_texto === '#ffffff')
+                                                                        <a href="/productos/detalle/{{ $producto->pro_url }}"
+                                                                            class="link-op"
+                                                                            style="color: {{ $item->seg_color }}">{{ $producto->pro_titulo }}</a>
+                                                                    @else
+                                                                        <a href="/productos/detalle/{{ $producto->pro_url }}"
+                                                                            class="link-op"
+                                                                            style="color: {{ $item->seg_color_texto }}">{{ $producto->pro_titulo }}</a>
+                                                                    @endif
+                                                                @endforeach
+                                                            </div>
+                                                        @endif
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                            <div class="linea-op-drop"></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @break
+
+                        @case(4)
+                            @if ($item->mdi_estado === 1)
+                                <div class="dropdown-menu-header dropdown-noticias">
+                                    <a class="dropbtn" href="{{ route('web.receta.index') }}">Recetas</a>
+                                    <div class="dropdown-content dropdown-content-noticias">
+                                        <div class="contenido-drop contenido-drop-noticias">
+                                            <div>
+                                                <div class="titulo-drop">
+                                                    <h5>Recetas</h5>
+                                                    <a href="{{ route('web.receta.index') }}" class="boton-ver-op bg-red">Ver
+                                                        todos</a>
+                                                </div>
+
+                                                @foreach (App\Http\Controllers\Management\SegmentoController::listarWithProducto() as $item)
+                                                    <a color="{{ $item->seg_color }}" style="background-color:{{ $item->seg_color }}"
+                                                        href="{{ route('web.receta.index') . '?segmentoId[0]=' . $item->seg_id }}"
+                                                        class="opcion-drop-n segmentoHover">
+                                                        <img style="width: 36px;" src="{{ $item->seg_imagen }}" alt="">
+                                                        <p style="color: {{ $item->seg_color_texto }}">{{ $item->seg_nombre }}</p>
+                                                    </a>
+                                                @endforeach
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @break
+
+                        @case(5)
+                            @if ($item->mdi_estado === 1)
+                                <div class="dropdown-menu-header">
+                                    <a href="{{ route('web.noticia.index') }}" class="dropbtn">Tendencias y noticias</a>
+                                </div>
+                            @endif
+                        @break
+                    @endswitch
+                @endforeach
+            </div>
+
+            {{-- <div class="menu-op">
                 <div class="dropdown-menu-header">
                     <a href="{{ route('web.conocenos') }}" class="dropbtn">Conócenos</a>
                 </div>
@@ -172,7 +306,7 @@
                 <div class="dropdown-menu-header">
                     <a href="{{ route('web.noticia.index') }}" class="dropbtn">Tendencias y noticias</a>
                 </div>
-            </div>
+            </div> --}}
             <div class="botones-header">
                 <a class="tienda">
                     <img src="{{ asset('/public/web/imagenes/i-carro.svg') }}" alt="">
@@ -210,7 +344,53 @@
                     <img class="btn-close" src="{{ asset('/public/web/imagenes/i-close.svg') }}" alt="">
                 </div>
             </div>
-            <div class="opcion-barra-n">
+            @foreach ($menuDinamico as $item)
+                @switch($item->mdi_id)
+                    @case(1)
+                        @if ($item->mdi_estado === 1)
+                            <div class="opcion-barra-n">
+                                <a href="{{ route('web.conocenos') }}">Conócenos</a>
+                            </div>
+                        @endif
+                    @break
+
+                    @case(2)
+                        @if ($item->mdi_estado === 1)
+                            <div class="opcion-barra-n btn-noticias-movil">
+                                <a>Academia</a>
+                                <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
+                            </div>
+                        @endif
+                    @break
+
+                    @case(3)
+                        @if ($item->mdi_estado === 1)
+                            <div class="opcion-barra-n btn-productos-movil">
+                                <a>Productos</a>
+                                <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
+                            </div>
+                        @endif
+                    @break
+
+                    @case(4)
+                        @if ($item->mdi_estado === 1)
+                            <div class="opcion-barra-n btn-recetas-movil">
+                                <a>Recetas</a>
+                                <img src="{{ asset('/public/web/imagenes/i-flecha-white.svg') }}" alt="">
+                            </div>
+                        @endif
+                    @break
+
+                    @case(5)
+                        @if ($item->mdi_estado === 1)
+                            <div class="opcion-barra-n">
+                                <a href="{{ route('web.noticia.index') }}">Tendencias y noticias</a>
+                            </div>
+                        @endif
+                    @break
+                @endswitch
+            @endforeach
+            {{-- <div class="opcion-barra-n">
                 <a href="{{ route('web.conocenos') }}">Conócenos</a>
             </div>
             <div class="opcion-barra-n btn-noticias-movil">
@@ -227,7 +407,7 @@
             </div>
             <div class="opcion-barra-n">
                 <a href="{{ route('web.noticia.index') }}">Tendencias y noticias</a>
-            </div>
+            </div> --}}
             <br>
             <div class="opcion-barra-n tienda-movil otros-opcion-barra-n tienda">
                 <img src="{{ asset('/public/web/imagenes/i-carro-2.svg') }}" alt="">

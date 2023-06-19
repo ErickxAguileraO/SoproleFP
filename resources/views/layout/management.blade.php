@@ -128,21 +128,37 @@
                             </div>
                         </nav>
                         <nav id="sidebarMenu"
-                        class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
-                        <div class="accordion my-3" id="accordionExampleY">
-                            <div class="accordion-item">
-                                <p class="text-center bg-info text-white mb-0 rounded-top"></i>Títulos</p>
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Títulos</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.titulo.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-ui-checks"></i>
+                                        &nbsp;Títulos
+                                    </a>
+                                </div>
                             </div>
-                            <div class="list-group list-group-light accordion-item">
-                                <a href="{{ route('administracion.titulo.index') }}"
-                                    class="list-group-item list-group-item-action px-5 border-0"
-                                    style="padding-left: 2rem !important;">
-                                    <i class="bi bi-ui-checks"></i>
-                                    &nbsp;Títulos
-                                </a>
+                        </nav>
+                        <nav id="sidebarMenu"
+                            class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
+                            <div class="accordion my-3" id="accordionExampleY">
+                                <div class="accordion-item">
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Orden de menu</p>
+                                </div>
+                                <div class="list-group list-group-light accordion-item">
+                                    <a href="{{ route('administracion.menu.index') }}"
+                                        class="list-group-item list-group-item-action px-5 border-0"
+                                        style="padding-left: 2rem !important;">
+                                        <i class="bi bi-ui-checks"></i>
+                                        &nbsp;Menu
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </nav>
+                        </nav>
                         <nav id="sidebarMenu"
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
