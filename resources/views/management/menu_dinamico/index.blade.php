@@ -1,6 +1,6 @@
 @extends('layout.management')
 
-@section('title', 'menu dinamico')
+@section('title', 'Menú dinámico')
 
 @section('content')
 

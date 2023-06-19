@@ -147,14 +147,14 @@
                             class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse sideBarMenuSecciones">
                             <div class="accordion my-3" id="accordionExampleY">
                                 <div class="accordion-item">
-                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Orden de menu</p>
+                                    <p class="text-center bg-info text-white mb-0 rounded-top"></i>Orden de menú</p>
                                 </div>
                                 <div class="list-group list-group-light accordion-item">
                                     <a href="{{ route('administracion.menu.index') }}"
                                         class="list-group-item list-group-item-action px-5 border-0"
                                         style="padding-left: 2rem !important;">
                                         <i class="bi bi-ui-checks"></i>
-                                        &nbsp;Menu
+                                        &nbsp;Menú
                                     </a>
                                 </div>
                             </div>
