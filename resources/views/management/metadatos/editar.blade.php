@@ -1,6 +1,6 @@
 @extends('layout.management')
 
-@section('title', 'Editar titulos')
+@section('title', 'Metadatos')
 
 @section('content')
     <div class="formulario-admin-secciones">
