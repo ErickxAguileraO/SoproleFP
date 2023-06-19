@@ -93,17 +93,6 @@
                             <textarea id="descripcion_uno_mini_sitio" class="form-control" name="descripcion_uno_mini_sitio" rows="4" cols="50">{{$result->descripcion}}</textarea>
                         </div> --}}
 
-                        <label for="titulo_dos_mini_sitio"><strong>Academia </strong></label>
-                        <div class="form-floating my-3">
-                            <input type="text" name="titulo_dos_mini_sitio" class="form-control" id="titulo_dos_mini_sitio" placeholder="titulo"
-                                autocomplete="new-password" value="{{$result->tit_titulo_dos_mini_sitio}}" required>
-                        </div>
-
-                        <label for="descripcion_dos_mini_sitio">Descripción</label>
-                        <div class="form-floating my-3">
-                            <textarea id="descripcion_dos_mini_sitio" class="form-control" name="descripcion_dos_mini_sitio" rows="4" cols="50">{{$result->tit_descripcion_dos_mini_sitio}}</textarea>
-                        </div>
-
                         <label for="titulo_tres_mini_sitio"><strong> Productos </strong></label>
                         <div class="form-floating my-3">
                             <input type="text" name="titulo_tres_mini_sitio" class="form-control" id="titulo_tres_mini_sitio" placeholder="titulo"
@@ -113,6 +102,17 @@
                         <label for="descripcion_tres_mini_sitio">Descripción</label>
                         <div class="form-floating my-3">
                             <textarea id="descripcion_tres_mini_sitio" class="form-control" name="descripcion_tres_mini_sitio" rows="4" cols="50">{{$result->tit_descripcion_tres_mini_sitio}}</textarea>
+                        </div>
+
+                        <label for="titulo_dos_mini_sitio"><strong>Academia </strong></label>
+                        <div class="form-floating my-3">
+                            <input type="text" name="titulo_dos_mini_sitio" class="form-control" id="titulo_dos_mini_sitio" placeholder="titulo"
+                                autocomplete="new-password" value="{{$result->tit_titulo_dos_mini_sitio}}" required>
+                        </div>
+
+                        <label for="descripcion_dos_mini_sitio">Descripción</label>
+                        <div class="form-floating my-3">
+                            <textarea id="descripcion_dos_mini_sitio" class="form-control" name="descripcion_dos_mini_sitio" rows="4" cols="50">{{$result->tit_descripcion_dos_mini_sitio}}</textarea>
                         </div>
 
                         <label for="titulo_cuatro_mini_sitio"><strong> Recetas </strong></label>
