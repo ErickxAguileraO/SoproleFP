@@ -26,6 +26,7 @@ use App\Http\Controllers\Management\DocumentosBasesLegalesController;
 use App\Http\Controllers\Management\FormularioContactoController;
 use App\Http\Controllers\Management\TituloController;
 use App\Http\Controllers\Management\MetaController;
+use App\Http\Controllers\Management\MenuDinamicoController;
 
 
 use App\Http\Controllers\Web\HomeController as WebHomeController;
@@ -253,6 +254,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('eliminar/{categoria}', 'eliminar')->name('categoria.eliminar');
             Route::post('store', 'store')->name('categoria.store');
             Route::post('update', 'update')->name('categoria.update');
+        });
+
+        Route::controller(MenuDinamicoController::class)->prefix('menu')->group(function () {
+            Route::get('', 'index')->name('menu.index');
+            // Route::get('crear', 'crear')->name('categoria.crear');
+            Route::get('editar/{menu}', 'editar')->name('menu.editar');
+            Route::get('listar', 'listar')->name('menu.listar');
+            // Route::get('eliminar/{categoria}', 'eliminar')->name('categoria.eliminar');
+            // Route::post('store', 'store')->name('menu.store');
+            Route::post('update', 'update')->name('menu.update');
         });
 
         Route::controller(ProductoController::class)->prefix('producto')->group(function () {

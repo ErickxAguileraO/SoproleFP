@@ -31,7 +31,7 @@
         <div class="cuadros-info cuadros-row-4">
 
             @foreach ($academias as $academia)
-                <a href="{{ route('web.academia.detalle', $academia->aca_id) . '-' . $academia->aca_url }}"
+                <a href="/academia/detalle/{{ $academia->aca_url }}"
                     class="cuadros-info-n">
                     <div class="img"><img src="{{ asset($academia->aca_imagen) }}" alt="">
                     </div>
@@ -58,7 +58,7 @@
         descubrir nuevas técnicas para crear sonrisas en quienes disfruten de tus preparaciones. </p>
     <div class="cuadros-info cuadros-row-3">
         @foreach ($recetas as $receta)
-            <a href="{{ route('web.receta.detalle', $receta->rec_id) . '-' . $receta->rec_url }}"
+            <a href="/receta/detalle/{{ $receta->rec_url }}"
                 class="cuadros-info-n">
                 <div class="img"><img src="{{ asset($receta->rec_imagen) }}" alt="">
                 </div>
@@ -80,7 +80,7 @@
         sobre capacitaciones, eventos, tendencias y todo lo relacionado al mundo gastronómico.</p>
     <div class="cuadros-info cuadros-row-3">
         @foreach ($noticias as $noticia)
-            <a href="{{ route('web.noticia.detalle', $noticia->not_id) . '-' . $noticia->not_url }}"
+            <a href="/noticia/detalle/{{ $noticia->not_url }}"
                 class="cuadros-info-n">
                 <div class="img">
                     @if (isset($noticia->imagenListado->ino_imagen))

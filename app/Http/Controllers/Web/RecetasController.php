@@ -13,14 +13,14 @@ class RecetasController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            if (is_null($request->segmentoId) && is_null($request->productoId)) {        
-                return view('web.recetas.data', 
-                    ['recetas' => Receta::with('imagenes','segmentos','Producto')->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12), 
+            if (is_null($request->segmentoId) && is_null($request->productoId)) {
+                return view('web.recetas.data',
+                    ['recetas' => Receta::with('imagenes','segmentos','Producto')->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12),
                     'segmentosId' => NULL,
                     'productosId' => NULL]
-                    )->render();  
+                    )->render();
             } else {
-                return view('web.recetas.data', 
+                return view('web.recetas.data',
                     ['recetas' => Receta::with('imagenes','segmentos','Producto')
                         ->whereHas('segmentos', function ($query) use($request){
                             if ($request->has('segmentoId')) {
@@ -32,10 +32,10 @@ class RecetasController extends Controller
                                 $query->whereIn('prorec_producto_id', $request->productoId);
                             }
                         })
-                        ->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12), 
+                        ->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12),
                     'segmentosId' => json_encode($request->segmentoId),
                     'productosId' => json_encode($request->productoId)]
-                )->render();  
+                )->render();
             }
         }
 
@@ -51,9 +51,9 @@ class RecetasController extends Controller
                         $query->whereIn('prorec_producto_id', $request->productoId);
                     }
                 })
-                ->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12);  
+                ->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12);
         } else {
-            $recetas = Receta::with('imagenes','segmentos','Producto')->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12);  
+            $recetas = Receta::with('imagenes','segmentos','Producto')->where('rec_estado', 1)->orderby('rec_orden', 'desc')->orderby('rec_id', 'desc')->paginate(12);
         }
 
         return view('web.recetas.index', [
@@ -68,7 +68,7 @@ class RecetasController extends Controller
     public function detalle($recetaId)
     {
         return view('web.recetas.detalle', [
-            "receta" => Receta::with('imagenes','segmentos','Producto')->where('rec_id', $recetaId)->where('rec_estado', 1)->firstOrFail(),
+            "receta" => Receta::with('imagenes','segmentos','Producto')->where('rec_url', $recetaId)->where('rec_estado', 1)->firstOrFail(),
         ]);
     }
 }
