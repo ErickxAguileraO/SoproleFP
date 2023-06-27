@@ -73,7 +73,7 @@
                 @if (count($producto->RecetasWeb) > 4)
                     <div class="carruselRecetas">
                         @foreach ($producto->RecetasWeb as $rec)
-                            <a href="{{ route('web.receta.detalle', $rec->rec_id) . '-' . $rec->rec_url }}"
+                            <a href="/receta/detalle/{{ $rec->rec_url }}"
                                 class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
                                 <div class="texto">
@@ -85,7 +85,7 @@
                 @else
                     <div class="cuadros-info flex-wrap-4">
                         @foreach ($producto->RecetasWeb as $rec)
-                            <a href="{{ route('web.receta.detalle', $rec->rec_id) . '-' . $rec->rec_url }}"
+                            <a href="/receta/detalle/{{ $rec->rec_url }}"
                                 class="cuadros-info-n">
                                 <div class="img"><img src="{{ asset($rec->rec_imagen) }}" alt=""></div>
                                 <div class="texto">
