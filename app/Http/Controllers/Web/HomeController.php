@@ -29,7 +29,7 @@ class HomeController extends Controller
             "noticias" => Noticia::where('not_estado',1)->orderBy('not_fecha','desc')->limit(3)->get(),
             "conocenos" => Editable::where('edi_tipo',1)->where('edi_estado',1)->first(),
             'result' => Titulo::first(),
-            'metaData' => Metadatos::first(),
+            // 'metaData' => Metadatos::first(),
             // 'menuDinamico' => MenuDinamico::orderBy('mdi_orden', 'asc')->get(),
         ]);
     }

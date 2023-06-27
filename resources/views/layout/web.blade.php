@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Metas -->
     {{-- <meta name="author" content="SoproleFP"> --}}
+    @php
+        $metaData = App\Models\Metadatos::first();
+    @endphp
     <meta name="title" content="{{ $metaData->met_titulo ?? '' }}">
     <meta name="keywords" content="{{ $metaData->met_key ?? '' }}">
     <meta name="description" content="{{ $metaData->met_descripcion ?? '' }}">
